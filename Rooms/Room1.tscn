@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c62mcfe50lkhn"]
+
+[ext_resource type="Script" uid="uid://c1poe3shrtvbk" path="res://Scripts/room.gd" id="1_fja4u"]
+[ext_resource type="PackedScene" uid="uid://djvpqjfwmselq" path="res://UI/RoomUI.tscn" id="2_p8p37"]
+[ext_resource type="Texture2D" uid="uid://bieyi4siu2ufr" path="res://Sprites/Placeholders/Rooms/Room1.png" id="2_t1wpb"]
+
+[node name="Room1" type="Node2D" unique_id=1138460362]
+script = ExtResource("1_fja4u")
+room_right_path = "res://Rooms/Room2.tscn"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=701273391]
+position = Vector2(960, 540)
+texture = ExtResource("2_t1wpb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=565787541]
+
+[node name="RoomUI" parent="CanvasLayer" unique_id=895738389 instance=ExtResource("2_p8p37")]
+has_left_arrow = false

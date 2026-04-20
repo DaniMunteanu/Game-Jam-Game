@@ -14,6 +14,16 @@ config/name="GameTeam12"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SceneChanger="*uid://l8wj2k251dxb"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=4
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dqjylmtnaee4s"]
+
+[ext_resource type="Script" uid="uid://c1poe3shrtvbk" path="res://Scripts/room.gd" id="1_wt6t0"]
+[ext_resource type="PackedScene" uid="uid://djvpqjfwmselq" path="res://UI/RoomUI.tscn" id="2_hocdy"]
+
+[node name="Room3" type="Node2D" unique_id=664680839]
+script = ExtResource("1_wt6t0")
+room_left_path = "res://Rooms/Room2.tscn"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=765953715]
+
+[node name="RoomUI" parent="CanvasLayer" unique_id=895738389 instance=ExtResource("2_hocdy")]
+has_right_arrow = false
