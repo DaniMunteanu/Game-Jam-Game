@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7l1ypa7s2h8m"]
 
-[ext_resource type="Script" uid="uid://c1poe3shrtvbk" path="res://scripts/room.gd" id="1_iehj0"]
+[ext_resource type="Script" uid="uid://c1poe3shrtvbk" path="res://Scripts/room.gd" id="1_iehj0"]
 [ext_resource type="Texture2D" uid="uid://cpxrljdpsu3ve" path="res://Sprites/Placeholders/Rooms/Room2.png" id="2_1a11v"]
 [ext_resource type="PackedScene" uid="uid://djvpqjfwmselq" path="res://UI/RoomUI.tscn" id="2_inb3q"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="4_a5nxq"]
@@ -27,6 +27,13 @@ texture = ExtResource("2_1a11v")
 mouse_filter = 2
 
 [node name="RoomUI" parent="CanvasLayer" unique_id=895738389 instance=ExtResource("2_inb3q")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("4_a5nxq")]
 mouse_filter = 2
