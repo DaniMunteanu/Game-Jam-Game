@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://bas6wnhitmmub"]
+
+[ext_resource type="Script" uid="uid://bfberpbmpkk4v" path="res://Scripts/Puzzles/puzzle.gd" id="1_1lbio"]
+[ext_resource type="PackedScene" uid="uid://dwv575pukbv8s" path="res://UI/ItemDropArea.tscn" id="1_7subs"]
+[ext_resource type="Resource" uid="uid://c7418maqfvfji" path="res://Scripts/Items/Item1.tres" id="2_1lbio"]
+[ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="2_hrlf3"]
+[ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="3_1lbio"]
+[ext_resource type="Resource" uid="uid://cdseck0lhm0be" path="res://Scripts/Items/Item2.tres" id="4_q3dfh"]
+[ext_resource type="Resource" uid="uid://d06x1x00mcp1" path="res://Scripts/Items/Item3.tres" id="5_ey8be"]
+
+[node name="Puzzle1" type="Node2D" unique_id=1912392956]
+script = ExtResource("1_1lbio")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=463053619]
+
+[node name="ItemDropAreas" type="Node" parent="CanvasLayer" unique_id=652393893]
+
+[node name="ItemDropArea" parent="CanvasLayer/ItemDropAreas" unique_id=748105193 instance=ExtResource("1_7subs")]
+offset_left = 983.0
+offset_top = 330.0
+offset_right = -783.0
+offset_bottom = -613.0
+required_item = ExtResource("2_1lbio")
+
+[node name="TempVisual" type="Panel" parent="CanvasLayer/ItemDropAreas/ItemDropArea" unique_id=1247695005]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/ItemDropAreas/ItemDropArea/TempVisual" unique_id=493735200]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Aici merge doar
+Item#1"
+
+[node name="TargetPosition" type="Marker2D" parent="CanvasLayer/ItemDropAreas/ItemDropArea" unique_id=2055134435]
+position = Vector2(46, 42)
+
+[node name="ItemDropArea2" parent="CanvasLayer/ItemDropAreas" unique_id=2144497246 instance=ExtResource("1_7subs")]
+offset_left = 146.0
+offset_top = 220.0
+offset_right = -1620.0
+offset_bottom = -723.0
+required_item = ExtResource("4_q3dfh")
+
+[node name="TempVisual" type="Panel" parent="CanvasLayer/ItemDropAreas/ItemDropArea2" unique_id=399151835]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/ItemDropAreas/ItemDropArea2/TempVisual" unique_id=695036384]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Aici merge doar
+Item#2"
+
+[node name="TargetPosition" type="Marker2D" parent="CanvasLayer/ItemDropAreas/ItemDropArea2" unique_id=1845285264]
+position = Vector2(46, 42)
+
+[node name="ItemDropArea3" parent="CanvasLayer/ItemDropAreas" unique_id=1865227056 instance=ExtResource("1_7subs")]
+offset_left = 449.0
+offset_top = 674.0
+offset_right = -1317.0
+offset_bottom = -269.0
+required_item = ExtResource("5_ey8be")
+
+[node name="TempVisual" type="Panel" parent="CanvasLayer/ItemDropAreas/ItemDropArea3" unique_id=1295515034]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/ItemDropAreas/ItemDropArea3/TempVisual" unique_id=994496767]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Aici merge doar
+Item#3"
+
+[node name="TargetPosition" type="Marker2D" parent="CanvasLayer/ItemDropAreas/ItemDropArea3" unique_id=25997732]
+position = Vector2(46, 42)
+
+[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=562612329]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+
+[node name="RightArrow" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=1550677521]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -458.0
+offset_top = -65.75
+offset_right = -123.0
+offset_bottom = 65.75
+grow_horizontal = 0
+grow_vertical = 2
+text = "Inapoi la camera"
+script = ExtResource("2_hrlf3")
+destination_room_path = "res://Rooms/Room1.tscn"
+
+[node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("3_1lbio")]
+mouse_filter = 2
+
+[connection signal="pressed" from="CanvasLayer/SceneSwitchers/RightArrow" to="CanvasLayer/SceneSwitchers/RightArrow" method="_on_pressed"]
