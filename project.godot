@@ -27,6 +27,7 @@ InventoryManager="*uid://b720nbrg4os7l"
 SignalBus="*uid://b8mxpa7hagck5"
 AudioManager="*uid://bnstsym7hep34"
 PauseMenu="*uid://fujp0m2jfpul"
+SaveManager="*uid://bq17yn112l8j7"
 
 [display]
 
