@@ -1,11 +1,12 @@
 extends TextureButton
 
 var isDragging: bool = false
+var draggable: bool = false
 var offset: Vector2 = Vector2(0,0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if isDragging:
+	if isDragging and draggable:
 		global_position = get_global_mouse_position() - offset
 
 func _on_button_down() -> void:

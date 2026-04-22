@@ -1,7 +1,9 @@
 extends Node
 
 #ITEMS
-const KEY: ItemData = preload("res://Scripts/Items/Item1.tres")
+const ITEM1: ItemData = preload("res://Scripts/Items/Item1.tres")
+const ITEM2: ItemData = preload("res://Scripts/Items/Item2.tres")
+const ITEM3: ItemData = preload("res://Scripts/Items/Item3.tres")
 
 var obtained_items: Array[ItemData] = []
 const MAX_SIZE = 10
