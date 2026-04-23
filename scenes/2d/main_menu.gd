@@ -17,6 +17,7 @@ func _on_start_pressed() -> void:
 
 func _on_options_pressed() -> void:
 	options_panel.visible = true
+	SceneChanger.change_scene_to_path(options_menu_path)
 
 func _on_continue_pressed() -> void:
 	InventoryManager.load_data()
