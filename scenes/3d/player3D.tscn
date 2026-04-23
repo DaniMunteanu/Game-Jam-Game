@@ -20,6 +20,7 @@ seetext = NodePath("CanvasLayer/BoxContainer/Label")
 mesh = SubResource("CapsuleMesh_fep6r")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1049069559]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5k5vb")
 
 [node name="head" type="Node3D" parent="." unique_id=1090359360]
