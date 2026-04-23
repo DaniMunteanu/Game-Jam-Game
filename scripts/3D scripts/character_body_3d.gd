@@ -13,6 +13,11 @@ var t_bob : float = 0.0
 
 @export var seetext : Label
 @onready var seecast := %SeeCast
+
+@onready var footstep_player = $FootStepsPlayer
+var footstep_timer : float = 0.0
+const FOOTSTEP_INTERVAL : float = 0.7
+
 signal clicked
 
 func _ready():
@@ -61,6 +66,13 @@ func _physics_process(delta: float) -> void:
 	camera.transform.origin = _headbob(t_bob)
 	
 	move_and_slide()
+	if is_on_floor() and velocity.length() > 0.1:
+		footstep_timer -= delta
+		if footstep_timer <= 0.0:
+			footstep_player.play()
+			footstep_timer = FOOTSTEP_INTERVAL
+	else:
+		footstep_timer = 0.0
 
 
 func _headbob(time : float) -> Vector3:

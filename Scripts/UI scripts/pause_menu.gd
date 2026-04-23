@@ -6,6 +6,7 @@ extends Control
 func _ready() -> void:
 	hide()
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
@@ -19,11 +20,13 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func resume() -> void:
 	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	hide()
 
 func pause() -> void:
 	show()
 	sfx_player.play()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_tree().paused = true
 
 func _on_resume_pressed() -> void:

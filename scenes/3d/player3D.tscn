@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dm0ycc5x5wtod"]
 
 [ext_resource type="Script" uid="uid://beaw8rgrydwhu" path="res://Scripts/3D scripts/character_body_3d.gd" id="1_pcgwn"]
+[ext_resource type="AudioStream" uid="uid://4ug4vg2xps3h" path="res://Audio/Steps_wood-004.ogg" id="2_ewrff"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_fep6r"]
 
@@ -53,3 +54,7 @@ alignment = 1
 visible = false
 layout_mode = 2
 text = "Click to Interact"
+
+[node name="FootStepsPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1268008791]
+stream = ExtResource("2_ewrff")
+bus = &"Sfx"
