@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 			seetext.show()
 			#print("can see tutorial message!")
 			if Input.is_action_just_pressed("interact"):
-				clicked.emit(target.get_parent())
+				clicked.emit(target)
 				print("DO STUFF!")
 		else: seetext.hide()
 	

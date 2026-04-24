@@ -1,6 +1,6 @@
 extends Node
 
-@onready var moon_shape: InteractableObject = $MoonShape
+@onready var moon_shape: InteractableObject = $StaticBody3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
