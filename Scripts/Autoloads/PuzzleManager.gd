@@ -11,6 +11,7 @@ enum puzzles{
 }
 
 var moon_symbol_picked_up: bool = false
+var death_solved : bool = false
 
 const number_of_puzzles: int = 7
 var complete_puzzles: Array[bool] = []

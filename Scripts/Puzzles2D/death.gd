@@ -26,6 +26,7 @@ func check_typed_text():
 		print("Death finished!")
 		PuzzleManager.finish_puzzle(PuzzleManager.puzzles.DEATH)
 		SignalBus.death_completed.emit()
+		PuzzleManager.death_solved = true
 		disconnect_key_signals()
 	else:
 		print("Wrong password!")
