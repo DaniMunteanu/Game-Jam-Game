@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="5_whf7h"]
 [ext_resource type="PackedScene" uid="uid://b6k8kxr7125rj" path="res://3D assets/Illusion.blend" id="6_5k5vb"]
 [ext_resource type="PackedScene" uid="uid://mrqt5s35qy47" path="res://3D assets/OGLINDA.tscn" id="6_nq88r"]
-[ext_resource type="PackedScene" uid="uid://bc5pslkwi8ri" path="res://3D assets/meshes/luna.glb" id="9_q48q4"]
 [ext_resource type="Script" uid="uid://5dn58dedj0g6" path="res://Scripts/Puzzles3D/moon_3d.gd" id="10_2vkj2"]
+[ext_resource type="PackedScene" uid="uid://ixxg5srbckg2" path="res://3D assets/luna.tscn" id="11_ntof2"]
 [ext_resource type="Script" uid="uid://c1srst7838qj0" path="res://Scripts/Puzzles3D/star_3d.gd" id="12_vl5l8"]
 [ext_resource type="Script" uid="uid://0htjwty3extj" path="res://Scripts/Puzzles3D/temperance_3d.gd" id="13_gnvy8"]
 [ext_resource type="PackedScene" uid="uid://by17lu4nxjwgw" path="res://3D assets/Objects/zodiac_wheel.tscn" id="13_yuerg"]
@@ -28,9 +28,10 @@ sky_material = SubResource("ProceduralSkyMaterial_j7t7n")
 
 [sub_resource type="Environment" id="Environment_rfp5g"]
 background_mode = 2
+background_energy_multiplier = 0.0
 sky = SubResource("Sky_ujn77")
-tonemap_mode = 4
-tonemap_exposure = 0.24
+tonemap_mode = 2
+tonemap_exposure = 0.05
 glow_enabled = true
 fog_sun_scatter = 0.27
 fog_density = 0.0469
@@ -208,7 +209,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14705658, -0.7613945, -0.05
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00671196, 0.9927366, -0.019042969)
 shape = SubResource("BoxShape3D_rfp5g")
 
-[node name="Illusion" parent="." unique_id=1683449931 instance=ExtResource("6_5k5vb")]
+[node name="Illusion" parent="." unique_id=1668288730 instance=ExtResource("6_5k5vb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0552967, 0.67229176, -3.7929158)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Illusion" unique_id=707953608]
@@ -285,10 +286,7 @@ object = NodePath(".")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles3D/Moon3D/StaticBody3D" unique_id=1216844020]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, 0.19714355, 0.11254883)
 shape = SubResource("BoxShape3D_whf7h")
-debug_color = Color(0, 0.62552637, 0.51651114, 1)
-
-[node name="luna" parent="Puzzles3D/Moon3D/StaticBody3D" unique_id=603556165 instance=ExtResource("9_q48q4")]
-transform = Transform3D(-0.3171266, 0, 0.12610383, 0, 0.34127915, 0, -0.12610383, 0, -0.3171266, 0.093675256, -0.09763837, 0.19177961)
+debug_color = Color(0, 0, 0, 1)
 
 [node name="InteractableArea3D" parent="Puzzles3D/Moon3D/StaticBody3D" unique_id=337735625 instance=ExtResource("3_rfp5g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12355518, -0.0886333, -0.06608534)
@@ -296,6 +294,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12355518, -0.0886333, -0.06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles3D/Moon3D/StaticBody3D/InteractableArea3D" unique_id=1961359182]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.056602478, 0.6347046, -0.20123291)
 shape = SubResource("BoxShape3D_2vkj2")
+
+[node name="luna" parent="Puzzles3D/Moon3D/StaticBody3D" unique_id=1692874708 instance=ExtResource("11_ntof2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.47433567, 0.16618538, 0.31009436)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Puzzles3D/Moon3D/StaticBody3D" unique_id=1300838160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2722509, 0.08672953, 0.26368427)
+light_size = 0.078
+omni_range = 0.47005576
 
 [node name="Star3D" type="Node" parent="Puzzles3D" unique_id=1914226684]
 script = ExtResource("12_vl5l8")

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ixxg5srbckg2"]
+
+[ext_resource type="PackedScene" uid="uid://bc5pslkwi8ri" path="res://3D assets/meshes/luna.glb" id="1_dag8t"]
+
+[node name="luna" unique_id=1692874708 instance=ExtResource("1_dag8t")]
+
+[node name="moon" parent="." index="0" unique_id=805810077]
+transform = Transform3D(-0.3145817, 0, -0.13781111, 0, 0.34344363, 0, 0.13781111, 0, -0.3145817, -0.35018343, -0.19414759, -0.011481285)
