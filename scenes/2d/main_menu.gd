@@ -13,6 +13,7 @@ func _ready() -> void:
 func _on_start_pressed() -> void:
 	DirAccess.remove_absolute("user://SaveFile.tres")
 	InventoryManager.reset_data()
+	PuzzleManager.reset_data()
 	SceneChanger.change_scene_to_path(start_scene_path)
 
 func _on_options_pressed() -> void:
@@ -21,6 +22,7 @@ func _on_options_pressed() -> void:
 
 func _on_continue_pressed() -> void:
 	InventoryManager.load_data()
+	PuzzleManager.load_data()
 	get_tree().change_scene_to_file("res://Rooms/Room2.tscn")
 
 func _on_quit_game_pressed() -> void:

@@ -18,8 +18,6 @@ signal puzzle_finished(puzzle_index: int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	complete_puzzles.resize(number_of_puzzles)
-	complete_puzzles.fill(false)
 	SignalBus.connect("magician_completed", check_cards)
 	SignalBus.connect("death_completed", check_cards)
 	SignalBus.connect("moon_completed", check_cards)
@@ -38,3 +36,16 @@ func check_cards():
 func finish_puzzle(puzzle_index: int):
 	complete_puzzles[puzzle_index] = true
 	puzzle_finished.emit(puzzle_index)
+	
+func reset_data():
+	complete_puzzles = []
+	complete_puzzles.resize(number_of_puzzles)
+	complete_puzzles.fill(false)
+	completed_puzzles = 0
+
+func load_data():
+	complete_puzzles = SaveManager.save_file_data.complete_puzzles
+	completed_puzzles = 0
+	for puzzle in complete_puzzles:
+		if puzzle == true:
+			completed_puzzles += 1

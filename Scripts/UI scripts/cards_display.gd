@@ -9,7 +9,7 @@ var big_cards: Array[Card] = []
 func _ready() -> void:
 	init_small_cards()
 	init_big_cards()
-	update_display()
+	call_deferred("update_display")
 	PuzzleManager.puzzle_finished.connect(on_puzzle_finished)
 
 func init_small_cards():
@@ -32,3 +32,7 @@ func update_display():
 func on_puzzle_finished(puzzle_index: int):
 	small_cards[puzzle_index].fade_in()
 	big_cards[puzzle_index].play_fade_sequence()
+	save_puzzle_progress()
+	
+func save_puzzle_progress():
+	SaveManager.save_file_data.complete_puzzles = PuzzleManager.complete_puzzles

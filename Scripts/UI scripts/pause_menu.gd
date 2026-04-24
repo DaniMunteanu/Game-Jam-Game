@@ -37,4 +37,5 @@ func _on_options_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().paused = false
+	SaveManager.save_data()
 	get_tree().change_scene_to_file("res://scenes/2d/main_menu.tscn")
