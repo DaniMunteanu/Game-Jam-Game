@@ -29,6 +29,8 @@ AudioManager="*uid://bnstsym7hep34"
 PauseMenu="*uid://fujp0m2jfpul"
 SaveManager="*uid://bq17yn112l8j7"
 PuzzleManager="*uid://clfq0m6sxt40y"
+DialogueBox="*uid://cmfbnbcffxin4"
+TextManager="*uid://4aefjcn31okg"
 
 [display]
 
@@ -39,6 +41,10 @@ window/main_scene="uid://d0rrcq8bkicf1"
 [global_group]
 
 Interactables="Interactable meshes"
+
+[gui]
+
+theme/custom_font="uid://1dhoekij6hvu"
 
 [input]
 

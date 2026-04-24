@@ -6,4 +6,4 @@ extends Resource
 @export var selected_item: ItemData
 @export var selected_item_index: int = 0
 
-@export var puzzles_completed: int = 0
+@export var complete_puzzles: Array[bool]
