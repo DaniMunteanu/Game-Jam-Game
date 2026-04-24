@@ -24,7 +24,9 @@ func _on_mirror_change():
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("3D_left"):
 		if left_room_path:
+			InteractionManager.unregister_area(mirror)
 			SceneChanger.change_scene_to_path(left_room_path)
 	if Input.is_action_just_pressed("3D_right"):
 		if right_room_path:
+			InteractionManager.unregister_area(mirror)
 			SceneChanger.change_scene_to_path(right_room_path)
