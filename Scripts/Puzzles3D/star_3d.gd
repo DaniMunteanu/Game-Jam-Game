@@ -2,9 +2,9 @@ extends Node
 
 @onready var zodiac_interactable: InteractableObject = $StaticBody3D
 @onready var zodiac_wheel: Node3D = $StaticBody3D/Zodiac_wheel
-
 @onready var interactable_area_3d: InteractableArea3D = $StaticBody3D/InteractableArea3D
 var dialogue_shown: bool = false
+@onready var sfx_player: AudioStreamPlayer3D = $"../../SfxPlayer"
 
 func say_something():
 	if not dialogue_shown:
@@ -33,6 +33,7 @@ func _on_player_entered(body: Node3D) -> void:
 		say_something()
 
 func _on_zodiac_click():
+	sfx_player.play()
 	print("you got the correct zodiac!")
 	zodiac_wheel.aries_fall()
 	print("The Star finished!")
