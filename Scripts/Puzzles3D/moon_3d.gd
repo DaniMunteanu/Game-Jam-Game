@@ -11,5 +11,9 @@ func _ready() -> void:
 
 func _on_moon_pickup():
 	InventoryManager.add_item(InventoryManager.ITEM3)
+	TextManager.show_once("mainroom_pick_moon", [
+		"Got it. I should take it back.", 
+		"Let's hope the mirror still works and I am not stuck." 
+	])
 	PuzzleManager.moon_symbol_picked_up = true
 	moon_shape.queue_free()

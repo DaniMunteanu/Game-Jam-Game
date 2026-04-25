@@ -13,6 +13,11 @@ func _ready() -> void:
 func end_puzzle():
 	print("The Moon finished!")
 	PuzzleManager.finish_puzzle(PuzzleManager.puzzles.MOON)
+	TextManager.show_once("Moon_completed" , [
+		"The Moon. Number eighteen. Illusion and anxiety... fitting.", 
+		"It’s a warning that what I’m seeing isn't the whole truth.", 
+		"So all the cards are scattered between these mirrored realities."
+	])
 	SignalBus.moon_completed.emit()
 	fill_moon_stand()
 	

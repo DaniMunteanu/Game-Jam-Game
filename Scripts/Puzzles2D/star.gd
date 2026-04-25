@@ -20,8 +20,8 @@ func _ready() -> void:
 	TextManager.show_once("Star" ,[
 		"The 16th. My fortieth birthday. I remember that New Moon...",
 		"it was so dark I couldn't see my own hands.", 
-		"But looking at the other dates, they somehow", 
-		"feel intentional, like a pattern. *maybe too much"
+		"But looking at the other dates, they somehow feel intentional", 
+		"like a pattern. *maybe too much"
 	])
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -98,4 +98,7 @@ func check_if_complete():
 	
 func end_puzzle():
 	PuzzleManager.calendar_solved = true
+	TextManager.show_once("Star_completed" ,[
+		"This feels familiar… it’s a constellation."
+	])
 	disconnect_drawing_dots_signals()

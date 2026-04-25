@@ -14,8 +14,8 @@ func _ready() -> void:
 	init_paintings_array()
 	init_paintings_snapped_array()
 	TextManager.show_once("Magician", [
-		"Tablourile par să fi fost mutate...",
-        "Trebuie să le pun la locurile potrivite."
+		"I should probably put these back in order.",
+		"I don't need my life looking as messy as this room."
 	])
 		
 func init_markers_array():
@@ -44,9 +44,16 @@ func end_puzzle():
 		painting.draggable = false
 		painting.try_snapping.disconnect(on_try_snapping)
 	print("The Magician finished!")
+	TextManager.show_once("Magician_completed", [
+		"The Magician. Number one. It’s the card of manifestation",
+		"As above, so below It’s a hint", 
+		"that I actually have all the tools I need right here in front of me.",
+		"I need the other six if I’m going to fix this mess",
+		"and find out what I did wrong in my reading." 
+	])
 	PuzzleManager.finish_puzzle(PuzzleManager.puzzles.MAGICIAN)
 	SignalBus.magician_completed.emit()
-	await get_tree().create_timer(4).timeout
+	await get_tree().create_timer(20).timeout
 	SceneChanger.change_scene_to_path(room1_path)
 
 func on_try_snapping(painting_index: int):

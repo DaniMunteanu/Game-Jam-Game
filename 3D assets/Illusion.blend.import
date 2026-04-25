@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b6k8kxr7125rj"
+uid="uid://d35qijl2l5jdx"
 path="res://.godot/imported/Illusion.blend-d94eb536f1d460c8de74ef9f89ab4b9e.scn"
 
 [deps]
@@ -37,15 +37,7 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"materials": {
-"vitraliu": {
-"use_external/enabled": true,
-"use_external/fallback_path": "",
-"use_external/path": "uid://c5okcl4su8tq0"
-}
-}
-}
+_subresources={}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
 blender/nodes/punctual_lights=true

@@ -12,6 +12,11 @@ extends Node
 func _ready() -> void:
 	#pt tranzitia de la 3d, ca mouse-ul sa se vada din nou in 2d
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	TextManager.show_once("room_2", [
+		"Ugh, my head... what the hell happened?",
+		"I was just doing a reading and then...everything went sideways", 
+	    "And why are my photos all messed up?"
+	])
 	if mirror:
 		mirror.interact = Callable(self, "_on_mirror_change")
 

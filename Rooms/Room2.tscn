@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="4_a5nxq"]
 [ext_resource type="Texture2D" uid="uid://brwtj0n2mr6xn" path="res://Sprites/Background/MoonStandEmpty.png" id="4_j8d48"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="4_xiq1f"]
+[ext_resource type="Script" uid="uid://gcs7aymyg04o" path="res://Scripts/Puzzles2D/room2_checker.gd" id="6_ipfbv"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="6_qsv4v"]
 [ext_resource type="Texture2D" uid="uid://cvfcblubkqpjv" path="res://Sprites/SceneSwitchers/Mirror.png" id="7_wjqet"]
 
@@ -41,6 +42,7 @@ anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
+script = ExtResource("6_ipfbv")
 
 [node name="Mirror" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=217423170]
 self_modulate = Color(1, 1, 1, 0)

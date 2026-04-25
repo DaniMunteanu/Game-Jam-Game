@@ -3,8 +3,20 @@ extends Node
 @onready var zodiac_interactable: InteractableObject = $StaticBody3D
 @onready var zodiac_wheel: Node3D = $StaticBody3D/Zodiac_wheel
 
+@onready var interactable_area_3d: InteractableArea3D = $StaticBody3D/InteractableArea3D
+var dialogue_shown: bool = false
+
+func say_something():
+	if not dialogue_shown:
+		dialogue_shown = true
+		TextManager.show_once("Zodiac_Seen", [
+		"I’ve spent half my life tracing these symbols in my books.", 
+		"Seeing the Great Wheel like this... feels like a dream.", 
+		"I need to see where my alignment actually falls."
+	])
 
 func _ready() -> void:
+	interactable_area_3d.body_entered.connect(_on_player_entered)
 	if PuzzleManager.calendar_solved == false:
 		zodiac_interactable.remove_from_group("Interactables")
 		return
@@ -16,10 +28,18 @@ func _ready() -> void:
 		zodiac_interactable.remove_from_group("Interactables")
 		zodiac_wheel.aries_fall()
 
+func _on_player_entered(body: Node3D) -> void:
+	if body is CharacterBody3D:
+		say_something()
+
 func _on_zodiac_click():
 	print("you got the correct zodiac!")
 	zodiac_wheel.aries_fall()
 	print("The Star finished!")
 	PuzzleManager.finish_puzzle(PuzzleManager.puzzles.STAR)
+	TextManager.show_once("Zodiac_completed", [
+		"The Star. Seventeen. Hope and renewal...", 
+		"a reminder that there’s actually a purpose to this mess."
+	])
 	SignalBus.star_completed.emit()
 	zodiac_interactable.remove_from_group("Interactables")

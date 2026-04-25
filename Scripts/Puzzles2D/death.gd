@@ -8,7 +8,7 @@ extends Node
 func _ready() -> void:
 	connect_key_signals()
 	TextManager.show_once("Death" , [
-		"I wonder what the code is[]"
+		"I wonder what the code is"
 	])
 
 func connect_key_signals():
@@ -27,6 +27,12 @@ func check_typed_text():
 		PuzzleManager.finish_puzzle(PuzzleManager.puzzles.DEATH)
 		SignalBus.death_completed.emit()
 		PuzzleManager.death_solved = true
+		TextManager.show_once("Death_completed", [
+		"Death. Number thirteen. Everyone panics when they see this one,", 
+		"but it’s rarely about the literal end. It’s just... a transition.", 
+		"A total change of state. Given the mess I’m in." ,
+		"I guess out with the old is the only way forward."
+	])
 		disconnect_key_signals()
 	else:
 		print("Wrong password!")
