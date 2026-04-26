@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://63u2vfluymja"]
+
+[ext_resource type="Texture2D" uid="uid://ckjm4unb7l4i6" path="res://Sprites/Mouse/bagheta.png" id="1_kf5kn"]
+[ext_resource type="Script" uid="uid://dxlkxxv5vlqyx" path="res://UI/cursorel.gd" id="2_ric88"]
+
+[node name="Node2D" type="Sprite2D" unique_id=1718022167]
+z_index = 4096
+position = Vector2(923.7512, 500.2373)
+scale = Vector2(0.075389184, 0.025807586)
+texture = ExtResource("1_kf5kn")
+offset = Vector2(150, 180)
+script = ExtResource("2_ric88")

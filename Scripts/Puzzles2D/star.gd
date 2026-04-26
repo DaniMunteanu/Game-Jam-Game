@@ -25,7 +25,6 @@ func _ready() -> void:
 		"The 16th. My fortieth birthday. I remember that New Moon...",
 		"it was so dark I couldn't see my own hands.", 
 		"But looking at the other dates, they somehow feel intentional", 
-		"like a pattern. *maybe too much"
 	])
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

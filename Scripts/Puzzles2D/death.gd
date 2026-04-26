@@ -32,7 +32,6 @@ func check_typed_text():
 		TextManager.show_once("Death_completed", [
 		"Death. Number thirteen. Everyone panics when they see this one,", 
 		"but it’s rarely about the literal end. It’s just... a transition.", 
-		"A total change of state. Given the mess I’m in." ,
 		"I guess out with the old is the only way forward."
 	])
 		disconnect_key_signals()

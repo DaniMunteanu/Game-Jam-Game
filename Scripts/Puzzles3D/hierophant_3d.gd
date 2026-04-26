@@ -6,6 +6,8 @@ extends Node
 @onready var cooking_static_body_3d: InteractableObject = $CookingPot/CookingStaticBody3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var liquid: MeshInstance3D = $CookingPot/Liquid
+@onready var hierophant_3d: Node = $"."
+@onready var sfx_player_2: AudioStreamPlayer3D = $"../../SfxPlayer2"
 
 #for animation
 @export var blue_pot_anim : Node3D
@@ -149,6 +151,12 @@ func check_if_completed():
 		
 func end_puzzle():
 	print("HIEROPHANT OVER!")
+	sfx_player_2.play()
+	TextManager.show_once("Hierophant_completed", [
+		"The Hierophant. Number five. Wisdom, structure, and the weight of the old ways.",
+		"It turns out that even when the world turns inside out",
+		"there are still rules you can’t bypass."
+	])
 	cooking_static_body_3d.remove_from_group("Interactables")
 	PuzzleManager.finish_puzzle(PuzzleManager.puzzles.HIEROPHANT)
 	SignalBus.hierophant_completed.emit()

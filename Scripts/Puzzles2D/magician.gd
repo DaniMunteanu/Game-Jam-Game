@@ -3,7 +3,12 @@ extends Node2D
 @onready var snap_markers: Node = $CanvasLayer/SnapMarkers
 @onready var paintings_parent: Node = $CanvasLayer/Paintings
 @onready var sfx_player: AudioStreamPlayer2D = $Sfx_Player
-
+var painting_descriptions: Array[String] = [
+	"Mom’s favorite photo. She always told people I was a star child.", "She even gave me a name to match “Otto” meaning wealth",
+	"Nine years old. I wore that wizard hat for weeks", "The start of the obsession. Should’ve just played football.",
+	"Twenty-two. Citrine and aventurine in my pockets for success.","I was sure a degree and a few crystals would do the heavy lifting.",
+	"Wait... this isn't supposed to be here. This just happened.", "The mirror... it was glowing exactly like that during the reading."
+]
 var markers: Array[Marker2D] = []
 var paintings: Array[DraggablePuzzleObject] = []
 var paintings_snapped: Array[int] = []
@@ -51,7 +56,6 @@ func end_puzzle():
 		"As above, so below It’s a hint", 
 		"that I actually have all the tools I need right here in front of me.",
 		"I need the other six if I’m going to fix this mess",
-		"and find out what I did wrong in my reading." 
 	])
 	PuzzleManager.finish_puzzle(PuzzleManager.puzzles.MAGICIAN)
 	SignalBus.magician_completed.emit()
@@ -64,6 +68,13 @@ func on_try_snapping(painting_index: int):
 				return
 			paintings_snapped[painting_index] = marker_index
 			paintings[painting_index].global_position = markers[marker_index].global_position
+			if marker_index == painting_index: 
+				var texts: Array[String] = [
+				painting_descriptions[painting_index * 2],
+				 painting_descriptions[painting_index * 2 + 1]
+	]
+				TextManager.show_sequence(texts)
+			await get_tree().create_timer(6.0).timeout 
 			check_if_solved()
 			return
 	paintings_snapped[painting_index] = -1
