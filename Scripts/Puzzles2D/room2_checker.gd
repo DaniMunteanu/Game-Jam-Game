@@ -6,6 +6,8 @@ extends Node
 
 @export var broken_mirror_texture: Texture2D
 
+
+
 func _ready() -> void:
 	
 	#DECOMENTAT DOAR PENTRU TESTARE
