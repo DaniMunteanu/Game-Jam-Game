@@ -15,8 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://cvfcblubkqpjv" path="res://Sprites/SceneSwitchers/Mirror.png" id="7_wjqet"]
 [ext_resource type="Script" uid="uid://dgxccig7fib3l" path="res://Rooms/canvas_layer.gd" id="10_a6xs1"]
 [ext_resource type="Texture2D" uid="uid://bu8os322q1q3o" path="res://Sprites/Background/BrokenMirror.png" id="11_iwjsq"]
-[ext_resource type="Script" uid="uid://cmohrk42myhw4" path="res://Rooms/new_mirror.gd" id="12_r2r2o"]
+[ext_resource type="Script" path="res://Rooms/new_mirror.gd" id="12_r2r2o"]
 [ext_resource type="Texture2D" uid="uid://dhtdue5rkxpdp" path="res://Sprites/tarot cards/The Magician.png" id="16_r2r2o"]
+[ext_resource type="AudioStream" uid="uid://bxptw45oxloct" path="res://Audio/SFX/vortex.mp3" id="18_atu7q"]
 
 [sub_resource type="Shader" id="Shader_a6xs1"]
 code = "shader_type canvas_item;
@@ -212,6 +213,9 @@ mouse_filter = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=998364505]
 libraries/ = SubResource("AnimationLibrary_a6xs1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1376025198]
+stream = ExtResource("18_atu7q")
 
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/Mirror" to="CanvasLayer" method="_on_mirror_pressed"]
 

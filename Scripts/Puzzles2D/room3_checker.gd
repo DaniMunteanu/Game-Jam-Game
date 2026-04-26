@@ -8,14 +8,14 @@ func _ready() -> void:
 		death.disabled = true
 
 func _on_grimoire_pressed() -> void:
-	if PuzzleManager.completed_puzzles == 1:
+	if PuzzleManager.completed_puzzles == 6:
 		PuzzleManager.finish_puzzle(PuzzleManager.puzzles.WORLD)
 		TextManager.show_once("World_completed", [
-			"ZA WARUDOOOOOOOOOOOO!"
+			"A mirror only shatters when its work is done!"
 		])
 		SignalBus.world_completed.emit()
-		await get_tree().create_timer(6).timeout
-		SceneChanger.change_scene_to_path("res://scenes/2d/main_menu.tscn")
+		await get_tree().create_timer(3).timeout
+		SceneChanger.change_scene_to_path("res://Rooms/Room2.tscn")
 	else:
 		TextManager.show_once("World_empty", [
 			"Not yet! I need all the other cards for this spell"
