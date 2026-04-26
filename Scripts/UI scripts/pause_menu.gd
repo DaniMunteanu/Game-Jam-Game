@@ -2,11 +2,12 @@ extends CanvasLayer
 
 @onready var options_panel = $OptionsPanel
 @onready var sfx_player = $SfxPlayer
+var is_in_chest : bool = false
 
 func _ready() -> void:
 	hide()
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
@@ -26,6 +27,7 @@ func resume() -> void:
 	if current_scene.name == "Mainroom":
 		await get_tree().process_frame
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		if is_in_chest: Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 
 func pause() -> void:

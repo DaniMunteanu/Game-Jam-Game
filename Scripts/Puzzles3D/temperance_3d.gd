@@ -75,6 +75,7 @@ func _on_chest_clicked():
 		zoom_camera.make_current()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		zoom_camera.canvas.visible = true
+		PauseMenu.is_in_chest = true
 
 
 func _on_zoom_camera_cypher_cracked() -> void:

@@ -74,7 +74,7 @@ func on_try_snapping(painting_index: int):
 				 painting_descriptions[painting_index * 2 + 1]
 	]
 				TextManager.show_sequence(texts)
-			await get_tree().create_timer(6.0).timeout 
+			#await get_tree().create_timer(6.0).timeout 
 			check_if_solved()
 			return
 	paintings_snapped[painting_index] = -1

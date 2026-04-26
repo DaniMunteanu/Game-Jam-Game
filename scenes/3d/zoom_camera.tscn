@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bm2sct1i5mld5"]
 
-[ext_resource type="Script" path="res://scenes/3d/zoom_camera.gd" id="1_8wvtw"]
+[ext_resource type="Script" uid="uid://cr1ppvqh8alvm" path="res://scenes/3d/zoom_camera.gd" id="1_8wvtw"]
 [ext_resource type="Texture2D" uid="uid://b1s1gig8fcge5" path="res://Sprites/runes/rune_0.jpg" id="2_cdv7l"]
 [ext_resource type="Texture2D" uid="uid://upl2fg165wol" path="res://Sprites/runes/rune_1.jpg" id="3_ygdcu"]
 [ext_resource type="Texture2D" uid="uid://bhl774fxqn772" path="res://Sprites/runes/rune_2.jpg" id="4_svo3w"]
@@ -73,8 +73,18 @@ grow_vertical = 2
 texture_normal = ExtResource("2_cdv7l")
 
 [node name="Exit" type="Button" parent="CanvasLayer" unique_id=836941342]
-offset_right = 8.0
-offset_bottom = 8.0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -252.0
+offset_right = -108.0
+offset_bottom = -90.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Exit"
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
