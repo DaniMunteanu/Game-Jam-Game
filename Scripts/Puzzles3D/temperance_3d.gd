@@ -8,6 +8,7 @@ extends Node
 @export var big_sack : Node3D
 @export var med_sack : Node3D
 @export var small_sack : Node3D
+@onready var sfx_player_2: AudioStreamPlayer3D = $"../../SfxPlayer2"
 
 #left taler markers:
 @export var left_big_marker : Marker3D
@@ -214,6 +215,7 @@ func compare():
 			left_scale.remove_from_group("Interactables")
 			right_scale.remove_from_group("Interactables")
 			PuzzleManager.temperance_solved = true
+			sfx_player_2.play()
 			PuzzleManager.finish_puzzle(PuzzleManager.puzzles.TEMPERANCE)
 			SignalBus.temperance_completed.emit()
 			

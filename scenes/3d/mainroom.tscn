@@ -10,20 +10,20 @@
 [ext_resource type="PackedScene" uid="uid://d35qijl2l5jdx" path="res://3D assets/Illusion.blend" id="6_5k5vb"]
 [ext_resource type="PackedScene" uid="uid://b8x23qj21yxwb" path="res://Particles/Fire.tscn" id="9_lr5v6"]
 [ext_resource type="Script" uid="uid://5dn58dedj0g6" path="res://Scripts/Puzzles3D/moon_3d.gd" id="10_2vkj2"]
-[ext_resource type="PackedScene" path="res://3D assets/luna.tscn" id="11_ntof2"]
+[ext_resource type="PackedScene" uid="uid://ixxg5srbckg2" path="res://3D assets/luna.tscn" id="11_ntof2"]
 [ext_resource type="Script" uid="uid://c1srst7838qj0" path="res://Scripts/Puzzles3D/star_3d.gd" id="12_vl5l8"]
 [ext_resource type="Script" uid="uid://0htjwty3extj" path="res://Scripts/Puzzles3D/temperance_3d.gd" id="13_gnvy8"]
-[ext_resource type="PackedScene" uid="uid://by17lu4nxjwgw" path="res://3D assets/Objects/zodiac_wheel.tscn" id="13_yuerg"]
+[ext_resource type="PackedScene" uid="uid://j403tq8k44rm" path="res://3D assets/Objects/zodiac_wheel.tscn" id="13_yuerg"]
 [ext_resource type="Script" uid="uid://jr6oloa7llj7" path="res://Scripts/Puzzles3D/hierophant_3d.gd" id="14_3epcx"]
 [ext_resource type="PackedScene" uid="uid://22hbh3dme6n0" path="res://3D assets/scenes/chest scene/cypher_chest.tscn" id="14_yuerg"]
-[ext_resource type="Script" path="res://scenes/3d/death_3d.gd" id="15_3epcx"]
+[ext_resource type="Script" uid="uid://c5jcpns81oxq3" path="res://scenes/3d/death_3d.gd" id="15_3epcx"]
 [ext_resource type="PackedScene" uid="uid://cp02prp35y6o4" path="res://3D assets/Objects/ouija_board_planchette.tscn" id="15_gnvy8"]
 [ext_resource type="PackedScene" uid="uid://bm2sct1i5mld5" path="res://scenes/3d/zoom_camera.tscn" id="16_3wu1q"]
 [ext_resource type="PackedScene" uid="uid://dac0nstm4o4l5" path="res://3D assets/scenes/sacks/Allsacks.tscn" id="16_yxx7e"]
-[ext_resource type="PackedScene" path="res://3D assets/Objects/bluepot.tscn" id="17_3wu1q"]
+[ext_resource type="PackedScene" uid="uid://bb05nxvtgq347" path="res://3D assets/Objects/bluepot.tscn" id="17_3wu1q"]
 [ext_resource type="PackedScene" uid="uid://drtrf8lmpshik" path="res://3D assets/scenes/scales/scales.tscn" id="17_83icm"]
-[ext_resource type="PackedScene" path="res://3D assets/Objects/greenpot.tscn" id="18_4aj2b"]
-[ext_resource type="PackedScene" path="res://3D assets/Objects/yellowpot.tscn" id="19_1o1v0"]
+[ext_resource type="PackedScene" uid="uid://dhtaksq2mt8o1" path="res://3D assets/Objects/greenpot.tscn" id="18_4aj2b"]
+[ext_resource type="PackedScene" uid="uid://bmw0bken33ymw" path="res://3D assets/Objects/yellowpot.tscn" id="19_1o1v0"]
 [ext_resource type="PackedScene" uid="uid://cj6exx8db3k3l" path="res://3D assets/scenes/sacks/smallsack.tscn" id="19_v6s45"]
 [ext_resource type="PackedScene" uid="uid://cs34nwn2hm41q" path="res://3D assets/scenes/sacks/bigsack.tscn" id="20_2or8c"]
 [ext_resource type="PackedScene" uid="uid://dcfqtxdgsvsf4" path="res://3D assets/scenes/sacks/midsack.tscn" id="21_kit8x"]
@@ -45,7 +45,7 @@ background_energy_multiplier = 0.0
 sky = SubResource("Sky_ujn77")
 ambient_light_color = Color(0.78183013, 0.78183013, 0.7818301, 1)
 tonemap_mode = 2
-tonemap_exposure = 0.21
+tonemap_exposure = 0.26
 tonemap_white = 4.75
 glow_enabled = true
 fog_enabled = true
@@ -128,8 +128,11 @@ size = Vector3(5.9093018, 5.895996, 4.697693)
 [sub_resource type="BoxShape3D" id="BoxShape3D_1o1v0"]
 size = Vector3(1.2212219, 3.2866821, 1.564209)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_lr5v6"]
+size = Vector3(7.4711, 3.0819092, 3.1874847)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_736gg"]
-size = Vector3(6.427246, 2.241455, 5.492218)
+size = Vector3(6.427246, 2.241455, 5.6532135)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_sbgw4"]
 
@@ -557,7 +560,6 @@ debug_color = Color(18.68087, 0, 6.28537, 1)
 
 [node name="Fire" parent="Illusion" unique_id=134169400 instance=ExtResource("9_lr5v6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.718072, 0.99135303, -1.652811)
-visible = false
 
 [node name="Puzzles3D" type="Node" parent="." unique_id=743297809]
 
@@ -767,10 +769,10 @@ debug_color = Color(0, 0.5372549, 0.627451, 1)
 [node name="BlueInteractableArea3D" parent="Puzzles3D/Hierophant3D/BluePot" unique_id=1368088010 instance=ExtResource("3_rfp5g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3266296, 1.6882858, -7.5607142)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles3D/Hierophant3D/BluePot/BlueInteractableArea3D" unique_id=242505155]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.010498, 0.4979248, 2.246109)
-shape = SubResource("BoxShape3D_736gg")
-debug_color = Color(0, 0.44313726, 0.5176471, 1)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Puzzles3D/Hierophant3D/BluePot/BlueInteractableArea3D" unique_id=458023466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91285706, 0.3874321, 0.25188446)
+shape = SubResource("BoxShape3D_lr5v6")
+debug_color = Color(0, 11.708403, 13.469126, 1)
 
 [node name="GreenPot" type="Node3D" parent="Puzzles3D/Hierophant3D" unique_id=978890430]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1149096, -0.06547761, 2.53463)
@@ -788,19 +790,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09748936, 1.1433411, 0.2821
 shape = SubResource("BoxShape3D_1o1v0")
 debug_color = Color(0, 0.5372549, 0.627451, 1)
 
-[node name="GreenInteractableArea3D2" parent="Puzzles3D/Hierophant3D/GreenPot" unique_id=1685431828 instance=ExtResource("3_rfp5g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3266296, 1.6882858, -7.5607142)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles3D/Hierophant3D/GreenPot/GreenInteractableArea3D2" unique_id=544122001]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.010498, 0.4979248, 2.246109)
-shape = SubResource("BoxShape3D_736gg")
-debug_color = Color(0, 0.44313726, 0.5176471, 1)
-
 [node name="YellowPot" type="Node3D" parent="Puzzles3D/Hierophant3D" unique_id=1640451311]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3198571, -0.071055174, 4.189965)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21432, -0.071055174, 4.818125)
 
 [node name="YellowStaticBody3D" type="StaticBody3D" parent="Puzzles3D/Hierophant3D/YellowPot" unique_id=721327788 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61283, 1.3226688, -7.9926257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2072692, 0.95686185, -7.479437)
 script = ExtResource("4_fep6r")
 area = NodePath("../YellowInteractableArea3D3")
 object = NodePath(".")
@@ -816,9 +810,9 @@ debug_color = Color(0, 0.5372549, 0.627451, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3266296, 1.6882858, -7.5607142)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles3D/Hierophant3D/YellowPot/YellowInteractableArea3D3" unique_id=1492353245]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.010498, 0.4979248, -0.12475419)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.010498, 0.4979248, -0.04425645)
 shape = SubResource("BoxShape3D_736gg")
-debug_color = Color(0, 0.44313726, 0.5176471, 1)
+debug_color = Color(0, 8.891243, 10.229394, 1)
 
 [node name="CookingPot" type="Node3D" parent="Puzzles3D/Hierophant3D" unique_id=1844371774]
 
@@ -920,12 +914,12 @@ omni_attenuation = 2.756
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="." unique_id=766418882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.160525, 6.0435123, -7.478418)
-light_energy = 3.146
+light_energy = 4.916
 omni_range = 5.86
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="." unique_id=1409851885]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2665634, 4.4870644, 5.2507176)
-light_energy = 3.861
+light_energy = 5.369
 omni_range = 5.86
 
 [node name="OmniLight3D8" type="OmniLight3D" parent="." unique_id=1618850347]
@@ -940,6 +934,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.383057, 3.3845518, 5.672757
 light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
 omni_range = 0.8843135
 
+[node name="OmniLight3D15" type="OmniLight3D" parent="." unique_id=2014703879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2773674, 5.219602, 5.7078624)
+light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
+light_energy = 9.616
+omni_range = 1.112485
+
 [node name="OmniLight3D11" type="OmniLight3D" parent="." unique_id=766243665]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1005034, 4.120695, -9.075926)
 light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
@@ -951,6 +951,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8002398, 3.2994466, -8.8188
 light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
 light_energy = 10.438
 omni_range = 1.8697889
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="." unique_id=500320639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8002398, 4.819501, -8.961021)
+light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
+light_energy = 10.438
+omni_range = 1.5578815
 
 [node name="OmniLight3D12" type="OmniLight3D" parent="." unique_id=1523201250]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.813715, 5.6147823, -8.902296)
