@@ -18,9 +18,6 @@ var random_messages: Array[String] = [
 	"*purring intensifies*"
 ]
 
-func _ready() -> void:
-	mouse_entered.connect(_on_mouse_entered)
-	mouse_exited.connect(_on_mouse_exited)
 
 func _on_pressed() -> void:
 	if destination_room_path != "":
@@ -36,13 +33,3 @@ func _on_pressed() -> void:
 	else:
 		purr_sound.play()
 		TextManager.show_text(random_messages[randi() % random_messages.size()])
-
-func _on_mouse_entered() -> void:
-	if disabled == true:
-		return
-	scale = Vector2(zoom_multiplier, zoom_multiplier)
-	pivot_offset = size / 2
-
-func _on_mouse_exited() -> void:
-	scale = Vector2(1, 1)
-	pivot_offset = size / 2

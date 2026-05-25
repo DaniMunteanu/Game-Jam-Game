@@ -9,6 +9,7 @@ extends Node
 
 func _ready() -> void:
 	connect_key_signals()
+	PauseMenu.enable_puzzle_escape("res://Rooms/Room3.tscn")
 	TextManager.show_once("Death" , [
 		"I wonder what the code is."
 	])
@@ -64,3 +65,14 @@ func update_displayed_letters():
 
 func _on_hint_pressed() -> void:
 	TextManager.show_text("Maybe I should check the Ouija board.")
+	
+func _exit_tree() -> void:
+	PauseMenu.disable_puzzle_escape()
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_BACKSPACE:
+			on_keyboard_input("<-")
+		elif event.unicode != 0:
+			var char = char(event.unicode).to_upper()
+			on_keyboard_input(char)

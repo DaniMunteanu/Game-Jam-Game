@@ -9,9 +9,11 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	if destination_room_path != "":
+		await get_tree().process_frame
 		SceneChanger.change_scene_to_path(destination_room_path)
 
 func _on_mouse_entered() -> void:
+	print("mouse entered button!")
 	if disabled == true:
 		return
 	scale = Vector2(zoom_multiplier,zoom_multiplier)

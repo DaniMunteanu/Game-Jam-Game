@@ -44,6 +44,7 @@ var left_weight : int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SignalBus.escape_chest.connect(_on_escape_chest)
 	if !PuzzleManager.chest_opened:
 		allsack.remove_from_group("Interactables")
 	
@@ -102,6 +103,17 @@ func _on_zoom_camera_cypher_cracked() -> void:
 	
 	await get_tree().create_timer(1).timeout
 	actual_chest.open_chest()
+	
+func _exit_tree() -> void:
+	PauseMenu.disable_puzzle_escape()
+	
+func _on_escape_chest() -> void:
+	if zoom_camera and is_instance_valid(zoom_camera):
+		player.camera.make_current()
+		zoom_camera.canvas.visible = false
+		player.canvas_layer.visible = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		PauseMenu.is_in_chest = false
 
 #region SACKS AND SCALES
 func _on_all_pickup():
@@ -114,7 +126,7 @@ func _on_all_pickup():
 	InventoryManager.add_item(InventoryManager.SMALL_SACK)
 	
 	allsack.queue_free()
-
+	
 func _on_lefts_interact():
 	print("comparing left")
 	
