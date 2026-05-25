@@ -18,10 +18,12 @@ func _on_skip_pressed() -> void:
 	if is_typing:
 		text_label.visible_characters = -1
 		is_typing = false
+		var saved_id = current_id
 		current_id += 1
 		await get_tree().create_timer(2.5).timeout
-		hide()
-		TextManager.dialogue_finished.emit()
+		if saved_id + 1 == current_id: 
+			hide()
+			TextManager.dialogue_finished.emit()
 
 func _on_start_dialogue(text: String) -> void:
 	current_id += 1

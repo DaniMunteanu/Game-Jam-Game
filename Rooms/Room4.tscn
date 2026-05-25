@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="11_pqupb"]
 [ext_resource type="Texture2D" uid="uid://di47lj0iiq1qj" path="res://Sprites/Background/Scale.png" id="12_a5u6s"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="12_ijtto"]
+[ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/A.png" id="16_3xykw"]
+[ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/D.png" id="17_lmr8f"]
 [ext_resource type="Texture2D" uid="uid://c3gfqcld8e0m5" path="res://Sprites/Background/Meds.png" id="20_llwn1"]
 [ext_resource type="Texture2D" uid="uid://bttgm556kt8gj" path="res://Sprites/Background/Plant.png" id="22_c0iiq"]
 [ext_resource type="Texture2D" uid="uid://kmknl30m2oye" path="res://Sprites/Background/Protein.png" id="23_mw6fo"]
@@ -129,6 +131,56 @@ texture = ExtResource("3_lstom")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="A" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=1020717284]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 724.0
+offset_right = 124.0
+offset_bottom = 781.0
+script = ExtResource("10_031wo")
+destination_room_path = "res://Rooms/Room3.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/A" unique_id=889169173]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.57900006
+anchor_right = 1.1600001
+anchor_bottom = 0.82500005
+offset_left = -13.5
+offset_top = 0.0030021667
+offset_bottom = -0.025001526
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("16_3xykw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="D" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=915977491]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1664.875
+offset_top = 724.0
+offset_right = 1764.8751
+offset_bottom = 781.0
+script = ExtResource("10_031wo")
+destination_room_path = "res://Rooms/Room1.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/D" unique_id=1761446286]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.7990001
+offset_left = -13.5
+offset_top = -33.0
+offset_right = 16.0
+offset_bottom = -55.543007
+mouse_filter = 2
+texture = ExtResource("17_lmr8f")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("11_pqupb")]
 
 [node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("12_ijtto")]
@@ -136,3 +188,5 @@ stretch_mode = 5
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/Star" to="CanvasLayer/SceneSwitchers/Star" method="_on_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/SceneSwitchers/Books" to="CanvasLayer/SceneSwitchers" method="_on_books_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/SceneSwitchers/Books" to="CanvasLayer/SceneSwitchers" method="_on_books_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/SceneSwitchers/A" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="CanvasLayer/SceneSwitchers/D" to="." method="_on_d_pressed"]

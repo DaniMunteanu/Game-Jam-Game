@@ -11,4 +11,5 @@ func _process(delta: float) -> void:
 	pass
 	
 func change_scene_to_path(path: String):
+	print("Changing scene to: ", path)
 	get_tree().change_scene_to_file(path)

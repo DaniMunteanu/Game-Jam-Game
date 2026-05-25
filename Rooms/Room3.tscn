@@ -14,8 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://chp128bx0kugn" path="res://Sprites/Background/pisi.png" id="9_jk8e2"]
 [ext_resource type="Texture2D" uid="uid://cnx5eop323exp" path="res://Sprites/SceneSwitchers/Laptop.png" id="9_x05e3"]
 [ext_resource type="Texture2D" uid="uid://catwiuebv55f2" path="res://Sprites/Background/Wall.png" id="10_a1vuc"]
-[ext_resource type="PackedScene" uid="uid://dikfl5gk47ugd" path="res://UI/CinematicPlayer.tscn" id="11_3cfrt"]
+[ext_resource type="PackedScene" uid="uid://xjsowxpop2h6" path="res://UI/CinematicPlayer.tscn" id="11_3cfrt"]
 [ext_resource type="Texture2D" uid="uid://ck5no70bq1i2k" path="res://Sprites/Background/Floor.png" id="11_diejy"]
+[ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/A.png" id="14_eeqrn"]
+[ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/D.png" id="15_48l5a"]
 [ext_resource type="Script" uid="uid://demfdhxe224qk" path="res://Rooms/pisi.gd" id="16_8thjb"]
 [ext_resource type="AudioStream" uid="uid://v6expysct4fh" path="res://Audio/SFX/purr.mp3" id="19_3cfrt"]
 [ext_resource type="AudioStream" uid="uid://cnyl21bqw7ifp" path="res://Audio/SFX/pisi-miau.mp3" id="19_8thjb"]
@@ -121,6 +123,56 @@ offset_bottom = 856.0
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("9_x05e3")
 
+[node name="A" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=371454315]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 724.0
+offset_right = 81.0
+offset_bottom = 781.0
+script = ExtResource("5_lsdnl")
+destination_room_path = "res://Rooms/Room2.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/A" unique_id=1202792667]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.57900006
+anchor_right = 1.1600001
+anchor_bottom = 0.82500005
+offset_left = -13.5
+offset_top = 0.0030021667
+offset_bottom = -0.025001526
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("14_eeqrn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="D" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=680602743]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1664.875
+offset_top = 724.0
+offset_right = 1764.8751
+offset_bottom = 781.0
+script = ExtResource("5_lsdnl")
+destination_room_path = "res://Rooms/Room4.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/D" unique_id=279417645]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.7990001
+offset_left = -13.5
+offset_top = -33.0
+offset_right = 16.0
+offset_bottom = -55.543007
+mouse_filter = 2
+texture = ExtResource("15_48l5a")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("3_vy55m")]
 
 [node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("5_gxi2d")]
@@ -170,4 +222,6 @@ volume_db = 9.295
 
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/Grimoire" to="CanvasLayer/SceneSwitchers" method="_on_grimoire_pressed"]
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/Death" to="CanvasLayer/SceneSwitchers/Death" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/SceneSwitchers/A" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="CanvasLayer/SceneSwitchers/D" to="." method="_on_d_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pisi" to="CanvasLayer/Pisi" method="_on_pressed"]
