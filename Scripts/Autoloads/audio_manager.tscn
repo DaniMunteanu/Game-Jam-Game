@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bnstsym7hep34"]
 
-[ext_resource type="Script" uid="uid://bb8qgl5f13twh" path="res://Scripts/Autoloads/Audio_manager.gd" id="1_jymlb"]
+[ext_resource type="Script" uid="uid://cmrhrwfcs8ntw" path="res://Scripts/Autoloads/Audio_manager.gd" id="1_jymlb"]
 [ext_resource type="AudioStream" uid="uid://by7serhcsuqfc" path="res://Audio/Music/Mind's Eye Full.wav" id="2_jymlb"]
 [ext_resource type="AudioStream" uid="uid://bxlxanaeysd4v" path="res://Audio/Music/Music3D.mp3" id="3_vyl8t"]
 
@@ -8,12 +8,14 @@
 script = ExtResource("1_jymlb")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=520177544]
+process_mode = 3
 stream = ExtResource("2_jymlb")
 volume_db = -5.74
 autoplay = true
 bus = &"Music"
 
 [node name="MusicPlayer3d" type="AudioStreamPlayer" parent="." unique_id=1287518570]
+process_mode = 3
 stream = ExtResource("3_vyl8t")
 volume_db = -8.635
 bus = &"Music"
