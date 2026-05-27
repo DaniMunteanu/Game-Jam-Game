@@ -14,6 +14,24 @@ func _ready() -> void:
 	#pt tranzitia de la 3d, ca mouse-ul sa se vada din nou in 2d
 	
 	#can_switch = true
+	if PuzzleManager.completed_puzzles >= 6:
+		if name == "Room2":  # sau cum se numeste nodul root din Room2
+			var wall = get_node_or_null("BackgroundSprites/Wall")
+			if wall:
+				wall.texture = load("res://Sprites/Background/R-Side/perete 1 bec stins.png")
+		#elif name == "Room1":
+			#var wall = get_node_or_null("BackgroundSprites/Wall")
+			#if wall:
+				#wall.texture = load("res://calea/spre/textura_room1.png")
+		#elif name == "Room3":
+			#var wall = get_node_or_null("BackgroundSprites/Wall")
+			#if wall:
+				#wall.texture = load("res://calea/spre/textura_room1.png")
+		#elif name == "Room4":
+			#var wall = get_node_or_null("BackgroundSprites/Wall")
+			#if wall:
+				#wall.texture = load("res://calea/spre/textura_room1.png")
+			
 	SignalBus.world_completed.connect(disable_input)
 	AudioManager.switch_to_2d()
 	if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.WORLD] == true:

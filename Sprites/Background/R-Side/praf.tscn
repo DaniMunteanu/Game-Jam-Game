@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b06xf8rmjtknh"]
+
+[sub_resource type="Curve" id="Curve_xtl6f"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.3175676, 1), 0.0, 0.0, 0, 0, Vector2(0.7027027, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_kiss7"]
+curve = SubResource("Curve_xtl6f")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_71pyv"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 47.68
+inherit_velocity_ratio = 20.0
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_kiss7")
+color = Color(1.2765458, 1.2765458, 1.2765458, 1)
+
+[node name="Praf" type="Node2D" unique_id=1443607552]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1133089022]
+position = Vector2(-1, 1)
+amount = 74
+lifetime = 3.6199999999999997
+speed_scale = 1.27
+randomness = 0.55
+fixed_fps = 61
+process_material = SubResource("ParticleProcessMaterial_71pyv")
