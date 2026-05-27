@@ -21,7 +21,7 @@ func end_puzzle():
 	fill_moon_stand()
 	
 func fill_moon_stand():
-	moon_stand_sprite.texture = load("res://Sprites/Items/suport_2.png")
+	moon_stand_sprite.texture = load("res://Sprites/Background/R-Side/suport luna2.png")
 	
 	#disable item_drop_area so it can no longer receive items
 	item_drop_area.visible = false

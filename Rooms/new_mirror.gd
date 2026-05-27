@@ -1,7 +1,7 @@
 extends Button
 
 @export var destination_room_path : String = ""
-@export var zoom_multiplier: float = 1.2
+@export var zoom_multiplier: float = 1.1
 
 
 func _ready() -> void:
