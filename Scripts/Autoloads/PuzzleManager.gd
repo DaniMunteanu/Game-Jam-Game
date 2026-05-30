@@ -45,6 +45,7 @@ func check_cards():
 	completed_puzzles += 1
 	if completed_puzzles == 6:
 		all_puzzles_completed.emit()
+		print("LIGHTS OFF! SECRET DOOR OPENED!")
 	print("puzzle count:", completed_puzzles)
 
 func finish_puzzle(puzzle_index: int):

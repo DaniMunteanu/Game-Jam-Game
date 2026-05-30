@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bfe04lb7b7ftw"]
+
+[ext_resource type="Script" uid="uid://xg7gpy3sksdc" path="res://Rooms/room_manager.gd" id="1_ko0fx"]
+[ext_resource type="PackedScene" uid="uid://c62mcfe50lkhn" path="res://Rooms/Room1.tscn" id="1_njqf7"]
+[ext_resource type="PackedScene" uid="uid://c7l1ypa7s2h8m" path="res://Rooms/Room2.tscn" id="2_ko0fx"]
+[ext_resource type="PackedScene" uid="uid://dqjylmtnaee4s" path="res://Rooms/Room3.tscn" id="3_pwaw4"]
+[ext_resource type="PackedScene" uid="uid://cerucin5td6cb" path="res://Rooms/Room4.tscn" id="4_p7pex"]
+
+[node name="RoomManager" type="Node" unique_id=761482438 node_paths=PackedStringArray("room1", "room2", "room3", "room4")]
+script = ExtResource("1_ko0fx")
+room1 = NodePath("Room1")
+room2 = NodePath("Room2")
+room3 = NodePath("Room3")
+room4 = NodePath("Room4")
+
+[node name="Room1" parent="." unique_id=1138460362 instance=ExtResource("1_njqf7")]
+
+[node name="Room2" parent="." unique_id=104392886 instance=ExtResource("2_ko0fx")]
+visible = false
+
+[node name="Room3" parent="." unique_id=664680839 instance=ExtResource("3_pwaw4")]
+visible = false
+
+[node name="Room4" parent="." unique_id=1276671648 instance=ExtResource("4_p7pex")]
+visible = false
+position = Vector2(943, 452)
+
+[connection signal="switch_room" from="Room1" to="." method="_on_room_1_switch_room"]

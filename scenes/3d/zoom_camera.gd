@@ -79,4 +79,4 @@ func _on_button_4_pressed() -> void:
 
 
 func _on_hint_pressed() -> void:
-	TextManager.show_text("I should look more closely at the runes.")
+	TextManager.show_text("I should look more closely at the runes.")	
