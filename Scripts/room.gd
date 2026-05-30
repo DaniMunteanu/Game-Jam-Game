@@ -6,7 +6,8 @@ extends Node
 @export var room_3d_path : String
 
 @export var left_room_path : String
-@export var right_room_path : String 
+@export var right_room_path : String
+signal switch_room(no : int) 
 
 var can_switch: bool = true
 
@@ -16,6 +17,7 @@ func _ready() -> void:
 	#can_switch = true
 	if PuzzleManager.completed_puzzles >= 6:
 		if name == "Room2":  # sau cum se numeste nodul root din Room2
+			#alternative variant: @export var wall : Sprite2d, si de acl accesam doar fieldul de texture
 			var wall = get_node_or_null("BackgroundSprites/Wall")
 			if wall:
 				wall.texture = load("res://Sprites/Background/R-Side/perete 1 bec stins.png")
@@ -65,8 +67,8 @@ func _input(event: InputEvent) -> void:
 			SceneChanger.change_scene_to_path(left_room_path)
 	if Input.is_action_just_pressed("3D_right") and can_switch:
 		if right_room_path:
-			SceneChanger.change_scene_to_path(right_room_path)
-		
+			#SceneChanger.change_scene_to_path(right_room_path)
+			switch_room.emit(2)
 func disable_input():
 	can_switch = false
 
