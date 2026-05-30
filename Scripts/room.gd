@@ -67,8 +67,7 @@ func _input(event: InputEvent) -> void:
 			SceneChanger.change_scene_to_path(left_room_path)
 	if Input.is_action_just_pressed("3D_right") and can_switch:
 		if right_room_path:
-			#SceneChanger.change_scene_to_path(right_room_path)
-			switch_room.emit(2)
+			SceneChanger.change_scene_to_path(right_room_path)
 func disable_input():
 	can_switch = false
 

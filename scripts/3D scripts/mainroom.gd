@@ -11,6 +11,7 @@ extends Node3D
 #@export var moon_symbol : InteractableObject
 @export var placeholder_item : ItemData
 @export var zoom_camera : Camera3D
+@export var secret_door : Node3D
 @onready var dissolve: ColorRect = $dissolve
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sfx_player_4: AudioStreamPlayer3D = $SfxPlayer4
@@ -19,6 +20,10 @@ extends Node3D
 
 
 func _ready() -> void:
+	if PuzzleManager.completed_puzzles == 6:
+		_on_part1_finished() # for finishing in 2d
+	PuzzleManager.all_puzzles_completed.connect(_on_part1_finished)
+	# for finishing in 3d ^
 	AudioManager.switch_to_3d()
 	dissolve.visible = false
 	print(mirror.area.can_interact)
@@ -51,7 +56,7 @@ func _on_player_clicked(target) -> void:
 		print("target is in area!")
 		target.interact.call()
 
-
-#func _on_moon_pickup():
-	#InventoryManager.add_item(InventoryManager.ITEM3)
-	#moon_symbol.queue_free()
+func _on_part1_finished():
+	print("SECRET DOOR OPENED!")
+	secret_door.queue_free()
+	mirror.queue_free()
