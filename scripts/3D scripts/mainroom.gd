@@ -20,6 +20,7 @@ extends Node3D
 
 
 func _ready() -> void:
+	PuzzleManager.completed_puzzles = 6
 	if PuzzleManager.completed_puzzles == 6:
 		_on_part1_finished() # for finishing in 2d
 	PuzzleManager.all_puzzles_completed.connect(_on_part1_finished)

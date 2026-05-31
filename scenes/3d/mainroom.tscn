@@ -555,7 +555,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.799304, 1.5806179, -0.00904
 shape = SubResource("BoxShape3D_rfp5g")
 debug_color = Color(7.4990616, 6.40278, 0, 1)
 
-[node name="Illusion" parent="." unique_id=7282486 instance=ExtResource("6_5k5vb")]
+[node name="Illusion" parent="." unique_id=2096598983 instance=ExtResource("6_5k5vb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0513783, 0.67439675, -3.7933526)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Illusion" unique_id=707953608]

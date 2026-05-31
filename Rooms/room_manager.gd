@@ -5,6 +5,7 @@ extends Node
 @export var room3 : Room
 @export var room4 : Room
 
+var curr_room : int = 1
 
 func _ready() -> void:
 	print("ENTERED MANAGER")
@@ -15,7 +16,6 @@ func _ready() -> void:
 	room3.process_mode = Node.PROCESS_MODE_DISABLED
 	room4.visible = false
 	room4.process_mode = Node.PROCESS_MODE_DISABLED
-	
 
 func switch_to_room2():
 	room2.visible = true
