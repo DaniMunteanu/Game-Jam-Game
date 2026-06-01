@@ -16,10 +16,15 @@ extends Node3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sfx_player_4: AudioStreamPlayer3D = $SfxPlayer4
 @onready var sfx_player_5: AudioStreamPlayer3D = $SfxPlayer5
-
-
+@export var garden_path : String
+#NEW STUFF
+@export var room_level : Node
+@export var garden_level : Node
+@export var tower : Node3D
 
 func _ready() -> void:
+	#garden_level.visible = false
+	#SHUT OFF THE MUSIC FOR DRAMATIC SPOOKY EFFECT
 	PuzzleManager.completed_puzzles = 6
 	if PuzzleManager.completed_puzzles == 6:
 		_on_part1_finished() # for finishing in 2d
@@ -61,3 +66,13 @@ func _on_part1_finished():
 	print("SECRET DOOR OPENED!")
 	secret_door.queue_free()
 	mirror.queue_free()
+
+
+func _on_tower_delete_body_entered(body: CharacterBody3D) -> void:
+	print("out with the old, in with the new.")
+	garden_level.visible = true
+	if room_level:
+		room_level.queue_free()
+	if tower:
+		tower.queue_free()
+	#PLAY DOOR DROPPING DOWN ANIMATION
