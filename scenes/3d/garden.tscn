@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://be1ks538q54p8"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
+
+[sub_resource type="Sky" id="Sky_ujn77"]
+sky_material = SubResource("ProceduralSkyMaterial_yxx7e")
+
+[sub_resource type="Environment" id="Environment_rfp5g"]
+background_mode = 2
+sky = SubResource("Sky_ujn77")
+ambient_light_color = Color(0.78183013, 0.78183013, 0.7818301, 1)
+tonemap_mode = 2
+tonemap_exposure = 0.26
+tonemap_white = 4.75
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.567832, 0.5213776, 0.67262733, 1)
+fog_sun_scatter = 0.27
+fog_density = 0.02
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(0.36692, 0.6230053, 0.8730759, 1)
+volumetric_fog_anisotropy = 0.11
+volumetric_fog_length = 26.2
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ujn77"]
+
+[node name="Garden" type="Node3D" unique_id=81722206]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1343459481]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="DirectionalLight3D" unique_id=1195144581]
+transform = Transform3D(1, 0, -5.9604645e-08, 0, 1, 5.9604645e-08, 2.9802322e-08, 0, 1, 1.2631903, 1.8718197, 3.2352653)
+light_energy = 10.0
+omni_range = 10.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1954821123]
+environment = SubResource("Environment_rfp5g")
+camera_attributes = SubResource("CameraAttributesPractical_ujn77")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment" unique_id=1914248222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.505795, 5.162975, 2.7179422)
+light_energy = 6.593
+light_volumetric_fog_energy = 10.383
+light_size = 0.485
+omni_range = 1.6018165
+
+[node name="garden_spawn" type="Marker3D" parent="." unique_id=968669344]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5907462, -0.53646517, 1.0825098)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1304724302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64643097, 0, 0)
+use_collision = true
+size = Vector3(73.95987, 1, 47.953857)
