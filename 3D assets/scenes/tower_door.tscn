@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://j27wrkptprcf"]
+
+[ext_resource type="PackedScene" uid="uid://boa04hujtlg5b" path="res://3D assets/Objects/doors/tower_door.glb" id="1_ar2ap"]
+[ext_resource type="Script" uid="uid://d1qeov7gmhu5o" path="res://Scripts/3D scripts/tower_door.gd" id="2_ipx4a"]
+
+[sub_resource type="Animation" id="Animation_ipx4a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tower_door_001:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kbbl0"]
+resource_name = "open_door"
+length = 3.0666666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tower_door_001:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -1.8360864, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_up53m"]
+_data = {
+&"RESET": SubResource("Animation_ipx4a"),
+&"open_door": SubResource("Animation_kbbl0")
+}
+
+[node name="tower_door2" unique_id=394253567 instance=ExtResource("1_ar2ap")]
+script = ExtResource("2_ipx4a")
+
+[node name="tower_door" parent="." index="0" unique_id=1289924650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5723897, 0.0655067, -0.064127445)
+
+[node name="tower_door_001" parent="." index="1" unique_id=1767048330]
+transform = Transform3D(1.031, 0, 0, 0, 1.031, 0, 0, 0, 1.031, -0.5723897, 0.01844287, -0.064127445)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2" unique_id=644599851]
+libraries/ = SubResource("AnimationLibrary_up53m")

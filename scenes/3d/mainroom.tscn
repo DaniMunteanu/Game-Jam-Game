@@ -41,6 +41,7 @@
 [ext_resource type="AudioStream" uid="uid://jjggtprm8e3" path="res://Audio/SFX/bubblez.mp3" id="38_7m280"]
 [ext_resource type="PackedScene" uid="uid://bp6sa81g84l08" path="res://3D assets/tower.blend" id="40_5g3xn"]
 [ext_resource type="PackedScene" uid="uid://be1ks538q54p8" path="res://scenes/3d/garden.tscn" id="40_nq443"]
+[ext_resource type="PackedScene" uid="uid://j27wrkptprcf" path="res://3D assets/scenes/tower_door.tscn" id="42_qe2jl"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_rfp5g"]
 
@@ -496,12 +497,16 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_pchfi"]
 size = Vector3(4.0340576, 7.571808, 1)
 
-[node name="Mainroom" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("spawnpos", "player", "mirror", "zodiac_wheel", "zodiac_tile", "zoom_camera", "secret_door", "room_level", "garden_level", "tower")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_0gmuw"]
+size = Vector3(2.4833984, 5.509506, 0.35009766)
+
+[node name="Mainroom" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("spawnpos", "player", "mirror", "tower_door", "zodiac_wheel", "zodiac_tile", "zoom_camera", "secret_door", "room_level", "garden_level", "tower", "tower_delete")]
 script = ExtResource("1_j7t7n")
 spawnpos = NodePath("MirrorSpawnPos")
 player = NodePath("Player")
 scene_2D_path = "res://Rooms/Room2.tscn"
 mirror = NodePath("FirstRoom/actual_mirror")
+tower_door = NodePath("tower_door_model")
 zodiac_wheel = NodePath("FirstRoom/Puzzles3D/Star3D/StaticBody3D")
 zodiac_tile = NodePath("FirstRoom/Puzzles3D/Star3D/StaticBody3D/Zodiac_wheel")
 zoom_camera = NodePath("FirstRoom/Puzzles3D/Temperance3D/zoom_camera")
@@ -510,6 +515,7 @@ garden_path = "res://scenes/3d/garden.tscn"
 room_level = NodePath("FirstRoom")
 garden_level = NodePath("GardenLevel")
 tower = NodePath("tower")
+tower_delete = NodePath("tower_delete")
 
 [node name="Player" parent="." unique_id=2036735905 instance=ExtResource("1_w1mmj")]
 transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -5.271773, 3.1448445, 2.6078143)
@@ -520,6 +526,13 @@ stream = ExtResource("4_5ikaq")
 
 [node name="OmniLight3D15" type="OmniLight3D" parent="." unique_id=1222721448]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.324274, -18.615837, 18.180344)
+light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
+light_energy = 9.113
+light_size = 0.682
+omni_range = 3.802
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="." unique_id=1461297497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.779073, -20.589664, 20.044329)
 light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
 light_energy = 9.113
 light_size = 0.682
@@ -1087,7 +1100,7 @@ stream = ExtResource("38_7m280")
 volume_db = 44.592
 
 [node name="tower_delete" type="Area3D" parent="." unique_id=875819227]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.869523, -23.500576, 22.633482)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.869523, -23.500576, 23.37301)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tower_delete" unique_id=996002085]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26116943, 2.276268, 0)
@@ -1098,10 +1111,23 @@ debug_color = Color(0.79607844, 0.06666667, 1, 1)
 
 [node name="Garden" parent="GardenLevel" unique_id=691132770 instance=ExtResource("40_nq443")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.008336, -24.63243, 25.162058)
-script = null
 
-[node name="tower" parent="." unique_id=1037334000 instance=ExtResource("40_5g3xn")]
+[node name="tower" parent="." unique_id=195821572 instance=ExtResource("40_5g3xn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.490861, -22.040165, 14.807217)
+
+[node name="tower_door_model" parent="." unique_id=394253567 node_paths=PackedStringArray("interactable") instance=ExtResource("42_qe2jl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.611942, -24.03334, 21.580822)
+interactable = NodePath("tower_door2")
+
+[node name="tower_door2" type="StaticBody3D" parent="tower_door_model" unique_id=165538496 node_paths=PackedStringArray("object") groups=["Interactables"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01194191, 0.096925735, -1.1444092e-05)
+script = ExtResource("4_fep6r")
+object = NodePath(".")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tower_door_model/tower_door2" unique_id=85417351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55029297, 2.807415, 0.064697266)
+shape = SubResource("BoxShape3D_0gmuw")
+debug_color = Color(0, 0, 0, 1)
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
 [connection signal="body_entered" from="FirstRoom/actual_mirror/InteractableArea3D" to="." method="_on_d_mirror_body_entered"]
