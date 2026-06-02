@@ -6,6 +6,7 @@ extends Node3D
 @export var music_3d : AudioStream
 #var can_interact : bool = false
 @export var mirror : InteractableObject
+@export var tower_door : Node3D
 @export var zodiac_wheel : InteractableObject
 @export var zodiac_tile : Node3D 
 #@export var moon_symbol : InteractableObject
@@ -21,6 +22,7 @@ extends Node3D
 @export var room_level : Node
 @export var garden_level : Node
 @export var tower : Node3D
+@export var tower_delete : Area3D
 
 func _ready() -> void:
 	#garden_level.visible = false
@@ -39,6 +41,8 @@ func _ready() -> void:
 		"What is this place? Looks like some wizard’s room. I see the moon from the mirror,but can I get back to my world?"
 	])
 	zoom_camera.canvas.visible = false
+	#GARDEN STUFF
+	
 	
 
 
@@ -75,4 +79,6 @@ func _on_tower_delete_body_entered(body: CharacterBody3D) -> void:
 		room_level.queue_free()
 	if tower:
 		tower.queue_free()
+	tower_door.close_door()
+	tower_delete.queue_free()
 	#PLAY DOOR DROPPING DOWN ANIMATION
