@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://be1ks538q54p8"]
 
+[ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
 
 [sub_resource type="Sky" id="Sky_ujn77"]
@@ -25,6 +27,9 @@ volumetric_fog_length = 26.2
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ujn77"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_i446x"]
+size = Vector3(164.29094, 1, 88.05139)
+
 [node name="Garden" type="Node3D" unique_id=81722206]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1343459481]
@@ -32,16 +37,24 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="DirectionalLight3D" unique_id=1195144581]
-transform = Transform3D(1, 0, -5.9604645e-08, 0, 1, 5.9604645e-08, 2.9802322e-08, 0, 1, 1.2631903, 1.8718197, 3.2352653)
+transform = Transform3D(1, -2.9802322e-08, -4.4703484e-08, 2.9802322e-08, 1, 2.9802322e-08, 4.4703484e-08, 2.9802322e-08, 1, 1.2631903, 3.857481, 6.6745315)
 light_energy = 10.0
 omni_range = 10.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="DirectionalLight3D" unique_id=1115896647]
+transform = Transform3D(-0.8660254, -4.071073e-08, -0.50000006, -0.43301278, 0.5, 0.75, 0.24999997, 0.86602545, -0.43301266, -64.44831, -25.149271, 24.581879)
+visible = false
+light_energy = 6.593
+light_volumetric_fog_energy = 10.383
+light_size = 0.485
+omni_range = 64.028
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1954821123]
 environment = SubResource("Environment_rfp5g")
 camera_attributes = SubResource("CameraAttributesPractical_ujn77")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment" unique_id=1914248222]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.505795, 5.162975, 2.7179422)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.83336663, 1.4374603, -0.7650187)
 light_energy = 6.593
 light_volumetric_fog_energy = 10.383
 light_size = 0.485
@@ -50,7 +63,12 @@ omni_range = 1.6018165
 [node name="garden_spawn" type="Marker3D" parent="." unique_id=968669344]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5907462, -0.53646517, 1.0825098)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1304724302]
+[node name="garden" parent="." unique_id=2100844445 instance=ExtResource("1_i446x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64643097, 0, 0)
-use_collision = true
-size = Vector3(73.95987, 1, 47.953857)
+
+[node name="ground-col" type="StaticBody3D" parent="." unique_id=1860861424]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground-col" unique_id=1818973963]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4835129, -0.4605956, 0.6734009)
+shape = SubResource("BoxShape3D_i446x")
+debug_color = Color(0.3141283, 0.23909599, 0, 1)
