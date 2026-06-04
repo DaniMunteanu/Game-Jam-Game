@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c7l1ypa7s2h8m"]
 
 [ext_resource type="Script" uid="uid://c1poe3shrtvbk" path="res://Scripts/room.gd" id="1_iehj0"]
-[ext_resource type="Texture2D" uid="uid://5hqhl1rxlqit" path="res://Sprites/Background/R-Side/perete 1 fara suport.png" id="2_iwjsq"]
+[ext_resource type="Texture2D" uid="uid://cb5dlk2udxsj2" path="res://Sprites/Background/R-Side/Background-2560X_1440.png" id="2_r2r2o"]
 [ext_resource type="PackedScene" uid="uid://baoxv5vjmbtil" path="res://Puzzles/Moon.tscn" id="3_qsv4v"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="4_a5nxq"]
 [ext_resource type="Texture2D" uid="uid://bmeymdi1jaxpu" path="res://Sprites/Background/R-Side/suport luna1.png" id="4_r2r2o"]
@@ -114,8 +114,8 @@ right_room_path = "res://Rooms/Room3.tscn"
 
 [node name="Wall" type="Sprite2D" parent="BackgroundSprites" unique_id=2099410039]
 position = Vector2(960.9999, 545.5)
-scale = Vector2(0.312987, 0.3127138)
-texture = ExtResource("2_iwjsq")
+scale = Vector2(0.774, 0.774)
+texture = ExtResource("2_r2r2o")
 
 [node name="Moon" parent="." unique_id=1789782810 instance=ExtResource("3_qsv4v")]
 position = Vector2(-529, -42)

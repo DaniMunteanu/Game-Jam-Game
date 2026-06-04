@@ -27,9 +27,15 @@ extends Node3D
 func _ready() -> void:
 	#garden_level.visible = false
 	#SHUT OFF THE MUSIC FOR DRAMATIC SPOOKY EFFECT
+	#FOR DEBUGGING
+	PuzzleManager.complete_puzzles.resize(7)
+	PuzzleManager.complete_puzzles[PuzzleManager.puzzles.MAGICIAN] = true
+	
 	PuzzleManager.completed_puzzles = 6
 	if PuzzleManager.completed_puzzles == 6:
 		_on_part1_finished() # for finishing in 2d
+		
+		
 	PuzzleManager.all_puzzles_completed.connect(_on_part1_finished)
 	# for finishing in 3d ^
 	AudioManager.switch_to_3d()

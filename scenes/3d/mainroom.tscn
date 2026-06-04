@@ -1108,9 +1108,10 @@ shape = SubResource("BoxShape3D_pchfi")
 debug_color = Color(0.79607844, 0.06666667, 1, 1)
 
 [node name="GardenLevel" type="Node3D" parent="." unique_id=246033411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26.282516)
 
-[node name="Garden" parent="GardenLevel" unique_id=691132770 instance=ExtResource("40_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.008336, -24.63243, 25.162058)
+[node name="Garden" parent="GardenLevel" unique_id=515940542 instance=ExtResource("40_nq443")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.008, -24.162, 25.162)
 
 [node name="tower" parent="." unique_id=195821572 instance=ExtResource("40_5g3xn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.490861, -22.040165, 14.807217)
