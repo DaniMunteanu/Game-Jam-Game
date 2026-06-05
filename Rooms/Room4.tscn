@@ -20,8 +20,9 @@
 [ext_resource type="Script" uid="uid://ck7mhaykas1vp" path="res://Scripts/Puzzles2D/room4_checker.gd" id="26_mjyp4"]
 [ext_resource type="Texture2D" uid="uid://d22t7xl7mbpld" path="res://Sprites/SceneSwitchers/Calendar.png" id="29_l332i"]
 
-[node name="Room4" type="Node2D" unique_id=1276671648]
+[node name="Room4" type="Node2D" unique_id=1276671648 node_paths=PackedStringArray("canvas_layer")]
 script = ExtResource("1_tj7eo")
+canvas_layer = NodePath("CanvasLayer")
 left_room_path = "res://Rooms/Room3.tscn"
 right_room_path = "res://Rooms/Room1.tscn"
 

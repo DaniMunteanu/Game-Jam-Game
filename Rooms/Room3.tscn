@@ -23,8 +23,9 @@
 [ext_resource type="AudioStream" uid="uid://cnyl21bqw7ifp" path="res://Audio/SFX/pisi-miau.mp3" id="19_8thjb"]
 [ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="20_3cfrt"]
 
-[node name="Room3" type="Node2D" unique_id=664680839]
+[node name="Room3" type="Node2D" unique_id=664680839 node_paths=PackedStringArray("canvas_layer")]
 script = ExtResource("1_wt6t0")
+canvas_layer = NodePath("CanvasLayer")
 left_room_path = "res://Rooms/Room2.tscn"
 right_room_path = "res://Rooms/Room4.tscn"
 
