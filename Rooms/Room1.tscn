@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c62mcfe50lkhn"]
 
 [ext_resource type="Script" uid="uid://c1poe3shrtvbk" path="res://Scripts/room.gd" id="1_fja4u"]
-[ext_resource type="Texture2D" uid="uid://catwiuebv55f2" path="res://Sprites/Background/Wall.png" id="2_5nh31"]
+[ext_resource type="Texture2D" uid="uid://bsk7wixnks7s1" path="res://Sprites/Background/Back-side/perete 2 faca carte.png" id="2_enbp3"]
 [ext_resource type="Texture2D" uid="uid://ck5no70bq1i2k" path="res://Sprites/Background/Floor.png" id="3_gthuv"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="4_477ix"]
 [ext_resource type="Texture2D" uid="uid://qjik6804vt6k" path="res://Sprites/Background/Table.png" id="4_bktqt"]
@@ -18,8 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/A.png" id="8_enbp3"]
 [ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/D.png" id="9_c8nu8"]
 
-[node name="Room1" type="Node2D" unique_id=1138460362]
+[node name="Room1" type="Node2D" unique_id=1138460362 node_paths=PackedStringArray("canvas_layer")]
 script = ExtResource("1_fja4u")
+canvas_layer = NodePath("CanvasLayer")
 left_room_path = "res://Rooms/Room4.tscn"
 right_room_path = "res://Rooms/Room2.tscn"
 
@@ -27,13 +28,16 @@ right_room_path = "res://Rooms/Room2.tscn"
 
 [node name="Wall" type="Sprite2D" parent="BackgroundSprites" unique_id=142072958]
 position = Vector2(960, 540)
-texture = ExtResource("2_5nh31")
+scale = Vector2(0.755, 0.755)
+texture = ExtResource("2_enbp3")
 
 [node name="Floor" type="Sprite2D" parent="BackgroundSprites/Wall" unique_id=697022783]
+visible = false
 position = Vector2(0, 800)
 texture = ExtResource("3_gthuv")
 
 [node name="Table" type="Sprite2D" parent="BackgroundSprites" unique_id=952236053]
+visible = false
 position = Vector2(1200.0001, 732.00006)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_bktqt")

@@ -104,9 +104,10 @@ _data = {
 &"dissolve": SubResource("Animation_r2r2o")
 }
 
-[node name="Room2" type="Node2D" unique_id=104392886]
+[node name="Room2" type="Node2D" unique_id=104392886 node_paths=PackedStringArray("canvas_layer")]
 script = ExtResource("1_iehj0")
 room_3d_path = "res://scenes/3d/mainroom.tscn"
+canvas_layer = NodePath("CanvasLayer")
 left_room_path = "res://Rooms/Room1.tscn"
 right_room_path = "res://Rooms/Room3.tscn"
 

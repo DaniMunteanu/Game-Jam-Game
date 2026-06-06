@@ -4,7 +4,7 @@ extends Node
 
 
 @export var room_3d_path : String
-
+@export var canvas_layer : CanvasLayer
 @export var left_room_path : String
 @export var right_room_path : String
 signal switch_room(no : int) 
