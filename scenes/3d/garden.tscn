@@ -41,29 +41,19 @@ transform = Transform3D(1, 0, -7.4505806e-08, 0, 1, -5.9604645e-08, 5.9604645e-0
 light_energy = 10.0
 omni_range = 10.0
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="DirectionalLight3D" unique_id=1115896647]
-transform = Transform3D(-0.8660254, -4.071073e-08, -0.50000006, -0.43301278, 0.5, 0.75, 0.24999997, 0.86602545, -0.43301266, -64.44831, -25.149271, 24.581879)
-visible = false
-light_energy = 6.593
-light_volumetric_fog_energy = 10.383
-light_size = 0.485
-omni_range = 64.028
+[node name="OmniLight3D3" type="OmniLight3D" parent="DirectionalLight3D" unique_id=543300371]
+transform = Transform3D(1, -2.9802322e-08, -1.7881393e-07, 0, 1, 0, 1.6391277e-07, 5.9604645e-08, 1, 30.596947, 19.414185, 5.4816523)
+light_energy = 15.796
+omni_range = 14.644067
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1954821123]
 environment = SubResource("Environment_rfp5g")
 camera_attributes = SubResource("CameraAttributesPractical_ujn77")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment" unique_id=1914248222]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.83336663, 1.4374603, -0.7650187)
-light_energy = 6.593
-light_volumetric_fog_energy = 10.383
-light_size = 0.485
-omni_range = 1.6018165
-
 [node name="garden_spawn" type="Marker3D" parent="." unique_id=968669344]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5907462, -0.53646517, 1.0825098)
 
-[node name="garden" parent="." unique_id=1433665057 instance=ExtResource("1_i446x")]
+[node name="garden" parent="." unique_id=458415284 instance=ExtResource("1_i446x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64643097, 0, 0)
 
 [node name="ground-col" type="StaticBody3D" parent="." unique_id=1860861424]
