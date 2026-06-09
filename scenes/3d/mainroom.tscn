@@ -564,7 +564,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.799304, 1.5806179, -0.00904
 shape = SubResource("BoxShape3D_rfp5g")
 debug_color = Color(7.4990616, 6.40278, 0, 1)
 
-[node name="Illusion" parent="FirstRoom" unique_id=816472781 instance=ExtResource("6_5k5vb")]
+[node name="Illusion" parent="FirstRoom" unique_id=1381747546 instance=ExtResource("6_5k5vb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0513783, 0.67439675, -3.7933526)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="FirstRoom/Illusion" unique_id=707953608]
@@ -1113,11 +1113,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26.282516)
 [node name="Garden" parent="GardenLevel" unique_id=173432636 instance=ExtResource("40_nq443")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.13058, -24.17402, 15.159222)
 
-[node name="tower" parent="." unique_id=195821572 instance=ExtResource("40_5g3xn")]
+[node name="tower" parent="." unique_id=308737739 instance=ExtResource("40_5g3xn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.490861, -22.040165, 14.807217)
 
 [node name="tower_door_model" parent="." unique_id=394253567 node_paths=PackedStringArray("interactable") instance=ExtResource("42_qe2jl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.611942, -24.03334, 21.580822)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.611942, -23.838614, 21.580822)
 interactable = NodePath("tower_door2")
 
 [node name="tower_door2" type="StaticBody3D" parent="tower_door_model" unique_id=165538496 node_paths=PackedStringArray("object") groups=["Interactables"]]
