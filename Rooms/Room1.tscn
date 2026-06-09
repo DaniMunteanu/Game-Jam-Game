@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://c62mcfe50lkhn"]
 
 [ext_resource type="Script" uid="uid://c1poe3shrtvbk" path="res://Scripts/room.gd" id="1_fja4u"]
-[ext_resource type="Texture2D" uid="uid://bsk7wixnks7s1" path="res://Sprites/Background/Back-side/perete 2 faca carte.png" id="2_enbp3"]
+[ext_resource type="Texture2D" uid="uid://cddp7qexgo8np" path="res://Sprites/Background/R-Side/perete 4/perete gol pt tablourile dezordonate.png" id="2_enbp3"]
 [ext_resource type="Texture2D" uid="uid://ck5no70bq1i2k" path="res://Sprites/Background/Floor.png" id="3_gthuv"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="4_477ix"]
 [ext_resource type="Texture2D" uid="uid://qjik6804vt6k" path="res://Sprites/Background/Table.png" id="4_bktqt"]
-[ext_resource type="Texture2D" uid="uid://b8f212x0roc8b" path="res://Sprites/PuzzleObjects/Painting0.png" id="4_cpc84"]
 [ext_resource type="Script" uid="uid://u06go6wad3mn" path="res://Scripts/Puzzles2D/room1_checker.gd" id="4_gthuv"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="5_1kmgg"]
 [ext_resource type="Texture2D" uid="uid://cu4citckkerp4" path="res://Sprites/Background/LightBulb.png" id="5_bktqt"]
-[ext_resource type="Texture2D" uid="uid://7xy1t0nknkd3" path="res://Sprites/PuzzleObjects/Painting1.png" id="5_lud8e"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="6_1kmgg"]
 [ext_resource type="Texture2D" uid="uid://c1d50w80guhr1" path="res://Sprites/Background/Perfume.png" id="6_bktqt"]
-[ext_resource type="Texture2D" uid="uid://h50u3vfpmwir" path="res://Sprites/PuzzleObjects/Painting2.png" id="6_mv7ge"]
 [ext_resource type="Texture2D" uid="uid://v3v23w7saabr" path="res://Sprites/Background/CrackedPhone.png" id="6_tw4i0"]
-[ext_resource type="Texture2D" uid="uid://bmurmu88dbd5q" path="res://Sprites/PuzzleObjects/Painting3.png" id="7_5nh31"]
 [ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/A.png" id="8_enbp3"]
 [ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/D.png" id="9_c8nu8"]
+[ext_resource type="Texture2D" uid="uid://dnj433qvrsdfg" path="res://Sprites/Background/R-Side/perete 4/p4 t4.png" id="12_c8nu8"]
+[ext_resource type="Texture2D" uid="uid://cc117xqyg5ec4" path="res://Sprites/Background/R-Side/perete 4/p4 t1.png" id="13_n6owa"]
+[ext_resource type="Texture2D" uid="uid://brt4mc0lgppnt" path="res://Sprites/Background/R-Side/perete 4/p4 t2.png" id="14_s5xj0"]
+[ext_resource type="Texture2D" uid="uid://0recepu2uw3f" path="res://Sprites/Background/R-Side/perete 4/p4 t3.png" id="15_ooe62"]
 
 [node name="Room1" type="Node2D" unique_id=1138460362 node_paths=PackedStringArray("canvas_layer")]
 script = ExtResource("1_fja4u")
@@ -129,9 +129,9 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -1819.0
-offset_top = -364.0
-offset_right = -1188.0
+offset_left = -819.0
+offset_top = -382.0
+offset_right = -171.0
 offset_bottom = 105.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -141,41 +141,41 @@ destination_room_path = "res://Puzzles/Magician.tscn"
 
 [node name="Painting3" type="TextureRect" parent="CanvasLayer/SceneSwitchers/The Magician" unique_id=78689016]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 3.0
-offset_right = 246.0
-offset_bottom = 298.0
-texture = ExtResource("7_5nh31")
+offset_left = -941.0
+offset_top = -138.0
+offset_right = 192.0
+offset_bottom = 468.0
+texture = ExtResource("12_c8nu8")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Painting0" type="TextureRect" parent="CanvasLayer/SceneSwitchers/The Magician" unique_id=1489679427]
 layout_mode = 0
-offset_left = 318.0
-offset_top = 13.0
-offset_right = 560.0
-offset_bottom = 308.0
-texture = ExtResource("4_cpc84")
+offset_left = 158.0
+offset_top = -135.0
+offset_right = 1215.0
+offset_bottom = 472.0
+texture = ExtResource("13_n6owa")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Painting1" type="TextureRect" parent="CanvasLayer/SceneSwitchers/The Magician" unique_id=1784287487]
 layout_mode = 0
-offset_left = 136.0
-offset_top = 120.0
-offset_right = 378.0
-offset_bottom = 415.0
-texture = ExtResource("5_lud8e")
+offset_left = -309.0
+offset_top = -89.0
+offset_right = 816.0
+offset_bottom = 990.0
+texture = ExtResource("14_s5xj0")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Painting2" type="TextureRect" parent="CanvasLayer/SceneSwitchers/The Magician" unique_id=1228924516]
 layout_mode = 0
-offset_left = 390.0
-offset_top = 173.0
-offset_right = 632.0
-offset_bottom = 468.0
-texture = ExtResource("6_mv7ge")
+offset_left = -277.0
+offset_top = 120.0
+offset_right = 824.0
+offset_bottom = 801.0
+texture = ExtResource("15_ooe62")
 expand_mode = 1
 stretch_mode = 5
 
@@ -183,6 +183,10 @@ stretch_mode = 5
 mouse_filter = 2
 
 [node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("6_1kmgg")]
+offset_left = 990.0
+offset_top = 1089.0
+offset_right = 990.0
+offset_bottom = 1089.0
 
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/A" to="." method="_on_a_pressed"]
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/D" to="." method="_on_d_pressed"]
