@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7pkeu71kmlta"
-path="res://.godot/imported/oglinda bec stins.png-f74ae0cd9ee7ef38eff7ca8eadf534d4.ctex"
+uid="uid://mfq87dcdr85l"
+path="res://.godot/imported/perete 1 bec stins.png-cd121e1d02cd6198b60d6ed3787fe380.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/oglinda bec stins.png"
-dest_files=["res://.godot/imported/oglinda bec stins.png-f74ae0cd9ee7ef38eff7ca8eadf534d4.ctex"]
+source_file="res://Sprites/Background/front-side/perete 1 bec stins.png"
+dest_files=["res://.godot/imported/perete 1 bec stins.png-cd121e1d02cd6198b60d6ed3787fe380.ctex"]
 
 [params]
 

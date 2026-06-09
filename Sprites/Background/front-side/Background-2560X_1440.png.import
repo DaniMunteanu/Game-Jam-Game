@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uhgkwnltuvlv"
-path="res://.godot/imported/tablouri inainte de puzzle.png-c148bb6cb86fa188651af6ddae283f91.ctex"
+uid="uid://cb5dlk2udxsj2"
+path="res://.godot/imported/Background-2560X_1440.png-7cc3fa680e8d31187c9677399ce5772f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/perete 4/tablouri inainte de puzzle.png"
-dest_files=["res://.godot/imported/tablouri inainte de puzzle.png-c148bb6cb86fa188651af6ddae283f91.ctex"]
+source_file="res://Sprites/Background/front-side/Background-2560X_1440.png"
+dest_files=["res://.godot/imported/Background-2560X_1440.png-7cc3fa680e8d31187c9677399ce5772f.ctex"]
 
 [params]
 

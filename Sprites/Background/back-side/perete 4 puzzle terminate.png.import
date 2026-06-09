@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brt4mc0lgppnt"
-path="res://.godot/imported/p4 t2.png-5a002edfe795927700e8f6a7a9522815.ctex"
+uid="uid://bgavl54thp5og"
+path="res://.godot/imported/perete 4 puzzle terminate.png-b74370901dcf8999ee197ec86e6a857c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/perete 4/p4 t2.png"
-dest_files=["res://.godot/imported/p4 t2.png-5a002edfe795927700e8f6a7a9522815.ctex"]
+source_file="res://Sprites/Background/back-side/perete 4 puzzle terminate.png"
+dest_files=["res://.godot/imported/perete 4 puzzle terminate.png-b74370901dcf8999ee197ec86e6a857c.ctex"]
 
 [params]
 

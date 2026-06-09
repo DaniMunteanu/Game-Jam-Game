@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp3vdbu1imfll"
-path="res://.godot/imported/perete 4 puzzle gol.png-6389d25f9faf6a68837ad185ed3b68e0.ctex"
+uid="uid://cledy5jvujelb"
+path="res://.godot/imported/perete 1 bec stins fara oglinda.png-946d7663a71ef9c3b3840e55b66e8bf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/perete 4/perete 4 puzzle gol.png"
-dest_files=["res://.godot/imported/perete 4 puzzle gol.png-6389d25f9faf6a68837ad185ed3b68e0.ctex"]
+source_file="res://Sprites/Background/front-side/perete 1 bec stins fara oglinda.png"
+dest_files=["res://.godot/imported/perete 1 bec stins fara oglinda.png-946d7663a71ef9c3b3840e55b66e8bf7.ctex"]
 
 [params]
 

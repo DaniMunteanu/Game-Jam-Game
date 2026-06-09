@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnj433qvrsdfg"
-path="res://.godot/imported/p4 t4.png-ec7a8064dac5be4aae0fd6e4b00bd85f.ctex"
+path="res://.godot/imported/p4 t4.png-348b0201c8a4f473eafba74e04c8957b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/perete 4/p4 t4.png"
-dest_files=["res://.godot/imported/p4 t4.png-ec7a8064dac5be4aae0fd6e4b00bd85f.ctex"]
+source_file="res://Sprites/Background/back-side/p4 t4.png"
+dest_files=["res://.godot/imported/p4 t4.png-348b0201c8a4f473eafba74e04c8957b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc117xqyg5ec4"
-path="res://.godot/imported/p4 t1.png-875d0541c5f5131e4312fe4c455c446d.ctex"
+uid="uid://cjjeh3oqsq25u"
+path="res://.godot/imported/perete_2_becu_stins.png-c765c410f700aa82782b951a386ff2b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/perete 4/p4 t1.png"
-dest_files=["res://.godot/imported/p4 t1.png-875d0541c5f5131e4312fe4c455c446d.ctex"]
+source_file="res://Sprites/Background/left-side/perete_2_becu_stins.png"
+dest_files=["res://.godot/imported/perete_2_becu_stins.png-c765c410f700aa82782b951a386ff2b0.ctex"]
 
 [params]
 

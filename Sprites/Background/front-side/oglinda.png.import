@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://syvemhkxdp0p"
-path="res://.godot/imported/suport luna2.png-d460ba47637d3c4b7a7cd223b26c2350.ctex"
+uid="uid://bcrvaaih4mrjg"
+path="res://.godot/imported/oglinda.png-5ea6580da96639c873cddf2f794e458b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/suport luna2.png"
-dest_files=["res://.godot/imported/suport luna2.png-d460ba47637d3c4b7a7cd223b26c2350.ctex"]
+source_file="res://Sprites/Background/front-side/oglinda.png"
+dest_files=["res://.godot/imported/oglinda.png-5ea6580da96639c873cddf2f794e458b.ctex"]
 
 [params]
 

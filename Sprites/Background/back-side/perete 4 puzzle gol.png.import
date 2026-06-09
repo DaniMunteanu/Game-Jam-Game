@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsk7wixnks7s1"
-path="res://.godot/imported/perete 2 faca carte.png-2e8512429d9865f5bdb8a40102595784.ctex"
+uid="uid://bp3vdbu1imfll"
+path="res://.godot/imported/perete 4 puzzle gol.png-0a372e9d690492cbdff649a64f4f5c51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/Back-side/perete 2 faca carte.png"
-dest_files=["res://.godot/imported/perete 2 faca carte.png-2e8512429d9865f5bdb8a40102595784.ctex"]
+source_file="res://Sprites/Background/back-side/perete 4 puzzle gol.png"
+dest_files=["res://.godot/imported/perete 4 puzzle gol.png-0a372e9d690492cbdff649a64f4f5c51.ctex"]
 
 [params]
 

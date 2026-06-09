@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcrvaaih4mrjg"
-path="res://.godot/imported/oglinda.png-5cc4476091cfbcc99dfde0bc84bfc6f7.ctex"
+uid="uid://0recepu2uw3f"
+path="res://.godot/imported/p4 t3.png-ae23c280de563c048f89954e51c4bc60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/oglinda.png"
-dest_files=["res://.godot/imported/oglinda.png-5cc4476091cfbcc99dfde0bc84bfc6f7.ctex"]
+source_file="res://Sprites/Background/back-side/p4 t3.png"
+dest_files=["res://.godot/imported/p4 t3.png-ae23c280de563c048f89954e51c4bc60.ctex"]
 
 [params]
 

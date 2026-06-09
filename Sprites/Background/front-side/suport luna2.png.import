@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cddp7qexgo8np"
-path="res://.godot/imported/perete gol pt tablourile dezordonate.png-17717265742ef6934b9a96bf5f999825.ctex"
+uid="uid://syvemhkxdp0p"
+path="res://.godot/imported/suport luna2.png-efd56621e4cb50a2e7f96a1da829764d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/perete 4/perete gol pt tablourile dezordonate.png"
-dest_files=["res://.godot/imported/perete gol pt tablourile dezordonate.png-17717265742ef6934b9a96bf5f999825.ctex"]
+source_file="res://Sprites/Background/front-side/suport luna2.png"
+dest_files=["res://.godot/imported/suport luna2.png-efd56621e4cb50a2e7f96a1da829764d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmeymdi1jaxpu"
-path="res://.godot/imported/suport luna1.png-f9cef2d6be84dae30cb48484818ec7f5.ctex"
+uid="uid://uhgkwnltuvlv"
+path="res://.godot/imported/tablouri inainte de puzzle.png-59a98ee6ff6dea15063a0d9c3806d057.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/suport luna1.png"
-dest_files=["res://.godot/imported/suport luna1.png-f9cef2d6be84dae30cb48484818ec7f5.ctex"]
+source_file="res://Sprites/Background/back-side/tablouri inainte de puzzle.png"
+dest_files=["res://.godot/imported/tablouri inainte de puzzle.png-59a98ee6ff6dea15063a0d9c3806d057.ctex"]
 
 [params]
 

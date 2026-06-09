@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://54u88nc15aod"
-path="res://.godot/imported/perete 4 puzzle.png-df4d752aebb74306bdba43023edf744d.ctex"
+uid="uid://bmeymdi1jaxpu"
+path="res://.godot/imported/suport luna1.png-08e86df1211040dbd75ef98e9e2b2b5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/perete 4/perete 4 puzzle.png"
-dest_files=["res://.godot/imported/perete 4 puzzle.png-df4d752aebb74306bdba43023edf744d.ctex"]
+source_file="res://Sprites/Background/front-side/suport luna1.png"
+dest_files=["res://.godot/imported/suport luna1.png-08e86df1211040dbd75ef98e9e2b2b5b.ctex"]
 
 [params]
 

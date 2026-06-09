@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5hqhl1rxlqit"
-path="res://.godot/imported/perete 1 fara suport.png-0e210896dcb41c8df7678c1f4bb5b6e2.ctex"
+uid="uid://dam2g206eg23e"
+path="res://.godot/imported/perete 4 CALENDAR PUZZ.png-1b51c459bd00b1bf5eab4c0ce6947f74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/perete 1 fara suport.png"
-dest_files=["res://.godot/imported/perete 1 fara suport.png-0e210896dcb41c8df7678c1f4bb5b6e2.ctex"]
+source_file="res://Sprites/Background/back-side/perete 4 CALENDAR PUZZ.png"
+dest_files=["res://.godot/imported/perete 4 CALENDAR PUZZ.png-1b51c459bd00b1bf5eab4c0ce6947f74.ctex"]
 
 [params]
 

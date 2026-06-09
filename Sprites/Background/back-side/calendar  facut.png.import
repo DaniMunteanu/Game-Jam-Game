@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgavl54thp5og"
-path="res://.godot/imported/perete 4 puzzle terminate.png-a9fd81283cd610965d256b7c6f181d6e.ctex"
+uid="uid://cevdts7vd61kq"
+path="res://.godot/imported/calendar  facut.png-2d97cf564339bc8571edbcfea6e09e96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/perete 4/perete 4 puzzle terminate.png"
-dest_files=["res://.godot/imported/perete 4 puzzle terminate.png-a9fd81283cd610965d256b7c6f181d6e.ctex"]
+source_file="res://Sprites/Background/back-side/calendar  facut.png"
+dest_files=["res://.godot/imported/calendar  facut.png-2d97cf564339bc8571edbcfea6e09e96.ctex"]
 
 [params]
 

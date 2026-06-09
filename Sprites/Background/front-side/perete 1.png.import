@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cledy5jvujelb"
-path="res://.godot/imported/perete 1 bec stins fara oglinda.png-d5ad6bc6028d555bdc5ddcfc3ee0597b.ctex"
+uid="uid://bcbdav6c5xclk"
+path="res://.godot/imported/perete 1.png-cad91762b255a4fff0d34a422323ba6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/perete 1 bec stins fara oglinda.png"
-dest_files=["res://.godot/imported/perete 1 bec stins fara oglinda.png-d5ad6bc6028d555bdc5ddcfc3ee0597b.ctex"]
+source_file="res://Sprites/Background/front-side/perete 1.png"
+dest_files=["res://.godot/imported/perete 1.png-cad91762b255a4fff0d34a422323ba6a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dam2g206eg23e"
-path="res://.godot/imported/perete 4 CALENDAR PUZZ.png-65aa4a4388c704edd356fbc0139f194e.ctex"
+uid="uid://c7pkeu71kmlta"
+path="res://.godot/imported/oglinda bec stins.png-dae12f90d32d15997f8f01fdf432c691.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/perete 4/perete 4 CALENDAR PUZZ.png"
-dest_files=["res://.godot/imported/perete 4 CALENDAR PUZZ.png-65aa4a4388c704edd356fbc0139f194e.ctex"]
+source_file="res://Sprites/Background/front-side/oglinda bec stins.png"
+dest_files=["res://.godot/imported/oglinda bec stins.png-dae12f90d32d15997f8f01fdf432c691.ctex"]
 
 [params]
 

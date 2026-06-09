@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mfq87dcdr85l"
-path="res://.godot/imported/perete 1 bec stins.png-42a92830cb31c4b49f88b5d6ce2d359a.ctex"
+uid="uid://doraxurtuscns"
+path="res://.godot/imported/perete 2 carte.png-86ad35b8cd116ae7b7c2ffb8168c65bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/R-Side/perete 1 bec stins.png"
-dest_files=["res://.godot/imported/perete 1 bec stins.png-42a92830cb31c4b49f88b5d6ce2d359a.ctex"]
+source_file="res://Sprites/Background/left-side/perete 2 carte.png"
+dest_files=["res://.godot/imported/perete 2 carte.png-86ad35b8cd116ae7b7c2ffb8168c65bd.ctex"]
 
 [params]
 
