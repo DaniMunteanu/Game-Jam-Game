@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcrvaaih4mrjg"
-path="res://.godot/imported/oglinda.png-5ea6580da96639c873cddf2f794e458b.ctex"
+uid="uid://dfuhtsc7764wq"
+path="res://.godot/imported/Stone_stairs.png-7e657a16583a61c302f1ecc5ef430a20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/front-side/oglinda.png"
-dest_files=["res://.godot/imported/oglinda.png-5ea6580da96639c873cddf2f794e458b.ctex"]
+source_file="res://3D assets/texturi/Stone_stairs.png"
+dest_files=["res://.godot/imported/Stone_stairs.png-7e657a16583a61c302f1ecc5ef430a20.ctex"]
 
 [params]
 

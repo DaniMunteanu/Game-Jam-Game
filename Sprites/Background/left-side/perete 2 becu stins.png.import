@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxcn46d7gtqqn"
-path="res://.godot/imported/perete 1 fara suport.png-ac27b84b0ffd94bf22da61934f8d1314.ctex"
+uid="uid://dhd04sxmlblef"
+path="res://.godot/imported/perete 2 becu stins.png-976862d083df16c40a69a8cd329641b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/front-side/perete 1 fara suport.png"
-dest_files=["res://.godot/imported/perete 1 fara suport.png-ac27b84b0ffd94bf22da61934f8d1314.ctex"]
+source_file="res://Sprites/Background/left-side/perete 2 becu stins.png"
+dest_files=["res://.godot/imported/perete 2 becu stins.png-976862d083df16c40a69a8cd329641b3.ctex"]
 
 [params]
 
