@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcbdav6c5xclk"
-path="res://.godot/imported/perete 1.png-cad91762b255a4fff0d34a422323ba6a.ctex"
+uid="uid://bdcb8rk6wolr8"
+path="res://.godot/imported/leptop.png-65e3ffda6402f9500666a8c490edd832.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/front-side/perete 1.png"
-dest_files=["res://.godot/imported/perete 1.png-cad91762b255a4fff0d34a422323ba6a.ctex"]
+source_file="res://Sprites/Background/right-side/leptop.png"
+dest_files=["res://.godot/imported/leptop.png-65e3ffda6402f9500666a8c490edd832.ctex"]
 
 [params]
 

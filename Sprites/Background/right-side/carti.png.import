@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxcn46d7gtqqn"
-path="res://.godot/imported/perete 1 fara suport.png-ac27b84b0ffd94bf22da61934f8d1314.ctex"
+uid="uid://b6nprqavk0gqd"
+path="res://.godot/imported/carti.png-42390232e0cde0796d4359ab2a391a37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/front-side/perete 1 fara suport.png"
-dest_files=["res://.godot/imported/perete 1 fara suport.png-ac27b84b0ffd94bf22da61934f8d1314.ctex"]
+source_file="res://Sprites/Background/right-side/carti.png"
+dest_files=["res://.godot/imported/carti.png-42390232e0cde0796d4359ab2a391a37.ctex"]
 
 [params]
 

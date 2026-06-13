@@ -7,7 +7,7 @@ extends Node
 @export var canvas_layer : CanvasLayer
 @export var left_room_path : String
 @export var right_room_path : String
-signal switch_room(no : int) 
+#signal switch_room(no : int) 
 
 var can_switch: bool = true
 
