@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb5dlk2udxsj2"
-path="res://.godot/imported/Background-2560X_1440.png-7cc3fa680e8d31187c9677399ce5772f.ctex"
+uid="uid://dlguk1v8aja30"
+path="res://.godot/imported/oglinda reparata perete luminos.png-ba095f6bd01f8c3ffbcb5d8185987dc5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/front-side/Background-2560X_1440.png"
-dest_files=["res://.godot/imported/Background-2560X_1440.png-7cc3fa680e8d31187c9677399ce5772f.ctex"]
+source_file="res://Sprites/Background/front-side/oglinda reparata perete luminos.png"
+dest_files=["res://.godot/imported/oglinda reparata perete luminos.png-ba095f6bd01f8c3ffbcb5d8185987dc5.ctex"]
 
 [params]
 
