@@ -1,18 +1,28 @@
 extends Control
 
 @onready var death: Button = $Death
-@onready var grimoire: Button = $Grimoire
-@onready var pisi: Button = $"../Pisi"
+@onready var tooltip_scene = preload("res://UI/Tooltip.tscn")
+var tooltip: Tooltip
 
-@onready var sfx_player: AudioStreamPlayer2D = $"../../SfxPlayer"
-
-@onready var cinematic_player: CinematicPlayer = $"../CinematicPlayer"
+func _process(delta: float) -> void:
+	if tooltip:
+		tooltip.global_position = get_global_mouse_position() + Vector2(0, -80)
 
 func _ready() -> void:
 	if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.DEATH] == true:
 		death.disabled = true
 
-func _on_grimoire_pressed() -> void:
+func _on_books_mouse_entered() -> void:
+	tooltip = tooltip_scene.instantiate()
+	tooltip.set_text("Maybe those colors hint to something...")
+	add_child(tooltip)
+
+func _on_books_mouse_exited() -> void:
+	if tooltip:
+		tooltip.queue_free()
+		tooltip = null
+
+"""func _on_grimoire_pressed() -> void:
 	if PuzzleManager.completed_puzzles == PuzzleManager.number_of_puzzles - 1:
 		PauseMenu.game_won = true
 		disable_buttons()
@@ -35,8 +45,5 @@ func _on_grimoire_pressed() -> void:
 		TextManager.show_once("World_empty", [
 			"The Grimoire is silent. I need to find the rest of the cards before I even think about starting the spell."
 		])
+		"""
 		
-func disable_buttons():
-	death.disabled = true
-	grimoire.disabled = true
-	pisi.disabled = true

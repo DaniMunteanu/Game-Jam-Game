@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://f6qmr6jsfsaw"]
 
 [ext_resource type="Script" uid="uid://b0drdn5m6g7ey" path="res://Scripts/Puzzles2D/star.gd" id="1_asnyx"]
-[ext_resource type="Texture2D" uid="uid://d22t7xl7mbpld" path="res://Sprites/SceneSwitchers/Calendar.png" id="2_3nmne"]
-[ext_resource type="Texture2D" uid="uid://catwiuebv55f2" path="res://Sprites/Background/Wall.png" id="2_aad07"]
+[ext_resource type="Texture2D" uid="uid://catwiuebv55f2" path="res://Sprites/Background/legacy/Wall.png" id="2_aad07"]
 [ext_resource type="PackedScene" uid="uid://c1hkjqgxqgyld" path="res://PuzzleObjects/DrawingDot.tscn" id="2_i662l"]
+[ext_resource type="Texture2D" uid="uid://dam2g206eg23e" path="res://Sprites/Background/back-side/perete 4 CALENDAR PUZZ.png" id="3_yyvcj"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="4_aad07"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="5_5gbe3"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="5_xo56k"]
@@ -18,9 +18,9 @@ position = Vector2(960, 540)
 texture = ExtResource("2_aad07")
 
 [node name="Calendar" type="Sprite2D" parent="." unique_id=1426004988]
-position = Vector2(1001, 216)
-scale = Vector2(2, 2)
-texture = ExtResource("2_3nmne")
+position = Vector2(954.87506, 538.99994)
+scale = Vector2(0.7540418, 0.74999994)
+texture = ExtResource("3_yyvcj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=887561674]
 
@@ -36,10 +36,10 @@ mouse_filter = 2
 layout_mode = 1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 391.0
-offset_top = 445.0
-offset_right = 475.0
-offset_bottom = 525.0
+offset_left = 449.0
+offset_top = 689.0
+offset_right = 533.0
+offset_bottom = 769.0
 ignore_texture_size = true
 stretch_mode = 0
 target_indexes = Array[int]([1])
@@ -48,10 +48,10 @@ target_indexes = Array[int]([1])
 layout_mode = 1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 883.0
-offset_top = 534.0
-offset_right = 961.0
-offset_bottom = 612.0
+offset_left = 784.0
+offset_top = 789.0
+offset_right = 862.0
+offset_bottom = 867.0
 ignore_texture_size = true
 stretch_mode = 0
 target_indexes = Array[int]([0, 2])
@@ -61,10 +61,10 @@ index = 1
 layout_mode = 1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 1106.0
-offset_top = 611.0
-offset_right = 1184.0
-offset_bottom = 687.0
+offset_left = 986.0
+offset_top = 793.0
+offset_right = 1064.0
+offset_bottom = 869.0
 ignore_texture_size = true
 stretch_mode = 0
 target_indexes = Array[int]([1, 3])
@@ -74,10 +74,10 @@ index = 2
 layout_mode = 1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 1162.0
-offset_top = 769.0
-offset_right = 1250.0
-offset_bottom = 859.0
+offset_left = 988.0
+offset_top = 885.0
+offset_right = 1076.0
+offset_bottom = 975.0
 ignore_texture_size = true
 stretch_mode = 0
 target_indexes = Array[int]([2])
@@ -86,19 +86,19 @@ index = 3
 [node name="TargetMarkers" type="Node" parent="CanvasLayer" unique_id=389890641]
 
 [node name="Marker0" type="Marker2D" parent="CanvasLayer/TargetMarkers" unique_id=1275042861]
-position = Vector2(547, 485)
+position = Vector2(596, 738)
 scale = Vector2(4, 4)
 
 [node name="Marker1" type="Marker2D" parent="CanvasLayer/TargetMarkers" unique_id=42949806]
-position = Vector2(1041, 575)
+position = Vector2(960, 802)
 scale = Vector2(4, 4)
 
 [node name="Marker2" type="Marker2D" parent="CanvasLayer/TargetMarkers" unique_id=1887122023]
-position = Vector2(1261, 657)
+position = Vector2(1118, 858)
 scale = Vector2(4, 4)
 
 [node name="Marker3" type="Marker2D" parent="CanvasLayer/TargetMarkers" unique_id=1702258535]
-position = Vector2(1321, 812)
+position = Vector2(1165, 945)
 scale = Vector2(4, 4)
 
 [node name="DrawableLines" type="Node" parent="CanvasLayer" unique_id=1542286310]
@@ -126,7 +126,7 @@ grow_horizontal = 0
 grow_vertical = 2
 text = "Back to room"
 script = ExtResource("4_aad07")
-destination_room_path = "res://Rooms/Room4.tscn"
+destination_room_path = "res://Rooms/Room1.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/RightArrow" unique_id=1093403086]
 layout_mode = 0

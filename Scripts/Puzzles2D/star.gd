@@ -13,8 +13,8 @@ var currently_drawn_line: Line2D = null
 
 @export var snap_max_distance: float = 100.0
 
-func _ready() -> void:
-	PauseMenu.enable_puzzle_escape("res://Rooms/Room4.tscn")
+func _ready() -> void:	
+	PauseMenu.enable_puzzle_escape("res://Rooms/Room1.tscn")
 	if PuzzleManager.pencil_picked_up == false:
 		InventoryManager.add_item(InventoryManager.PENCIL)
 		PuzzleManager.pencil_picked_up = true
@@ -107,7 +107,7 @@ func end_puzzle():
 	disconnect_drawing_dots_signals()
 	InventoryManager.remove_item(InventoryManager.PENCIL)
 	await get_tree().create_timer(3.0).timeout
-	SceneChanger.change_scene_to_path("res://Rooms/Room4.tscn")
+	SceneChanger.change_scene_to_path("res://Rooms/Room1.tscn")
 
 func _exit_tree() -> void:
 	PauseMenu.disable_puzzle_escape()
