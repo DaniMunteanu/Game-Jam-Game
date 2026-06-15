@@ -18,9 +18,9 @@ func _ready() -> void:
 	SignalBus.world_completed.connect(disable_input)
 	AudioManager.switch_to_2d()
 	
-	if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.WORLD] == true:
-		can_switch = false
-		return
+	#if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.WORLD] == true:
+		#can_switch = false
+		#return
 	
 	if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.MAGICIAN] == false:
 		can_switch = false
@@ -40,15 +40,3 @@ func _input(event: InputEvent) -> void:
 
 func disable_input():
 	can_switch = false
-
-func _on_a_pressed() -> void:
-	if left_room_path and can_switch:
-		SceneChanger.change_scene_to_path(left_room_path)
-
-func _on_d_pressed() -> void:
-	if right_room_path and can_switch:
-		SceneChanger.change_scene_to_path(right_room_path)
-
-
-func _on_pisi_pressed() -> void:
-	pass # Replace with function body.
