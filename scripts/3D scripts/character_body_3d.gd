@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 3.0
+var speed = 3.0
 const SENSITIVITY = 0.003
 
 var gravity = 9.8
@@ -58,8 +58,8 @@ func _physics_process(delta: float) -> void:
 	var direction = (head.transform.basis * Vector3(
 		input_dir.x,0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 	else:
 		velocity.x = 0.0
 		velocity.z = 0.0

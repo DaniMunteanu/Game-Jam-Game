@@ -53,7 +53,7 @@ camera_attributes = SubResource("CameraAttributesPractical_ujn77")
 [node name="garden_spawn" type="Marker3D" parent="." unique_id=968669344]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5907462, -0.53646517, 1.0825098)
 
-[node name="garden" parent="." unique_id=458415284 instance=ExtResource("1_i446x")]
+[node name="garden" parent="." unique_id=1345149440 instance=ExtResource("1_i446x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64643097, 0, 0)
 
 [node name="ground-col" type="StaticBody3D" parent="." unique_id=1860861424]

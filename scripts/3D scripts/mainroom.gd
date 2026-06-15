@@ -23,6 +23,7 @@ extends Node3D
 @export var garden_level : Node
 @export var tower : Node3D
 @export var tower_delete : Area3D
+const GARDEN_SPEED : float = 5.0
 
 func _ready() -> void:
 	#garden_level.visible = false
@@ -81,6 +82,7 @@ func _on_part1_finished():
 func _on_tower_delete_body_entered(body: CharacterBody3D) -> void:
 	print("out with the old, in with the new.")
 	garden_level.visible = true
+	player.speed = GARDEN_SPEED
 	if room_level:
 		room_level.queue_free()
 	if tower:
