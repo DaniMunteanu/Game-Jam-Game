@@ -75,4 +75,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			on_keyboard_input("<-")
 		elif event.unicode != 0:
 			var char = char(event.unicode).to_upper()
-			on_keyboard_input(char)
+			var allowed = "QWERTYUIOPASDFGHJKL"
+			if char in allowed:
+				on_keyboard_input(char)

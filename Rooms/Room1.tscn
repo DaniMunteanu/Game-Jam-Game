@@ -7,12 +7,22 @@
 [ext_resource type="Script" uid="uid://u06go6wad3mn" path="res://Scripts/Puzzles2D/room1_checker.gd" id="4_gthuv"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="5_1kmgg"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="6_1kmgg"]
-[ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/A.png" id="8_enbp3"]
-[ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/D.png" id="9_c8nu8"]
-[ext_resource type="Texture2D" uid="uid://dnj433qvrsdfg" path="res://Sprites/Background/back-side/p4 t4.png" id="12_c8nu8"]
-[ext_resource type="Texture2D" uid="uid://cc117xqyg5ec4" path="res://Sprites/Background/back-side/p4 t1.png" id="13_n6owa"]
-[ext_resource type="Texture2D" uid="uid://brt4mc0lgppnt" path="res://Sprites/Background/back-side/p4 t2.png" id="14_s5xj0"]
-[ext_resource type="Texture2D" uid="uid://0recepu2uw3f" path="res://Sprites/Background/back-side/p4 t3.png" id="15_ooe62"]
+[ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/legacy/A.png" id="8_enbp3"]
+[ext_resource type="Texture2D" uid="uid://cor10e2hj7i4t" path="res://Sprites/Background/back-side/calendar ne facut.png" id="8_lud8e"]
+[ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/legacy/D.png" id="9_c8nu8"]
+[ext_resource type="PackedScene" uid="uid://b06xf8rmjtknh" path="res://Sprites/Background/front-side/praf.tscn" id="11_mv7ge"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cpc84"]
+load_path = "res://.godot/imported/p4 t4.png-348b0201c8a4f473eafba74e04c8957b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x0fmj"]
+load_path = "res://.godot/imported/p4 t1.png-1a70e682aa1dce646106f3c66755f3ad.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lud8e"]
+load_path = "res://.godot/imported/p4 t2.png-9472ecb4a304655c5e2c84358c9576b9.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mv7ge"]
+load_path = "res://.godot/imported/p4 t3.png-ae23c280de563c048f89954e51c4bc60.ctex"
 
 [node name="Room1" type="Node2D" unique_id=1138460362 node_paths=PackedStringArray("canvas_layer")]
 script = ExtResource("1_fja4u")
@@ -29,15 +39,18 @@ texture = ExtResource("2_enbp3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=565787541]
 
-[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=653715160 node_paths=PackedStringArray("a_button", "d_button")]
+[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=653715160 node_paths=PackedStringArray("a_button", "d_button", "calendar_button")]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_left = -10.0
+offset_top = 2.0
+offset_right = 1910.0
+offset_bottom = 1082.0
 mouse_filter = 2
 script = ExtResource("4_gthuv")
 a_button = NodePath("A")
 d_button = NodePath("D")
+calendar_button = NodePath("Calendar")
 
 [node name="A" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=329204687]
 self_modulate = Color(1, 1, 1, 0)
@@ -116,7 +129,7 @@ offset_left = -941.0
 offset_top = -138.0
 offset_right = 192.0
 offset_bottom = 468.0
-texture = ExtResource("12_c8nu8")
+texture = SubResource("CompressedTexture2D_cpc84")
 expand_mode = 1
 stretch_mode = 5
 
@@ -127,7 +140,7 @@ offset_left = 158.0
 offset_top = -135.0
 offset_right = 1215.0
 offset_bottom = 472.0
-texture = ExtResource("13_n6owa")
+texture = SubResource("CompressedTexture2D_x0fmj")
 expand_mode = 1
 stretch_mode = 5
 
@@ -138,7 +151,7 @@ offset_left = -309.0
 offset_top = -89.0
 offset_right = 816.0
 offset_bottom = 990.0
-texture = ExtResource("14_s5xj0")
+texture = SubResource("CompressedTexture2D_lud8e")
 expand_mode = 1
 stretch_mode = 5
 
@@ -149,7 +162,7 @@ offset_left = -277.0
 offset_top = 120.0
 offset_right = 824.0
 offset_bottom = 801.0
-texture = ExtResource("15_ooe62")
+texture = SubResource("CompressedTexture2D_mv7ge")
 expand_mode = 1
 stretch_mode = 5
 
@@ -157,6 +170,31 @@ stretch_mode = 5
 position = Vector2(-141, 382)
 scale = Vector2(0.755, 0.755)
 texture = ExtResource("4_c8nu8")
+
+[node name="Calendar" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=812858316]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 213.0
+offset_top = 140.0
+offset_right = 468.0
+offset_bottom = 492.0
+script = ExtResource("5_1kmgg")
+destination_room_path = "res://Puzzles/Star.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/Calendar" unique_id=1565696211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -94.0
+offset_right = 23.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_lud8e")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("4_477ix")]
 visible = false
@@ -169,6 +207,13 @@ offset_top = 1089.0
 offset_right = 990.0
 offset_bottom = 1089.0
 
+[node name="Praf2" parent="." unique_id=1443607552 instance=ExtResource("11_mv7ge")]
+position = Vector2(779, 528)
+
+[node name="Praf" parent="." unique_id=1678158692 instance=ExtResource("11_mv7ge")]
+position = Vector2(697, 532)
+
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/A" to="." method="_on_a_pressed"]
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/D" to="." method="_on_d_pressed"]
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/The Magician" to="CanvasLayer/SceneSwitchers/The Magician" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/SceneSwitchers/Calendar" to="." method="_on_calendar_pressed"]
