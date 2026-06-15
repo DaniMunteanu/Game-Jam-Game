@@ -3,6 +3,13 @@
 [ext_resource type="Script" uid="uid://dn2rdmud1mnx2" path="res://Scripts/Puzzles2D/draggable_puzzle_object.gd" id="1_2dnpp"]
 
 [node name="PuzzleObject" type="TextureButton" unique_id=374029610]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1920.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_2dnpp")
 
 [connection signal="button_down" from="." to="." method="_on_button_down"]

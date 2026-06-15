@@ -6,13 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://dkbuximtqybmu" path="res://Sprites/Background/front-side/suport luna1.png" id="4_r2r2o"]
 [ext_resource type="Script" uid="uid://gcs7aymyg04o" path="res://Scripts/Puzzles2D/room2_checker.gd" id="6_ipfbv"]
 [ext_resource type="Texture2D" uid="uid://dxcn46d7gtqqn" path="res://Sprites/Background/front-side/perete 1 fara suport.png" id="8_7ixoc"]
+[ext_resource type="Texture2D" uid="uid://74dxxux8pupb" path="res://Sprites/Background/front-side/oglinda_reparata_perete_luminos-removebg-preview.png" id="9_iwjsq"]
 [ext_resource type="Script" uid="uid://dgxccig7fib3l" path="res://Rooms/canvas_layer.gd" id="10_a6xs1"]
 [ext_resource type="Script" uid="uid://cmohrk42myhw4" path="res://Rooms/new_mirror.gd" id="12_r2r2o"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="15_okvqb"]
-[ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/A.png" id="16_1fjmt"]
-[ext_resource type="PackedScene" path="res://Sprites/Background/front-side/praf.tscn" id="16_a6xs1"]
+[ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/legacy/A.png" id="16_1fjmt"]
+[ext_resource type="PackedScene" uid="uid://b06xf8rmjtknh" path="res://Sprites/Background/front-side/praf.tscn" id="16_a6xs1"]
 [ext_resource type="Texture2D" uid="uid://dhtdue5rkxpdp" path="res://Sprites/tarot cards/The Magician.png" id="16_r2r2o"]
-[ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/D.png" id="17_a1b0s"]
+[ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/legacy/D.png" id="17_a1b0s"]
 [ext_resource type="AudioStream" uid="uid://bm085t0y4w02f" path="res://Audio/SFX/mirror4.mp3" id="18_atu7q"]
 
 [sub_resource type="Shader" id="Shader_a6xs1"]
@@ -171,10 +172,9 @@ anchor_top = 0.044000003
 anchor_right = 0.46800002
 anchor_bottom = 0.56700003
 offset_left = 0.6399536
-offset_top = 0.47999573
+offset_top = 5.4799957
 offset_right = -0.5600586
-offset_bottom = -0.3600464
-grow_vertical = 2
+offset_bottom = 4.6399536
 script = ExtResource("12_r2r2o")
 destination_room_path = "res://scenes/3d/mainroom.tscn"
 
@@ -185,12 +185,13 @@ anchor_left = -1.9670001
 anchor_top = -0.126
 anchor_right = 4.2970004
 anchor_bottom = 1.8210001
-offset_left = -0.097961426
-offset_top = 0.06400299
-offset_right = 821.68896
-offset_bottom = 470.52734
+offset_left = 548.90204
+offset_top = 25.064
+offset_right = -799.31067
+offset_bottom = -145.90125
 scale = Vector2(0.7, 0.7)
 mouse_filter = 2
+texture = ExtResource("9_iwjsq")
 expand_mode = 1
 
 [node name="A" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=624187282]

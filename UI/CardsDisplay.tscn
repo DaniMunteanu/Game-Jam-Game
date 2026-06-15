@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://roet0qnciil5"]
 
 [ext_resource type="Script" uid="uid://xcvw77rnj7nv" path="res://Scripts/UI scripts/cards_display.gd" id="1_52fc6"]
-[ext_resource type="Texture2D" uid="uid://sd0uqnl33b5a" path="res://Sprites/Background/CardsDisplayBackground.jpg" id="2_7udf8"]
+[ext_resource type="Texture2D" uid="uid://sd0uqnl33b5a" path="res://Sprites/Background/legacy/CardsDisplayBackground.jpg" id="2_7udf8"]
 [ext_resource type="Texture2D" uid="uid://dhtdue5rkxpdp" path="res://Sprites/tarot cards/The Magician.png" id="2_c4fsi"]
 [ext_resource type="Script" uid="uid://dias3okb0nhm1" path="res://Scripts/UI scripts/card.gd" id="2_ck1g6"]
 [ext_resource type="Texture2D" uid="uid://cir7ng11lami6" path="res://Sprites/tarot cards/The Moon.png" id="4_7udf8"]

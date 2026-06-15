@@ -66,19 +66,29 @@ func end_puzzle():
 	await get_tree().create_timer(3.0).timeout 
 	back_to_room.disabled = false
 	texture_rect.modulate.a = 1
+	PauseMenu.enable_puzzle_escape("res://Rooms/Room1.tscn")
 
 func on_try_snapping(painting_index: int):
+	var closest_marker_index = -1
+	var closest_distance = snap_max_distance
+	var painting_center = paintings[painting_index].global_position + paintings[painting_index].size / 2
+	
 	for marker_index in range(markers.size()):
-		if paintings[painting_index].global_position.distance_to(markers[marker_index].global_position) < snap_max_distance:
-			if paintings_snapped.has(marker_index):
-				return
-			paintings_snapped[painting_index] = marker_index
-			paintings[painting_index].global_position = markers[marker_index].global_position
-			if marker_index == painting_index:
-				TextManager.show_text(painting_descriptions[painting_index])
-			check_if_solved()
+		var dist = painting_center.distance_to(markers[marker_index].global_position)
+		if dist < closest_distance:
+			closest_distance = dist
+			closest_marker_index = marker_index
+	
+	if closest_marker_index != -1:
+		if paintings_snapped.has(closest_marker_index):
 			return
-	paintings_snapped[painting_index] = -1
+		paintings_snapped[painting_index] = closest_marker_index
+		paintings[painting_index].global_position = markers[closest_marker_index].global_position - paintings[painting_index].size / 2
+		if closest_marker_index == painting_index:
+			TextManager.show_text(painting_descriptions[painting_index])
+		check_if_solved()
+	else:
+		paintings_snapped[painting_index] = -1
 
 func _exit_tree() -> void:
 	TextManager.cancel()
