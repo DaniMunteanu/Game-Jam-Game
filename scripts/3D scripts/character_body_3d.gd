@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+const SPRINT_SPEED = 8.7  #RUUUUN
 var speed = 3.0
 const SENSITIVITY = 0.003
 
@@ -57,9 +58,14 @@ func _physics_process(delta: float) -> void:
 	var input_dir = Input.get_vector("3D_left","3D_right", "3D_up", "3D_down")
 	var direction = (head.transform.basis * Vector3(
 		input_dir.x,0, input_dir.y)).normalized()
+#RUUUUN
+	var current_speed = speed
+	if Input.is_key_pressed(KEY_SHIFT):
+		current_speed = SPRINT_SPEED
+	
 	if direction:
-		velocity.x = direction.x * speed
-		velocity.z = direction.z * speed
+		velocity.x = direction.x * current_speed  #RUUUUN 
+		velocity.z = direction.z * current_speed  #RUUUUN
 	else:
 		velocity.x = 0.0
 		velocity.z = 0.0
