@@ -31,19 +31,19 @@ texture = ExtResource("2_v7l01")
 [node name="SnapMarkers" type="Node" parent="CanvasLayer" unique_id=87600555]
 
 [node name="Marker0" type="Marker2D" parent="CanvasLayer/SnapMarkers" unique_id=1810309430]
-position = Vector2(334.975, 589.105)
+position = Vector2(63, 198)
 scale = Vector2(4, 4)
 
 [node name="Marker1" type="Marker2D" parent="CanvasLayer/SnapMarkers" unique_id=787503195]
-position = Vector2(797.655, 592)
+position = Vector2(517, 199)
 scale = Vector2(4, 4)
 
 [node name="Marker2" type="Marker2D" parent="CanvasLayer/SnapMarkers" unique_id=1137301116]
-position = Vector2(1183, 489)
+position = Vector2(982, 197)
 scale = Vector2(4, 4)
 
 [node name="Marker3" type="Marker2D" parent="CanvasLayer/SnapMarkers" unique_id=665969494]
-position = Vector2(1716, 592)
+position = Vector2(1442, 194)
 scale = Vector2(4, 4)
 
 [node name="Paintings" type="Node" parent="CanvasLayer" unique_id=52144617]
@@ -59,28 +59,26 @@ offset_top = 62.160126
 offset_right = 221.59998
 offset_bottom = 538.6001
 scale = Vector2(0.744, 0.744)
-pivot_offset = Vector2(217, 328)
 size_flags_horizontal = 4
 texture_normal = ExtResource("5_0ef3u")
 
 [node name="Painting1" parent="CanvasLayer/Paintings" unique_id=1430282290 instance=ExtResource("5_ppu18")]
-offset_left = 448.0
-offset_top = -48.0
-offset_right = -918.03235
-offset_bottom = -332.30115
+offset_left = 385.0
+offset_top = 17.000004
+offset_right = -981.0322
+offset_bottom = -267.30115
 scale = Vector2(0.744, 0.744)
-pivot_offset = Vector2(183, 219)
 texture_normal = ExtResource("6_yobl8")
 ignore_texture_size = true
 stretch_mode = 5
 index = 1
 
 [node name="Painting2" parent="CanvasLayer/Paintings" unique_id=670298556 instance=ExtResource("5_ppu18")]
-offset_left = 176.0
-offset_top = 456.0
-offset_right = -1359.0
-offset_bottom = 27.0
-pivot_offset = Vector2(183, 219)
+offset_left = 161.0
+offset_top = 409.0
+offset_right = -1240.0
+offset_bottom = 137.0
+scale = Vector2(0.744, 0.744)
 texture_normal = ExtResource("7_nr8vp")
 ignore_texture_size = true
 stretch_mode = 5
