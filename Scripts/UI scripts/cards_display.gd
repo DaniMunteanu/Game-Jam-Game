@@ -9,7 +9,7 @@ var big_cards: Array[Card] = []
 func _ready() -> void:
 	init_small_cards()
 	init_big_cards()
-	call_deferred("update_display")
+	#call_deferred("update_display")
 	PuzzleManager.puzzle_finished.connect(on_puzzle_finished)
 
 func init_small_cards():

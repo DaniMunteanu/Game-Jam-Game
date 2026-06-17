@@ -71,7 +71,8 @@ func end_puzzle():
 func on_try_snapping(painting_index: int):
 	var closest_marker_index = -1
 	var closest_distance = snap_max_distance
-	var painting_center = paintings[painting_index].global_position + paintings[painting_index].size / 2
+	#var painting_center = paintings[painting_index].global_position + paintings[painting_index].size / 2
+	var painting_center = paintings[painting_index].global_position
 	
 	for marker_index in range(markers.size()):
 		var dist = painting_center.distance_to(markers[marker_index].global_position)
@@ -80,10 +81,11 @@ func on_try_snapping(painting_index: int):
 			closest_marker_index = marker_index
 	
 	if closest_marker_index != -1:
-		if paintings_snapped.has(closest_marker_index):
+		if paintings_snapped.has(closest_marker_index) and paintings_snapped[painting_index] != closest_marker_index:
 			return
 		paintings_snapped[painting_index] = closest_marker_index
-		paintings[painting_index].global_position = markers[closest_marker_index].global_position - paintings[painting_index].size / 2
+		#paintings[painting_index].global_position = markers[closest_marker_index].global_position - paintings[painting_index].size / 2
+		paintings[painting_index].global_position = markers[closest_marker_index].global_position
 		if closest_marker_index == painting_index:
 			TextManager.show_text(painting_descriptions[painting_index])
 		check_if_solved()

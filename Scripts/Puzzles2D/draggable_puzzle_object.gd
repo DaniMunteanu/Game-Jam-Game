@@ -23,3 +23,4 @@ func _on_button_up() -> void:
 	is_dragging = false
 	if draggable:
 		try_snapping.emit(index)
+		print("Tries to snap")
