@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://b52n10npscye6" path="res://Scripts/3D scripts/mainroom.gd" id="1_j7t7n"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="1_w1mmj"]
 [ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="3_rfp5g"]
-[ext_resource type="AudioStream" uid="uid://ycmioj1u1n0e" path="res://Audio/SFX/lepasi.mp3" id="4_5ikaq"]
 [ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://scenes/3d/InteractableObject.gd" id="4_fep6r"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="4_rfp5g"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="5_whf7h"]
@@ -496,6 +495,39 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_pchfi"]
 size = Vector3(4.0340576, 7.571808, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_nq443"]
+size = Vector3(2.8374329, 0.16894531, 2.4878998)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qe2jl"]
+size = Vector3(3.055725, 0.16894531, 2.9738464)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rmfpj"]
+size = Vector3(3.055725, 0.0758667, 2.9738464)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pnqj1"]
+size = Vector3(3.544342, 0.0758667, 2.9738464)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aso34"]
+size = Vector3(3.6529694, 0.0758667, 3.3087006)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v5abu"]
+size = Vector3(3.3175125, 0.0758667, 2.9738464)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_34cmk"]
+size = Vector3(3.4699411, 0.0758667, 3.3411627)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_agc57"]
+size = Vector3(2.8770103, 0.0758667, 2.999683)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e36nn"]
+size = Vector3(3.5283947, 0.001, 4.345789)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_54vqj"]
+size = Vector3(4.4076586, 0.001, 6.5117617)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5g3xn"]
+size = Vector3(2.6733403, 0.0107421875, 2.78454)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_0gmuw"]
 size = Vector3(2.4833984, 5.509506, 0.35009766)
 
@@ -518,12 +550,6 @@ tower_delete = NodePath("tower_delete")
 
 [node name="Player" parent="." unique_id=2036735905 instance=ExtResource("1_w1mmj")]
 transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -5.271773, 3.1448445, 2.6078143)
-
-[node name="Camera3D" parent="Player/head" parent_id_path=PackedInt32Array(2036735905, 1090359360) index="0" unique_id=1055196709]
-transform = Transform3D(0.27027026, 0, 8.881784e-16, 0, 0.27027026, 0, -8.881784e-16, 0, 0.27027026, 0, 0.8701416, -0.23591435)
-
-[node name="FootStepsPlayer" parent="Player" index="4" unique_id=1268008791]
-stream = ExtResource("4_5ikaq")
 
 [node name="OmniLight3D15" type="OmniLight3D" parent="." unique_id=1222721448]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.324274, -18.615837, 18.180344)
@@ -1104,21 +1130,96 @@ volume_db = 44.592
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.869523, -23.500576, 23.37301)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tower_delete" unique_id=996002085]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26116943, 2.276268, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23845196, 2.276268, 0)
 shape = SubResource("BoxShape3D_pchfi")
 debug_color = Color(0.79607844, 0.06666667, 1, 1)
 
 [node name="GardenLevel" type="Node3D" parent="." unique_id=246033411]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26.282516)
 
-[node name="Fire2" parent="GardenLevel" unique_id=1685599615 instance=ExtResource("9_lr5v6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.132976, 5.044213, -13.567103)
-
 [node name="Garden" parent="GardenLevel" unique_id=168570848 instance=ExtResource("40_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.13058, -24.603342, 15.159222)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.135526, -24.512018, 15.134487)
 
 [node name="tower" parent="." unique_id=1822419501 instance=ExtResource("40_5g3xn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.490861, -22.040165, 14.807217)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4908595, -22.040041, 14.807217)
+
+[node name="scara_turn" type="StaticBody3D" parent="tower" unique_id=389250079]
+transform = Transform3D(0.9951487, 0, -0.098381884, 0, 1, 0, 0.098381884, 0, 0.9951487, 6.80983, -1.3168182, 4.9584503)
+
+[node name="treapta1" type="CollisionShape3D" parent="tower/scara_turn" unique_id=334330867]
+transform = Transform3D(0.908497, -0.19841374, -0.36778456, -0.04948277, 0.8228268, -0.56613445, 0.4149521, 0.5325283, 0.73771656, -8.291308, 0.1585348, -4.8899484)
+shape = SubResource("BoxShape3D_nq443")
+debug_color = Color(1, 1, 0.28918967, 0.42000002)
+
+[node name="treapta2" type="CollisionShape3D" parent="tower/scara_turn" unique_id=210661255]
+transform = Transform3D(0.79236084, -0.30392578, -0.52895546, -0.10550067, 0.78573346, -0.60950214, 0.6008616, 0.53874946, 0.5905183, -7.169447, 1.0800574, -6.7444496)
+shape = SubResource("BoxShape3D_qe2jl")
+debug_color = Color(1, 1, 0.28918967, 0.42000002)
+
+[node name="treapta3" type="CollisionShape3D" parent="tower/scara_turn" unique_id=2969878]
+transform = Transform3D(0.5260193, -0.4352808, -0.730639, -0.13720009, 0.80441403, -0.5780086, 0.8393321, 0.40428606, 0.36341497, -5.676555, 2.1910703, -7.472637)
+shape = SubResource("BoxShape3D_rmfpj")
+debug_color = Color(1, 1, 0.28918967, 0.42000002)
+
+[node name="treapta4" type="CollisionShape3D" parent="tower/scara_turn" unique_id=1973494147]
+transform = Transform3D(0.02923344, -0.6034677, -0.796848, -0.24678499, 0.7681553, -0.59079176, 0.9686284, 0.21391997, -0.12647325, -3.7754385, 3.532, -7.61384)
+shape = SubResource("BoxShape3D_pnqj1")
+debug_color = Color(1, 1, 0.28918967, 0.42000002)
+
+[node name="treapta5" type="CollisionShape3D" parent="tower/scara_turn" unique_id=1881637568]
+transform = Transform3D(-0.36267108, -0.66589314, -0.6519566, -0.023804434, 0.70598143, -0.7078308, 0.9316093, -0.24119166, -0.27189142, -2.0339484, 4.7225437, -6.9628243)
+shape = SubResource("BoxShape3D_aso34")
+debug_color = Color(1, 1, 0.28918967, 0.42000002)
+
+[node name="treapta6" type="CollisionShape3D" parent="tower/scara_turn" unique_id=1703357105]
+transform = Transform3D(-0.72397864, -0.5399523, -0.42929912, -0.15392193, 0.7330972, -0.6624779, 0.67242676, -0.41354108, -0.61385775, -0.83021927, 6.1257095, -5.394205)
+shape = SubResource("BoxShape3D_aso34")
+debug_color = Color(1, 1, 0.28918967, 0.42000002)
+
+[node name="treapta7" type="CollisionShape3D" parent="tower/scara_turn" unique_id=1848721648]
+transform = Transform3D(-0.94805264, -0.27603555, -0.15807351, -0.09330414, 0.7164018, -0.69142145, 0.30410415, -0.6407565, -0.70494306, -0.30171886, 7.7604756, -3.566654)
+shape = SubResource("BoxShape3D_v5abu")
+debug_color = Color(1, 1, 0.28918967, 0.42000002)
+
+[node name="treapta8" type="CollisionShape3D" parent="tower/scara_turn" unique_id=382479056]
+transform = Transform3D(-0.97417325, -0.020410653, 0.22486763, -0.16797683, 0.7310169, -0.66136146, -0.15088087, -0.68204856, -0.71556354, -0.19571145, 9.283587, -1.485175)
+shape = SubResource("BoxShape3D_34cmk")
+debug_color = Color(2.8940194, 7.124637, 9.04351, 1)
+
+[node name="treapta9" type="CollisionShape3D" parent="tower/scara_turn" unique_id=1485731438]
+transform = Transform3D(-0.78589153, 0.19335505, 0.5873492, -0.20543171, 0.8142642, -0.54292935, -0.58323205, -0.5473421, -0.60020065, -1.7449626, 10.601406, 0.40279865)
+shape = SubResource("BoxShape3D_agc57")
+debug_color = Color(2.8940194, 7.124637, 9.04351, 1)
+
+[node name="treapta10" type="CollisionShape3D" parent="tower/scara_turn" unique_id=701892367]
+transform = Transform3D(-0.051320642, 0.54778165, 0.8350328, -0.1573647, 0.821261, -0.5484226, -0.98619366, -0.1595462, 0.04405628, -4.0832477, 12.359462, 1.1182551)
+shape = SubResource("BoxShape3D_e36nn")
+debug_color = Color(2.8940194, 7.124637, 9.04351, 1)
+
+[node name="treapta11" type="CollisionShape3D" parent="tower/scara_turn" unique_id=504660206]
+transform = Transform3D(0.31365055, 0.65007424, 0.692101, -0.16901037, 0.7554738, -0.633005, -0.934363, 0.081573784, 0.3468269, -6.7399955, 14.207465, 0.4679784)
+shape = SubResource("BoxShape3D_e36nn")
+debug_color = Color(2.8940194, 7.124637, 9.04351, 1)
+
+[node name="treapta12" type="CollisionShape3D" parent="tower/scara_turn" unique_id=1436734070]
+transform = Transform3D(0.8716555, 0.4733182, 0.12711975, -0.33146712, 0.7604203, -0.55847174, -0.36100122, 0.44465935, 0.8197162, -8.933519, 16.512362, -2.5660567)
+shape = SubResource("BoxShape3D_54vqj")
+debug_color = Color(2.8940194, 7.124637, 9.04351, 1)
+
+[node name="treapta13" type="CollisionShape3D" parent="tower/scara_turn" unique_id=1222963586]
+transform = Transform3D(0.9082554, -0.03294719, -0.41708928, -0.23849133, 0.7783117, -0.58082116, 0.34375846, 0.6270059, 0.69904786, -8.437077, 18.783499, -5.2597213)
+shape = SubResource("BoxShape3D_54vqj")
+debug_color = Color(2.8940194, 7.124637, 9.04351, 1)
+
+[node name="treapta14" type="CollisionShape3D" parent="tower/scara_turn" unique_id=1267966254]
+transform = Transform3D(0.6085178, -0.32986045, -0.7217154, -0.29329234, 0.75161016, -0.5908148, 0.7373307, 0.5711967, 0.3606217, -5.0547533, 21.691126, -7.521372)
+shape = SubResource("BoxShape3D_54vqj")
+debug_color = Color(2.8940194, 7.124637, 9.04351, 1)
+
+[node name="treapta15" type="CollisionShape3D" parent="tower/scara_turn" unique_id=1155905545]
+transform = Transform3D(0.7725606, -0.51670927, 0.36899626, 0.62490886, 0.72165924, -0.2978188, -0.11240502, 0.46067134, 0.8804225, -4.862214, 22.062319, -7.560009)
+shape = SubResource("BoxShape3D_5g3xn")
+debug_color = Color(1, 1, 0.28918967, 0.42000002)
 
 [node name="tower_door_model" parent="." unique_id=394253567 node_paths=PackedStringArray("interactable") instance=ExtResource("42_qe2jl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.611942, -23.838614, 21.580822)
@@ -1138,5 +1239,3 @@ debug_color = Color(0, 0, 0, 1)
 [connection signal="body_entered" from="FirstRoom/actual_mirror/InteractableArea3D" to="." method="_on_d_mirror_body_entered"]
 [connection signal="cypher_cracked" from="FirstRoom/Puzzles3D/Temperance3D/zoom_camera" to="FirstRoom/Puzzles3D/Temperance3D" method="_on_zoom_camera_cypher_cracked"]
 [connection signal="body_entered" from="tower_delete" to="." method="_on_tower_delete_body_entered"]
-
-[editable path="Player"]
