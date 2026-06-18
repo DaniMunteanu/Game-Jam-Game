@@ -12,8 +12,8 @@ signal try_snapping(index: int)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_dragging and draggable:
-		global_position.x = clamp(get_global_mouse_position().x - offset.x, 0, 1600)
-		global_position.y = clamp(get_global_mouse_position().y - offset.y, 0, 800)
+		global_position.x = clamp(get_global_mouse_position().x - offset.x, 0, 1550)
+		global_position.y = clamp(get_global_mouse_position().y - offset.y, -50, 550)
 
 func _on_button_down() -> void:
 	is_dragging = true
