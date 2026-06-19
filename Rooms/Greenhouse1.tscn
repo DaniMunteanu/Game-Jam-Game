@@ -212,6 +212,7 @@ offset_bottom = 0.52001953
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_lskgf")
+destination_room_path = "res://scenes/3d/garden.tscn"
 zoom_multiplier = 1.05
 metadata/_edit_use_anchors_ = true
 
@@ -244,7 +245,7 @@ offset_top = 250.0
 offset_right = 557.0
 offset_bottom = 1081.0
 script = ExtResource("2_lskgf")
-destination_room_path = "res://Rooms/Room4.tscn"
+destination_room_path = "res://Puzzles/Acvariu_close.tscn"
 zoom_multiplier = 1.1
 metadata/_edit_use_anchors_ = true
 

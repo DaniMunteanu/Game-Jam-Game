@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bpeajadq85r1q"]
+
+[ext_resource type="Texture2D" uid="uid://n3xfdygu0juy" path="res://Sprites/Background/sera-right/sera  PERETE SAH.png" id="1_bpovk"]
+[ext_resource type="Texture2D" uid="uid://crnahm3sh2ey7" path="res://Sprites/Background/sera-right/sera  sah.png" id="2_emyrw"]
+
+[node name="Room6" type="Node2D" unique_id=2004927298]
+
+[node name="BackgroundSprites" type="Node2D" parent="." unique_id=1024796150]
+
+[node name="Wall" type="Sprite2D" parent="BackgroundSprites" unique_id=653775498]
+position = Vector2(961.49994, 543.25)
+scale = Vector2(0.7551261, 0.7496528)
+texture = ExtResource("1_bpovk")
+
+[node name="Chess" type="Button" parent="." unique_id=142384321]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="Chess" unique_id=1063483808]
+layout_mode = 0
+offset_left = 1432.0
+offset_top = 637.0
+offset_right = 1667.0
+offset_bottom = 720.0
+texture = ExtResource("2_emyrw")
+expand_mode = 1
