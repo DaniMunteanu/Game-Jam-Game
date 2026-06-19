@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://j403tq8k44rm"]
 
 [ext_resource type="PackedScene" uid="uid://cr4636s7oduy4" path="res://3D assets/Objects/zodiac_wheel/Zodiac_wheel.glb" id="1_gxnlk"]
-[ext_resource type="Script" uid="uid://cprcdtuksosjh" path="res://zodiac_wheel.gd" id="2_gxnlk"]
+[ext_resource type="Script" uid="uid://cprcdtuksosjh" path="res://Scripts/zodiac_wheel.gd" id="2_gxnlk"]
 
 [sub_resource type="Animation" id="Animation_bvugf"]
 length = 0.001
