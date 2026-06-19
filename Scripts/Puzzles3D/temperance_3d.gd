@@ -8,8 +8,8 @@ extends Node
 @export var big_sack : Node3D
 @export var med_sack : Node3D
 @export var small_sack : Node3D
-@onready var sfx_player_2: AudioStreamPlayer3D = $"../../SfxPlayer2"
-@onready var sfx_player_3: AudioStreamPlayer3D = $"../../SfxPlayer3"
+@onready var sfx_player_2: AudioStreamPlayer3D = $"../../../SfxPlayers/SfxPlayer2"
+@onready var sfx_player_3: AudioStreamPlayer3D = $"../../../SfxPlayers/SfxPlayer3"
 
 #left taler markers:
 @export var left_big_marker : Marker3D
