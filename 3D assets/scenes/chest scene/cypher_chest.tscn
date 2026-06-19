@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://22hbh3dme6n0"]
 
 [ext_resource type="PackedScene" uid="uid://cpi0utts8cqry" path="res://3D assets/Objects/CHEST/Cypher_chest.glb" id="1_inefa"]
-[ext_resource type="Script" uid="uid://b3hmarbna5hmb" path="res://3D assets/scenes/chest scene/cypher_chest.gd" id="2_exhbm"]
+[ext_resource type="Script" uid="uid://b3hmarbna5hmb" path="res://Scripts/3D scripts/cypher_chest.gd" id="2_exhbm"]
 
 [sub_resource type="Animation" id="Animation_dhlte"]
 length = 0.001
