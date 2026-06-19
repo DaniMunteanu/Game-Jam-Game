@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://be1ks538q54p8"]
 
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
+[ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="2_yr1ht"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
 
@@ -379,3 +380,6 @@ debug_color = Color(0.3141283, 0.23909599, 0, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.19738, 7.062762, 22.170635)
 light_energy = 9.325
 omni_range = 10.420014
+
+[node name="Player" parent="." unique_id=2036735905 instance=ExtResource("2_yr1ht")]
+transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -0.18859243, 3.1448445, -4.32356)
