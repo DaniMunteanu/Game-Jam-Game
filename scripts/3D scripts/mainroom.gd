@@ -15,8 +15,8 @@ extends Node3D
 @export var secret_door : Node3D
 @onready var dissolve: ColorRect = $dissolve
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var sfx_player_4: AudioStreamPlayer3D = $SfxPlayer4
-@onready var sfx_player_5: AudioStreamPlayer3D = $SfxPlayer5
+@onready var sfx_player_4: AudioStreamPlayer3D = $SfxPlayers/SfxPlayer4
+@onready var sfx_player_5: AudioStreamPlayer3D = $SfxPlayers/SfxPlayer5
 @export var garden_path : String
 #NEW STUFF
 @export var room_level : Node
@@ -79,7 +79,9 @@ func _on_part1_finished():
 	mirror.queue_free()
 
 
-func _on_tower_delete_body_entered(body: CharacterBody3D) -> void:
+func _on_tower_delete_body_entered(body: Node3D) -> void:
+	if body is not CharacterBody3D:
+		return
 	print("out with the old, in with the new.")
 	garden_level.visible = true
 	player.speed = GARDEN_SPEED

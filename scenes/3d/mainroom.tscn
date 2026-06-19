@@ -2,21 +2,20 @@
 
 [ext_resource type="Script" uid="uid://b52n10npscye6" path="res://Scripts/3D scripts/mainroom.gd" id="1_j7t7n"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="1_w1mmj"]
-[ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="3_rfp5g"]
-[ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://scenes/3d/InteractableObject.gd" id="4_fep6r"]
+[ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_qe2jl"]
+[ext_resource type="PackedScene" path="res://scenes/3d/interactable_area_3d.tscn" id="3_rfp5g"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="4_rfp5g"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="5_whf7h"]
 [ext_resource type="PackedScene" uid="uid://d35qijl2l5jdx" path="res://3D assets/Illusion.blend" id="6_5k5vb"]
 [ext_resource type="PackedScene" uid="uid://b8x23qj21yxwb" path="res://Particles/Fire.tscn" id="9_lr5v6"]
 [ext_resource type="Script" uid="uid://5dn58dedj0g6" path="res://Scripts/Puzzles3D/moon_3d.gd" id="10_2vkj2"]
-[ext_resource type="PackedScene" uid="uid://ixxg5srbckg2" path="res://3D assets/luna.tscn" id="11_ntof2"]
+[ext_resource type="PackedScene" path="res://3D assets/luna.tscn" id="11_ntof2"]
 [ext_resource type="PackedScene" uid="uid://yvqu345dohrg" path="res://3D assets/scenes/secret_vitraliu.tscn" id="11_pchfi"]
 [ext_resource type="Script" uid="uid://c1srst7838qj0" path="res://Scripts/Puzzles3D/star_3d.gd" id="12_vl5l8"]
 [ext_resource type="Script" uid="uid://0htjwty3extj" path="res://Scripts/Puzzles3D/temperance_3d.gd" id="13_gnvy8"]
 [ext_resource type="PackedScene" uid="uid://j403tq8k44rm" path="res://3D assets/Objects/zodiac_wheel.tscn" id="13_yuerg"]
 [ext_resource type="Script" uid="uid://jr6oloa7llj7" path="res://Scripts/Puzzles3D/hierophant_3d.gd" id="14_3epcx"]
 [ext_resource type="PackedScene" uid="uid://22hbh3dme6n0" path="res://3D assets/scenes/chest scene/cypher_chest.tscn" id="14_yuerg"]
-[ext_resource type="Script" uid="uid://c5jcpns81oxq3" path="res://scenes/3d/death_3d.gd" id="15_3epcx"]
 [ext_resource type="PackedScene" uid="uid://cp02prp35y6o4" path="res://3D assets/Objects/ouija_board_planchette.tscn" id="15_gnvy8"]
 [ext_resource type="PackedScene" uid="uid://bm2sct1i5mld5" path="res://scenes/3d/zoom_camera.tscn" id="16_3wu1q"]
 [ext_resource type="PackedScene" uid="uid://dac0nstm4o4l5" path="res://3D assets/scenes/sacks/Allsacks.tscn" id="16_yxx7e"]
@@ -31,6 +30,7 @@
 [ext_resource type="Resource" uid="uid://fxf623ngowdt" path="res://Scripts/Items/GreenPot.tres" id="23_v6s45"]
 [ext_resource type="Resource" uid="uid://dhkl5spggl2ln" path="res://Scripts/Items/BluePot.tres" id="24_yxx7e"]
 [ext_resource type="Resource" uid="uid://yvnkv23qvu5v" path="res://Scripts/Items/YellowPot.tres" id="25_lr5v6"]
+[ext_resource type="Script" uid="uid://c5jcpns81oxq3" path="res://Scripts/Puzzles3D/death_3d.gd" id="29_qe2jl"]
 [ext_resource type="AudioStream" uid="uid://dtos2mplvjkri" path="res://Audio/SFX/zodiac_pressedt.wav" id="31_v6s45"]
 [ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="32_yxx7e"]
 [ext_resource type="AudioStream" uid="uid://djksd37gj7fx6" path="res://Audio/SFX/chest.wav" id="35_yh05a"]
@@ -531,7 +531,7 @@ size = Vector3(2.6733403, 0.0107421875, 2.78454)
 [sub_resource type="BoxShape3D" id="BoxShape3D_0gmuw"]
 size = Vector3(2.4833984, 5.509506, 0.35009766)
 
-[node name="Mainroom" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("spawnpos", "player", "mirror", "tower_door", "zodiac_wheel", "zodiac_tile", "zoom_camera", "secret_door", "room_level", "garden_level", "tower", "tower_delete")]
+[node name="Mainroom" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("spawnpos", "player", "mirror", "tower_door", "zodiac_wheel", "zoom_camera", "secret_door", "room_level", "garden_level", "tower", "tower_delete")]
 script = ExtResource("1_j7t7n")
 spawnpos = NodePath("MirrorSpawnPos")
 player = NodePath("Player")
@@ -539,7 +539,6 @@ scene_2D_path = "res://Rooms/Room2.tscn"
 mirror = NodePath("FirstRoom/actual_mirror")
 tower_door = NodePath("tower_door_model")
 zodiac_wheel = NodePath("FirstRoom/Puzzles3D/Star3D/StaticBody3D")
-zodiac_tile = NodePath("FirstRoom/Puzzles3D/Star3D/StaticBody3D/Zodiac_wheel")
 zoom_camera = NodePath("FirstRoom/Puzzles3D/Temperance3D/zoom_camera")
 secret_door = NodePath("FirstRoom/Illusion/secret_door")
 garden_path = "res://scenes/3d/garden.tscn"
@@ -569,7 +568,7 @@ omni_range = 3.802
 
 [node name="actual_mirror" type="StaticBody3D" parent="FirstRoom" unique_id=974036244 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.126584, 4.0611067, 2.591559)
-script = ExtResource("4_fep6r")
+script = ExtResource("3_qe2jl")
 area = NodePath("InteractableArea3D")
 object = NodePath(".")
 
@@ -684,7 +683,7 @@ script = ExtResource("10_2vkj2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="FirstRoom/Puzzles3D/Moon3D" unique_id=818467150 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5652399, 2.927988, 4.489984)
-script = ExtResource("4_fep6r")
+script = ExtResource("3_qe2jl")
 area = NodePath("InteractableArea3D")
 object = NodePath(".")
 
@@ -715,14 +714,12 @@ script = ExtResource("12_vl5l8")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="FirstRoom/Puzzles3D/Star3D" unique_id=2064750770 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2829282, 0, 0)
-script = ExtResource("4_fep6r")
+script = ExtResource("3_qe2jl")
 area = NodePath("InteractableArea3D")
 object = NodePath(".")
 
-[node name="Zodiac_wheel" parent="FirstRoom/Puzzles3D/Star3D/StaticBody3D" unique_id=788897303 node_paths=PackedStringArray("anim_player", "star_card") instance=ExtResource("13_yuerg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.095262, 0.6250768, -3.8107934)
-anim_player = NodePath("AnimationPlayer")
-star_card = NodePath("The Star")
+[node name="Zodiac_wheel" parent="FirstRoom/Puzzles3D/Star3D/StaticBody3D" unique_id=788897303 instance=ExtResource("13_yuerg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.095, 0.625, -3.811)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FirstRoom/Puzzles3D/Star3D/StaticBody3D" unique_id=633480971]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.107796, 6.376869, -4.9116974)
@@ -756,7 +753,7 @@ right_scale = NodePath("Scales/rightscale")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="FirstRoom/Puzzles3D/Temperance3D" unique_id=525020287 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.405443, 0.88286996, 2.3648462)
-script = ExtResource("4_fep6r")
+script = ExtResource("3_qe2jl")
 area = NodePath("../InteractableArea3D")
 object = NodePath(".")
 
@@ -786,7 +783,7 @@ butt4 = NodePath("CanvasLayer/Button4")
 
 [node name="Allsacks" type="StaticBody3D" parent="FirstRoom/Puzzles3D/Temperance3D" unique_id=369757129 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.642055, 0, 0)
-script = ExtResource("4_fep6r")
+script = ExtResource("3_qe2jl")
 area = NodePath("../InteractableArea3D")
 object = NodePath(".")
 
@@ -803,7 +800,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.444011, 2.8703268, 6.39352
 
 [node name="leftscale" type="StaticBody3D" parent="FirstRoom/Puzzles3D/Temperance3D/Scales" unique_id=1402304221 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26737595, 1.0159888, -0.7954478)
-script = ExtResource("4_fep6r")
+script = ExtResource("3_qe2jl")
 area = NodePath("../../InteractableArea3D2")
 object = NodePath(".")
 
@@ -814,7 +811,7 @@ debug_color = Color(0.75686276, 0.6, 1, 1)
 
 [node name="rightscale" type="StaticBody3D" parent="FirstRoom/Puzzles3D/Temperance3D/Scales" unique_id=314698658 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1500616, 1.0922501, 0.956923)
-script = ExtResource("4_fep6r")
+script = ExtResource("3_qe2jl")
 area = NodePath("../../InteractableArea3D2")
 object = NodePath(".")
 
@@ -872,7 +869,7 @@ solution = Array[ExtResource("22_jk8y8")]([ExtResource("23_v6s45"), ExtResource(
 
 [node name="BlueStaticBody3D" type="StaticBody3D" parent="FirstRoom/Puzzles3D/Hierophant3D/BluePot" unique_id=1052639667 node_paths=PackedStringArray("object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61283, 1.3226688, -7.9926257)
-script = ExtResource("4_fep6r")
+script = ExtResource("3_qe2jl")
 object = NodePath(".")
 
 [node name="bluepot" parent="FirstRoom/Puzzles3D/Hierophant3D/BluePot/BlueStaticBody3D" unique_id=55907318 instance=ExtResource("17_3wu1q")]
@@ -888,7 +885,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1149096, -0.06547761, 2.53
 
 [node name="GreenStaticBody3D" type="StaticBody3D" parent="FirstRoom/Puzzles3D/Hierophant3D/GreenPot" unique_id=1476279752 node_paths=PackedStringArray("object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61283, 1.3226688, -7.9926257)
-script = ExtResource("4_fep6r")
+script = ExtResource("3_qe2jl")
 object = NodePath(".")
 
 [node name="greenpot" parent="FirstRoom/Puzzles3D/Hierophant3D/GreenPot/GreenStaticBody3D" unique_id=1222744295 instance=ExtResource("18_4aj2b")]
@@ -904,7 +901,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21432, -0.071055174, 4.818
 
 [node name="YellowStaticBody3D" type="StaticBody3D" parent="FirstRoom/Puzzles3D/Hierophant3D/YellowPot" unique_id=721327788 node_paths=PackedStringArray("object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2072692, 0.95686185, -7.479437)
-script = ExtResource("4_fep6r")
+script = ExtResource("3_qe2jl")
 object = NodePath(".")
 
 [node name="yellowpot" parent="FirstRoom/Puzzles3D/Hierophant3D/YellowPot/YellowStaticBody3D" unique_id=132788889 instance=ExtResource("19_1o1v0")]
@@ -918,7 +915,7 @@ debug_color = Color(0, 0.5372549, 0.627451, 1)
 
 [node name="CookingStaticBody3D" type="StaticBody3D" parent="FirstRoom/Puzzles3D/Hierophant3D/CookingPot" unique_id=693344568 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40366638, 0.025342941, -2.0393384)
-script = ExtResource("4_fep6r")
+script = ExtResource("3_qe2jl")
 area = NodePath("../CookingInteractableArea3D3")
 object = NodePath(".")
 
@@ -959,7 +956,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65514034, 4.411404, -1.2199
 visible = false
 
 [node name="Death3D" type="Node" parent="FirstRoom/Puzzles3D" unique_id=414329513 node_paths=PackedStringArray("ouija_table")]
-script = ExtResource("15_3epcx")
+script = ExtResource("29_qe2jl")
 ouija_table = NodePath("Ouija_board_planchette")
 
 [node name="Ouija_board_planchette" parent="FirstRoom/Puzzles3D/Death3D" unique_id=841430910 instance=ExtResource("15_gnvy8")]
@@ -969,103 +966,106 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.93420315, 0.5774975, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6585083, 0.10107422, -1.4724121)
 size = Vector3(20.233032, 2.2021484, 22.753418)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="FirstRoom" unique_id=391650907]
-transform = Transform3D(1, 0, 0, 0, 0.999975, 0.0070685246, 0, -0.0070685246, 0.999975, 0.79261994, 8.612321, -0.7253725)
+[node name="OmniLights" type="Node3D" parent="FirstRoom" unique_id=1071963937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6585083, 0.10107422, -1.4724121)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=391650907]
+transform = Transform3D(1, 0, 0, 0, 0.999975, 0.0070685246, 0, -0.0070685246, 0.999975, -3.8658884, 8.511247, 0.7470396)
 light_color = Color(0.853349, 0.7353579, 0.74360764, 1)
 light_energy = 8.0
 light_size = 0.363
 omni_range = 6.5356345
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="FirstRoom" unique_id=1933721416]
-transform = Transform3D(1, 0, 0, 0, 0.999975, 0.0070685246, 0, -0.0070685246, 0.999975, 2.0469384, 8.612321, 0.30996692)
+[node name="OmniLight3D2" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=1933721416]
+transform = Transform3D(1, 0, 0, 0, 0.999975, 0.0070685246, 0, -0.0070685246, 0.999975, -2.61157, 8.511247, 1.782379)
 light_color = Color(0.853349, 0.7353579, 0.74360764, 1)
 light_energy = 8.0
 light_size = 0.363
 omni_range = 6.5356345
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="FirstRoom" unique_id=2100872595]
-transform = Transform3D(1, 0, 0, 0, 0.999975, 0.0070685246, 0, -0.0070685246, 0.999975, 3.5652378, 8.663017, -1.189168)
+[node name="OmniLight3D3" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=2100872595]
+transform = Transform3D(1, 0, 0, 0, 0.999975, 0.0070685246, 0, -0.0070685246, 0.999975, -1.0932705, 8.561943, 0.28324413)
 light_color = Color(0.853349, 0.7353579, 0.74360764, 1)
 light_energy = 8.0
 light_size = 0.363
 omni_range = 6.5356345
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="FirstRoom" unique_id=1263593863]
-transform = Transform3D(1, 0, 0, 0, 0.999975, 0.0070685246, 0, -0.0070685246, 0.999975, 1.6121585, 8.320367, -2.3563719)
+[node name="OmniLight3D4" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=1263593863]
+transform = Transform3D(1, 0, 0, 0, 0.999975, 0.0070685246, 0, -0.0070685246, 0.999975, -3.0463498, 8.219293, -0.8839598)
 light_color = Color(0.853349, 0.7353579, 0.74360764, 1)
 light_energy = 8.0
 light_size = 0.363
 omni_range = 6.5356345
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="FirstRoom" unique_id=1825110667]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2914543, 1.9897165, -5.4727025)
+[node name="OmniLight3D5" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=1825110667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.949963, 1.8886423, -4.0002904)
 light_color = Color(0.99352354, 0.532938, 0.57480246, 1)
 light_size = 1.0
 omni_attenuation = 2.756
 
-[node name="OmniLight3D6" type="OmniLight3D" parent="FirstRoom" unique_id=766418882]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.160525, 6.0435123, -7.478418)
+[node name="OmniLight3D6" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=766418882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.502017, 5.942438, -6.006006)
 light_energy = 4.916
 omni_range = 5.86
 
-[node name="OmniLight3D7" type="OmniLight3D" parent="FirstRoom" unique_id=1409851885]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2665634, 4.4870644, 5.2507176)
+[node name="OmniLight3D7" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=1409851885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.925072, 4.38599, 6.7231297)
 light_energy = 5.369
 omni_range = 5.86
 
-[node name="OmniLight3D8" type="OmniLight3D" parent="FirstRoom" unique_id=1618850347]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6694467, 3.4123137, 5.710823)
+[node name="OmniLight3D8" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=1618850347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9890616, 3.3112395, 7.183235)
 light_color = Color(0.60492414, 0.58097315, 1, 1)
 light_energy = 5.021
 light_volumetric_fog_energy = 3.87
 omni_range = 5.86
 
-[node name="OmniLight3D9" type="OmniLight3D" parent="FirstRoom" unique_id=1736961323]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.383057, 3.3845518, 5.672757)
+[node name="OmniLight3D9" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=1736961323]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2754512, 3.2834775, 7.1451693)
 light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
 omni_range = 0.8843135
 
-[node name="OmniLight3D15" type="OmniLight3D" parent="FirstRoom" unique_id=2014703879]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2773674, 5.219602, 5.7078624)
+[node name="OmniLight3D15" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=2014703879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.935876, 5.118528, 7.1802745)
 light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
 light_energy = 9.616
 omni_range = 1.112485
 
-[node name="OmniLight3D11" type="OmniLight3D" parent="FirstRoom" unique_id=766243665]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1005034, 4.120695, -9.075926)
+[node name="OmniLight3D11" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=766243665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7590117, 4.019621, -7.6035137)
 light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
 light_energy = 6.591
 omni_range = 1.3998072
 
-[node name="OmniLight3D13" type="OmniLight3D" parent="FirstRoom" unique_id=28924441]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8002398, 3.2994466, -8.818841)
+[node name="OmniLight3D13" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=28924441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8582685, 3.1983724, -7.346429)
 light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
 light_energy = 10.438
 omni_range = 1.8697889
 
-[node name="OmniLight3D16" type="OmniLight3D" parent="FirstRoom" unique_id=500320639]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8002398, 4.819501, -8.961021)
+[node name="OmniLight3D16" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=500320639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8582685, 4.7184267, -7.4886093)
 light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
 light_energy = 10.438
 omni_range = 1.5578815
 
-[node name="OmniLight3D12" type="OmniLight3D" parent="FirstRoom" unique_id=1523201250]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.813715, 5.6147823, -8.902296)
+[node name="OmniLight3D12" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=1523201250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.472223, 5.513708, -7.429884)
 light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
 light_energy = 6.591
 omni_range = 1.3998072
 
-[node name="OmniLight3D10" type="OmniLight3D" parent="FirstRoom" unique_id=1174573847]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.769357, 6.258958, 10.349823)
+[node name="OmniLight3D10" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=1174573847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1108484, 6.1578836, 11.822235)
 light_energy = 12.715
 
-[node name="OmniLight3D14" type="OmniLight3D" parent="FirstRoom" unique_id=652381846]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.116099, 3.4962506, 5.640469)
+[node name="OmniLight3D14" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=652381846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45759058, 3.3951764, 7.112881)
 light_energy = 2.301
 light_size = 0.215
 
-[node name="OmniLight3D17" type="OmniLight3D" parent="FirstRoom" unique_id=1914248222]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.505795, 5.162975, 2.7179422)
+[node name="OmniLight3D17" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=1914248222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.164303, 5.0619006, 4.1903543)
 light_energy = 6.593
 light_volumetric_fog_energy = 10.383
 light_size = 0.485
@@ -1091,16 +1091,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.596, 1.567, 3.542)
 
 [node name="CardsDisplay" parent="." unique_id=2004390668 instance=ExtResource("5_whf7h")]
 
-[node name="SfxPlayer" type="AudioStreamPlayer3D" parent="." unique_id=31134926]
+[node name="SfxPlayers" type="Node3D" parent="." unique_id=1482972871]
+
+[node name="SfxPlayer" type="AudioStreamPlayer3D" parent="SfxPlayers" unique_id=31134926]
 stream = ExtResource("31_v6s45")
 bus = &"Sfx"
 
-[node name="SfxPlayer2" type="AudioStreamPlayer3D" parent="." unique_id=313866492]
+[node name="SfxPlayer2" type="AudioStreamPlayer3D" parent="SfxPlayers" unique_id=313866492]
 stream = ExtResource("32_yxx7e")
 bus = &"Sfx"
 
-[node name="SfxPlayer3" type="AudioStreamPlayer3D" parent="." unique_id=1108698427]
+[node name="SfxPlayer3" type="AudioStreamPlayer3D" parent="SfxPlayers" unique_id=1108698427]
 stream = ExtResource("35_yh05a")
+
+[node name="SfxPlayer4" type="AudioStreamPlayer3D" parent="SfxPlayers" unique_id=1327373369]
+stream = ExtResource("38_7m280")
+volume_db = 44.592
+
+[node name="SfxPlayer5" type="AudioStreamPlayer3D" parent="SfxPlayers" unique_id=1399176760]
+stream = ExtResource("37_ch8tf")
 
 [node name="dissolve" type="ColorRect" parent="." unique_id=823956295]
 z_index = 11
@@ -1118,13 +1127,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1201800877]
 libraries/ = SubResource("AnimationLibrary_pchfi")
-
-[node name="SfxPlayer5" type="AudioStreamPlayer3D" parent="." unique_id=1399176760]
-stream = ExtResource("37_ch8tf")
-
-[node name="SfxPlayer4" type="AudioStreamPlayer3D" parent="." unique_id=1327373369]
-stream = ExtResource("38_7m280")
-volume_db = 44.592
 
 [node name="tower_delete" type="Area3D" parent="." unique_id=875819227]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.869523, -23.500576, 23.37301)
@@ -1227,7 +1229,7 @@ interactable = NodePath("tower_door2")
 
 [node name="tower_door2" type="StaticBody3D" parent="tower_door_model" unique_id=165538496 node_paths=PackedStringArray("object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01194191, 0.096925735, -1.1444092e-05)
-script = ExtResource("4_fep6r")
+script = ExtResource("3_qe2jl")
 object = NodePath(".")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tower_door_model/tower_door2" unique_id=85417351]

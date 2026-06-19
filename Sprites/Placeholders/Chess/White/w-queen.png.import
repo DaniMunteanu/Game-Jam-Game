@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djr1m0um7slft"
-path="res://.godot/imported/peretii_2-3.jpg-4bad6529cf0dedb29629456fb9b5fe33.ctex"
+uid="uid://cxhkh40rgasxn"
+path="res://.godot/imported/w-queen.png-65529a70da1880b421ebe38dc6f04c7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://3D assets/references/peretii_2-3.jpg"
-dest_files=["res://.godot/imported/peretii_2-3.jpg-4bad6529cf0dedb29629456fb9b5fe33.ctex"]
+source_file="res://Sprites/Placeholders/Chess/White/w-queen.png"
+dest_files=["res://.godot/imported/w-queen.png-65529a70da1880b421ebe38dc6f04c7f.ctex"]
 
 [params]
 

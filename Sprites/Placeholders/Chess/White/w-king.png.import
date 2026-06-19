@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn1klvkmxk5uc"
-path="res://.godot/imported/iimage.png-478d5137839900449520c3b17e9c7d0e.ctex"
+uid="uid://c472y5ml4j7x2"
+path="res://.godot/imported/w-king.png-4edd781ba8974d35dca70db028d035f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://3D assets/references/iimage.png"
-dest_files=["res://.godot/imported/iimage.png-478d5137839900449520c3b17e9c7d0e.ctex"]
+source_file="res://Sprites/Placeholders/Chess/White/w-king.png"
+dest_files=["res://.godot/imported/w-king.png-4edd781ba8974d35dca70db028d035f1.ctex"]
 
 [params]
 

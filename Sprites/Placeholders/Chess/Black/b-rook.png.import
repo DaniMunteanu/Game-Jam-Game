@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ptob1e43u8fg"
-path="res://.godot/imported/castitiff.jpg-48aed54bb6ba61b12cead87373377f39.ctex"
+uid="uid://bp08mfx58h3ge"
+path="res://.godot/imported/b-rook.png-c01af60c81a818000fa2edb23e8ef2ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://3D assets/references/castitiff.jpg"
-dest_files=["res://.godot/imported/castitiff.jpg-48aed54bb6ba61b12cead87373377f39.ctex"]
+source_file="res://Sprites/Placeholders/Chess/Black/b-rook.png"
+dest_files=["res://.godot/imported/b-rook.png-c01af60c81a818000fa2edb23e8ef2ff.ctex"]
 
 [params]
 

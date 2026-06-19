@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7d7ac8q8yid7"
-path="res://.godot/imported/peretii_1-4.jpg-d73fcb869b040e24726c85cdcf1b9083.ctex"
+uid="uid://bo3721wxqeho6"
+path="res://.godot/imported/w-pawn.png-e133be3b82c8a390e5a1609b80970cec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://3D assets/references/peretii_1-4.jpg"
-dest_files=["res://.godot/imported/peretii_1-4.jpg-d73fcb869b040e24726c85cdcf1b9083.ctex"]
+source_file="res://Sprites/Placeholders/Chess/White/w-pawn.png"
+dest_files=["res://.godot/imported/w-pawn.png-e133be3b82c8a390e5a1609b80970cec.ctex"]
 
 [params]
 

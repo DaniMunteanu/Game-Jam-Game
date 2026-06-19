@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://j403tq8k44rm"]
 
 [ext_resource type="PackedScene" uid="uid://cr4636s7oduy4" path="res://3D assets/Objects/zodiac_wheel/Zodiac_wheel.glb" id="1_gxnlk"]
-[ext_resource type="Script" uid="uid://cprcdtuksosjh" path="res://zodiac_wheel.gd" id="2_gxnlk"]
+[ext_resource type="Script" uid="uid://cprcdtuksosjh" path="res://Scripts/Puzzles3D/zodiac_wheel.gd" id="2_gxnlk"]
 
 [sub_resource type="Animation" id="Animation_bvugf"]
 length = 0.001
@@ -304,8 +304,10 @@ _data = {
 &"aries_falling": SubResource("Animation_gxnlk")
 }
 
-[node name="Zodiac_wheel" unique_id=788897303 instance=ExtResource("1_gxnlk")]
+[node name="Zodiac_wheel" unique_id=788897303 node_paths=PackedStringArray("anim_player", "star_card") instance=ExtResource("1_gxnlk")]
 script = ExtResource("2_gxnlk")
+anim_player = NodePath("AnimationPlayer")
+star_card = NodePath("The Star")
 
 [node name="aries_sign" parent="." index="2" unique_id=85423786]
 transform = Transform3D(-5.6873226e-08, -1, -1.1059097e-07, 0.64114773, 4.8405308e-08, -0.76741743, 0.7674175, -1.1455066e-07, 0.6411477, 9.872185, 5.814583, -1.142973)

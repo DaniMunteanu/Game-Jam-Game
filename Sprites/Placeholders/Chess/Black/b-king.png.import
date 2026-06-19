@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cedh4raymyyck"
-path="res://.godot/imported/zodiac.png-b8d9985b31fc1be20a44cc9a3700ede2.ctex"
+uid="uid://buag7108t6tlf"
+path="res://.godot/imported/b-king.png-d09d7d7af2c01e1436144f00092787c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://3D assets/references/zodiac.png"
-dest_files=["res://.godot/imported/zodiac.png-b8d9985b31fc1be20a44cc9a3700ede2.ctex"]
+source_file="res://Sprites/Placeholders/Chess/Black/b-king.png"
+dest_files=["res://.godot/imported/b-king.png-d09d7d7af2c01e1436144f00092787c7.ctex"]
 
 [params]
 

@@ -1,11 +1,11 @@
 extends Node
 
 @onready var zodiac_interactable: InteractableObject = $StaticBody3D
-@onready var zodiac_wheel: Node3D = $StaticBody3D/Zodiac_wheel
+@onready var zodiac_wheel: Node3D = $StaticBody3D
 @onready var interactable_area_3d: InteractableArea3D = $StaticBody3D/InteractableArea3D
 var dialogue_shown: bool = false
-@onready var sfx_player: AudioStreamPlayer3D = $"../../SfxPlayer"
-@onready var sfx_player_2: AudioStreamPlayer3D = $"../../SfxPlayer2"
+@onready var sfx_player: AudioStreamPlayer3D = $"../../../SfxPlayers/SfxPlayer"
+@onready var sfx_player_2: AudioStreamPlayer3D = $"../../../SfxPlayers/SfxPlayer2"
 
 func say_something():
 	if not dialogue_shown:

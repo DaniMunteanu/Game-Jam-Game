@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cp02prp35y6o4"]
 
 [ext_resource type="PackedScene" uid="uid://h7ssbjtk2bev" path="res://3D assets/Objects/Ouija_board_planchette.glb" id="1_oo16j"]
-[ext_resource type="Script" uid="uid://d2vtxjgialrd4" path="res://3D assets/Objects/ouija_board_planchette.gd" id="2_nguts"]
+[ext_resource type="Script" uid="uid://d2vtxjgialrd4" path="res://Scripts/3D scripts/ouija_board_planchette.gd" id="2_nguts"]
 
 [sub_resource type="Animation" id="Animation_nguts"]
 resource_name = "Planchette_animation"

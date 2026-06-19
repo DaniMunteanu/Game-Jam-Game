@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c102s4oy47iil"
-path="res://.godot/imported/Vrajitor.png-b697ef4470771d7f1e88c22814add026.ctex"
+uid="uid://bgrqx88d51ppw"
+path="res://.godot/imported/b-pawn.png-b4f0f597da308cbff5d51ad8da401942.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Placeholders/Vrajitor.png"
-dest_files=["res://.godot/imported/Vrajitor.png-b697ef4470771d7f1e88c22814add026.ctex"]
+source_file="res://Sprites/Placeholders/Chess/Black/b-pawn.png"
+dest_files=["res://.godot/imported/b-pawn.png-b4f0f597da308cbff5d51ad8da401942.ctex"]
 
 [params]
 

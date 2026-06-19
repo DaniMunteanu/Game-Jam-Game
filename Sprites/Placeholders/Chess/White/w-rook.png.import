@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7t2l6gkf3t3c"
-path="res://.godot/imported/image.png-b68f4faffa2203eacd083bca4fe7fcbf.ctex"
+uid="uid://bgi8rx2wrvjng"
+path="res://.godot/imported/w-rook.png-4d9e93c1909a1d06f158ecb6d62a8737.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://3D assets/references/image.png"
-dest_files=["res://.godot/imported/image.png-b68f4faffa2203eacd083bca4fe7fcbf.ctex"]
+source_file="res://Sprites/Placeholders/Chess/White/w-rook.png"
+dest_files=["res://.godot/imported/w-rook.png-4d9e93c1909a1d06f158ecb6d62a8737.ctex"]
 
 [params]
 
