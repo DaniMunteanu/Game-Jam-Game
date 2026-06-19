@@ -7,7 +7,10 @@ enum puzzles{
 	TEMPERANCE,
 	STAR,
 	HIEROPHANT,
-	WORLD
+	WORLD,
+	EMPEROR,
+	SUN,
+	JUDGEMENT
 }
 
 var moon_symbol_picked_up: bool = false
