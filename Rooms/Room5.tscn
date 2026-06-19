@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://begrgtijry107"]
+
+[ext_resource type="Texture2D" uid="uid://d3thbckgf3ro1" path="res://Sprites/Background/sera-left/sera perete acvariu.png" id="1_foo01"]
+[ext_resource type="Texture2D" uid="uid://chebbvngrf2vt" path="res://Sprites/Background/sera-left/sera poarta spre 3d.png" id="2_exv3j"]
+[ext_resource type="Texture2D" uid="uid://6gmyjkay7ksj" path="res://Sprites/Background/sera-left/sera acvariu.png" id="3_ro5n5"]
+
+[node name="Room5" type="Node2D" unique_id=605210706]
+
+[node name="BackgroundSprites" type="Node2D" parent="." unique_id=1510225110]
+position = Vector2(-16, -13)
+
+[node name="Wall" type="Sprite2D" parent="BackgroundSprites" unique_id=1960399389]
+position = Vector2(975.4999, 553.5)
+scale = Vector2(0.7567035, 0.74375)
+texture = ExtResource("1_foo01")
+
+[node name="Oglinda" type="Button" parent="." unique_id=629160878]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 616.0
+offset_top = 173.0
+offset_right = 1316.0
+offset_bottom = 1012.0
+
+[node name="TextureRect" type="TextureRect" parent="Oglinda" unique_id=156663791]
+layout_mode = 0
+offset_left = -34.0
+offset_top = -59.0
+offset_right = 732.0
+offset_bottom = 858.0
+texture = ExtResource("2_exv3j")
+expand_mode = 1
+
+[node name="Acvariu" type="Button" parent="." unique_id=1561377247]
+self_modulate = Color(1, 1, 1, 0)
+offset_top = 371.0
+offset_right = 532.0
+offset_bottom = 706.0
+
+[node name="TextureRect" type="TextureRect" parent="Acvariu" unique_id=1146731707]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -36.0
+offset_right = 568.0
+offset_bottom = 705.0
+texture = ExtResource("3_ro5n5")
+expand_mode = 1

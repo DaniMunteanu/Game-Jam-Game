@@ -20,77 +20,84 @@ script = ExtResource("1_6eh2d")
 snap_max_distance = 150.0
 
 [node name="Background" type="Sprite2D" parent="." unique_id=880769567]
-position = Vector2(960.50006, 538.50006)
-scale = Vector2(0.75433755, 0.74375004)
+position = Vector2(958.99994, 540.99994)
+scale = Vector2(0.758, 0.758)
 texture = ExtResource("2_v7l01")
-
-[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=836245630]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=355521650]
 
 [node name="SnapMarkers" type="Node" parent="CanvasLayer" unique_id=87600555]
 
 [node name="Marker0" type="Marker2D" parent="CanvasLayer/SnapMarkers" unique_id=1810309430]
-position = Vector2(63, 198)
-scale = Vector2(4, 4)
+position = Vector2(260, 493)
 
 [node name="Marker1" type="Marker2D" parent="CanvasLayer/SnapMarkers" unique_id=787503195]
-position = Vector2(517, 199)
-scale = Vector2(4, 4)
+position = Vector2(727, 493)
 
 [node name="Marker2" type="Marker2D" parent="CanvasLayer/SnapMarkers" unique_id=1137301116]
-position = Vector2(982, 197)
-scale = Vector2(4, 4)
+position = Vector2(1190, 493)
 
 [node name="Marker3" type="Marker2D" parent="CanvasLayer/SnapMarkers" unique_id=665969494]
-position = Vector2(1442, 194)
-scale = Vector2(4, 4)
+position = Vector2(1649, 493)
 
 [node name="Paintings" type="Node" parent="CanvasLayer" unique_id=52144617]
 
 [node name="Painting0" parent="CanvasLayer/Paintings" unique_id=374029610 instance=ExtResource("5_ppu18")]
-anchors_preset = -1
-anchor_left = 0.432
-anchor_top = 0.298
-anchor_right = 0.545
-anchor_bottom = 0.605
-offset_left = -80.44
-offset_top = 62.160126
-offset_right = 221.59998
-offset_bottom = 538.6001
-scale = Vector2(0.744, 0.744)
-size_flags_horizontal = 4
+offset_left = 780.0
+offset_top = 489.0
+offset_right = -758.0
+offset_bottom = 61.0
+pivot_offset = Vector2(191, 326)
 texture_normal = ExtResource("5_0ef3u")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="Painting1" parent="CanvasLayer/Paintings" unique_id=1430282290 instance=ExtResource("5_ppu18")]
-offset_left = 385.0
-offset_top = 17.000004
-offset_right = -981.0322
-offset_bottom = -267.30115
-scale = Vector2(0.744, 0.744)
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1088.0
+offset_top = 16.0
+offset_right = 1470.0
+offset_bottom = 668.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(191, 326)
 texture_normal = ExtResource("6_yobl8")
 ignore_texture_size = true
 stretch_mode = 5
 index = 1
 
 [node name="Painting2" parent="CanvasLayer/Paintings" unique_id=670298556 instance=ExtResource("5_ppu18")]
-offset_left = 161.0
-offset_top = 409.0
-offset_right = -1240.0
-offset_bottom = 137.0
-scale = Vector2(0.744, 0.744)
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1492.0
+offset_top = 511.0
+offset_right = 1874.0
+offset_bottom = 1163.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(191, 326)
 texture_normal = ExtResource("7_nr8vp")
 ignore_texture_size = true
 stretch_mode = 5
 index = 2
 
 [node name="Painting3" parent="CanvasLayer/Paintings" unique_id=1271815954 instance=ExtResource("5_ppu18")]
-offset_left = 1198.0
-offset_top = 84.00006
-offset_right = -212.0
-offset_bottom = -210.99994
-scale = Vector2(0.744, 0.744)
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 87.0
+offset_top = -2.0
+offset_right = 469.0
+offset_bottom = 650.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(191, 326)
 texture_normal = ExtResource("8_hbrtu")
+ignore_texture_size = true
+stretch_mode = 5
 index = 3
 
 [node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=69047337]
@@ -137,17 +144,15 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("6_oasne")]
-offset_left = -116.0
-offset_top = 241.0
-offset_right = -3.0
-offset_bottom = -9.0
+visible = false
+offset_left = -120.0
+offset_right = -7.0
 mouse_filter = 2
 
 [node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("6_36xyo")]
-offset_left = 1676.0
-offset_top = -9.0
-offset_right = 4.0
-offset_bottom = -841.0
+visible = false
+offset_left = 1672.0
+offset_bottom = -832.0
 
 [node name="Sfx_Player" type="AudioStreamPlayer2D" parent="." unique_id=656204950]
 stream = ExtResource("12_x0fmj")
