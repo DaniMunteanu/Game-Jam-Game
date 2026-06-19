@@ -9,6 +9,7 @@ extends Node
 var can_switch: bool = true
 
 func _ready() -> void:
+	"""
 	if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.MAGICIAN] == true:
 		if name == "Room1":
 			var wall = get_node_or_null("BackgroundSprites/Wall")
@@ -29,6 +30,7 @@ func _ready() -> void:
 	TextManager.show_once("room_2", [
 		"Ugh, my head... what the hell happened?, I was just doing a reading and then...everything went sideways. And why are my photos all messed up?"
 	])
+	"""
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("3D_left") and can_switch:

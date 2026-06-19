@@ -1,3 +1,136 @@
 [gd_scene format=3 uid="uid://c07wlh6hho5hn"]
 
-[node name="Greenhouse2" type="Node2D" unique_id=1041314291]
+[ext_resource type="Script" uid="uid://c1poe3shrtvbk" path="res://Scripts/room.gd" id="1_g0gk5"]
+[ext_resource type="Texture2D" uid="uid://55ttssrk811f" path="res://Sprites/Background/back-side/sera perete sah.png" id="1_ng4ie"]
+[ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="2_5s7jx"]
+[ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/legacy/A.png" id="3_hsk72"]
+[ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/legacy/D.png" id="4_b5jqt"]
+[ext_resource type="Texture2D" uid="uid://duf3ls1s7cyo7" path="res://Sprites/Background/front-side/sera sah.png" id="5_g0gk5"]
+[ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="8_147er"]
+[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="9_cv0ed"]
+
+[node name="Greenhouse2" type="Node2D" unique_id=1041314291 node_paths=PackedStringArray("canvas_layer")]
+script = ExtResource("1_g0gk5")
+room_3d_path = "res://scenes/3d/mainroom.tscn"
+canvas_layer = NodePath("CanvasLayer")
+left_room_path = "res://Rooms/Greenhouse1.tscn"
+right_room_path = "res://Rooms/Greenhouse1.tscn"
+
+[node name="BackgroundSprites" type="Node2D" parent="." unique_id=786603575]
+
+[node name="Wall" type="Sprite2D" parent="BackgroundSprites" unique_id=438293240]
+position = Vector2(960.00006, 540)
+scale = Vector2(0.7570978, 0.755)
+texture = ExtResource("1_ng4ie")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1122052096]
+
+[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=999581055]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -10.0
+offset_top = 2.0
+offset_right = 1910.0
+offset_bottom = 1082.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="A" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=2055260161]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 107.0
+offset_top = 724.0
+offset_right = 207.0
+offset_bottom = 781.0
+script = ExtResource("2_5s7jx")
+destination_room_path = "res://Rooms/Greenhouse1.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/A" unique_id=1965361023]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.57900006
+anchor_right = 1.1600001
+anchor_bottom = 0.82500005
+offset_left = -13.5
+offset_top = 0.0030021667
+offset_bottom = -0.025001526
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_hsk72")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="D" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=1265537777]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1664.875
+offset_top = 724.0
+offset_right = 1764.8751
+offset_bottom = 781.0
+script = ExtResource("2_5s7jx")
+destination_room_path = "res://Rooms/Greenhouse1.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/D" unique_id=1958258505]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.7990001
+offset_left = -13.5
+offset_top = -33.0
+offset_right = 16.0
+offset_bottom = -55.543007
+mouse_filter = 2
+texture = ExtResource("4_b5jqt")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="ChessBoard" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=1907414107]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7536459
+anchor_top = 0.60385185
+anchor_right = 0.8800418
+anchor_bottom = 0.658
+offset_left = -0.00012207031
+offset_top = -0.15997314
+offset_right = 0.31982422
+offset_bottom = 0.35992432
+script = ExtResource("2_5s7jx")
+destination_room_path = "res://Rooms/Room4.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/ChessBoard" unique_id=1261048683]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.08455882
+anchor_top = -0.18008319
+anchor_right = 1.0367353
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -0.01499939
+offset_right = 0.0079956055
+offset_bottom = -1.5259247
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_g0gk5")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("8_147er")]
+visible = false
+mouse_filter = 2
+
+[node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("9_cv0ed")]
+visible = false
+offset_left = 990.0
+offset_top = 1089.0
+offset_right = 990.0
+offset_bottom = 1089.0
