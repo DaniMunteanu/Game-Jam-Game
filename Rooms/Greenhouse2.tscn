@@ -102,7 +102,7 @@ offset_top = -0.15997314
 offset_right = 0.31982422
 offset_bottom = 0.35992432
 script = ExtResource("2_5s7jx")
-destination_room_path = "res://Rooms/Room4.tscn"
+destination_room_path = "res://Puzzles/Emperor.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/ChessBoard" unique_id=1261048683]

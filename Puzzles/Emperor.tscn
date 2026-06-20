@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cieuvtykj67ky"]
+[gd_scene format=3 uid="uid://t5j6satk8for"]
 
 [ext_resource type="Script" uid="uid://cabkl3x4gbyfi" path="res://Scripts/Puzzles2D/emperor.gd" id="1_dy1vk"]
 [ext_resource type="PackedScene" uid="uid://bvip2aownlgr" path="res://PuzzleObjects/DraggablePuzzleObject.tscn" id="2_5dqgq"]
@@ -25,6 +25,7 @@
 
 [node name="Emperor" type="Node2D" unique_id=678236464]
 script = ExtResource("1_dy1vk")
+solution = Array[Vector2]([Vector2(5, 36), Vector2(11, 45), Vector2(13, 38), Vector2(19, 27), Vector2(20, 35), Vector2(29, 19), Vector2(30, 51)])
 
 [node name="Background" type="Sprite2D" parent="." unique_id=129414867]
 position = Vector2(958.99994, 540.99994)
@@ -41,210 +42,210 @@ texture = ExtResource("2_gax46")
 
 [node name="RowA" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=617166175]
 
-[node name="Marker1" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=776629907]
+[node name="Marker0" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=776629907]
 position = Vector2(161, 937)
 
-[node name="Marker2" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=622761763]
+[node name="Marker1" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=622761763]
 position = Vector2(162, 833)
 
-[node name="Marker3" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=1014828181]
+[node name="Marker2" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=1014828181]
 position = Vector2(161, 726)
 
-[node name="Marker4" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=17370127]
+[node name="Marker3" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=17370127]
 position = Vector2(159, 626)
 
-[node name="Marker5" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=966025371]
+[node name="Marker4" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=966025371]
 position = Vector2(162, 514)
 
-[node name="Marker6" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=1602175681]
+[node name="Marker5" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=1602175681]
 position = Vector2(161, 415)
 
-[node name="Marker7" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=1195371566]
+[node name="Marker6" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=1195371566]
 position = Vector2(163, 298)
 
-[node name="Marker8" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=443731337]
+[node name="Marker7" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=443731337]
 position = Vector2(163, 191)
 
 [node name="RowB" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=1743211357]
 
-[node name="Marker1" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1323128284]
+[node name="Marker8" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1323128284]
 position = Vector2(267, 937)
 
-[node name="Marker2" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1401923885]
+[node name="Marker9" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1401923885]
 position = Vector2(268, 833)
 
-[node name="Marker3" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1570382021]
+[node name="Marker10" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1570382021]
 position = Vector2(267, 726)
 
-[node name="Marker4" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1278835498]
+[node name="Marker11" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1278835498]
 position = Vector2(265, 626)
 
-[node name="Marker5" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=168774298]
+[node name="Marker12" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=168774298]
 position = Vector2(268, 514)
 
-[node name="Marker6" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=2094791705]
+[node name="Marker13" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=2094791705]
 position = Vector2(267, 415)
 
-[node name="Marker7" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=64077303]
+[node name="Marker14" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=64077303]
 position = Vector2(269, 298)
 
-[node name="Marker8" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=547941944]
+[node name="Marker15" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=547941944]
 position = Vector2(269, 191)
 
 [node name="RowC" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=36706462]
 
-[node name="Marker1" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1535271123]
+[node name="Marker16" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1535271123]
 position = Vector2(380, 937)
 
-[node name="Marker2" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1829754014]
+[node name="Marker17" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1829754014]
 position = Vector2(381, 833)
 
-[node name="Marker3" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=729344062]
+[node name="Marker18" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=729344062]
 position = Vector2(380, 726)
 
-[node name="Marker4" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1411576154]
+[node name="Marker19" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1411576154]
 position = Vector2(378, 626)
 
-[node name="Marker5" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=991227708]
+[node name="Marker20" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=991227708]
 position = Vector2(381, 514)
 
-[node name="Marker6" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1595224900]
+[node name="Marker21" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1595224900]
 position = Vector2(380, 415)
 
-[node name="Marker7" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=405336758]
+[node name="Marker22" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=405336758]
 position = Vector2(382, 298)
 
-[node name="Marker8" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1768156252]
+[node name="Marker23" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1768156252]
 position = Vector2(382, 191)
 
 [node name="RowD" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=473415191]
 
-[node name="Marker1" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1705884027]
+[node name="Marker24" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1705884027]
 position = Vector2(488, 937)
 
-[node name="Marker2" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=53597295]
+[node name="Marker25" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=53597295]
 position = Vector2(489, 833)
 
-[node name="Marker3" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1457432096]
+[node name="Marker26" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1457432096]
 position = Vector2(488, 726)
 
-[node name="Marker4" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=709571302]
+[node name="Marker27" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=709571302]
 position = Vector2(486, 626)
 
-[node name="Marker5" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1311703175]
+[node name="Marker28" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1311703175]
 position = Vector2(489, 514)
 
-[node name="Marker6" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=690251424]
+[node name="Marker29" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=690251424]
 position = Vector2(488, 415)
 
-[node name="Marker7" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1175743780]
+[node name="Marker30" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1175743780]
 position = Vector2(490, 298)
 
-[node name="Marker8" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=362969240]
+[node name="Marker31" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=362969240]
 position = Vector2(490, 191)
 
 [node name="RowE" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=2108799261]
 
-[node name="Marker1" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=1136741344]
+[node name="Marker32" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=1136741344]
 position = Vector2(596, 937)
 
-[node name="Marker2" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=443982457]
+[node name="Marker33" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=443982457]
 position = Vector2(597, 833)
 
-[node name="Marker3" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=2040241620]
+[node name="Marker34" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=2040241620]
 position = Vector2(596, 726)
 
-[node name="Marker4" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=170239769]
+[node name="Marker35" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=170239769]
 position = Vector2(594, 626)
 
-[node name="Marker5" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=808694116]
+[node name="Marker36" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=808694116]
 position = Vector2(597, 514)
 
-[node name="Marker6" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=517391158]
+[node name="Marker37" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=517391158]
 position = Vector2(596, 415)
 
-[node name="Marker7" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=59461228]
+[node name="Marker38" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=59461228]
 position = Vector2(598, 298)
 
-[node name="Marker8" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=1505312256]
+[node name="Marker39" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=1505312256]
 position = Vector2(598, 191)
 
 [node name="RowF" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=592556647]
 
-[node name="Marker1" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=428680318]
+[node name="Marker40" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=428680318]
 position = Vector2(704, 937)
 
-[node name="Marker2" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1410583233]
+[node name="Marker41" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1410583233]
 position = Vector2(705, 833)
 
-[node name="Marker3" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1130730053]
+[node name="Marker42" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1130730053]
 position = Vector2(704, 726)
 
-[node name="Marker4" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1957322230]
+[node name="Marker43" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1957322230]
 position = Vector2(702, 626)
 
-[node name="Marker5" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=859852660]
+[node name="Marker44" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=859852660]
 position = Vector2(705, 514)
 
-[node name="Marker6" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=987935856]
+[node name="Marker45" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=987935856]
 position = Vector2(704, 415)
 
-[node name="Marker7" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1626603123]
+[node name="Marker46" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1626603123]
 position = Vector2(706, 298)
 
-[node name="Marker8" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=948843492]
+[node name="Marker47" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=948843492]
 position = Vector2(706, 191)
 
 [node name="RowG" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=628809234]
 
-[node name="Marker1" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=778968591]
+[node name="Marker48" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=778968591]
 position = Vector2(810, 937)
 
-[node name="Marker2" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=81780061]
+[node name="Marker49" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=81780061]
 position = Vector2(811, 833)
 
-[node name="Marker3" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=346677981]
+[node name="Marker50" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=346677981]
 position = Vector2(810, 726)
 
-[node name="Marker4" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=234761817]
+[node name="Marker51" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=234761817]
 position = Vector2(808, 626)
 
-[node name="Marker5" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1958919301]
+[node name="Marker52" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1958919301]
 position = Vector2(811, 514)
 
-[node name="Marker6" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1586285710]
+[node name="Marker53" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1586285710]
 position = Vector2(810, 415)
 
-[node name="Marker7" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1482671999]
+[node name="Marker54" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1482671999]
 position = Vector2(812, 298)
 
-[node name="Marker8" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1846035448]
+[node name="Marker55" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1846035448]
 position = Vector2(812, 191)
 
 [node name="RowH" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=661037092]
 
-[node name="Marker1" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=680595726]
+[node name="Marker56" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=680595726]
 position = Vector2(920, 937)
 
-[node name="Marker2" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=501877119]
+[node name="Marker57" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=501877119]
 position = Vector2(921, 833)
 
-[node name="Marker3" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=1739783288]
+[node name="Marker58" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=1739783288]
 position = Vector2(920, 726)
 
-[node name="Marker4" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=425253646]
+[node name="Marker59" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=425253646]
 position = Vector2(918, 626)
 
-[node name="Marker5" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=85249095]
+[node name="Marker60" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=85249095]
 position = Vector2(921, 514)
 
-[node name="Marker6" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=438540006]
+[node name="Marker61" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=438540006]
 position = Vector2(920, 415)
 
-[node name="Marker7" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=203793591]
+[node name="Marker62" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=203793591]
 position = Vector2(922, 298)
 
-[node name="Marker8" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=1056158902]
+[node name="Marker63" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=1056158902]
 position = Vector2(922, 191)
 
 [node name="Pieces" type="Node" parent="CanvasLayer" unique_id=1794281774]
@@ -277,6 +278,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_gmbwj")
 ignore_texture_size = true
 stretch_mode = 5
+index = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackPawn3" parent="CanvasLayer/Pieces/Black" unique_id=1757506355 instance=ExtResource("2_5dqgq")]
@@ -291,6 +293,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_gmbwj")
 ignore_texture_size = true
 stretch_mode = 5
+index = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackPawn4" parent="CanvasLayer/Pieces/Black" unique_id=1560391555 instance=ExtResource("2_5dqgq")]
@@ -305,6 +308,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_gmbwj")
 ignore_texture_size = true
 stretch_mode = 5
+index = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackPawn5" parent="CanvasLayer/Pieces/Black" unique_id=1198812263 instance=ExtResource("2_5dqgq")]
@@ -319,6 +323,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_gmbwj")
 ignore_texture_size = true
 stretch_mode = 5
+index = 4
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackPawn6" parent="CanvasLayer/Pieces/Black" unique_id=1169292212 instance=ExtResource("2_5dqgq")]
@@ -333,6 +338,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_gmbwj")
 ignore_texture_size = true
 stretch_mode = 5
+index = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackPawn7" parent="CanvasLayer/Pieces/Black" unique_id=1161327682 instance=ExtResource("2_5dqgq")]
@@ -347,6 +353,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_gmbwj")
 ignore_texture_size = true
 stretch_mode = 5
+index = 6
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackPawn8" parent="CanvasLayer/Pieces/Black" unique_id=1638061481 instance=ExtResource("2_5dqgq")]
@@ -361,6 +368,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_gmbwj")
 ignore_texture_size = true
 stretch_mode = 5
+index = 7
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackRook" parent="CanvasLayer/Pieces/Black" unique_id=1211182401 instance=ExtResource("2_5dqgq")]
@@ -375,6 +383,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("5_1an1i")
 ignore_texture_size = true
 stretch_mode = 5
+index = 8
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackRook2" parent="CanvasLayer/Pieces/Black" unique_id=720834750 instance=ExtResource("2_5dqgq")]
@@ -389,6 +398,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("5_1an1i")
 ignore_texture_size = true
 stretch_mode = 5
+index = 9
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackKnight" parent="CanvasLayer/Pieces/Black" unique_id=1123483684 instance=ExtResource("2_5dqgq")]
@@ -403,6 +413,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("6_herje")
 ignore_texture_size = true
 stretch_mode = 5
+index = 10
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackKnight2" parent="CanvasLayer/Pieces/Black" unique_id=2142050519 instance=ExtResource("2_5dqgq")]
@@ -417,6 +428,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("6_herje")
 ignore_texture_size = true
 stretch_mode = 5
+index = 11
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackBishop" parent="CanvasLayer/Pieces/Black" unique_id=2114527502 instance=ExtResource("2_5dqgq")]
@@ -431,6 +443,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("7_sca3m")
 ignore_texture_size = true
 stretch_mode = 5
+index = 12
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackBishop2" parent="CanvasLayer/Pieces/Black" unique_id=42218018 instance=ExtResource("2_5dqgq")]
@@ -445,6 +458,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("7_sca3m")
 ignore_texture_size = true
 stretch_mode = 5
+index = 13
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackQueen" parent="CanvasLayer/Pieces/Black" unique_id=1062627824 instance=ExtResource("2_5dqgq")]
@@ -459,6 +473,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("8_8vgn6")
 ignore_texture_size = true
 stretch_mode = 5
+index = 14
 metadata/_edit_use_anchors_ = true
 
 [node name="BlackKing" parent="CanvasLayer/Pieces/Black" unique_id=1935108904 instance=ExtResource("2_5dqgq")]
@@ -473,6 +488,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("9_8smwi")
 ignore_texture_size = true
 stretch_mode = 5
+index = 15
 metadata/_edit_use_anchors_ = true
 
 [node name="White" type="Node" parent="CanvasLayer/Pieces" unique_id=1134517503]
@@ -489,6 +505,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_xpncv")
 ignore_texture_size = true
 stretch_mode = 5
+index = 16
 metadata/_edit_use_anchors_ = true
 
 [node name="WhitePawn2" parent="CanvasLayer/Pieces/White" unique_id=322474733 instance=ExtResource("2_5dqgq")]
@@ -503,6 +520,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_xpncv")
 ignore_texture_size = true
 stretch_mode = 5
+index = 17
 metadata/_edit_use_anchors_ = true
 
 [node name="WhitePawn3" parent="CanvasLayer/Pieces/White" unique_id=1913462904 instance=ExtResource("2_5dqgq")]
@@ -517,6 +535,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_xpncv")
 ignore_texture_size = true
 stretch_mode = 5
+index = 18
 metadata/_edit_use_anchors_ = true
 
 [node name="WhitePawn4" parent="CanvasLayer/Pieces/White" unique_id=1106762177 instance=ExtResource("2_5dqgq")]
@@ -531,6 +550,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_xpncv")
 ignore_texture_size = true
 stretch_mode = 5
+index = 19
 metadata/_edit_use_anchors_ = true
 
 [node name="WhitePawn5" parent="CanvasLayer/Pieces/White" unique_id=565795652 instance=ExtResource("2_5dqgq")]
@@ -545,6 +565,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_xpncv")
 ignore_texture_size = true
 stretch_mode = 5
+index = 20
 metadata/_edit_use_anchors_ = true
 
 [node name="WhitePawn6" parent="CanvasLayer/Pieces/White" unique_id=304998182 instance=ExtResource("2_5dqgq")]
@@ -559,6 +580,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_xpncv")
 ignore_texture_size = true
 stretch_mode = 5
+index = 21
 metadata/_edit_use_anchors_ = true
 
 [node name="WhitePawn7" parent="CanvasLayer/Pieces/White" unique_id=376617162 instance=ExtResource("2_5dqgq")]
@@ -573,6 +595,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_xpncv")
 ignore_texture_size = true
 stretch_mode = 5
+index = 22
 metadata/_edit_use_anchors_ = true
 
 [node name="WhitePawn8" parent="CanvasLayer/Pieces/White" unique_id=1688426999 instance=ExtResource("2_5dqgq")]
@@ -587,6 +610,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("4_xpncv")
 ignore_texture_size = true
 stretch_mode = 5
+index = 23
 metadata/_edit_use_anchors_ = true
 
 [node name="WhiteRook" parent="CanvasLayer/Pieces/White" unique_id=1690910215 instance=ExtResource("2_5dqgq")]
@@ -601,6 +625,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("5_osrak")
 ignore_texture_size = true
 stretch_mode = 5
+index = 24
 metadata/_edit_use_anchors_ = true
 
 [node name="WhiteRook2" parent="CanvasLayer/Pieces/White" unique_id=334381189 instance=ExtResource("2_5dqgq")]
@@ -615,6 +640,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("5_osrak")
 ignore_texture_size = true
 stretch_mode = 5
+index = 25
 metadata/_edit_use_anchors_ = true
 
 [node name="WhiteKnight" parent="CanvasLayer/Pieces/White" unique_id=878638712 instance=ExtResource("2_5dqgq")]
@@ -629,6 +655,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("6_v53tg")
 ignore_texture_size = true
 stretch_mode = 5
+index = 26
 metadata/_edit_use_anchors_ = true
 
 [node name="WhiteKnight2" parent="CanvasLayer/Pieces/White" unique_id=214942360 instance=ExtResource("2_5dqgq")]
@@ -643,6 +670,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("6_v53tg")
 ignore_texture_size = true
 stretch_mode = 5
+index = 27
 metadata/_edit_use_anchors_ = true
 
 [node name="WhiteBishop" parent="CanvasLayer/Pieces/White" unique_id=1537822838 instance=ExtResource("2_5dqgq")]
@@ -657,6 +685,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("13_ahbjf")
 ignore_texture_size = true
 stretch_mode = 5
+index = 28
 metadata/_edit_use_anchors_ = true
 
 [node name="WhiteBishop2" parent="CanvasLayer/Pieces/White" unique_id=1786769013 instance=ExtResource("2_5dqgq")]
@@ -671,6 +700,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("13_ahbjf")
 ignore_texture_size = true
 stretch_mode = 5
+index = 29
 metadata/_edit_use_anchors_ = true
 
 [node name="WhiteQueen" parent="CanvasLayer/Pieces/White" unique_id=1147425676 instance=ExtResource("2_5dqgq")]
@@ -685,6 +715,7 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("14_30pvx")
 ignore_texture_size = true
 stretch_mode = 5
+index = 30
 metadata/_edit_use_anchors_ = true
 
 [node name="WhiteKing" parent="CanvasLayer/Pieces/White" unique_id=631974858 instance=ExtResource("2_5dqgq")]
@@ -699,7 +730,50 @@ pivot_offset = Vector2(50, 50)
 texture_normal = ExtResource("15_mryt5")
 ignore_texture_size = true
 stretch_mode = 5
+index = 31
 metadata/_edit_use_anchors_ = true
+
+[node name="Poem" type="Control" parent="CanvasLayer" unique_id=2020449582]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Poem" unique_id=610345918]
+layout_mode = 0
+offset_left = 1134.0
+offset_top = 218.0
+offset_right = 1906.0
+offset_bottom = 277.0
+text = "The Emperor's footman, in front of him, marched two paces, armour all a glimmer
+The Shadow's soldier answered his call, moved the same just like a mirror"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Poem" unique_id=78521589]
+layout_mode = 0
+offset_left = 1134.0
+offset_top = 307.0
+offset_right = 1906.0
+offset_bottom = 366.0
+text = "And then the Bishop White flew far and wide, with his marching soldier on the line
+The Shadow's Horse, on the same side, moved to center to align"
+
+[node name="Label3" type="Label" parent="CanvasLayer/Poem" unique_id=35019079]
+layout_mode = 0
+offset_left = 1134.0
+offset_top = 404.0
+offset_right = 1906.0
+offset_bottom = 463.0
+text = "The Emperor's footman, in front of The queen of light moved now, until she could no more
+Shadow's dark priest ran just one, treachery at his core"
+
+[node name="Label4" type="Label" parent="CanvasLayer/Poem" unique_id=840843099]
+layout_mode = 0
+offset_left = 1134.0
+offset_top = 494.0
+offset_right = 1906.0
+offset_bottom = 553.0
+text = "To finish, the Emperor simply moved his queen
+FIND HIM IN THE IN-BETWEEN"
 
 [node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=926328027]
 layout_mode = 3
