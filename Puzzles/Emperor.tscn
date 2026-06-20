@@ -25,7 +25,7 @@
 
 [node name="Emperor" type="Node2D" unique_id=678236464]
 script = ExtResource("1_dy1vk")
-solution = Array[Vector2]([Vector2(5, 36), Vector2(11, 45), Vector2(13, 38), Vector2(19, 27), Vector2(20, 35), Vector2(29, 19), Vector2(30, 51)])
+solution = Array[Vector2]([Vector2(4, 36), Vector2(10, 21), Vector2(13, 38), Vector2(20, 35), Vector2(29, 19), Vector2(30, 60)])
 
 [node name="Background" type="Sprite2D" parent="." unique_id=129414867]
 position = Vector2(958.99994, 540.99994)
@@ -755,7 +755,7 @@ offset_top = 307.0
 offset_right = 1906.0
 offset_bottom = 366.0
 text = "And then the Bishop White flew far and wide, with his marching soldier on the line
-The Shadow's Horse, on the same side, moved to center to align"
+The Shadow's Horse, on Light's left side, moved to center to align"
 
 [node name="Label3" type="Label" parent="CanvasLayer/Poem" unique_id=35019079]
 layout_mode = 0
@@ -763,7 +763,7 @@ offset_left = 1134.0
 offset_top = 404.0
 offset_right = 1906.0
 offset_bottom = 463.0
-text = "The Emperor's footman, in front of The queen of light moved now, until she could no more
+text = "The queen of light moved now, until she could no more
 Shadow's dark priest ran just one, treachery at his core"
 
 [node name="Label4" type="Label" parent="CanvasLayer/Poem" unique_id=840843099]
