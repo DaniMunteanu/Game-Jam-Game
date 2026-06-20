@@ -79,6 +79,7 @@ func on_try_snapping(piece_index: int):
 			closest_marker_index = pieces_snapped[piece_index]
 			
 		pieces_snapped[piece_index] = closest_marker_index
+		#print("Piece " + str(piece_index) + " snapped at marker " + str(pieces_snapped[piece_index]))
 		pieces[piece_index].global_position = markers[closest_marker_index].global_position - pieces[piece_index].size / 2
 	else:
 		closest_marker_index = pieces_snapped[piece_index]
