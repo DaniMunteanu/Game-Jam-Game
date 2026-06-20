@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://vm85akor8ljr"]
+
+[ext_resource type="MultiMesh" uid="uid://b53wgt1yi84x3" path="res://3D assets/meshes/grass1_multimesh.tres" id="1_0ci3d"]
+[ext_resource type="MultiMesh" uid="uid://dxda0ava1d076" path="res://3D assets/meshes/grass2_multimesh.tres" id="2_0wwo2"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0ci3d"]
+size = Vector2(10, 10)
+
+[node name="Le_Grass" type="Node3D" unique_id=471673943]
+
+[node name="Plane" type="MeshInstance3D" parent="." unique_id=238752909]
+mesh = SubResource("PlaneMesh_0ci3d")
+
+[node name="Floc" type="MultiMeshInstance3D" parent="." unique_id=2084732059]
+transform = Transform3D(-0.9826391, -0.023033692, 0.00011255248, -0.018509926, 1.2211711, 0.033902857, -0.00073178264, 0.04104251, -1.0086738, 0, 0.043396533, 0)
+cast_shadow = 0
+multimesh = ExtResource("1_0ci3d")
+
+[node name="Floc2" type="MultiMeshInstance3D" parent="." unique_id=621091892]
+transform = Transform3D(1.0001953, -0.00120803, 0, 0.0010125234, 1.1933213, 0, 0, 0, 1, 0, 0, 0)
+cast_shadow = 0
+multimesh = ExtResource("2_0wwo2")
