@@ -51,6 +51,7 @@ pivot_offset = Vector2(191, 326)
 texture_normal = ExtResource("5_0ef3u")
 ignore_texture_size = true
 stretch_mode = 5
+is_painting = true
 
 [node name="Painting1" parent="CanvasLayer/Paintings" unique_id=1430282290 instance=ExtResource("5_ppu18")]
 anchors_preset = 0
@@ -67,6 +68,7 @@ texture_normal = ExtResource("6_yobl8")
 ignore_texture_size = true
 stretch_mode = 5
 index = 1
+is_painting = true
 
 [node name="Painting2" parent="CanvasLayer/Paintings" unique_id=670298556 instance=ExtResource("5_ppu18")]
 anchors_preset = 0
@@ -83,6 +85,7 @@ texture_normal = ExtResource("7_nr8vp")
 ignore_texture_size = true
 stretch_mode = 5
 index = 2
+is_painting = true
 
 [node name="Painting3" parent="CanvasLayer/Paintings" unique_id=1271815954 instance=ExtResource("5_ppu18")]
 anchors_preset = 0
@@ -99,6 +102,7 @@ texture_normal = ExtResource("8_hbrtu")
 ignore_texture_size = true
 stretch_mode = 5
 index = 3
+is_painting = true
 
 [node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=69047337]
 layout_mode = 3
