@@ -62,7 +62,7 @@ func update_displayed_letters():
 				letter.text = typed_text.text[letter_index]
 			letter_index += 1
 
-
+#maybe remove this
 func _on_hint_pressed() -> void:
 	TextManager.show_text("Maybe I should check the Ouija board.")
 	
