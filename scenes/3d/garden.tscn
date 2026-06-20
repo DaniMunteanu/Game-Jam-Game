@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="2_yr1ht"]
+[ext_resource type="PackedScene" uid="uid://vm85akor8ljr" path="res://3D assets/Objects/le_grass.tscn" id="3_jdxrh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
 
@@ -32,10 +33,13 @@ volumetric_fog_length = 26.2
 size = Vector3(7.7314453, 0.48059082, 4.371338)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7s4op"]
-size = Vector3(4.659668, 0.48059082, 3.8146973)
+size = Vector3(4.659668, 0.14778137, 3.8146973)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f4ofy"]
-size = Vector3(1.6946411, 0.48059082, 3.8146973)
+size = Vector3(1.6946411, 0.05671692, 3.8146973)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uu8jw"]
+size = Vector3(1.2486877, 0.02357483, 1.7317047)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8eb3g"]
 size = Vector3(22.976624, 0.6047363, 33.34662)
@@ -44,13 +48,16 @@ size = Vector3(22.976624, 0.6047363, 33.34662)
 size = Vector3(2.2925124, 0.10811806, 2.253059)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jdxrh"]
-size = Vector3(2.8633451, 0.2839265, 2.3482807)
+size = Vector3(2.8633451, 0.20824742, 2.3482807)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ulxv8"]
 size = Vector3(1.8876057, 0.36810088, 2.3558865)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g7k05"]
-size = Vector3(0.85066056, 0.46390325, 2.2952309)
+size = Vector3(0.85066056, 0.39454928, 2.2952309)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p6o2n"]
+size = Vector3(1.7390296, 0.20725727, 1.6558263)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lrqvg"]
 size = Vector3(0.48712516, 0.8225918, 0.13814545)
@@ -138,31 +145,36 @@ camera_attributes = SubResource("CameraAttributesPractical_ujn77")
 [node name="garden_spawn" type="Marker3D" parent="." unique_id=968669344]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5907462, -0.53646517, 1.0825098)
 
-[node name="garden" parent="." unique_id=1345149440 instance=ExtResource("1_i446x")]
+[node name="garden" parent="." unique_id=1247023737 instance=ExtResource("1_i446x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64643097, 0, 0)
 
 [node name="stair_left" type="StaticBody3D" parent="garden" unique_id=2108510987]
-transform = Transform3D(0.9951487, 0, -0.098381884, 0, 1, 0, 0.098381884, 0, 0.9951487, 2.811595, 1.155159, -21.651337)
+transform = Transform3D(0.9951487, 0, -0.098381884, 0, 1, 0, 0.098381884, 0, 0.9951487, 2.8030891, 1.155159, -21.651337)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="garden/stair_left" unique_id=2010468981]
 transform = Transform3D(-0.23614821, 0.09036066, -0.9675044, 0.35737306, 0.93396145, 3.7252903e-09, 0.90361184, -0.34576148, -0.2528458, -13.577628, 0.41431236, 40.379463)
 shape = SubResource("BoxShape3D_qs6id")
-debug_color = Color(0, 11.715372, 13.504487, 1)
+debug_color = Color(13.88177, 16.02977, 0, 1)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="garden/stair_left" unique_id=1433436701]
-transform = Transform3D(-0.8840337, 0.38431305, -0.26605213, 0.45100462, 0.8508466, -0.2695436, 0.122780606, -0.35827753, -0.9255022, -17.102024, 1.7091217, 42.71432)
+transform = Transform3D(-0.9045447, 0.42324293, -0.051578544, 0.42530337, 0.88708216, -0.17944813, -0.030195825, -0.18425554, -0.9824104, -17.102026, 1.7091217, 42.71432)
 shape = SubResource("BoxShape3D_qs6id")
-debug_color = Color(0, 11.715372, 13.504487, 1)
+debug_color = Color(13.88177, 16.02977, 0, 1)
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="garden/stair_left" unique_id=2139010698]
-transform = Transform3D(-0.6237044, 0.44949397, 0.63948315, 0.45999613, 0.87252, -0.16465339, -0.63197476, 0.19146632, -0.7509625, -21.576214, 4.074864, 41.677715)
+transform = Transform3D(-0.623704, 0.44949383, 0.6394831, 0.45999613, 0.87252, -0.16465339, -0.63197374, 0.19146623, -0.7509625, -21.651014, 3.9296727, 41.645863)
 shape = SubResource("BoxShape3D_7s4op")
-debug_color = Color(0, 11.715372, 13.504487, 1)
+debug_color = Color(13.88177, 16.02977, 0, 1)
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="garden/stair_left" unique_id=1066707960]
-transform = Transform3D(-0.16727477, 0.0623125, 0.9839357, 0.20016354, 0.9793604, -0.027997527, -0.96537423, 0.19226314, -0.17629641, -23.577625, 5.043702, 39.24681)
+transform = Transform3D(-0.23406215, 0.28602168, 0.9291892, 0.44007248, 0.8833965, -0.1610733, -0.8669131, 0.37121055, -0.3326431, -23.578533, 4.9545035, 39.330082)
 shape = SubResource("BoxShape3D_f4ofy")
-debug_color = Color(0, 11.715372, 13.504487, 1)
+debug_color = Color(13.88177, 16.02977, 0, 1)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="garden/stair_left" unique_id=1003461670]
+transform = Transform3D(-0.37923455, 0.04214543, 0.92432207, 0.017283134, 0.9991081, -0.038470503, -0.9251275, 0.0013855309, -0.37962568, -24.104282, 5.1368833, 40.74453)
+shape = SubResource("BoxShape3D_uu8jw")
+debug_color = Color(13.88177, 16.02977, 0, 1)
 
 [node name="terasa_ground" type="StaticBody3D" parent="garden" unique_id=1268400152]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64643097, 0, 0)
@@ -173,7 +185,7 @@ shape = SubResource("BoxShape3D_8eb3g")
 debug_color = Color(0, 11.715372, 13.504487, 1)
 
 [node name="scari" type="StaticBody3D" parent="garden" unique_id=1493466145]
-transform = Transform3D(0.31438974, 0, -1.4007226, 0, 1.4355711, 0, 1.4007226, 0, 0.31438974, -8.257132, 4.0251503, -17.696024)
+transform = Transform3D(0.31438974, 0, -1.4007226, 0, 1.4355711, 0, 1.4007226, 0, 0.31438974, -8.236877, 4.0251503, -17.696024)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="garden/scari" unique_id=1258272091]
 transform = Transform3D(1.5709097, 0.61879766, 0.07371676, -0.61938703, 1.5724062, 0, -0.0685873, -0.027017295, 1.6883914, -4.292322, -1.8571738, 3.5623274)
@@ -181,7 +193,7 @@ shape = SubResource("BoxShape3D_yr1ht")
 debug_color = Color(18.892157, 18.892157, 18.892157, 1)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="garden/scari" unique_id=107970290]
-transform = Transform3D(0.6696101, 0.5454664, 1.4526486, -0.9598451, 1.3887244, -0.07901442, -1.2191887, -0.7937335, 0.8600392, -6.5441103, -0.7153115, 5.666701)
+transform = Transform3D(0.6696101, 0.5454664, 1.4526486, -0.9598451, 1.3887244, -0.07901442, -1.2191887, -0.7937335, 0.8600392, -6.5647516, -0.7678602, 5.6967354)
 shape = SubResource("BoxShape3D_jdxrh")
 debug_color = Color(18.892157, 18.892157, 18.892157, 1)
 
@@ -191,9 +203,14 @@ shape = SubResource("BoxShape3D_ulxv8")
 debug_color = Color(18.892157, 18.892157, 18.892157, 1)
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="garden/scari" unique_id=1384764728]
-transform = Transform3D(-1.3459201, -0.51591885, 0.88228744, -0.83430296, 1.3972913, -0.45565087, -0.590375, -0.79844, -1.3674984, -4.221774, 1.2922266, 10.194676)
+transform = Transform3D(-1.3117943, -0.5777612, 0.895261, -0.7642745, 1.4996196, -0.15207575, -0.7424189, -0.522909, -1.4252998, -4.2017365, 1.2402241, 10.212811)
 shape = SubResource("BoxShape3D_g7k05")
 debug_color = Color(18.892157, 18.892157, 18.892157, 1)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="garden/scari" unique_id=1160038850]
+transform = Transform3D(0.8164393, 0.14453295, 1.4726299, -0.16732596, 1.6801486, -0.072133124, -1.4702139, -0.11095685, 0.82598984, -8.060949, 0.6088338, 8.516445)
+shape = SubResource("BoxShape3D_p6o2n")
+debug_color = Color(16.55998, 7.195068, 0, 1)
 
 [node name="balustrada2" type="StaticBody3D" parent="garden" unique_id=602498643]
 transform = Transform3D(-1.8631829, 0, -0.88074565, 0, 2.0608642, 0, 0.88074565, 0, -1.8631829, -31.82428, -1.6601293, 6.8169403)
@@ -383,3 +400,8 @@ omni_range = 10.420014
 
 [node name="Player" parent="." unique_id=2036735905 instance=ExtResource("2_yr1ht")]
 transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -0.18859243, 3.1448445, -4.32356)
+
+[node name="GrassManager" type="Node3D" parent="." unique_id=2143436493]
+transform = Transform3D(1, 0, 0, 0, 1.4756787, 0, 0, 0, 1, -0.42600155, 0, 0)
+
+[node name="Le_Grass" parent="GrassManager" unique_id=471673943 instance=ExtResource("3_jdxrh")]
