@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://dfovannbdm63n" path="res://Sprites/Mouse/back2.png" id="8_fx03e"]
 [ext_resource type="Texture2D" uid="uid://buag7108t6tlf" path="res://Sprites/Placeholders/Chess/Black/b-king.png" id="9_8smwi"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="9_i0knk"]
-[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="10_gmbwj"]
 [ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="11_1an1i"]
 [ext_resource type="Texture2D" uid="uid://cgahdae2q2wyu" path="res://Sprites/Placeholders/Chess/White/w-bishop.png" id="13_ahbjf"]
 [ext_resource type="Texture2D" uid="uid://cxhkh40rgasxn" path="res://Sprites/Placeholders/Chess/White/w-queen.png" id="14_30pvx"]
@@ -25,7 +24,7 @@
 
 [node name="Emperor" type="Node2D" unique_id=678236464]
 script = ExtResource("1_dy1vk")
-solution = Array[Vector2]([Vector2(5, 36), Vector2(11, 45), Vector2(13, 38), Vector2(19, 27), Vector2(20, 35), Vector2(29, 19), Vector2(30, 51)])
+solution = Array[Vector2]([Vector2(4, 36), Vector2(10, 21), Vector2(13, 38), Vector2(20, 35), Vector2(29, 19), Vector2(30, 60)])
 
 [node name="Background" type="Sprite2D" parent="." unique_id=129414867]
 position = Vector2(958.99994, 540.99994)
@@ -755,7 +754,7 @@ offset_top = 307.0
 offset_right = 1906.0
 offset_bottom = 366.0
 text = "And then the Bishop White flew far and wide, with his marching soldier on the line
-The Shadow's Horse, on the same side, moved to center to align"
+The Shadow's Horse, on Light's left side, moved to center to align"
 
 [node name="Label3" type="Label" parent="CanvasLayer/Poem" unique_id=35019079]
 layout_mode = 0
@@ -763,7 +762,7 @@ offset_left = 1134.0
 offset_top = 404.0
 offset_right = 1906.0
 offset_bottom = 463.0
-text = "The Emperor's footman, in front of The queen of light moved now, until she could no more
+text = "The queen of light moved now, until she could no more
 Shadow's dark priest ran just one, treachery at his core"
 
 [node name="Label4" type="Label" parent="CanvasLayer/Poem" unique_id=840843099]
@@ -822,15 +821,7 @@ stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("9_i0knk")]
-visible = false
-offset_left = -120.0
-offset_right = -7.0
 mouse_filter = 2
-
-[node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("10_gmbwj")]
-visible = false
-offset_left = 1672.0
-offset_bottom = -832.0
 
 [node name="Sfx_Player" type="AudioStreamPlayer2D" parent="." unique_id=738795611]
 stream = ExtResource("11_1an1i")

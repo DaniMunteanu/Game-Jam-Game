@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://cc3cf27fyy8" path="res://Sprites/Background/back-side/p4 t1.png" id="5_0ef3u"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="5_d7o1r"]
 [ext_resource type="PackedScene" uid="uid://bvip2aownlgr" path="res://PuzzleObjects/DraggablePuzzleObject.tscn" id="5_ppu18"]
-[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="6_36xyo"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="6_oasne"]
 [ext_resource type="Texture2D" uid="uid://dinnobohn3jht" path="res://Sprites/Background/back-side/p4 t2.png" id="6_yobl8"]
 [ext_resource type="Texture2D" uid="uid://b3e171hyk8wh7" path="res://Sprites/Background/back-side/p4 t3.png" id="7_nr8vp"]
@@ -20,8 +19,8 @@ script = ExtResource("1_6eh2d")
 snap_max_distance = 150.0
 
 [node name="Background" type="Sprite2D" parent="." unique_id=880769567]
-position = Vector2(958.99994, 540.99994)
-scale = Vector2(0.758, 0.758)
+position = Vector2(960.0721, 540)
+scale = Vector2(0.7571546, 0.74999994)
 texture = ExtResource("2_v7l01")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=355521650]
@@ -148,15 +147,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("6_oasne")]
-visible = false
-offset_left = -120.0
-offset_right = -7.0
 mouse_filter = 2
-
-[node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("6_36xyo")]
-visible = false
-offset_left = 1672.0
-offset_bottom = -832.0
 
 [node name="Sfx_Player" type="AudioStreamPlayer2D" parent="." unique_id=656204950]
 stream = ExtResource("12_x0fmj")
