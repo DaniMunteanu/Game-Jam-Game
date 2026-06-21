@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://50pjjyamt4ew" path="res://Scripts/inventory_panel.gd" id="1_7cfyf"]
 [ext_resource type="Script" uid="uid://begx5xtvasbnu" path="res://Scripts/item_slot.gd" id="1_la3np"]
 [ext_resource type="Texture2D" uid="uid://djnhajkpwvna2" path="res://Sprites/Placeholders/Items/Item1.png" id="1_xufhh"]
+[ext_resource type="PackedScene" uid="uid://bvjoucwd4ls7t" path="res://UI/Grimoire.tscn" id="4_72myj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72myj"]
 bg_color = Color(0, 0, 0, 0.23529412)
@@ -186,3 +187,10 @@ layout_mode = 2
 size_flags_vertical = 0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7cfyf")
+
+[node name="Grimoire" parent="." unique_id=178188831 instance=ExtResource("4_72myj")]
+layout_mode = 1
+offset_left = -1801.0
+offset_top = -5.0
+offset_right = -1786.0
+offset_bottom = -707.0
