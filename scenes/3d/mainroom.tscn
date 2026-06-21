@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b52n10npscye6" path="res://Scripts/3D scripts/mainroom.gd" id="1_j7t7n"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="1_w1mmj"]
-[ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_qe2jl"]
+[ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_qe2jl"]
 [ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="3_rfp5g"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="4_rfp5g"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="5_whf7h"]
@@ -30,7 +30,7 @@
 [ext_resource type="Resource" uid="uid://fxf623ngowdt" path="res://Scripts/Items/GreenPot.tres" id="23_v6s45"]
 [ext_resource type="Resource" uid="uid://dhkl5spggl2ln" path="res://Scripts/Items/BluePot.tres" id="24_yxx7e"]
 [ext_resource type="Resource" uid="uid://yvnkv23qvu5v" path="res://Scripts/Items/YellowPot.tres" id="25_lr5v6"]
-[ext_resource type="Script" path="res://Scripts/Puzzles3D/death_3d.gd" id="29_qe2jl"]
+[ext_resource type="Script" uid="uid://c5jcpns81oxq3" path="res://Scripts/Puzzles3D/death_3d.gd" id="29_qe2jl"]
 [ext_resource type="AudioStream" uid="uid://dtos2mplvjkri" path="res://Audio/SFX/zodiac_pressedt.wav" id="31_v6s45"]
 [ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="32_yxx7e"]
 [ext_resource type="AudioStream" uid="uid://djksd37gj7fx6" path="res://Audio/SFX/chest.wav" id="35_yh05a"]
@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://bp6sa81g84l08" path="res://3D assets/tower.blend" id="40_5g3xn"]
 [ext_resource type="PackedScene" uid="uid://be1ks538q54p8" path="res://scenes/3d/garden.tscn" id="40_nq443"]
 [ext_resource type="PackedScene" uid="uid://dp1ao8e1wcrjm" path="res://3D assets/Particles/torch_fire.tscn" id="41_nq443"]
+[ext_resource type="PackedScene" uid="uid://d4dxmoylc2lu4" path="res://3D assets/Objects/Foliage/weed2.glb" id="42_0gmuw"]
 [ext_resource type="PackedScene" uid="uid://j27wrkptprcf" path="res://3D assets/scenes/tower scenes/tower_door.tscn" id="42_qe2jl"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_rfp5g"]
@@ -1269,6 +1270,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5646133, -13.06361, 17.6557
 
 [node name="TorchFire10" parent="FireHazard" unique_id=1909785237 instance=ExtResource("41_nq443")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.442758, -15.400107, 18.920898)
+
+[node name="weed2" parent="." unique_id=1062597871 instance=ExtResource("42_0gmuw")]
+transform = Transform3D(0.545, 0, 0, 0, 0.545, 0, 0, 0, 0.545, 14.6, -24.300001, 33)
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
 [connection signal="body_entered" from="FirstRoom/actual_mirror/InteractableArea3D" to="." method="_on_d_mirror_body_entered"]
