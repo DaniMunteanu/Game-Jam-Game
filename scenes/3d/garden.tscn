@@ -405,3 +405,12 @@ transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -0.18859243, 3.1448445,
 transform = Transform3D(1, 0, 0, 0, 1.4756787, 0, 0, 0, 1, -0.42600155, 0, 0)
 
 [node name="Le_Grass" parent="GrassManager" unique_id=471673943 instance=ExtResource("3_jdxrh")]
+
+[node name="Le_Grass2" parent="GrassManager" unique_id=780506909 instance=ExtResource("3_jdxrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5995035, 0, 0)
+
+[node name="Le_Grass3" parent="GrassManager" unique_id=923007739 instance=ExtResource("3_jdxrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0583534, 0, 10.202518)
+
+[node name="Le_Grass4" parent="GrassManager" unique_id=1174159923 instance=ExtResource("3_jdxrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.17243)

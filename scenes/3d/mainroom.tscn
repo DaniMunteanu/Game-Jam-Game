@@ -1221,6 +1221,39 @@ transform = Transform3D(0.7725606, -0.51670927, 0.36899626, 0.62490886, 0.721659
 shape = SubResource("BoxShape3D_5g3xn")
 debug_color = Color(1, 1, 0.28918967, 0.42000002)
 
+[node name="FireHazard" type="Node3D" parent="tower" unique_id=210936665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4908595, 22.040041, -14.807217)
+
+[node name="TorchFire" parent="tower/FireHazard" unique_id=324158462 instance=ExtResource("41_nq443")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.164463, 4.88518, 12.708351)
+
+[node name="TorchFire2" parent="tower/FireHazard" unique_id=1378261448 instance=ExtResource("41_nq443")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.43404, 2.723868, 14.249923)
+
+[node name="TorchFire3" parent="tower/FireHazard" unique_id=101460308 instance=ExtResource("41_nq443")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.462517, 0.4470706, 17.430187)
+
+[node name="TorchFire4" parent="tower/FireHazard" unique_id=1973452660 instance=ExtResource("41_nq443")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.172638, -1.7674866, 18.938763)
+
+[node name="TorchFire5" parent="tower/FireHazard" unique_id=1358725417 instance=ExtResource("41_nq443")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.913319, -3.9991233, 17.296726)
+
+[node name="TorchFire6" parent="tower/FireHazard" unique_id=582403091 instance=ExtResource("41_nq443")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.734504, -6.249477, 14.178783)
+
+[node name="TorchFire7" parent="tower/FireHazard" unique_id=1473017931 instance=ExtResource("41_nq443")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.896693, -8.553467, 12.704126)
+
+[node name="TorchFire8" parent="tower/FireHazard" unique_id=1036230470 instance=ExtResource("41_nq443")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2181168, -10.785858, 14.514005)
+
+[node name="TorchFire9" parent="tower/FireHazard" unique_id=1522948951 instance=ExtResource("41_nq443")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5646133, -13.06361, 17.655796)
+
+[node name="TorchFire10" parent="tower/FireHazard" unique_id=1909785237 instance=ExtResource("41_nq443")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.442758, -15.400107, 18.920898)
+
 [node name="tower_door_model" parent="." unique_id=394253567 node_paths=PackedStringArray("interactable") instance=ExtResource("42_qe2jl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.611942, -23.838614, 21.580822)
 interactable = NodePath("tower_door2")
@@ -1234,38 +1267,6 @@ object = NodePath(".")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55029297, 2.807415, 0.064697266)
 shape = SubResource("BoxShape3D_0gmuw")
 debug_color = Color(0, 0, 0, 1)
-
-[node name="FireHazard" type="Node3D" parent="." unique_id=210936665]
-
-[node name="TorchFire" parent="FireHazard" unique_id=324158462 instance=ExtResource("41_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.164463, 4.88518, 12.708351)
-
-[node name="TorchFire2" parent="FireHazard" unique_id=1378261448 instance=ExtResource("41_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.43404, 2.723868, 14.249923)
-
-[node name="TorchFire3" parent="FireHazard" unique_id=101460308 instance=ExtResource("41_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.462517, 0.4470706, 17.430187)
-
-[node name="TorchFire4" parent="FireHazard" unique_id=1973452660 instance=ExtResource("41_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.172638, -1.7674866, 18.938763)
-
-[node name="TorchFire5" parent="FireHazard" unique_id=1358725417 instance=ExtResource("41_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.913319, -3.9991233, 17.296726)
-
-[node name="TorchFire6" parent="FireHazard" unique_id=582403091 instance=ExtResource("41_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.734504, -6.249477, 14.178783)
-
-[node name="TorchFire7" parent="FireHazard" unique_id=1473017931 instance=ExtResource("41_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.896693, -8.553467, 12.704126)
-
-[node name="TorchFire8" parent="FireHazard" unique_id=1036230470 instance=ExtResource("41_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2181168, -10.785858, 14.514005)
-
-[node name="TorchFire9" parent="FireHazard" unique_id=1522948951 instance=ExtResource("41_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5646133, -13.06361, 17.655796)
-
-[node name="TorchFire10" parent="FireHazard" unique_id=1909785237 instance=ExtResource("41_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.442758, -15.400107, 18.920898)
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
 [connection signal="body_entered" from="FirstRoom/actual_mirror/InteractableArea3D" to="." method="_on_d_mirror_body_entered"]
