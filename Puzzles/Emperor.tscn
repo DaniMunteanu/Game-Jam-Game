@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://dfovannbdm63n" path="res://Sprites/Mouse/back2.png" id="8_fx03e"]
 [ext_resource type="Texture2D" uid="uid://buag7108t6tlf" path="res://Sprites/Placeholders/Chess/Black/b-king.png" id="9_8smwi"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="9_i0knk"]
-[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="10_gmbwj"]
 [ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="11_1an1i"]
 [ext_resource type="Texture2D" uid="uid://cgahdae2q2wyu" path="res://Sprites/Placeholders/Chess/White/w-bishop.png" id="13_ahbjf"]
 [ext_resource type="Texture2D" uid="uid://cxhkh40rgasxn" path="res://Sprites/Placeholders/Chess/White/w-queen.png" id="14_30pvx"]
@@ -822,15 +821,7 @@ stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("9_i0knk")]
-visible = false
-offset_left = -120.0
-offset_right = -7.0
 mouse_filter = 2
-
-[node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("10_gmbwj")]
-visible = false
-offset_left = 1672.0
-offset_bottom = -832.0
 
 [node name="Sfx_Player" type="AudioStreamPlayer2D" parent="." unique_id=738795611]
 stream = ExtResource("11_1an1i")

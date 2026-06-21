@@ -28,7 +28,7 @@ var big_sack_picked_up: bool = false
 
 var all_sacks_picked_up: bool = false
 
-const number_of_puzzles: int = 7
+const number_of_puzzles: int = 10
 var complete_puzzles: Array[bool] = []
 var completed_puzzles : int = 0
 
@@ -36,6 +36,11 @@ signal puzzle_finished(puzzle_index: int)
 signal all_puzzles_completed
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	# For testing purposes ONLY
+	reset_data()
+	complete_puzzles[puzzles.MAGICIAN] = true
+	
 	SignalBus.connect("magician_completed", check_cards)
 	SignalBus.connect("death_completed", check_cards)
 	SignalBus.connect("moon_completed", check_cards)

@@ -2,14 +2,13 @@
 
 [ext_resource type="Script" uid="uid://c1poe3shrtvbk" path="res://Scripts/room.gd" id="1_tj7eo"]
 [ext_resource type="Texture2D" uid="uid://8unoo7n3iuta" path="res://Sprites/Background/left-side/perete 2 faca carte.png" id="2_def1v"]
-[ext_resource type="Script" uid="uid://demfdhxe224qk" path="res://Scripts/pisi.gd" id="6_def1v"]
+[ext_resource type="Script" path="res://Scripts/pisi.gd" id="6_def1v"]
 [ext_resource type="AudioStream" uid="uid://v6expysct4fh" path="res://Audio/SFX/purr.mp3" id="7_03h48"]
 [ext_resource type="AudioStream" uid="uid://cnyl21bqw7ifp" path="res://Audio/SFX/pisi-miau.mp3" id="8_qu38w"]
-[ext_resource type="Script" uid="uid://bobxfq0ow7u2l" path="res://Scripts/grimoire.gd" id="9_03h48"]
+[ext_resource type="Script" path="res://Scripts/grimoire.gd" id="9_03h48"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="10_031wo"]
 [ext_resource type="Texture2D" uid="uid://3d6fx73p2xj6" path="res://Sprites/Background/left-side/perete 2 carte.png" id="11_03h48"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="11_pqupb"]
-[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="12_ijtto"]
 [ext_resource type="PackedScene" uid="uid://b06xf8rmjtknh" path="res://Sprites/Background/front-side/praf.tscn" id="13_qu38w"]
 [ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/legacy/A.png" id="16_3xykw"]
 [ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/legacy/D.png" id="17_lmr8f"]
@@ -23,8 +22,8 @@ right_room_path = "res://Rooms/Room1.tscn"
 [node name="BackgorundSprites" type="Node2D" parent="." unique_id=1847405546]
 
 [node name="Wall" type="Sprite2D" parent="BackgorundSprites" unique_id=1526937745]
-position = Vector2(958, 540)
-scale = Vector2(0.755, 0.755)
+position = Vector2(960.00006, 539.99994)
+scale = Vector2(0.7570979, 0.75)
 texture = ExtResource("2_def1v")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1817150608]
@@ -122,10 +121,6 @@ scale = Vector2(0.595, 0.595)
 texture = ExtResource("11_03h48")
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("11_pqupb")]
-
-[node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("12_ijtto")]
-offset_left = 1673.0
-offset_bottom = -835.0
 
 [node name="Praf" parent="." unique_id=1443607552 instance=ExtResource("13_qu38w")]
 position = Vector2(151.00002, 644)

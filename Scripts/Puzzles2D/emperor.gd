@@ -13,6 +13,7 @@ var pieces_snapped: Array[int] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	PauseMenu.enable_puzzle_escape("res://Rooms/Greenhouse2.tscn")
 	init_markers_array()
 	init_pieces_array()
 	init_pieces_snapped_array()
@@ -41,27 +42,13 @@ func check_if_solved():
 	for pair in solution:
 		if pieces_snapped[pair.x] != pair.y:
 			return
-	print("Emperor Won!")
-	#end_puzzle()
+	end_puzzle()
 
-"""
 func end_puzzle():
-	for painting in paintings:
-		painting.draggable = false
-		
-	print("The Magician finished!")
-	sfx_player.play()
-	
-	TextManager.show_once("Magician_completed", [
-		"The Magician. Number one. It’s the card of manifestation, I need the other six if I’m going to fix this mess"
-	])
-	PuzzleManager.finish_puzzle(PuzzleManager.puzzles.MAGICIAN)
-	SignalBus.magician_completed.emit()
-	
-	await get_tree().create_timer(3.0).timeout 
-	
-	PauseMenu.enable_puzzle_escape("res://Rooms/Room1.tscn")
-"""
+	for piece in pieces:
+		piece.draggable = false
+	PuzzleManager.finish_puzzle(PuzzleManager.puzzles.EMPEROR)
+	print("Emperor Won!")
 
 func on_try_snapping(piece_index: int):
 	var closest_marker_index = -1

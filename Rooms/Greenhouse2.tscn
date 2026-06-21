@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://55ttssrk811f" path="res://Sprites/Background/back-side/sera perete sah.png" id="1_ng4ie"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="2_5s7jx"]
 [ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/legacy/A.png" id="3_hsk72"]
+[ext_resource type="Script" uid="uid://clhjhexsk6ajh" path="res://Scripts/Puzzles2D/greenhouse2_checker.gd" id="3_xevms"]
 [ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/legacy/D.png" id="4_b5jqt"]
 [ext_resource type="Texture2D" uid="uid://duf3ls1s7cyo7" path="res://Sprites/Background/front-side/sera sah.png" id="5_g0gk5"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="8_147er"]
-[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="9_cv0ed"]
 
 [node name="Greenhouse2" type="Node2D" unique_id=1041314291 node_paths=PackedStringArray("canvas_layer")]
 script = ExtResource("1_g0gk5")
@@ -20,12 +20,12 @@ right_room_path = "res://Rooms/Greenhouse1.tscn"
 
 [node name="Wall" type="Sprite2D" parent="BackgroundSprites" unique_id=438293240]
 position = Vector2(960.00006, 540)
-scale = Vector2(0.7570978, 0.755)
+scale = Vector2(0.7570978, 0.75)
 texture = ExtResource("1_ng4ie")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1122052096]
 
-[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=999581055]
+[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=999581055 node_paths=PackedStringArray("chess_button")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -10.0
@@ -33,6 +33,8 @@ offset_top = 2.0
 offset_right = 1910.0
 offset_bottom = 1082.0
 mouse_filter = 2
+script = ExtResource("3_xevms")
+chess_button = NodePath("ChessBoard")
 metadata/_edit_use_anchors_ = true
 
 [node name="A" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=2055260161]
@@ -125,12 +127,4 @@ stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("8_147er")]
-visible = false
 mouse_filter = 2
-
-[node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("9_cv0ed")]
-visible = false
-offset_left = 990.0
-offset_top = 1089.0
-offset_right = 990.0
-offset_bottom = 1089.0
