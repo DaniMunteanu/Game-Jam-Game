@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://50pjjyamt4ew" path="res://Scripts/inventory_panel.gd" id="1_7cfyf"]
 [ext_resource type="Script" uid="uid://begx5xtvasbnu" path="res://Scripts/item_slot.gd" id="1_la3np"]
 [ext_resource type="Texture2D" uid="uid://djnhajkpwvna2" path="res://Sprites/Placeholders/Items/Item1.png" id="1_xufhh"]
+[ext_resource type="PackedScene" uid="uid://bvjoucwd4ls7t" path="res://UI/Grimoire.tscn" id="4_72myj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72myj"]
-bg_color = Color(0.050980393, 0.30980393, 0.5568628, 1)
+bg_color = Color(0, 0, 0, 0.23529412)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cfyf"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -13,39 +14,47 @@ border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
-border_color = Color(0.7882353, 0.7254902, 0.30588236, 1)
+border_color = Color(0.728822, 0.72882205, 0.7288217, 1)
 
 [node name="InventoryUI" type="Panel" unique_id=629547533]
-anchors_preset = 11
+anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
 offset_left = -113.0
-offset_top = 250.0
+offset_bottom = 830.0
 grow_horizontal = 0
-grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_72myj")
 script = ExtResource("1_7cfyf")
 
 [node name="SelectionBorder" type="Panel" parent="." unique_id=720554800]
 custom_minimum_size = Vector2(98, 98)
-layout_mode = 0
-offset_right = 113.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -113.0
 offset_bottom = 830.0
+grow_horizontal = 0
 size_flags_vertical = 0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7cfyf")
+metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1677735597]
-layout_mode = 0
-offset_left = 1.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -112.0
 offset_top = 3.0
-offset_right = 111.0
-offset_bottom = 1049.0
+offset_right = -2.0
+offset_bottom = 830.0
+grow_horizontal = 0
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+metadata/_edit_use_anchors_ = true
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=1123555826]
 layout_mode = 2
@@ -178,3 +187,10 @@ layout_mode = 2
 size_flags_vertical = 0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7cfyf")
+
+[node name="Grimoire" parent="." unique_id=178188831 instance=ExtResource("4_72myj")]
+layout_mode = 1
+offset_left = -1801.0
+offset_top = -5.0
+offset_right = -1786.0
+offset_bottom = -707.0
