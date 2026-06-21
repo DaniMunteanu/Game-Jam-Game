@@ -36,7 +36,6 @@ TextManager="*uid://4aefjcn31okg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=4
 window/size/resizable=false
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="uid://bkv7c1m0cuef4"
@@ -112,4 +111,5 @@ escape={
 
 [rendering]
 
+rendering_device/pipeline_cache/save_chunk_size_mb=3.000001
 rendering_device/driver.windows="d3d12"
