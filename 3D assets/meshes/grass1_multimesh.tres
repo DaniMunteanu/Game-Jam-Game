@@ -1,6 +1,6 @@
 [gd_resource type="MultiMesh" format=3 uid="uid://b53wgt1yi84x3"]
 
-[ext_resource type="ArrayMesh" uid="uid://ckbmr7cw1nsol" path="res://3D assets/grass.res" id="1_4jw05"]
+[ext_resource type="ArrayMesh" uid="uid://dnh8rtxh8q1d2" path="res://3D assets/grass.res" id="1_4jw05"]
 
 [resource]
 transform_format = 1

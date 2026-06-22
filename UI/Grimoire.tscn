@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bvjoucwd4ls7t"]
+
+[ext_resource type="Script" uid="uid://cwwawof7hguvj" path="res://Scripts/UI scripts/grimoire.gd" id="1_dn28g"]
+[ext_resource type="Texture2D" uid="uid://1s05vlcqe8ml" path="res://icon.svg" id="2_eoyrf"]
+[ext_resource type="PackedScene" uid="uid://cu1m6vvgk233u" path="res://UI/GrimoirePage.tscn" id="3_46r2j"]
+
+[node name="Grimoire" type="Control" unique_id=178188831]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dn28g")
+
+[node name="GrimoireImage" type="TextureRect" parent="." unique_id=167200829]
+layout_mode = 0
+offset_left = 1749.0
+offset_top = 917.0
+offset_right = 1877.0
+offset_bottom = 1045.0
+texture = ExtResource("2_eoyrf")
+
+[node name="Label" type="Label" parent="GrimoireImage" unique_id=550900772]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 108.0
+offset_right = 102.0
+offset_bottom = 127.0
+text = "[Q] - Open"
+
+[node name="Pages" type="Control" parent="." unique_id=1155734976]
+anchors_preset = 0
+
+[node name="GrimoirePage" parent="Pages" unique_id=2121197119 instance=ExtResource("3_46r2j")]
+layout_mode = 1
+
+[node name="GrimoirePage2" parent="Pages" unique_id=450620601 instance=ExtResource("3_46r2j")]
+layout_mode = 1
+
+[node name="GrimoirePage3" parent="Pages" unique_id=972283493 instance=ExtResource("3_46r2j")]
+layout_mode = 1
+
+[node name="GrimoirePage4" parent="Pages" unique_id=1277763301 instance=ExtResource("3_46r2j")]
+layout_mode = 1

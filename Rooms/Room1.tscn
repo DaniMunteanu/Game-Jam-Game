@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://uhgkwnltuvlv" path="res://Sprites/Background/back-side/tablouri inainte de puzzle.png" id="4_c8nu8"]
 [ext_resource type="Script" uid="uid://u06go6wad3mn" path="res://Scripts/Puzzles2D/room1_checker.gd" id="4_gthuv"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="5_1kmgg"]
-[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="6_1kmgg"]
 [ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/legacy/A.png" id="8_enbp3"]
 [ext_resource type="Texture2D" uid="uid://cor10e2hj7i4t" path="res://Sprites/Background/back-side/calendar ne facut.png" id="8_lud8e"]
 [ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/legacy/D.png" id="9_c8nu8"]
@@ -33,8 +32,8 @@ right_room_path = "res://Rooms/Room2.tscn"
 [node name="BackgroundSprites" type="Node2D" parent="." unique_id=1832573747]
 
 [node name="Wall" type="Sprite2D" parent="BackgroundSprites" unique_id=142072958]
-position = Vector2(960, 540)
-scale = Vector2(0.755, 0.755)
+position = Vector2(959.9999, 540)
+scale = Vector2(0.7570978, 0.75)
 texture = ExtResource("2_enbp3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=565787541]
@@ -197,15 +196,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("4_477ix")]
-visible = false
 mouse_filter = 2
-
-[node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("6_1kmgg")]
-visible = false
-offset_left = 990.0
-offset_top = 1089.0
-offset_right = 990.0
-offset_bottom = 1089.0
 
 [node name="Praf2" parent="." unique_id=1443607552 instance=ExtResource("11_mv7ge")]
 position = Vector2(779, 528)
