@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="2_yr1ht"]
 [ext_resource type="PackedScene" uid="uid://vm85akor8ljr" path="res://3D assets/Objects/le_grass.tscn" id="3_jdxrh"]
+[ext_resource type="PackedScene" uid="uid://by1tm21k2oglb" path="res://3D assets/Particles/le_water.tscn" id="4_ulxv8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
 
@@ -414,3 +415,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0583534, 0, 10.202518)
 
 [node name="Le_Grass4" parent="GrassManager" unique_id=1174159923 instance=ExtResource("3_jdxrh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.17243)
+
+[node name="le_water" parent="." unique_id=1725622952 instance=ExtResource("4_ulxv8")]
+transform = Transform3D(1.3939561, 0, 0, 0, 1, 0, 0, 0, 2.1273987, -19.740154, 0.38146496, -2.8984933)
