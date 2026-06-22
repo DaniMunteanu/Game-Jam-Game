@@ -139,7 +139,7 @@ light_energy = 10.0
 omni_range = 10.0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="DirectionalLight3D" unique_id=543300371]
-transform = Transform3D(1, -2.9802322e-08, -1.7881393e-07, 0, 1, 0, 1.6391277e-07, 5.9604645e-08, 1, 30.596947, 19.414185, 5.4816523)
+transform = Transform3D(1, -2.9802322e-08, -1.7881393e-07, 0, 1, 0, 1.6391277e-07, 5.9604645e-08, 1, 28.396387, 18.313908, 6.1169004)
 light_energy = 15.796
 omni_range = 14.644067
 
