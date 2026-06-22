@@ -213,7 +213,7 @@ offset_bottom = 0.52001953
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_lskgf")
-destination_room_path = "res://scenes/3d/garden.tscn"
+destination_room_path = "res://scenes/3d/mainroom.tscn"
 zoom_multiplier = 1.05
 metadata/_edit_use_anchors_ = true
 
