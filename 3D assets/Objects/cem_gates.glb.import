@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dceue8mxnimfe"
-path="res://.godot/imported/g1.glb-4bec6596fca4fa3e32c3c5f216e3bd2f.scn"
+uid="uid://cbu7gb7u5ybrj"
+path="res://.godot/imported/cem_gates.glb-d19b17d29ac6cfbe3dd3c2ac86c8d1a6.scn"
 
 [deps]
 
-source_file="res://3D assets/g1.glb"
-dest_files=["res://.godot/imported/g1.glb-4bec6596fca4fa3e32c3c5f216e3bd2f.scn"]
+source_file="res://3D assets/Objects/cem_gates.glb"
+dest_files=["res://.godot/imported/cem_gates.glb-d19b17d29ac6cfbe3dd3c2ac86c8d1a6.scn"]
 
 [params]
 
@@ -39,19 +39,7 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"meshes": {
-"g1_Plane_005": {
-"generate/lightmap_uv": 0,
-"generate/lods": 0,
-"generate/shadow_meshes": 0,
-"lods/normal_merge_angle": 20.0,
-"save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://3D assets/grass.res",
-"save_to_file/path": "uid://dnh8rtxh8q1d2"
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=0
+gltf/texture_map_mode=1

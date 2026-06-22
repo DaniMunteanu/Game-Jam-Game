@@ -32,6 +32,12 @@ const number_of_puzzles: int = 10
 var complete_puzzles: Array[bool] = []
 var completed_puzzles : int = 0
 
+#region GARDEN VARS
+var has_gate_key : bool = true #for testin
+#endregion
+
+
+
 signal puzzle_finished(puzzle_index: int)
 signal all_puzzles_completed
 # Called when the node enters the scene tree for the first time.
