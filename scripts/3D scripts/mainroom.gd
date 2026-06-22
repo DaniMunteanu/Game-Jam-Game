@@ -25,6 +25,9 @@ extends Node3D
 @export var tower_delete : Area3D
 const GARDEN_SPEED : float = 5.0
 
+@export var fantana : InteractableObject 
+@export var greenhouse_path : String  
+
 func _ready() -> void:
 	#garden_level.visible = false
 	#SHUT OFF THE MUSIC FOR DRAMATIC SPOOKY EFFECT
@@ -44,6 +47,7 @@ func _ready() -> void:
 	print(mirror.area.can_interact)
 	player.global_position = spawnpos.position
 	mirror.interact = Callable(self, "_on_mirror_switch")
+	fantana.interact = Callable(self, "_on_well_switch")
 	TextManager.show_once("mainroom_enter", [
 		"What is this place? Looks like some wizard’s room. I see the moon from the mirror,but can I get back to my world?"
 	])
@@ -65,7 +69,16 @@ func _on_mirror_switch():
 	await animation_player.animation_finished
 	SceneChanger.change_scene_to_path.call_deferred(scene_2D_path)
 
-
+func _on_well_switch():
+	print("SWITCHING TO GREENHOUSE!")
+	fantana.area.can_interact = false
+	player.set_physics_process(false)
+	dissolve.visible = true
+	animation_player.play("dissolve")
+	sfx_player_5.play()
+	await animation_player.animation_finished
+	SceneChanger.change_scene_to_path.call_deferred(greenhouse_path)
+	
 func _on_player_clicked(target) -> void:
 	if not target.area:
 		target.interact.call()
