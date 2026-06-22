@@ -138,7 +138,7 @@ light_energy = 10.0
 omni_range = 10.0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="DirectionalLight3D" unique_id=543300371]
-transform = Transform3D(1, -2.9802322e-08, -1.7881393e-07, 0, 1, 0, 1.6391277e-07, 5.9604645e-08, 1, 30.596947, 19.414185, 5.4816523)
+transform = Transform3D(1, -2.9802322e-08, -1.7881393e-07, 0, 1, 0, 1.6391277e-07, 5.9604645e-08, 1, 28.396387, 18.313908, 6.1169004)
 light_energy = 15.796
 omni_range = 14.644067
 
@@ -410,10 +410,6 @@ transform = Transform3D(1, 0, 0, 0, 1.4756787, 0, 0, 0, 1, -0.42600155, 0, 0)
 
 [node name="Le_Grass" parent="GrassManager" unique_id=471673943 instance=ExtResource("3_jdxrh")]
 
-[node name="Emperor3D" type="Node3D" parent="." unique_id=1762415287]
-
-[node name="cem_gates" parent="Emperor3D" unique_id=995697651 instance=ExtResource("4_ulxv8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.646, 0, 0)
 [node name="Le_Grass2" parent="GrassManager" unique_id=780506909 instance=ExtResource("3_jdxrh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5995035, 0, 0)
 
@@ -422,3 +418,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0583534, 0, 10.202518)
 
 [node name="Le_Grass4" parent="GrassManager" unique_id=1174159923 instance=ExtResource("3_jdxrh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.17243)
+
+[node name="Emperor3D" type="Node3D" parent="." unique_id=1762415287]
+
+[node name="cem_gates" parent="Emperor3D" unique_id=995697651 instance=ExtResource("4_ulxv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.646, 0, 0)
