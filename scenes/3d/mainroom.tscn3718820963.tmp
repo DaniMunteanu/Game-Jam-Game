@@ -39,6 +39,7 @@
 [ext_resource type="PackedScene" uid="uid://bp6sa81g84l08" path="res://3D assets/tower.blend" id="40_5g3xn"]
 [ext_resource type="PackedScene" uid="uid://be1ks538q54p8" path="res://scenes/3d/garden.tscn" id="40_nq443"]
 [ext_resource type="PackedScene" uid="uid://dp1ao8e1wcrjm" path="res://3D assets/Particles/torch_fire.tscn" id="41_nq443"]
+[ext_resource type="Script" uid="uid://f0vsfhyi55lw" path="res://Scripts/3D scripts/3d_mirror.gd" id="41_qe2jl"]
 [ext_resource type="PackedScene" uid="uid://j27wrkptprcf" path="res://3D assets/scenes/tower scenes/tower_door.tscn" id="42_qe2jl"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_rfp5g"]
@@ -536,7 +537,7 @@ radius = 2.104004
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_qe2jl"]
 height = 1.0561523
-radius = 5.275879
+radius = 1.996582
 
 [node name="Mainroom" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("spawnpos", "player", "mirror", "tower_door", "zodiac_wheel", "zoom_camera", "secret_door", "room_level", "garden_level", "tower", "tower_delete", "fantana")]
 script = ExtResource("1_j7t7n")
@@ -553,7 +554,7 @@ room_level = NodePath("FirstRoom")
 garden_level = NodePath("GardenLevel")
 tower = NodePath("tower")
 tower_delete = NodePath("tower_delete")
-fantana = NodePath("Well")
+fantana = NodePath("Fantana")
 greenhouse_path = "res://Rooms/Greenhouse1.tscn"
 
 [node name="Player" parent="." unique_id=2036735905 instance=ExtResource("1_w1mmj")]
@@ -1277,26 +1278,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55029297, 2.807415, 0.06469
 shape = SubResource("BoxShape3D_0gmuw")
 debug_color = Color(0, 0, 0, 1)
 
-[node name="Well" type="StaticBody3D" parent="." unique_id=1688590423 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
+[node name="Fantana" type="StaticBody3D" parent="." unique_id=1688590423 groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.526048, -22.087914, 41.425323)
 script = ExtResource("3_qe2jl")
-area = NodePath("InteractableArea3D")
-object = NodePath(".")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Well" unique_id=23361573]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fantana" unique_id=23361573]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07324886, -1.002943, 0.004524231)
 shape = SubResource("CylinderShape3D_nq443")
 
-[node name="InteractableArea3D" parent="Well" unique_id=13246257 instance=ExtResource("3_rfp5g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23981094, -0.2817688, -0.034259796)
+[node name="InteractableArea3D" type="Area3D" parent="Fantana" unique_id=1722531692]
+script = ExtResource("41_qe2jl")
+metadata/_custom_type_script = "uid://f0vsfhyi55lw"
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Well/InteractableArea3D" unique_id=1497062866]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23981094, -0.13994026, -0.080200195)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fantana/InteractableArea3D" unique_id=1497062866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.47192383, -0.11445999)
 shape = SubResource("CylinderShape3D_qe2jl")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="WellSpawnPos" type="Marker3D" parent="." unique_id=825547713]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.362839, -23.484127, 35.826927)
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
 [connection signal="body_entered" from="FirstRoom/actual_mirror/InteractableArea3D" to="." method="_on_d_mirror_body_entered"]

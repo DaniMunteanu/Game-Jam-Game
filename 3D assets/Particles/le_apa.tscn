@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://by1tm21k2oglb"]
+[gd_scene format=3 uid="uid://ms8kg0b1tlyb"]
 
-[sub_resource type="Shader" id="Shader_nt6mn"]
+[sub_resource type="Shader" id="Shader_uludk"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.6.2.stable's StandardMaterial3D.
 
 shader_type spatial;
@@ -52,7 +52,7 @@ void vertex() {
 
 	// UV1 Triplanar: Enabled (with World Triplanar)
 	uv1_power_normal = pow(abs(normal), vec3(uv1_blend_sharpness));
-	uv1_triplanar_pos = (MODEL_MATRIX * vec4(VERTEX, 1.0)).xyz * uv1_scale + uv1_offset + TIME * 0.05;
+	uv1_triplanar_pos = (MODEL_MATRIX * vec4(VERTEX, 1.0)).xyz * uv1_scale + uv1_offset + vec3(0.0, 0.0, sin(TIME * 0.4) * 0.05);
 	uv1_power_normal /= dot(uv1_power_normal, vec3(1.0));
 	uv1_triplanar_pos *= vec3(1.0, -1.0, 1.0);
 }
@@ -107,27 +107,27 @@ void fragment() {
 }
 "
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_77j7u"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_mokih"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_p6mgy"]
-noise = SubResource("FastNoiseLite_77j7u")
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_scl1v"]
+noise = SubResource("FastNoiseLite_mokih")
 seamless = true
 as_normal_map = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2p8r4"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jqhja"]
 render_priority = 0
-shader = SubResource("Shader_nt6mn")
-shader_parameter/albedo = Color(0.047058824, 0.31764707, 0.46666667, 0.44705883)
+shader = SubResource("Shader_uludk")
+shader_parameter/albedo = Color(0.047058824, 0.31764707, 0.46666667, 0.9764706)
 shader_parameter/albedo_texture_size = Vector2i(0, 0)
 shader_parameter/point_size = 1.0
 shader_parameter/roughness = 0.0
 shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
 shader_parameter/specular = 0.5
 shader_parameter/metallic = 0.0
-shader_parameter/texture_refraction = SubResource("NoiseTexture2D_p6mgy")
+shader_parameter/texture_refraction = SubResource("NoiseTexture2D_scl1v")
 shader_parameter/refraction = 0.05
 shader_parameter/refraction_texture_channel = Vector4(1, 0, 0, 0)
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_p6mgy")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_scl1v")
 shader_parameter/normal_scale = 1.0
 shader_parameter/uv1_blend_sharpness = 1.0
 shader_parameter/uv1_scale = Vector3(0.04, 0.04, 0.04)
@@ -135,11 +135,11 @@ shader_parameter/uv1_offset = Vector3(0, 0, 0)
 shader_parameter/uv2_scale = Vector3(1, 1, 1)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
 
-[sub_resource type="BoxMesh" id="BoxMesh_wfrsl"]
-material = SubResource("ShaderMaterial_2p8r4")
-size = Vector3(10, 1, 10)
+[sub_resource type="CylinderMesh" id="CylinderMesh_4l1qj"]
+material = SubResource("ShaderMaterial_jqhja")
 
-[node name="le_water" type="Node3D" unique_id=1725622952]
+[node name="le_apa" type="Node3D" unique_id=1036512425]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1327005381]
-mesh = SubResource("BoxMesh_wfrsl")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1894282408]
+transform = Transform3D(3.1643846, 0, 0, 0, 1, 0, 0, 0, 4.9055343, 0, 0, 0)
+mesh = SubResource("CylinderMesh_4l1qj")
