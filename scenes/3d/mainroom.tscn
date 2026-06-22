@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d35qijl2l5jdx" path="res://3D assets/Illusion.blend" id="6_5k5vb"]
 [ext_resource type="PackedScene" uid="uid://b8x23qj21yxwb" path="res://Particles/Fire.tscn" id="9_lr5v6"]
 [ext_resource type="Script" uid="uid://5dn58dedj0g6" path="res://Scripts/Puzzles3D/moon_3d.gd" id="10_2vkj2"]
-[ext_resource type="PackedScene" path="res://3D assets/luna.tscn" id="11_ntof2"]
+[ext_resource type="PackedScene" uid="uid://ixxg5srbckg2" path="res://3D assets/luna.tscn" id="11_ntof2"]
 [ext_resource type="PackedScene" uid="uid://yvqu345dohrg" path="res://3D assets/scenes/secret_vitraliu.tscn" id="11_pchfi"]
 [ext_resource type="Script" uid="uid://c1srst7838qj0" path="res://Scripts/Puzzles3D/star_3d.gd" id="12_vl5l8"]
 [ext_resource type="Script" uid="uid://0htjwty3extj" path="res://Scripts/Puzzles3D/temperance_3d.gd" id="13_gnvy8"]
@@ -39,7 +39,6 @@
 [ext_resource type="PackedScene" uid="uid://bp6sa81g84l08" path="res://3D assets/tower.blend" id="40_5g3xn"]
 [ext_resource type="PackedScene" uid="uid://be1ks538q54p8" path="res://scenes/3d/garden.tscn" id="40_nq443"]
 [ext_resource type="PackedScene" uid="uid://dp1ao8e1wcrjm" path="res://3D assets/Particles/torch_fire.tscn" id="41_nq443"]
-[ext_resource type="PackedScene" uid="uid://d4dxmoylc2lu4" path="res://3D assets/Objects/Foliage/weed2.glb" id="42_0gmuw"]
 [ext_resource type="PackedScene" uid="uid://j27wrkptprcf" path="res://3D assets/scenes/tower scenes/tower_door.tscn" id="42_qe2jl"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_rfp5g"]

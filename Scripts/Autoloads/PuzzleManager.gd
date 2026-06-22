@@ -8,6 +8,7 @@ enum puzzles{
 	STAR,
 	HIEROPHANT,
 	WORLD,
+	FOOL,
 	EMPEROR,
 	SUN,
 	JUDGEMENT
