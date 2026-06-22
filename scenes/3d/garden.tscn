@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://be1ks538q54p8"]
 
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
-[ext_resource type="Script" uid="uid://b80xsyas7fj1" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
+[ext_resource type="Script" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="2_yr1ht"]
 [ext_resource type="PackedScene" uid="uid://vm85akor8ljr" path="res://3D assets/Objects/le_grass.tscn" id="3_jdxrh"]
-[ext_resource type="PackedScene" uid="uid://by1tm21k2oglb" path="res://3D assets/Particles/le_water.tscn" id="4_ulxv8"]
 [ext_resource type="PackedScene" uid="uid://bse2py88bpr6s" path="res://3D assets/scenes/cem_gates.tscn" id="4_ulxv8"]
+[ext_resource type="PackedScene" uid="uid://by1tm21k2oglb" path="res://3D assets/Particles/le_water.tscn" id="6_ktj0q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
 
@@ -411,10 +411,6 @@ transform = Transform3D(1, 0, 0, 0, 1.4756787, 0, 0, 0, 1, -0.42600155, 0, 0)
 
 [node name="Le_Grass" parent="GrassManager" unique_id=471673943 instance=ExtResource("3_jdxrh")]
 
-[node name="Emperor3D" type="Node3D" parent="." unique_id=1762415287]
-
-[node name="cem_gates" parent="Emperor3D" unique_id=995697651 instance=ExtResource("4_ulxv8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.646, 0, 0)
 [node name="Le_Grass2" parent="GrassManager" unique_id=780506909 instance=ExtResource("3_jdxrh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5995035, 0, 0)
 
@@ -424,5 +420,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0583534, 0, 10.202518)
 [node name="Le_Grass4" parent="GrassManager" unique_id=1174159923 instance=ExtResource("3_jdxrh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.17243)
 
-[node name="le_water" parent="." unique_id=1725622952 instance=ExtResource("4_ulxv8")]
-transform = Transform3D(1.3939561, 0, 0, 0, 1, 0, 0, 0, 2.1273987, -19.740154, 0.38146496, -2.8984933)
+[node name="Emperor3D" type="Node3D" parent="." unique_id=1762415287]
+
+[node name="cem_gates" parent="Emperor3D" unique_id=995697651 instance=ExtResource("4_ulxv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.646, 0, 0)
+
+[node name="Wataryoudoinghere" type="Node3D" parent="." unique_id=1274077845]
+
+[node name="le_water" parent="Wataryoudoinghere" unique_id=1725622952 instance=ExtResource("6_ktj0q")]
+transform = Transform3D(1.3569123, 0, 0, 0, 1.4023973, 0, 0, 0, 2.2659807, -19.100634, 0, -2.5488381)
+
+[node name="le_water2" parent="Wataryoudoinghere" unique_id=1569767628 instance=ExtResource("6_ktj0q")]
+transform = Transform3D(91.65182, 0, 0, 0, 1.4023973, 0, 0, 0, 47.63385, -122.08481, -0.91259, -2.5488381)
