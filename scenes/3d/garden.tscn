@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://be1ks538q54p8"]
 
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
+[ext_resource type="Script" uid="uid://b80xsyas7fj1" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="2_yr1ht"]
 [ext_resource type="PackedScene" uid="uid://vm85akor8ljr" path="res://3D assets/Objects/le_grass.tscn" id="3_jdxrh"]
+[ext_resource type="PackedScene" uid="uid://bse2py88bpr6s" path="res://3D assets/scenes/cem_gates.tscn" id="4_ulxv8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
 
@@ -122,7 +124,9 @@ size = Vector3(1.8472499, 1.693676, 0.5035019)
 [sub_resource type="BoxShape3D" id="BoxShape3D_i446x"]
 size = Vector3(117.42721, 1, 88.05139)
 
-[node name="Garden" type="Node3D" unique_id=81722206]
+[node name="Garden" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("gates")]
+script = ExtResource("1_lrqvg")
+gates = NodePath("Emperor3D/cem_gates")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1343459481]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -405,3 +409,8 @@ transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -0.18859243, 3.1448445,
 transform = Transform3D(1, 0, 0, 0, 1.4756787, 0, 0, 0, 1, -0.42600155, 0, 0)
 
 [node name="Le_Grass" parent="GrassManager" unique_id=471673943 instance=ExtResource("3_jdxrh")]
+
+[node name="Emperor3D" type="Node3D" parent="." unique_id=1762415287]
+
+[node name="cem_gates" parent="Emperor3D" unique_id=995697651 instance=ExtResource("4_ulxv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.646, 0, 0)
