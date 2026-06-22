@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://bse2py88bpr6s"]
+
+[ext_resource type="PackedScene" uid="uid://cbu7gb7u5ybrj" path="res://3D assets/Objects/cem_gates.glb" id="1_ajygt"]
+[ext_resource type="Script" uid="uid://y22lu5u33s2y" path="res://Scripts/3D scripts/cem_gates.gd" id="2_u6cbj"]
+[ext_resource type="Script" uid="uid://f0vsfhyi55lw" path="res://Scripts/3D scripts/3d_mirror.gd" id="3_gxwps"]
+[ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://Scripts/3D scripts/InteractableObject.gd" id="4_6rd5l"]
+
+[sub_resource type="Animation" id="Animation_gxwps"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("gate2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("gate1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6rd5l"]
+resource_name = "open_gate"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("gate2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.87266463, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("gate1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.87266463, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1v7u4"]
+_data = {
+&"RESET": SubResource("Animation_gxwps"),
+&"open_gate": SubResource("Animation_6rd5l")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b1lj4"]
+size = Vector3(19.84961, 12.646362, 20.94043)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1v7u4"]
+size = Vector3(0.6184082, 11.189392, 20.072517)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4t17"]
+size = Vector3(0.74560547, 10.396973, 10.046143)
+
+[node name="cem_gates" unique_id=995697651 node_paths=PackedStringArray("anim_player", "closed_col", "obj") instance=ExtResource("1_ajygt")]
+script = ExtResource("2_u6cbj")
+anim_player = NodePath("AnimationPlayer")
+closed_col = NodePath("interactableobj/locked_col")
+obj = NodePath("interactableobj")
+
+[node name="gate1" parent="." index="0" unique_id=1864517855]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 28.472666, 1.4993634, -1.879207)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2" unique_id=1143583763]
+libraries/ = SubResource("AnimationLibrary_1v7u4")
+
+[node name="InteractableArea3D" type="Area3D" parent="." index="3" unique_id=1497242617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.075941, 0, -9.684528)
+visible = false
+script = ExtResource("3_gxwps")
+metadata/_custom_type_script = "uid://f0vsfhyi55lw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea3D" index="0" unique_id=936347367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.424805, 5.823181, -2.011963)
+shape = SubResource("BoxShape3D_b1lj4")
+debug_color = Color(0.99607843, 0, 0.17254902, 1)
+
+[node name="interactableobj" type="StaticBody3D" parent="." index="4" unique_id=663558102 node_paths=PackedStringArray("object") groups=["Interactables"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.646, 0, 0)
+script = ExtResource("4_6rd5l")
+object = NodePath(".")
+
+[node name="locked_col" type="CollisionShape3D" parent="interactableobj" index="0" unique_id=328353192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.710064, 5.7128906, -12.261844)
+shape = SubResource("BoxShape3D_1v7u4")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="open_right" type="CollisionShape3D" parent="interactableobj" index="1" unique_id=689636540]
+transform = Transform3D(0.64278764, 0, -0.76604444, 0, 1, 0, 0.76604444, 0, 0.64278764, 32.256676, 5.7643814, -5.5769167)
+shape = SubResource("BoxShape3D_g4t17")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="open_left" type="CollisionShape3D" parent="interactableobj" index="2" unique_id=1340136970]
+transform = Transform3D(0.64278764, 0, 0.76604444, 0, 1, 0, -0.76604444, 0, 0.64278764, 32.26257, 5.764379, -19.051262)
+shape = SubResource("BoxShape3D_g4t17")
+debug_color = Color(0, 0.6, 0.69803923, 1)

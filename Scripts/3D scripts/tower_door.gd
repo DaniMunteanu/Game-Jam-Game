@@ -11,6 +11,7 @@ func _ready() -> void:
 
 
 func _on_door_open():
+	
 	anim_player.play("open_door")
 	await anim_player.animation_finished
 	interactable.get_node("CollisionShape3D").disabled = true
