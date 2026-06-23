@@ -35,6 +35,7 @@ var completed_puzzles : int = 0
 
 #region GARDEN VARS
 var has_gate_key : bool = true #for testin
+var has_worm : bool = false
 #endregion
 
 
