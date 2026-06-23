@@ -10,29 +10,28 @@ extends Node3D
 @export var zodiac_wheel : InteractableObject
 @export var zodiac_tile : Node3D 
 #@export var moon_symbol : InteractableObject
-@export var placeholder_item : ItemData
 @export var zoom_camera : Camera3D
 @export var secret_door : Node3D
 @onready var dissolve: ColorRect = $dissolve
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sfx_player_4: AudioStreamPlayer3D = $SfxPlayers/SfxPlayer4
 @onready var sfx_player_5: AudioStreamPlayer3D = $SfxPlayers/SfxPlayer5
-@export var garden_path : String
+#@export var garden_path : String
 #NEW STUFF
 @export var room_level : Node
 @export var garden_level : Node
 @export var tower : Node3D
 @export var tower_delete : Area3D
+
 const GARDEN_SPEED : float = 5.0
 
-@export var fantana : InteractableObject 
-@export var greenhouse_path : String  
+#@export var fantana : InteractableObject 
+#@export var greenhouse_path : String  
 
 func _ready() -> void:
 	#garden_level.visible = false
 	#SHUT OFF THE MUSIC FOR DRAMATIC SPOOKY EFFECT
 	#FOR DEBUGGING
-	PuzzleManager.complete_puzzles.resize(7)
 	PuzzleManager.complete_puzzles[PuzzleManager.puzzles.MAGICIAN] = true
 	
 	PuzzleManager.completed_puzzles = 6
@@ -42,12 +41,12 @@ func _ready() -> void:
 		
 	PuzzleManager.all_puzzles_completed.connect(_on_part1_finished)
 	# for finishing in 3d ^
-	AudioManager.switch_to_3d()
+	#AudioManager.switch_to_3d()
 	dissolve.visible = false
 	print(mirror.area.can_interact)
 	player.global_position = spawnpos.position
 	mirror.interact = Callable(self, "_on_mirror_switch")
-	fantana.interact = Callable(self, "_on_well_switch")
+	
 	TextManager.show_once("mainroom_enter", [
 		"What is this place? Looks like some wizard’s room. I see the moon from the mirror,but can I get back to my world?"
 	])
@@ -68,16 +67,6 @@ func _on_mirror_switch():
 	sfx_player_5.play()
 	await animation_player.animation_finished
 	SceneChanger.change_scene_to_path.call_deferred(scene_2D_path)
-
-func _on_well_switch():
-	print("SWITCHING TO GREENHOUSE!")
-	fantana.area.can_interact = false
-	player.set_physics_process(false)
-	dissolve.visible = true
-	animation_player.play("dissolve")
-	sfx_player_5.play()
-	await animation_player.animation_finished
-	SceneChanger.change_scene_to_path.call_deferred(greenhouse_path)
 	
 func _on_player_clicked(target) -> void:
 	if not target.area:

@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://be1ks538q54p8"]
 
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
-[ext_resource type="Script" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
+[ext_resource type="Script" uid="uid://b80xsyas7fj1" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="2_yr1ht"]
 [ext_resource type="PackedScene" uid="uid://vm85akor8ljr" path="res://3D assets/Objects/le_grass.tscn" id="3_jdxrh"]
+[ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
+[ext_resource type="PackedScene" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
 [ext_resource type="PackedScene" uid="uid://bse2py88bpr6s" path="res://3D assets/scenes/cem_gates.tscn" id="4_ulxv8"]
 [ext_resource type="PackedScene" uid="uid://by1tm21k2oglb" path="res://3D assets/Particles/le_water.tscn" id="6_ktj0q"]
 [ext_resource type="PackedScene" uid="uid://ms8kg0b1tlyb" path="res://3D assets/Particles/le_apa.tscn" id="7_t1yto"]
+[ext_resource type="Texture2D" uid="uid://dhtdue5rkxpdp" path="res://Sprites/tarot cards/The Magician.png" id="8_cxpkk"]
+[ext_resource type="AudioStream" uid="uid://bm085t0y4w02f" path="res://Audio/SFX/mirror4.mp3" id="11_jw885"]
+[ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="12_tsddh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
 
@@ -123,12 +128,110 @@ size = Vector3(2.874936, 1.6163934, 0.39866257)
 [sub_resource type="BoxShape3D" id="BoxShape3D_tsddh"]
 size = Vector3(1.8472499, 1.693676, 0.5035019)
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tsddh"]
+radius = 2.104004
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_g7k05"]
+height = 1.0561523
+radius = 5.275879
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_i446x"]
 size = Vector3(117.42721, 1, 88.05139)
 
-[node name="Garden" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("gates")]
+[sub_resource type="Shader" id="Shader_a6xs1"]
+code = "shader_type canvas_item;
+
+uniform float luminance_cutoff: hint_range(0.0, 1.0) = 0.0;
+uniform bool invert = false;
+uniform sampler2D mask_texture;
+uniform sampler2D display_texture;
+
+void fragment() {
+	vec4 sample_color = texture(mask_texture, UV);
+	float luminance = dot(sample_color.rgb, vec3(0.2126, 0.7152, 0.0722));
+	bool filter = luminance > luminance_cutoff;
+	if (invert) {
+		filter = !filter;
+	}
+	
+	if (filter) {
+		COLOR = texture(display_texture, UV);
+	} else {
+		COLOR = vec4(1.0, 1.0, 1.0, 0.0) * texture(display_texture, UV);
+	}
+}
+"
+
+[sub_resource type="Gradient" id="Gradient_kj86x"]
+offsets = PackedFloat32Array(0.6729323)
+colors = PackedColorArray(0.14214447, 0.13081574, 0.29850298, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wuast"]
+gradient = SubResource("Gradient_kj86x")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ngcjk"]
+shader = SubResource("Shader_a6xs1")
+shader_parameter/luminance_cutoff = 0.0
+shader_parameter/invert = true
+shader_parameter/mask_texture = ExtResource("8_cxpkk")
+shader_parameter/display_texture = SubResource("GradientTexture2D_wuast")
+
+[sub_resource type="Animation" id="Animation_iwjsq"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("dissolve:material:shader_parameter/luminance_cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("dissolve:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_r2r2o"]
+resource_name = "dissolve"
+length = 1.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("dissolve:material:shader_parameter/luminance_cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jw885"]
+_data = {
+&"RESET": SubResource("Animation_iwjsq"),
+&"dissolve": SubResource("Animation_r2r2o")
+}
+
+[node name="Garden" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("gates", "spawnpos", "player", "fantana")]
 script = ExtResource("1_lrqvg")
 gates = NodePath("Emperor3D/cem_gates")
+spawnpos = NodePath("garden_spawn")
+player = NodePath("Player")
+fantana = NodePath("Well")
+greenhouse_path = "res://Rooms/Greenhouse1.tscn"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1343459481]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -392,6 +495,24 @@ transform = Transform3D(-0.30832303, -0.093308896, -1.6590155, -0.5655845, 1.592
 shape = SubResource("BoxShape3D_yr1ht")
 debug_color = Color(18.892157, 18.892157, 18.892157, 1)
 
+[node name="Well" type="StaticBody3D" parent="." unique_id=1945195027 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5949764, 2.2206395, 0.10785675)
+script = ExtResource("3_ngcjk")
+area = NodePath("InteractableArea3D")
+object = NodePath(".")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Well" unique_id=1321577962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07324886, -1.002943, 0.004524231)
+shape = SubResource("CylinderShape3D_tsddh")
+
+[node name="InteractableArea3D" parent="Well" unique_id=563925380 instance=ExtResource("4_jw885")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23981094, -0.2817688, -0.034259796)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Well/InteractableArea3D" unique_id=853851025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23981094, -0.13994026, -0.080200195)
+shape = SubResource("CylinderShape3D_g7k05")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
 [node name="ground-col" type="StaticBody3D" parent="." unique_id=1860861424]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground-col" unique_id=1818973963]
@@ -434,3 +555,29 @@ transform = Transform3D(91.65182, 0, 0, 0, 1.4023973, 0, 0, 0, 47.63385, -122.08
 
 [node name="le_apa" parent="Wataryoudoinghere" unique_id=1036512425 instance=ExtResource("7_t1yto")]
 transform = Transform3D(3.9162838, 0, 0, 0, 0.8797428, 0, 0, 0, 4.317669, -18.931345, 0, -3.0005379)
+
+[node name="dissolve" type="ColorRect" parent="." unique_id=200841696]
+z_index = 11
+material = SubResource("ShaderMaterial_ngcjk")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_right = 32.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.091252245, 0.08692636, 0.2524531, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=88925973]
+libraries/ = SubResource("AnimationLibrary_jw885")
+
+[node name="SfxPlayers" type="Node3D" parent="." unique_id=1440740002]
+
+[node name="SfxPlayer5" type="AudioStreamPlayer3D" parent="SfxPlayers" unique_id=1408212519]
+stream = ExtResource("11_jw885")
+
+[node name="InventoryUI" parent="." unique_id=629547533 instance=ExtResource("12_tsddh")]
+
+[connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
