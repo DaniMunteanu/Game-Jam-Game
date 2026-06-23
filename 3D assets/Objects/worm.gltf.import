@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cbu7gb7u5ybrj"
-path="res://.godot/imported/cem_gates.glb-d19b17d29ac6cfbe3dd3c2ac86c8d1a6.scn"
+uid="uid://b1ofnoclsjqpv"
+path="res://.godot/imported/worm.gltf-f934ff5cfaddadc9dff19d4e63506528.scn"
 
 [deps]
 
-source_file="res://3D assets/Objects/cem_gates.glb"
-dest_files=["res://.godot/imported/cem_gates.glb-d19b17d29ac6cfbe3dd3c2ac86c8d1a6.scn"]
+source_file="res://3D assets/Objects/worm.gltf"
+dest_files=["res://.godot/imported/worm.gltf-f934ff5cfaddadc9dff19d4e63506528.scn"]
 
 [params]
 
@@ -42,4 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=0
+gltf/texture_map_mode=1
