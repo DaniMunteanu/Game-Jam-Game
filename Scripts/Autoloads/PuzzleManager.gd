@@ -29,7 +29,7 @@ var big_sack_picked_up: bool = false
 
 var all_sacks_picked_up: bool = false
 
-const number_of_puzzles: int = 10
+const number_of_puzzles: int = 11
 var complete_puzzles: Array[bool] = []
 var completed_puzzles : int = 0
 

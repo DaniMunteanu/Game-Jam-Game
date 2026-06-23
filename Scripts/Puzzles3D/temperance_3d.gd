@@ -49,7 +49,7 @@ func _ready() -> void:
 		allsack.remove_from_group("Interactables")
 	
 	if PuzzleManager.all_sacks_picked_up: allsack.queue_free()
-	PuzzleManager.complete_puzzles.resize(7) #NEEDED FOR DEBUGGING
+	
 	if !PuzzleManager.complete_puzzles[PuzzleManager.puzzles.TEMPERANCE]:
 		left_scale.interact = Callable(self, "_on_lefts_interact")
 		right_scale.interact = Callable(self, "_on_rights_interact")
