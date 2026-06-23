@@ -32,7 +32,6 @@ func _ready() -> void:
 	#garden_level.visible = false
 	#SHUT OFF THE MUSIC FOR DRAMATIC SPOOKY EFFECT
 	#FOR DEBUGGING
-	PuzzleManager.complete_puzzles.resize(7)
 	PuzzleManager.complete_puzzles[PuzzleManager.puzzles.MAGICIAN] = true
 	
 	PuzzleManager.completed_puzzles = 6
