@@ -19,5 +19,5 @@ func place_worm():
 
 func _on_gate_key_pressed() -> void:
 	gate_key.queue_free()
-	InventoryManager.add_item(InventoryManager.GATE_KEY)
+	InventoryManager.add_item(InventoryManager.KEY)
 	PuzzleManager.has_gate_key = true
