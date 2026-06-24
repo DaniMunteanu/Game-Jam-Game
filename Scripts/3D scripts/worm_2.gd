@@ -22,10 +22,7 @@ func on_pickup():
 	print("pickup")
 	PuzzleManager.has_worm = true
 	InventoryManager.add_item(InventoryManager.WORM)
-<<<<<<< Updated upstream
-=======
 	TextManager.show_once("worm_pickup", [
         "A worm. Gross. But something tells me I should keep it."
 		])
->>>>>>> Stashed changes
 	queue_free()

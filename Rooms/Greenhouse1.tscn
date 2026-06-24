@@ -247,7 +247,7 @@ offset_top = 250.0
 offset_right = 557.0
 offset_bottom = 1081.0
 script = ExtResource("2_lskgf")
-destination_room_path = "res://Puzzles/AquariumCloseUp.tscn"
+destination_room_path = "res://Puzzles/Acvariu_close.tscn"
 zoom_multiplier = 1.1
 metadata/_edit_use_anchors_ = true
 
