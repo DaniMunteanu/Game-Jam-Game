@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dilekr0qfjlmb"]
+
+[ext_resource type="Script" uid="uid://s4iq5hfdsch5" path="res://Scripts/Items/item_data.gd" id="1_0v0pr"]
+[ext_resource type="Texture2D" uid="uid://djnhajkpwvna2" path="res://Sprites/Placeholders/Items/Item1.png" id="1_kvv7a"]
+
+[resource]
+script = ExtResource("1_0v0pr")
+item_name = "GateKey"
+icon = ExtResource("1_kvv7a")
+metadata/_custom_type_script = "uid://s4iq5hfdsch5"

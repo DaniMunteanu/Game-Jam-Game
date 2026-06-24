@@ -583,6 +583,6 @@ stream = ExtResource("11_jw885")
 [node name="InventoryUI" parent="." unique_id=629547533 instance=ExtResource("12_tsddh")]
 
 [node name="worm2" parent="." unique_id=826826803 instance=ExtResource("13_g7k05")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5094466, 0, -0.07716179)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5094466, 1.1084762, -0.07716179)
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]

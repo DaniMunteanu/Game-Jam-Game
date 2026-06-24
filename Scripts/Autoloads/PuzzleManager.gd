@@ -34,9 +34,11 @@ var complete_puzzles: Array[bool] = []
 var completed_puzzles : int = 0
 
 #region GARDEN VARS
-var has_gate_key : bool = true #for testin
+var has_gate_key : bool = false #for testin
 var gate_opened: bool = false
 var has_worm : bool = false
+var worm_placed: bool = false
+var sunflower_picked: bool = false
 #endregion
 
 

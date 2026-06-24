@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cfs3s17sxp4ut"]
+
+[ext_resource type="Script" uid="uid://s4iq5hfdsch5" path="res://Scripts/Items/item_data.gd" id="1_b3eqd"]
+[ext_resource type="Texture2D" uid="uid://cdbnif3napvwb" path="res://Sprites/Placeholders/Items/FlowerPetal1.png" id="1_yqpn7"]
+
+[resource]
+script = ExtResource("1_b3eqd")
+item_name = "FlowerPetal1"
+icon = ExtResource("1_yqpn7")
+metadata/_custom_type_script = "uid://s4iq5hfdsch5"

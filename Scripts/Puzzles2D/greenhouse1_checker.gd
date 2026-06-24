@@ -1,11 +1,18 @@
 extends Node
 
+@onready var aquarium: Button = $Aquarium
+@onready var sunflower: TextureButton = $Sunflower
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	if PuzzleManager.has_gate_key:
+		aquarium.disabled = true
+	if PuzzleManager.sunflower_picked:
+		sunflower.queue_free()
+		
+func _on_sunflower_pressed() -> void:
+	PuzzleManager.sunflower_picked = true
+	sunflower.queue_free()
+	InventoryManager.add_item(InventoryManager.FLOWER_CORE)
+	InventoryManager.add_item(InventoryManager.FLOWER_PETAL_1)
+	InventoryManager.add_item(InventoryManager.FLOWER_PETAL_2)
+	InventoryManager.add_item(InventoryManager.FLOWER_PETAL_3)
