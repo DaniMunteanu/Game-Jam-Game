@@ -1,7 +1,6 @@
 extends Node3D
 
 @export var gates : Node3D
-@export var gate_obj : InteractableObject
 #@export var worm : Node3D
 #Adaugate de mine, Dani, inside my twisted mind...
 const GARDEN_SPEED : float = 5.0
@@ -15,8 +14,6 @@ const GARDEN_SPEED : float = 5.0
 @onready var sfx_player_5: AudioStreamPlayer3D = $SfxPlayers/SfxPlayer5
 @export var worm2 : InteractableObject
 
-<<<<<<< Updated upstream
-=======
 #Adaugate de mine, Dani, inside my twisted mind...
 """const GARDEN_SPEED : float = 5.0
 @export var spawnpos : Marker3D
@@ -30,7 +27,6 @@ const GARDEN_SPEED : float = 5.0
 """
 #Comentate de mine, Flo, mi a dat crash
 
->>>>>>> Stashed changes
 func _ready() -> void:
 	if PuzzleManager.has_gate_key:
 		pass
