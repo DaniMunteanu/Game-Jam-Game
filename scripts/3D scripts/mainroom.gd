@@ -68,12 +68,27 @@ func _on_mirror_switch():
 	await animation_player.animation_finished
 	SceneChanger.change_scene_to_path.call_deferred(scene_2D_path)
 	
+func find_interactable(node: Node) -> InteractableObject:
+	var current = node
+	while current != null:
+		if current is InteractableObject:
+			return current
+		current = current.get_parent()
+	return null
+
 func _on_player_clicked(target) -> void:
-	if not target.area:
-		target.interact.call()
-	elif target.area.can_interact:
+	var interactable = find_interactable(target)
+	
+	if not interactable:
+		return
+	
+	if not interactable.area:
+		interactable.interact.call()
+	elif interactable.area.can_interact:
 		print("target is in area!")
-		target.interact.call()
+		interactable.interact.call()
+	else:
+		print("can_interact is FALSE!")
 
 func _on_part1_finished():
 	print("SECRET DOOR OPENED!")

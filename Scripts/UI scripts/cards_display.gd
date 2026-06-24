@@ -13,7 +13,7 @@ func _ready() -> void:
 	#We don't use this display anymore
 	
 	#call_deferred("update_display")
-	#PuzzleManager.puzzle_finished.connect(on_puzzle_finished)
+	PuzzleManager.puzzle_finished.connect(on_puzzle_finished)
 
 func init_small_cards():
 	for card in small_cards_parent.get_children():

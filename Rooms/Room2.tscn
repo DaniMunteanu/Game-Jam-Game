@@ -120,10 +120,14 @@ texture = ExtResource("8_7ixoc")
 [node name="Moon" parent="." unique_id=1789782810 instance=ExtResource("3_qsv4v")]
 
 [node name="ItemDropArea" parent="Moon" index="0" unique_id=748105193]
-offset_left = 1682.0
-offset_top = 325.0
-offset_right = 1821.0
-offset_bottom = 510.0
+offset_left = 1174.0
+offset_top = 291.0
+offset_right = 1313.0
+offset_bottom = 476.0
+rotation = -0.009388164
+
+[node name="TargetPosition" parent="Moon/ItemDropArea" index="0" unique_id=505623796]
+position = Vector2(67.38678, 65.63553)
 
 [node name="Sfx_Player" parent="Moon" index="1" unique_id=1802982001]
 position = Vector2(8, 0)
