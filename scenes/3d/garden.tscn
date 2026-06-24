@@ -3,14 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
 [ext_resource type="Script" uid="uid://b80xsyas7fj1" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="2_yr1ht"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://vm85akor8ljr" path="res://3D assets/Objects/le_grass.tscn" id="3_jdxrh"]
 [ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
 [ext_resource type="PackedScene" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
-=======
-[ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
-[ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
->>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://bse2py88bpr6s" path="res://3D assets/scenes/cem_gates.tscn" id="4_ulxv8"]
 [ext_resource type="PackedScene" uid="uid://by1tm21k2oglb" path="res://3D assets/Particles/le_water.tscn" id="6_ktj0q"]
 [ext_resource type="PackedScene" uid="uid://ms8kg0b1tlyb" path="res://3D assets/Particles/le_apa.tscn" id="7_t1yto"]
@@ -134,12 +129,6 @@ size = Vector3(2.874936, 1.6163934, 0.39866257)
 [sub_resource type="BoxShape3D" id="BoxShape3D_tsddh"]
 size = Vector3(1.8472499, 1.693676, 0.5035019)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jt540"]
-size = Vector3(33.206673, 4.423706, 0.34265137)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_tfww2"]
-size = Vector3(15.25766, 4.4833984, 0.36816406)
-
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_tsddh"]
 radius = 2.104004
 
@@ -237,9 +226,10 @@ _data = {
 &"dissolve": SubResource("Animation_r2r2o")
 }
 
-[node name="Garden" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("gates", "spawnpos", "player", "fantana")]
+[node name="Garden" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("gates", "worm", "spawnpos", "player", "fantana")]
 script = ExtResource("1_lrqvg")
 gates = NodePath("Emperor3D/cem_gates")
+worm = NodePath("worm2")
 spawnpos = NodePath("garden_spawn")
 player = NodePath("Player")
 fantana = NodePath("Well")
@@ -283,7 +273,7 @@ shape = SubResource("BoxShape3D_qs6id")
 debug_color = Color(13.88177, 16.02977, 0, 1)
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="garden/stair_left" unique_id=2139010698]
-transform = Transform3D(-0.62370396, 0.44949383, 0.639483, 0.45999604, 0.8725199, -0.16465335, -0.6319737, 0.19146621, -0.7509625, -21.651012, 3.9296727, 41.645866)
+transform = Transform3D(-0.623704, 0.44949383, 0.6394831, 0.45999613, 0.87252, -0.16465339, -0.63197374, 0.19146623, -0.7509625, -21.651014, 3.9296727, 41.645863)
 shape = SubResource("BoxShape3D_7s4op")
 debug_color = Color(13.88177, 16.02977, 0, 1)
 
@@ -507,29 +497,6 @@ transform = Transform3D(-0.30832303, -0.093308896, -1.6590155, -0.5655845, 1.592
 shape = SubResource("BoxShape3D_yr1ht")
 debug_color = Color(18.892157, 18.892157, 18.892157, 1)
 
-[node name="stop1" type="StaticBody3D" parent="garden" unique_id=231023959]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="garden/stop1" unique_id=1829833273]
-transform = Transform3D(-0.006859105, 0, -0.99997646, 0, 1, 0, 0.99997646, 0, -0.006859105, -43.253433, 9.139476, -2.6219554)
-shape = SubResource("BoxShape3D_jt540")
-debug_color = Color(0, 11.708403, 13.469126, 1)
-
-[node name="stop2" type="StaticBody3D" parent="garden" unique_id=719601754]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.82977, 9.645797, 10.077542)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="garden/stop2" unique_id=955262407]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16978455, -0.9089861, 4.084818)
-shape = SubResource("BoxShape3D_tfww2")
-debug_color = Color(0, 11.708403, 13.469126, 1)
-
-[node name="stop3" type="StaticBody3D" parent="garden" unique_id=1686127659]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.82977, 9.645797, -23.66018)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="garden/stop3" unique_id=83334294]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16978455, -0.9089861, 4.084818)
-shape = SubResource("BoxShape3D_tfww2")
-debug_color = Color(0, 11.708403, 13.469126, 1)
-
 [node name="Well" type="StaticBody3D" parent="." unique_id=1945195027 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5949764, 2.2206395, 0.10785675)
 script = ExtResource("3_ngcjk")
@@ -562,6 +529,21 @@ omni_range = 10.420014
 
 [node name="Player" parent="." unique_id=2036735905 instance=ExtResource("2_yr1ht")]
 transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -0.18859243, 3.1448445, -4.32356)
+
+[node name="GrassManager" type="Node3D" parent="." unique_id=2143436493]
+transform = Transform3D(1, 0, 0, 0, 1.4756787, 0, 0, 0, 1, -0.42600155, 0, 0)
+
+[node name="Le_Grass" parent="GrassManager" unique_id=471673943 instance=ExtResource("3_jdxrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.522217, 0, -23.913197)
+
+[node name="Le_Grass2" parent="GrassManager" unique_id=780506909 instance=ExtResource("3_jdxrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5995035, 0, 0)
+
+[node name="Le_Grass3" parent="GrassManager" unique_id=923007739 instance=ExtResource("3_jdxrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0583534, 0, 10.202518)
+
+[node name="Le_Grass4" parent="GrassManager" unique_id=1174159923 instance=ExtResource("3_jdxrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.17243)
 
 [node name="Emperor3D" type="Node3D" parent="." unique_id=1762415287]
 
@@ -600,12 +582,7 @@ stream = ExtResource("11_jw885")
 
 [node name="InventoryUI" parent="." unique_id=629547533 instance=ExtResource("12_tsddh")]
 
-<<<<<<< Updated upstream
 [node name="worm2" parent="." unique_id=826826803 instance=ExtResource("13_g7k05")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5094466, 1.1084762, -0.07716179)
-=======
-[node name="worm2" parent="." unique_id=826826803 groups=["Interactables"] instance=ExtResource("13_g7k05")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5094466, 0, -0.07716179)
->>>>>>> Stashed changes
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]

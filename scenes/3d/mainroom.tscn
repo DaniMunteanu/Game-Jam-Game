@@ -3,10 +3,11 @@
 [ext_resource type="Script" uid="uid://b52n10npscye6" path="res://Scripts/3D scripts/mainroom.gd" id="1_j7t7n"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="1_w1mmj"]
 [ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_qe2jl"]
-[ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="3_rfp5g"]
+[ext_resource type="PackedScene" path="res://scenes/3d/interactable_area_3d.tscn" id="3_rfp5g"]
 [ext_resource type="PackedScene" uid="uid://d35qijl2l5jdx" path="res://3D assets/Illusion.blend" id="6_5k5vb"]
+[ext_resource type="PackedScene" uid="uid://b8x23qj21yxwb" path="res://Particles/Fire.tscn" id="9_lr5v6"]
 [ext_resource type="Script" uid="uid://5dn58dedj0g6" path="res://Scripts/Puzzles3D/moon_3d.gd" id="10_2vkj2"]
-[ext_resource type="PackedScene" uid="uid://ixxg5srbckg2" path="res://3D assets/luna.tscn" id="11_ntof2"]
+[ext_resource type="PackedScene" path="res://3D assets/luna.tscn" id="11_ntof2"]
 [ext_resource type="PackedScene" uid="uid://yvqu345dohrg" path="res://3D assets/scenes/secret_vitraliu.tscn" id="11_pchfi"]
 [ext_resource type="Script" uid="uid://c1srst7838qj0" path="res://Scripts/Puzzles3D/star_3d.gd" id="12_vl5l8"]
 [ext_resource type="Script" uid="uid://0htjwty3extj" path="res://Scripts/Puzzles3D/temperance_3d.gd" id="13_gnvy8"]
@@ -27,7 +28,7 @@
 [ext_resource type="Resource" uid="uid://fxf623ngowdt" path="res://Scripts/Items/GreenPot.tres" id="23_v6s45"]
 [ext_resource type="Resource" uid="uid://dhkl5spggl2ln" path="res://Scripts/Items/BluePot.tres" id="24_yxx7e"]
 [ext_resource type="Resource" uid="uid://yvnkv23qvu5v" path="res://Scripts/Items/YellowPot.tres" id="25_lr5v6"]
-[ext_resource type="Script" path="res://Scripts/Puzzles3D/death_3d.gd" id="29_qe2jl"]
+[ext_resource type="Script" uid="uid://c5jcpns81oxq3" path="res://Scripts/Puzzles3D/death_3d.gd" id="29_qe2jl"]
 [ext_resource type="AudioStream" uid="uid://dtos2mplvjkri" path="res://Audio/SFX/zodiac_pressedt.wav" id="31_v6s45"]
 [ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="32_yxx7e"]
 [ext_resource type="AudioStream" uid="uid://djksd37gj7fx6" path="res://Audio/SFX/chest.wav" id="35_yh05a"]
@@ -659,6 +660,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27523804, -0.1628418, -0.1
 shape = SubResource("BoxShape3D_v6s45")
 debug_color = Color(18.68087, 0, 6.28537, 1)
 
+[node name="Fire" parent="FirstRoom/Illusion" unique_id=134169400 instance=ExtResource("9_lr5v6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.718072, 0.99135303, -1.652811)
+
 [node name="secret_door" type="StaticBody3D" parent="FirstRoom/Illusion" unique_id=1371356322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.744363, 0, 13.400789)
 
@@ -1129,7 +1133,7 @@ debug_color = Color(0.79607844, 0.06666667, 1, 1)
 [node name="GardenLevel" type="Node3D" parent="." unique_id=246033411]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26.282516)
 
-[node name="Garden" parent="GardenLevel" unique_id=1062745425 instance=ExtResource("40_nq443")]
+[node name="Garden" parent="GardenLevel" unique_id=2093943185 instance=ExtResource("40_nq443")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.135526, -24.512018, 15.134487)
 
 [node name="tower" parent="." unique_id=741108897 instance=ExtResource("40_5g3xn")]
@@ -1245,9 +1249,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5646133, -13.06361, 17.6557
 
 [node name="TorchFire10" parent="tower/FireHazard" unique_id=1909785237 instance=ExtResource("41_nq443")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.442758, -15.400107, 18.920898)
-
-[node name="TorchFire11" parent="tower/FireHazard" unique_id=1318608129 instance=ExtResource("41_nq443")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.819221, 1.5365452, -5.533187)
 
 [node name="tower_door_model" parent="." unique_id=394253567 node_paths=PackedStringArray("interactable") instance=ExtResource("42_qe2jl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.611942, -23.838614, 21.580822)

@@ -9,8 +9,6 @@ const YELLOW_POT: ItemData = preload("res://Scripts/Items/YellowPot.tres")
 const SMALL_SACK: ItemData = preload("res://Scripts/Items/SmallSack.tres")
 const MEDIUM_SACK: ItemData = preload("res://Scripts/Items/MediumSack.tres")
 const BIG_SACK: ItemData = preload("res://Scripts/Items/BigSack.tres")
-const WORM: ItemData = preload("res://Scripts/Items/Worm.tres")
-const KEY: ItemData = preload("res://Scripts/Items/Key.tres")
 
 const GATE_KEY: ItemData = preload("res://Scripts/Items/GateKey.tres")
 const WORM: ItemData = preload("res://Scripts/Items/Worm.tres")

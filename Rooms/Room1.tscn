@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/legacy/A.png" id="8_enbp3"]
 [ext_resource type="Texture2D" uid="uid://cor10e2hj7i4t" path="res://Sprites/Background/back-side/calendar ne facut.png" id="8_lud8e"]
 [ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/legacy/D.png" id="9_c8nu8"]
-[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="10_mv7ge"]
 [ext_resource type="PackedScene" uid="uid://b06xf8rmjtknh" path="res://Sprites/Background/front-side/praf.tscn" id="11_mv7ge"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cpc84"]
@@ -198,12 +197,6 @@ stretch_mode = 5
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("4_477ix")]
 mouse_filter = 2
-
-[node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("10_mv7ge")]
-offset_left = -6.0
-offset_top = -7.0
-offset_right = -5.999878
-offset_bottom = -7.0
 
 [node name="Praf2" parent="." unique_id=1443607552 instance=ExtResource("11_mv7ge")]
 position = Vector2(779, 528)

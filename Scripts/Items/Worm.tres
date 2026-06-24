@@ -1,18 +1,10 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bo44vxoswpvho"]
 
 [ext_resource type="Script" uid="uid://s4iq5hfdsch5" path="res://Scripts/Items/item_data.gd" id="1_5mh8j"]
-<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://df124mp2j5u7e" path="res://Sprites/Placeholders/Items/worm.jpeg" id="1_loc2k"]
 
 [resource]
 script = ExtResource("1_5mh8j")
 item_name = "Worm"
-=======
-[ext_resource type="Texture2D" uid="uid://q8maaq6w6pk0" path="res://Sprites/Items/worm.png" id="1_loc2k"]
-
-[resource]
-script = ExtResource("1_5mh8j")
-item_name = "worm"
->>>>>>> Stashed changes
 icon = ExtResource("1_loc2k")
 metadata/_custom_type_script = "uid://s4iq5hfdsch5"
