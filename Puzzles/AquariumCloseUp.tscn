@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://ccg7qrgld0bca"]
+
+[ext_resource type="Texture2D" uid="uid://dme6ak0tvik6k" path="res://Sprites/Background/sera-left/ficsh.jpg" id="1_21b63"]
+[ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="2_fb07v"]
+[ext_resource type="Texture2D" uid="uid://dfovannbdm63n" path="res://Sprites/Mouse/back2.png" id="3_v845v"]
+[ext_resource type="PackedScene" uid="uid://baoxv5vjmbtil" path="res://Puzzles/Moon.tscn" id="4_v845v"]
+[ext_resource type="Script" uid="uid://ch3hopf8brwml" path="res://Puzzles/key.gd" id="5_33ga6"]
+[ext_resource type="Texture2D" uid="uid://dkbuximtqybmu" path="res://Sprites/Background/front-side/suport luna1.png" id="5_mqydg"]
+[ext_resource type="Resource" uid="uid://bo44vxoswpvho" path="res://Scripts/Items/Worm.tres" id="6_eegdr"]
+[ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="7_33ga6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kupa2"]
+
+[node name="Aquarium" type="Node2D" unique_id=778543338]
+
+[node name="Background" type="Node2D" parent="." unique_id=2069965437]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=11812718]
+position = Vector2(964.00006, 548.5)
+scale = Vector2(3.2470589, 3.2232146)
+texture = ExtResource("1_21b63")
+
+[node name="BackToRoom" type="Button" parent="." unique_id=1673048926]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 39.0
+offset_top = 41.0
+offset_right = 383.0
+offset_bottom = 163.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kupa2")
+text = "Back to room"
+script = ExtResource("2_fb07v")
+destination_room_path = "res://Rooms/Greenhouse1.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="BackToRoom" unique_id=142740668]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -8.884001
+anchor_top = 8.156
+anchor_right = -7.8490005
+anchor_bottom = 9.09
+offset_left = 3048.0962
+offset_top = -1000.03204
+offset_right = 3048.0562
+offset_bottom = -999.98
+texture = ExtResource("3_v845v")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Key" parent="." unique_id=1512798189 instance=ExtResource("4_v845v")]
+script = ExtResource("5_33ga6")
+
+[node name="ItemDropArea" parent="Key" index="0" unique_id=748105193]
+offset_left = 844.9999
+offset_top = 839.0
+offset_right = 983.9999
+offset_bottom = 1024.0
+rotation = -0.009388164
+required_item = ExtResource("6_eegdr")
+
+[node name="TargetPosition" parent="Key/ItemDropArea" index="0" unique_id=505623796]
+position = Vector2(67.38678, 65.63553)
+
+[node name="Sfx_Player" parent="Key" index="1" unique_id=1802982001]
+position = Vector2(8, 0)
+
+[node name="MoonStandSprite" type="Sprite2D" parent="Key" unique_id=2069139975]
+position = Vector2(628.00006, 1084)
+scale = Vector2(0.773, 0.773)
+texture = ExtResource("5_mqydg")
+
+[node name="InventoryUI" parent="." unique_id=629547533 instance=ExtResource("7_33ga6")]
+offset_left = 1815.0
+offset_top = 11.0
+offset_right = 1928.0
+offset_bottom = 841.0
+mouse_filter = 2
+
+[connection signal="pressed" from="BackToRoom" to="BackToRoom" method="_on_pressed"]
+
+[editable path="Key"]
