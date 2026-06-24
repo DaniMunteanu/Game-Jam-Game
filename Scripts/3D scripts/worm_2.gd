@@ -6,8 +6,9 @@ extends Node3D
 func _ready() -> void:
 	if PuzzleManager.has_worm:
 		queue_free()
-	obj.interact = Callable(self, "on_pickup")
-	walk()
+	else:
+		obj.interact = Callable(self, "on_pickup")
+		walk()
 
 func walk():
 	anim_player.play("MoveUp")
@@ -18,5 +19,7 @@ func walk():
 		walk()
 
 func on_pickup():
+	print("pickup")
 	PuzzleManager.has_worm = true
+	InventoryManager.add_item(InventoryManager.WORM)
 	queue_free()

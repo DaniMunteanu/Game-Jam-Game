@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://btj7252bdj5mf" path="res://Sprites/Background/front-side/sera poarta spre 3d.png" id="6_u76ue"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="7_8mi8e"]
 [ext_resource type="Texture2D" uid="uid://ynaiyyw75833" path="res://Sprites/Background/front-side/sera acvariu.png" id="7_lskgf"]
+[ext_resource type="Texture2D" uid="uid://bqgiw043nls7n" path="res://Sprites/Placeholders/sunflower.jpg" id="11_7j8cd"]
 [ext_resource type="AudioStream" uid="uid://bm085t0y4w02f" path="res://Audio/SFX/mirror4.mp3" id="12_qo4f6"]
 
 [sub_resource type="Shader" id="Shader_a6xs1"]
@@ -269,6 +270,14 @@ expand_mode = 1
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
+[node name="Sunflower" type="TextureButton" parent="CanvasLayer/SceneSwitchers" unique_id=1232117168]
+layout_mode = 0
+offset_left = 1401.0
+offset_top = 656.0
+offset_right = 1651.0
+offset_bottom = 933.0
+texture_normal = ExtResource("11_7j8cd")
+
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("7_8mi8e")]
 mouse_filter = 2
 
@@ -280,3 +289,4 @@ libraries/ = SubResource("AnimationLibrary_qo4f6")
 stream = ExtResource("12_qo4f6")
 
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/Mirror" to="CanvasLayer" method="_on_mirror_pressed"]
+[connection signal="pressed" from="CanvasLayer/SceneSwitchers/Sunflower" to="CanvasLayer/SceneSwitchers" method="_on_sunflower_pressed"]

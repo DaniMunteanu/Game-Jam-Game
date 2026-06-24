@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cbu7gb7u5ybrj" path="res://3D assets/Objects/cem_gates.glb" id="1_ajygt"]
 [ext_resource type="Script" uid="uid://y22lu5u33s2y" path="res://Scripts/3D scripts/cem_gates.gd" id="2_u6cbj"]
 [ext_resource type="Script" uid="uid://f0vsfhyi55lw" path="res://Scripts/3D scripts/3d_mirror.gd" id="3_gxwps"]
-[ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://Scripts/3D scripts/InteractableObject.gd" id="4_6rd5l"]
+[ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="4_6rd5l"]
 
 [sub_resource type="Animation" id="Animation_gxwps"]
 length = 0.001
@@ -81,7 +81,7 @@ anim_player = NodePath("AnimationPlayer")
 closed_col = NodePath("interactableobj/locked_col")
 obj = NodePath("interactableobj")
 
-[node name="gate1" parent="." index="0" unique_id=1864517855]
+[node name="gate1" parent="." index="0" unique_id=353321456]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 28.472666, 1.4993634, -1.879207)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2" unique_id=1143583763]
