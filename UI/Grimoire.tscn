@@ -30,6 +30,7 @@ offset_bottom = 127.0
 text = "[Q] - Open"
 
 [node name="Pages" type="Control" parent="." unique_id=1155734976]
+visible = false
 anchors_preset = 0
 
 [node name="GrimoirePage" parent="Pages" unique_id=2121197119 instance=ExtResource("3_46r2j")]
