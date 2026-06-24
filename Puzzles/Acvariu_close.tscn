@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://ccg7qrgld0bca"]
+[gd_scene format=3 uid="uid://cx4bkg766xlom"]
 
-[ext_resource type="Script" uid="uid://ciwfcqtu4wd16" path="res://Scripts/Puzzles2D/aquarium.gd" id="1_1cfge"]
+[ext_resource type="Script" path="res://Scripts/Puzzles2D/aquarium.gd" id="1_1cfge"]
 [ext_resource type="Texture2D" uid="uid://dme6ak0tvik6k" path="res://Sprites/Background/sera-left/ficsh.jpg" id="1_o037l"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="2_xn4a1"]
 [ext_resource type="Texture2D" uid="uid://d2o26gfv1e2oc" path="res://Sprites/Placeholders/Fih.jpg" id="3_bvpl3"]
@@ -76,6 +76,15 @@ offset_right = 1920.0
 mouse_filter = 2
 
 [node name="ItemDropArea" parent="." unique_id=748105193 instance=ExtResource("8_bvpl3")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 512.0
+offset_top = 624.0
+offset_right = 694.0
+offset_bottom = 757.0
+grow_horizontal = 1
+grow_vertical = 1
 required_item = ExtResource("9_8skb0")
 
 [connection signal="pressed" from="BackToRoom" to="BackToRoom" method="_on_pressed"]
