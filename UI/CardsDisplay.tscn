@@ -6,11 +6,10 @@
 [ext_resource type="Script" uid="uid://dias3okb0nhm1" path="res://Scripts/UI scripts/card.gd" id="2_ck1g6"]
 [ext_resource type="Texture2D" uid="uid://cir7ng11lami6" path="res://Sprites/tarot cards/The Moon.png" id="4_7udf8"]
 [ext_resource type="Texture2D" uid="uid://b1t81fqriim2x" path="res://Sprites/tarot cards/Death.png" id="5_bewe5"]
-[ext_resource type="Texture2D" uid="uid://cm0akfhlqpp2x" path="res://Sprites/tarot cards/temperance.jpg" id="7_7udf8"]
+[ext_resource type="Texture2D" uid="uid://br7qrsyrxqhqy" path="res://Sprites/tarot cards/Temperance.png" id="7_c4fsi"]
 [ext_resource type="Texture2D" uid="uid://da2uptdie06i4" path="res://Sprites/tarot cards/The Star.png" id="7_sou5j"]
 [ext_resource type="Texture2D" uid="uid://cxbyck50atg6q" path="res://Sprites/tarot cards/The Hierophant.png" id="8_hvcjo"]
 [ext_resource type="Texture2D" uid="uid://cvlinfjdwo51v" path="res://Sprites/tarot cards/The World.png" id="9_0gnej"]
-[ext_resource type="Texture2D" uid="uid://d3go8cauptswe" path="res://Scripts/UI scripts/temperance.jpg" id="11_7udf8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4fsi"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -87,7 +86,7 @@ offset_right = 62.0
 offset_bottom = 230.0
 rotation = 3.7524579
 pivot_offset = Vector2(16, 32)
-texture = ExtResource("7_7udf8")
+texture = ExtResource("7_c4fsi")
 expand_mode = 1
 script = ExtResource("2_ck1g6")
 
@@ -222,7 +221,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(200, 400)
 size_flags_horizontal = 4
-texture = ExtResource("11_7udf8")
+texture = ExtResource("7_c4fsi")
 expand_mode = 1
 script = ExtResource("2_ck1g6")
 
