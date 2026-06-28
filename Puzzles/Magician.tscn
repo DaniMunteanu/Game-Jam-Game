@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b3e171hyk8wh7" path="res://Sprites/Background/back-side/p4 t3.png" id="7_nr8vp"]
 [ext_resource type="Texture2D" uid="uid://cnhqaxfd20twa" path="res://Sprites/Background/back-side/p4 t4.png" id="8_hbrtu"]
 [ext_resource type="Texture2D" uid="uid://dfovannbdm63n" path="res://Sprites/Mouse/back2.png" id="10_v7l01"]
+[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="11_x0fmj"]
 [ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="12_x0fmj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ef3u"]
@@ -148,6 +149,8 @@ stretch_mode = 5
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("6_oasne")]
 mouse_filter = 2
+
+[node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("11_x0fmj")]
 
 [node name="Sfx_Player" type="AudioStreamPlayer2D" parent="." unique_id=656204950]
 stream = ExtResource("12_x0fmj")

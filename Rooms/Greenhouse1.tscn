@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="2_lskgf"]
 [ext_resource type="Texture2D" uid="uid://dhtdue5rkxpdp" path="res://Sprites/tarot cards/The Magician.png" id="3_4dwyl"]
 [ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/legacy/A.png" id="3_afr5c"]
-[ext_resource type="Script" path="res://Scripts/canvas_layer.gd" id="3_qo4f6"]
+[ext_resource type="Script" uid="uid://dgxccig7fib3l" path="res://Scripts/canvas_layer.gd" id="3_qo4f6"]
 [ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/legacy/D.png" id="4_4dwyl"]
 [ext_resource type="Script" uid="uid://74si1xeljpdm" path="res://Scripts/Puzzles2D/greenhouse1_checker.gd" id="5_7j8cd"]
 [ext_resource type="Texture2D" uid="uid://btj7252bdj5mf" path="res://Sprites/Background/front-side/sera poarta spre 3d.png" id="6_u76ue"]
@@ -57,7 +57,7 @@ resource_name = "RESET"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("dissolve:material:shader_parameter/luminance_cutoff")
+tracks/0/path = NodePath("../CanvasLayer/dissolve:material:shader_parameter/luminance_cutoff")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -69,7 +69,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("dissolve:modulate")
+tracks/1/path = NodePath("../CanvasLayer/dissolve:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -81,18 +81,18 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_r2r2o"]
 resource_name = "dissolve"
-length = 1.0333333
+length = 1.0332999999999999
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("dissolve:material:shader_parameter/luminance_cutoff")
+tracks/0/path = NodePath("../CanvasLayer/dissolve:material:shader_parameter/luminance_cutoff")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.0333333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1.0333, 1.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0]
+"values": [0.0, 1.0, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qo4f6"]
@@ -117,7 +117,7 @@ texture = ExtResource("1_u76ue")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1944920140]
 script = ExtResource("3_qo4f6")
-destination_room_path = "res://scenes/3d/mainroom.tscn"
+destination_room_path = "res://scenes/3d/garden.tscn"
 
 [node name="dissolve" type="ColorRect" parent="CanvasLayer" unique_id=1466902425]
 z_index = 11

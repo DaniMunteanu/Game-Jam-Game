@@ -1,23 +1,18 @@
 [gd_scene format=3 uid="uid://roet0qnciil5"]
 
 [ext_resource type="Script" uid="uid://xcvw77rnj7nv" path="res://Scripts/UI scripts/cards_display.gd" id="1_52fc6"]
-[ext_resource type="Texture2D" uid="uid://sd0uqnl33b5a" path="res://Sprites/Background/legacy/CardsDisplayBackground.jpg" id="2_7udf8"]
 [ext_resource type="Texture2D" uid="uid://dhtdue5rkxpdp" path="res://Sprites/tarot cards/The Magician.png" id="2_c4fsi"]
 [ext_resource type="Script" uid="uid://dias3okb0nhm1" path="res://Scripts/UI scripts/card.gd" id="2_ck1g6"]
 [ext_resource type="Texture2D" uid="uid://cir7ng11lami6" path="res://Sprites/tarot cards/The Moon.png" id="4_7udf8"]
 [ext_resource type="Texture2D" uid="uid://b1t81fqriim2x" path="res://Sprites/tarot cards/Death.png" id="5_bewe5"]
-[ext_resource type="Texture2D" uid="uid://cm0akfhlqpp2x" path="res://Sprites/tarot cards/temperance.jpg" id="7_7udf8"]
+[ext_resource type="Texture2D" uid="uid://br7qrsyrxqhqy" path="res://Sprites/tarot cards/Temperance.png" id="7_c4fsi"]
 [ext_resource type="Texture2D" uid="uid://da2uptdie06i4" path="res://Sprites/tarot cards/The Star.png" id="7_sou5j"]
 [ext_resource type="Texture2D" uid="uid://cxbyck50atg6q" path="res://Sprites/tarot cards/The Hierophant.png" id="8_hvcjo"]
 [ext_resource type="Texture2D" uid="uid://cvlinfjdwo51v" path="res://Sprites/tarot cards/The World.png" id="9_0gnej"]
-[ext_resource type="Texture2D" uid="uid://d3go8cauptswe" path="res://Scripts/UI scripts/temperance.jpg" id="11_7udf8"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4fsi"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
+[ext_resource type="Texture2D" uid="uid://dq3qmjyde0n8d" path="res://Sprites/tarot cards/The Sun.png" id="9_du1i3"]
+[ext_resource type="Texture2D" uid="uid://b0vpci1b0xpq1" path="res://Sprites/tarot cards/The Emperor.png" id="10_sou5j"]
+[ext_resource type="Texture2D" uid="uid://i3tcgfy3kd81" path="res://Sprites/tarot cards/Judgement.png" id="11_hvcjo"]
+[ext_resource type="Texture2D" uid="uid://bnknlv2bo7ghs" path="res://Sprites/tarot cards/The Fool.png" id="13_0gnej"]
 
 [node name="CardsDisplay" type="Control" unique_id=2004390668]
 layout_mode = 3
@@ -29,129 +24,19 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_52fc6")
 
-[node name="SmallCards" type="TextureRect" parent="." unique_id=1701393796]
+[node name="BigCards" type="Control" parent="." unique_id=1584491612]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = -250.0
-offset_bottom = 250.0
-grow_horizontal = 0
-mouse_filter = 2
-texture = ExtResource("2_7udf8")
-
-[node name="Magician" type="TextureRect" parent="SmallCards" unique_id=930246303]
-visible = false
-layout_mode = 0
-offset_left = 32.0
-offset_top = 27.999996
-offset_right = 64.0
-offset_bottom = 92.0
-rotation = -0.5235988
-pivot_offset = Vector2(16, 32)
-texture = ExtResource("2_c4fsi")
-expand_mode = 1
-script = ExtResource("2_ck1g6")
-
-[node name="Moon" type="TextureRect" parent="SmallCards" unique_id=1913472800]
-visible = false
-layout_mode = 0
-offset_left = 105.0
-offset_top = 13.0
-offset_right = 137.0
-offset_bottom = 77.0
-pivot_offset = Vector2(16, 32)
-texture = ExtResource("4_7udf8")
-expand_mode = 1
-script = ExtResource("2_ck1g6")
-
-[node name="Death" type="TextureRect" parent="SmallCards" unique_id=1864935124]
-visible = false
-layout_mode = 0
-offset_left = 177.0
-offset_top = 28.0
-offset_right = 209.0
-offset_bottom = 92.0
-rotation = 0.5235988
-pivot_offset = Vector2(16, 32)
-texture = ExtResource("5_bewe5")
-expand_mode = 1
-script = ExtResource("2_ck1g6")
-
-[node name="Temperance" type="TextureRect" parent="SmallCards" unique_id=1672964449]
-visible = false
-layout_mode = 0
-offset_left = 30.0
-offset_top = 166.0
-offset_right = 62.0
-offset_bottom = 230.0
-rotation = 3.7524579
-pivot_offset = Vector2(16, 32)
-texture = ExtResource("7_7udf8")
-expand_mode = 1
-script = ExtResource("2_ck1g6")
-
-[node name="Star" type="TextureRect" parent="SmallCards" unique_id=394124798]
-visible = false
-layout_mode = 0
-offset_left = 104.0
-offset_top = 175.0
-offset_right = 136.0
-offset_bottom = 239.0
-rotation = 3.1415927
-pivot_offset = Vector2(16, 32)
-texture = ExtResource("7_sou5j")
-expand_mode = 1
-script = ExtResource("2_ck1g6")
-
-[node name="Hierophant" type="TextureRect" parent="SmallCards" unique_id=1566480094]
-visible = false
-layout_mode = 0
-offset_left = 179.0
-offset_top = 166.0
-offset_right = 211.0
-offset_bottom = 230.0
-rotation = 2.6179938
-pivot_offset = Vector2(16, 32)
-texture = ExtResource("8_hvcjo")
-expand_mode = 1
-script = ExtResource("2_ck1g6")
-
-[node name="World" type="TextureRect" parent="SmallCards" unique_id=2131240729]
-visible = false
-layout_mode = 0
-offset_left = 104.0
-offset_top = 97.0
-offset_right = 136.0
-offset_bottom = 161.0
-pivot_offset = Vector2(16, 32)
-texture = ExtResource("9_0gnej")
-expand_mode = 1
-script = ExtResource("2_ck1g6")
-
-[node name="SelectionBorder" type="Panel" parent="SmallCards" unique_id=1449584135]
-self_modulate = Color(1, 0.8901961, 0.26666668, 1)
-custom_minimum_size = Vector2(98, 98)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -125.0
-offset_top = -125.0
-offset_right = 125.0
-offset_bottom = 125.0
+anchor_bottom = 1.0
+offset_top = -73.0
+offset_bottom = -73.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 0
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_c4fsi")
-
-[node name="BigCards" type="Node" parent="." unique_id=227751111]
 
 [node name="Magician" type="TextureRect" parent="BigCards" unique_id=1227189555]
-visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -170,7 +55,7 @@ expand_mode = 1
 script = ExtResource("2_ck1g6")
 
 [node name="Moon" type="TextureRect" parent="BigCards" unique_id=358000279]
-visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -189,7 +74,7 @@ expand_mode = 1
 script = ExtResource("2_ck1g6")
 
 [node name="Death" type="TextureRect" parent="BigCards" unique_id=2043103308]
-visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -208,7 +93,7 @@ expand_mode = 1
 script = ExtResource("2_ck1g6")
 
 [node name="Temperance" type="TextureRect" parent="BigCards" unique_id=1705634948]
-visible = false
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.39600003
 anchor_top = 0.13000001
@@ -222,12 +107,12 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(200, 400)
 size_flags_horizontal = 4
-texture = ExtResource("11_7udf8")
+texture = ExtResource("7_c4fsi")
 expand_mode = 1
 script = ExtResource("2_ck1g6")
 
 [node name="Star" type="TextureRect" parent="BigCards" unique_id=2125303659]
-visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -246,7 +131,7 @@ expand_mode = 1
 script = ExtResource("2_ck1g6")
 
 [node name="Hierophant" type="TextureRect" parent="BigCards" unique_id=1288756756]
-visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -264,8 +149,65 @@ texture = ExtResource("8_hvcjo")
 expand_mode = 1
 script = ExtResource("2_ck1g6")
 
+[node name="Sun" type="TextureRect" parent="BigCards" unique_id=1291559565]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -400.0
+offset_right = 200.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(200, 400)
+size_flags_horizontal = 4
+texture = ExtResource("9_du1i3")
+expand_mode = 1
+script = ExtResource("2_ck1g6")
+
+[node name="Emperor" type="TextureRect" parent="BigCards" unique_id=931148791]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -400.0
+offset_right = 200.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(200, 400)
+size_flags_horizontal = 4
+texture = ExtResource("10_sou5j")
+expand_mode = 1
+script = ExtResource("2_ck1g6")
+
+[node name="Judgement" type="TextureRect" parent="BigCards" unique_id=381367852]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -400.0
+offset_right = 200.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(200, 400)
+size_flags_horizontal = 4
+texture = ExtResource("11_hvcjo")
+expand_mode = 1
+script = ExtResource("2_ck1g6")
+
 [node name="World" type="TextureRect" parent="BigCards" unique_id=1428704826]
-visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -280,5 +222,24 @@ grow_vertical = 2
 pivot_offset = Vector2(200, 400)
 size_flags_horizontal = 4
 texture = ExtResource("9_0gnej")
+expand_mode = 1
+script = ExtResource("2_ck1g6")
+
+[node name="Fool" type="TextureRect" parent="BigCards" unique_id=953522759]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -400.0
+offset_right = 200.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(200, 400)
+size_flags_horizontal = 4
+texture = ExtResource("13_0gnej")
 expand_mode = 1
 script = ExtResource("2_ck1g6")

@@ -7,8 +7,9 @@
 [ext_resource type="Script" uid="uid://gcs7aymyg04o" path="res://Scripts/Puzzles2D/room2_checker.gd" id="6_ipfbv"]
 [ext_resource type="Texture2D" uid="uid://dxcn46d7gtqqn" path="res://Sprites/Background/front-side/perete 1 fara suport.png" id="8_7ixoc"]
 [ext_resource type="Texture2D" uid="uid://74dxxux8pupb" path="res://Sprites/Background/front-side/oglinda_reparata_perete_luminos-removebg-preview.png" id="9_iwjsq"]
-[ext_resource type="Script" path="res://Scripts/canvas_layer.gd" id="10_a6xs1"]
+[ext_resource type="Script" uid="uid://dgxccig7fib3l" path="res://Scripts/canvas_layer.gd" id="10_a6xs1"]
 [ext_resource type="Script" path="res://Scripts/new_mirror.gd" id="12_r2r2o"]
+[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="14_r2r2o"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="15_okvqb"]
 [ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/legacy/A.png" id="16_1fjmt"]
 [ext_resource type="PackedScene" uid="uid://b06xf8rmjtknh" path="res://Sprites/Background/front-side/praf.tscn" id="16_a6xs1"]
@@ -251,6 +252,8 @@ anchor_bottom = 0.231
 offset_top = -249.48001
 offset_bottom = 580.0
 mouse_filter = 2
+
+[node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("14_r2r2o")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=998364505]
 libraries/ = SubResource("AnimationLibrary_a6xs1")
