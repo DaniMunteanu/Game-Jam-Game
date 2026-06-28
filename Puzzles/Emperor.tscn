@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cgahdae2q2wyu" path="res://Sprites/Placeholders/Chess/White/w-bishop.png" id="13_ahbjf"]
 [ext_resource type="Texture2D" uid="uid://cxhkh40rgasxn" path="res://Sprites/Placeholders/Chess/White/w-queen.png" id="14_30pvx"]
 [ext_resource type="Texture2D" uid="uid://c472y5ml4j7x2" path="res://Sprites/Placeholders/Chess/White/w-king.png" id="15_mryt5"]
+[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="19_gmbwj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_herje"]
 
@@ -822,6 +823,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("9_i0knk")]
 mouse_filter = 2
+
+[node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("19_gmbwj")]
 
 [node name="Sfx_Player" type="AudioStreamPlayer2D" parent="." unique_id=738795611]
 stream = ExtResource("11_1an1i")

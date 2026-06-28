@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cx4bkg766xlom"]
 
-[ext_resource type="Script" path="res://Scripts/Puzzles2D/aquarium.gd" id="1_1cfge"]
+[ext_resource type="Script" uid="uid://ciwfcqtu4wd16" path="res://Scripts/Puzzles2D/aquarium.gd" id="1_1cfge"]
 [ext_resource type="Texture2D" uid="uid://dme6ak0tvik6k" path="res://Sprites/Background/sera-left/ficsh.jpg" id="1_o037l"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="2_xn4a1"]
 [ext_resource type="Texture2D" uid="uid://d2o26gfv1e2oc" path="res://Sprites/Placeholders/Fih.jpg" id="3_bvpl3"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="5_kupa2"]
 [ext_resource type="PackedScene" uid="uid://dwv575pukbv8s" path="res://UI/ItemDropArea.tscn" id="8_bvpl3"]
 [ext_resource type="Resource" uid="uid://bo44vxoswpvho" path="res://Scripts/Items/Worm.tres" id="9_8skb0"]
+[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="10_m5v8r"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kupa2"]
 
@@ -70,11 +71,6 @@ texture_disabled = ExtResource("4_dwue0")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="InventoryUI" parent="." unique_id=629547533 instance=ExtResource("5_kupa2")]
-offset_left = 1807.0
-offset_right = 1920.0
-mouse_filter = 2
-
 [node name="ItemDropArea" parent="." unique_id=748105193 instance=ExtResource("8_bvpl3")]
 anchors_preset = 0
 anchor_right = 0.0
@@ -86,6 +82,13 @@ offset_bottom = 757.0
 grow_horizontal = 1
 grow_vertical = 1
 required_item = ExtResource("9_8skb0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1927818754]
+
+[node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("5_kupa2")]
+mouse_filter = 2
+
+[node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("10_m5v8r")]
 
 [connection signal="pressed" from="BackToRoom" to="BackToRoom" method="_on_pressed"]
 [connection signal="pressed" from="GateKey" to="." method="_on_gate_key_pressed"]
