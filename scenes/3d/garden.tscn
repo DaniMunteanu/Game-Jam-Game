@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="12_g7k05"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="12_tsddh"]
 [ext_resource type="PackedScene" uid="uid://2b8uw558vv5v" path="res://3D assets/scenes/worm_2.tscn" id="13_g7k05"]
+[ext_resource type="PackedScene" uid="uid://byo6ymx2ral48" path="res://3D assets/scenes/mausoleum_door.tscn" id="14_qs6id"]
 [ext_resource type="PackedScene" uid="uid://vm85akor8ljr" path="res://3D assets/Objects/le_grass.tscn" id="13_qs6id"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
@@ -609,10 +610,12 @@ stream = ExtResource("11_jw885")
 [node name="worm2" parent="." unique_id=826826803 groups=["Interactables"] instance=ExtResource("13_g7k05")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5094466, 0, -0.07716179)
 
-[node name="mausoleum_cols" type="StaticBody3D" parent="." unique_id=1681388736]
+[node name="Judgement3D" type="Node3D" parent="." unique_id=2022163730]
+
+[node name="mausoleum_cols" type="StaticBody3D" parent="Judgement3D" unique_id=1681388736]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.918415, 0.588058, 21.678837)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="mausoleum_cols" unique_id=686282750]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Judgement3D/mausoleum_cols" unique_id=686282750]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6171112, 1.1785438, 0.22619629)
 shape = SubResource("BoxShape3D_xrivr")
 debug_color = Color(0.39231545, 0.0053528254, 0.17000195, 1)
@@ -738,5 +741,8 @@ transform = Transform3D(1.5316155, 0, -0.03028439, 0, 0.49782136, 0, 0.046612903
 
 [node name="Le_Grass40" parent="GrassManager" unique_id=1215122687 instance=ExtResource("13_qs6id")]
 transform = Transform3D(1.4408227, 0, -0.011832504, 0, 0.501446, 0, 0.04384974, 0, 0.3784726, 41.034393, 0.8636999, 2.5658908)
+
+[node name="mausoleum_door" parent="Judgement3D" unique_id=10120812 instance=ExtResource("14_qs6id")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64, 0, 0)
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
