@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm0akfhlqpp2x"
-path="res://.godot/imported/temperance.jpg-4876876bc09c09418d398808b4efad9c.ctex"
+uid="uid://cnyvdwyv2gx48"
+path="res://.godot/imported/grimoar_page_3.png-d853f1076dc9c10e954729d181ee0941.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/tarot cards/temperance.jpg"
-dest_files=["res://.godot/imported/temperance.jpg-4876876bc09c09418d398808b4efad9c.ctex"]
+source_file="res://Sprites/Grimoire/Pages/grimoar_page_3.png"
+dest_files=["res://.godot/imported/grimoar_page_3.png-d853f1076dc9c10e954729d181ee0941.ctex"]
 
 [params]
 
