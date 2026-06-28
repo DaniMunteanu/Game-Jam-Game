@@ -17,6 +17,7 @@ func open():
 	if InventoryManager.selected_item == InventoryManager.KEY:
 		print("openin")
 		InventoryManager.remove_item(InventoryManager.KEY)
+		PuzzleManager.gate_opened = true
 		anim_player.play("open_gate")
 		await anim_player.animation_finished
 		obj.remove_from_group("Interactables")
