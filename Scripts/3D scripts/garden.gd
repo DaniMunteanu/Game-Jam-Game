@@ -70,6 +70,7 @@ func _on_player_clicked(target) -> void:
 		target.interact.call()
 """
 func _on_well_switch():
+	PuzzleManager.came_from_greenhouse = true
 	print("SWITCHING TO GREENHOUSE!")
 	fantana.area.can_interact = false
 	player.set_physics_process(false)

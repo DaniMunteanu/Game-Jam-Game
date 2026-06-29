@@ -44,6 +44,7 @@ var gate_opened: bool = false
 var has_worm : bool = false
 var worm_placed: bool = false
 var sunflower_picked: bool = false
+var came_from_greenhouse: bool = false
 #endregion
 
 
