@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="12_tsddh"]
 [ext_resource type="PackedScene" uid="uid://2b8uw558vv5v" path="res://3D assets/scenes/worm_2.tscn" id="13_g7k05"]
 [ext_resource type="PackedScene" uid="uid://vm85akor8ljr" path="res://3D assets/Objects/le_grass.tscn" id="13_qs6id"]
-[ext_resource type="PackedScene" uid="uid://byo6ymx2ral48" path="res://3D assets/scenes/mausoleum_door.tscn" id="14_qs6id"]
 [ext_resource type="PackedScene" uid="uid://b7s680gfnukc3" path="res://3D assets/Particles/lil_fire.tscn" id="16_f4ofy"]
 [ext_resource type="PackedScene" uid="uid://cvgv4qxofwhs8" path="res://3D assets/Objects/pavilionstuff/2petal.glb" id="16_h22pd"]
 [ext_resource type="Script" uid="uid://bh7f51h2s6t8e" path="res://Scripts/Puzzles3D/sun_3d.gd" id="16_nayp3"]
@@ -187,6 +186,10 @@ size = Vector3(16.052002, 7.326172, 4.0221863)
 [sub_resource type="BoxShape3D" id="BoxShape3D_tg2s5"]
 size = Vector3(2.8975372, 10.261108, 18.107666)
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_13qdw"]
+height = 12.373047
+radius = 0.8066406
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_tsddh"]
 radius = 2.104004
 
@@ -291,9 +294,6 @@ _data = {
 &"RESET": SubResource("Animation_iwjsq"),
 &"dissolve": SubResource("Animation_r2r2o")
 }
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
-size = Vector3(34.409332, 1, 11.69751)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_umu6e"]
 size = Vector3(4.2180634, 4.4575195, 4.0126953)
@@ -655,6 +655,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.380646, 6.0626607, -31.054
 shape = SubResource("BoxShape3D_tg2s5")
 debug_color = Color(0.65057904, 0.32938653, 1, 1)
 
+[node name="pavilion_columne_cols" type="StaticBody3D" parent="garden" unique_id=725715535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.266745, 7.3178678, 1.5416515)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="garden/pavilion_columne_cols" unique_id=1108843092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27612305, 5.590383, 0.1864624)
+shape = SubResource("CylinderShape3D_13qdw")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="garden/pavilion_columne_cols" unique_id=425267847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.890253, 5.590383, 4.0339985)
+shape = SubResource("CylinderShape3D_13qdw")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="garden/pavilion_columne_cols" unique_id=349590336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.841085, 5.590383, -0.21478009)
+shape = SubResource("CylinderShape3D_13qdw")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="garden/pavilion_columne_cols" unique_id=1764156042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.729555, 5.590383, -8.434783)
+shape = SubResource("CylinderShape3D_13qdw")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="garden/pavilion_columne_cols" unique_id=884293344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6973896, 5.590383, -12.443636)
+shape = SubResource("CylinderShape3D_13qdw")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="garden/pavilion_columne_cols" unique_id=1026884955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7037678, 5.590383, -8.002305)
+shape = SubResource("CylinderShape3D_13qdw")
+debug_color = Color(1, 1, 1, 1)
+
 [node name="Well" type="StaticBody3D" parent="." unique_id=1945195027 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5949764, 2.2206395, 0.10785675)
 script = ExtResource("3_ngcjk")
@@ -780,17 +813,6 @@ is_in_3d = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5094466, 0, -0.07716179)
 
 [node name="Judgement3D" type="Node3D" parent="." unique_id=2022163730]
-
-[node name="mausoleum_cols" type="StaticBody3D" parent="Judgement3D" unique_id=1681388736]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.918415, 0.588058, 21.678837)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Judgement3D/mausoleum_cols" unique_id=686282750]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6171112, 1.1785438, 0.22619629)
-shape = SubResource("BoxShape3D_xrivr")
-debug_color = Color(0.39231545, 0.0053528254, 0.17000195, 1)
-
-[node name="mausoleum_door" parent="Judgement3D" unique_id=10120812 instance=ExtResource("14_qs6id")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64, 0, 0)
 
 [node name="GrassManager" type="Node3D" parent="." unique_id=275930328]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.836179, -0.43184996, 0)

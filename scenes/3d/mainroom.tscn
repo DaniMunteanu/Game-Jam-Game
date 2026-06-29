@@ -37,9 +37,11 @@
 [ext_resource type="AudioStream" uid="uid://jjggtprm8e3" path="res://Audio/SFX/bubblez.mp3" id="38_7m280"]
 [ext_resource type="PackedScene" uid="uid://bp6sa81g84l08" path="res://3D assets/tower.blend" id="40_5g3xn"]
 [ext_resource type="PackedScene" uid="uid://be1ks538q54p8" path="res://scenes/3d/garden.tscn" id="40_nq443"]
-[ext_resource type="PackedScene" uid="uid://d3rl7ob7dwtph" path="res://3D assets/Objects/bridge of shadows/bridge.glb" id="41_0gmuw"]
+[ext_resource type="PackedScene" uid="uid://hxtbsvyisbeg" path="res://3D assets/Objects/bridge of shadows/bridge.glb" id="41_0gmuw"]
 [ext_resource type="PackedScene" uid="uid://dp1ao8e1wcrjm" path="res://3D assets/Particles/torch_fire.tscn" id="41_nq443"]
+[ext_resource type="Script" uid="uid://b7sof7uayumow" path="res://Scripts/3D scripts/end_part.gd" id="41_pnqj1"]
 [ext_resource type="PackedScene" uid="uid://jsf5lm3hus52" path="res://3D assets/scenes/whole_ass_mausoleum.tscn" id="41_qe2jl"]
+[ext_resource type="PackedScene" uid="uid://byo6ymx2ral48" path="res://3D assets/scenes/mausoleum_door.tscn" id="41_rmfpj"]
 [ext_resource type="VoxelGIData" uid="uid://dtuxbiceo4mgb" path="res://3D assets/light bakes/mainroom.VoxelGI_data.res" id="42_0gmuw"]
 [ext_resource type="PackedScene" uid="uid://j27wrkptprcf" path="res://3D assets/scenes/tower scenes/tower_door.tscn" id="42_qe2jl"]
 
@@ -554,7 +556,16 @@ size = Vector3(1.2041016, 2.682495, 5.918518)
 [sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
 size = Vector3(1, 5.4, 11.900001)
 
-[node name="Mainroom" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("spawnpos", "player", "mirror", "tower_door", "zodiac_wheel", "zoom_camera", "secret_door", "room_level", "garden_level", "tower", "tower_delete", "garden_spawnpos")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_pktji"]
+size = Vector3(31.6, 1.3000001, 12.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_13qdw"]
+size = Vector3(1, 10.400001, 12.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fugsj"]
+size = Vector3(2.3646321, 0.10811806, 2.253059)
+
+[node name="Mainroom" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("spawnpos", "player", "mirror", "tower_door", "zodiac_wheel", "zoom_camera", "secret_door", "room_level", "garden_level", "tower", "tower_delete", "garden_spawnpos", "maus_door") groups=["Character"]]
 script = ExtResource("1_j7t7n")
 spawnpos = NodePath("MirrorSpawnPos")
 player = NodePath("Player")
@@ -570,12 +581,13 @@ tower = NodePath("tower")
 tower_delete = NodePath("tower_delete")
 garden_spawnpos = NodePath("Marker3D")
 grass_node_names = Array[String](["Le_Grass20", "Le_Grass21", "Le_Grass22", "Le_Grass24", "Le_Grass26"])
+maus_door = NodePath("EndPart/mausoleum_door")
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="." unique_id=1564272341]
 environment = SubResource("Environment_qe2jl")
 camera_attributes = SubResource("CameraAttributesPractical_0gmuw")
 
-[node name="Player" parent="." unique_id=2036735905 instance=ExtResource("1_w1mmj")]
+[node name="Player" parent="." unique_id=2036735905 groups=["Character"] instance=ExtResource("1_w1mmj")]
 transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -5.271773, 3.1448445, 2.6078143)
 
 [node name="OmniLight3D15" type="OmniLight3D" parent="." unique_id=1222721448]
@@ -1293,57 +1305,89 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.362839, -23.484127, 35.826
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1847247713]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.952183, -21.337326, 35.12363)
 
-[node name="bridge" parent="." unique_id=693219616 instance=ExtResource("41_0gmuw")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 58.399998, -24.700003, 59.199997)
-visible = false
-
-[node name="whole-ass_mausoleum2" parent="." unique_id=1942704860 instance=ExtResource("41_qe2jl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.496, -24.512, 41.416515)
-
-[node name="mausoleum_cols" type="StaticBody3D" parent="whole-ass_mausoleum2" unique_id=1226067728]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.15269, 0, 20.917171)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="whole-ass_mausoleum2/mausoleum_cols" unique_id=368018569]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.481855, 6.559374, -4.774067)
-shape = SubResource("BoxShape3D_hdeoa")
-debug_color = Color(0.69505805, 0.28128836, 1, 1)
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="whole-ass_mausoleum2/mausoleum_cols" unique_id=2094597873]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.481855, 6.559374, 6.9104843)
-shape = SubResource("BoxShape3D_hdeoa")
-debug_color = Color(0.69505805, 0.28128836, 1, 1)
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="whole-ass_mausoleum2/mausoleum_cols" unique_id=881739458]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4852638, 2.878822, -3.1233425)
-shape = SubResource("BoxShape3D_cp2t3")
-debug_color = Color(0.827451, 0.4, 0, 1)
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="whole-ass_mausoleum2/mausoleum_cols" unique_id=109268720]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.526144, 2.878822, 4.864876)
-shape = SubResource("BoxShape3D_cp2t3")
-debug_color = Color(0.827451, 0.4, 0, 1)
-
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="whole-ass_mausoleum2/mausoleum_cols" unique_id=1718189774]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.660229, 3.4293468, 0.8642082)
-shape = SubResource("BoxShape3D_yofqi")
-debug_color = Color(0.7825652, 0.00025287896, 0.7223949, 1)
-
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="whole-ass_mausoleum2/mausoleum_cols" unique_id=1764721913]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.206646, 3.570211, 0.7862873)
-shape = SubResource("BoxShape3D_kfru1")
-debug_color = Color(1, 1, 1, 1)
-
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="whole-ass_mausoleum2/mausoleum_cols" unique_id=1203912175]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.300003, 4.699999, 1.1500015)
-shape = SubResource("BoxShape3D_xrivr")
-debug_color = Color(0.23812026, 0.28094968, 1, 1)
-
 [node name="VoxelGI" type="VoxelGI" parent="." unique_id=1607077769]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9000006, 4.75, -0.75)
 size = Vector3(27.800001, 10.5, 21.5)
 data = ExtResource("42_0gmuw")
 
+[node name="EndPart" type="Node3D" parent="." unique_id=1143160083 node_paths=PackedStringArray("maus_door", "garden_level", "trans_area")]
+script = ExtResource("41_pnqj1")
+maus_door = NodePath("mausoleum_door")
+garden_level = NodePath("../GardenLevel")
+trans_area = NodePath("whole-ass_mausoleum2/Area3D")
+
+[node name="mausoleum_door" parent="EndPart" unique_id=10120812 instance=ExtResource("41_rmfpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.495525, -24.512018, 41.417004)
+
+[node name="whole-ass_mausoleum2" parent="EndPart" unique_id=1942704860 instance=ExtResource("41_qe2jl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.496, -24.512, 41.416515)
+
+[node name="mausoleum_cols" type="StaticBody3D" parent="EndPart/whole-ass_mausoleum2" unique_id=1226067728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.15269, 0, 20.917171)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EndPart/whole-ass_mausoleum2/mausoleum_cols" unique_id=368018569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.481855, 6.559374, -4.774067)
+shape = SubResource("BoxShape3D_hdeoa")
+debug_color = Color(0.69505805, 0.28128836, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="EndPart/whole-ass_mausoleum2/mausoleum_cols" unique_id=2094597873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.481855, 6.559374, 6.9104843)
+shape = SubResource("BoxShape3D_hdeoa")
+debug_color = Color(0.69505805, 0.28128836, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="EndPart/whole-ass_mausoleum2/mausoleum_cols" unique_id=881739458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4852638, 2.878822, -3.1233425)
+shape = SubResource("BoxShape3D_cp2t3")
+debug_color = Color(0.827451, 0.4, 0, 1)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="EndPart/whole-ass_mausoleum2/mausoleum_cols" unique_id=109268720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.526144, 2.878822, 4.864876)
+shape = SubResource("BoxShape3D_cp2t3")
+debug_color = Color(0.827451, 0.4, 0, 1)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="EndPart/whole-ass_mausoleum2/mausoleum_cols" unique_id=1718189774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.660229, 3.4293468, 0.8642082)
+shape = SubResource("BoxShape3D_yofqi")
+debug_color = Color(0.7825652, 0.00025287896, 0.7223949, 1)
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="EndPart/whole-ass_mausoleum2/mausoleum_cols" unique_id=1764721913]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.206646, 3.570211, 0.7862873)
+shape = SubResource("BoxShape3D_kfru1")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="EndPart/whole-ass_mausoleum2/mausoleum_cols" unique_id=1203912175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.300003, 4.699999, 1.1500015)
+shape = SubResource("BoxShape3D_xrivr")
+debug_color = Color(0.23812026, 0.28094968, 1, 1)
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="EndPart/whole-ass_mausoleum2/mausoleum_cols" unique_id=112682039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.922071, 1.3285427, 0.6274414)
+shape = SubResource("BoxShape3D_pktji")
+debug_color = Color(0.39231545, 0.0053528254, 0.17000195, 1)
+
+[node name="Area3D" type="Area3D" parent="EndPart/whole-ass_mausoleum2" unique_id=1933169472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.500008, 2.1000004, 21.7)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EndPart/whole-ass_mausoleum2/Area3D" unique_id=97903776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2999992, 5.300001, 0.05000305)
+shape = SubResource("BoxShape3D_13qdw")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="bridge" parent="EndPart" unique_id=1926463764 instance=ExtResource("41_0gmuw")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 59.8, -24.77, 61.6)
+visible = false
+
+[node name="scari2" type="StaticBody3D" parent="EndPart" unique_id=996384389]
+transform = Transform3D(0.31438974, 0, -1.4007226, 0, 1.4355711, 0, 1.4007226, 0, 0.31438974, 2.228526, -20.487019, 23.721004)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EndPart/scari2" unique_id=1793527746]
+transform = Transform3D(-0.30832303, -0.093308896, -1.6590155, -0.5655845, 1.5924746, 0.015545573, 1.5624194, 0.5580513, -0.32175726, 31.311138, -1.8952084, -14.130026)
+shape = SubResource("BoxShape3D_fugsj")
+debug_color = Color(18.892157, 18.892157, 18.892157, 1)
+
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
 [connection signal="body_entered" from="FirstRoom/actual_mirror/InteractableArea3D" to="." method="_on_d_mirror_body_entered"]
 [connection signal="cypher_cracked" from="FirstRoom/Puzzles3D/Temperance3D/zoom_camera" to="FirstRoom/Puzzles3D/Temperance3D" method="_on_zoom_camera_cypher_cracked"]
 [connection signal="body_entered" from="tower_delete" to="." method="_on_tower_delete_body_entered"]
+[connection signal="open_mausoleum" from="GardenLevel/Garden" to="." method="_on_garden_open_mausoleum"]
+[connection signal="body_entered" from="EndPart/whole-ass_mausoleum2/Area3D" to="EndPart" method="_on_area_3d_body_entered"]
