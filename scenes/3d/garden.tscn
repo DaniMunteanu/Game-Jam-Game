@@ -622,6 +622,9 @@ stream = ExtResource("11_jw885")
 
 [node name="InventoryUI" parent="." unique_id=629547533 instance=ExtResource("12_tsddh")]
 
+[node name="Grimoire" parent="InventoryUI" index="2" unique_id=178188831]
+is_in_3d = true
+
 [node name="CardsDisplay" parent="." unique_id=2004390668 instance=ExtResource("12_g7k05")]
 
 [node name="worm2" parent="." unique_id=826826803 groups=["Interactables"] instance=ExtResource("13_g7k05")]
@@ -854,3 +857,5 @@ visible = false
 visible = false
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
+
+[editable path="InventoryUI"]
