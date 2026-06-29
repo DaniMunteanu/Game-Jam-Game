@@ -40,6 +40,7 @@ func animate_zigzag(fish: Sprite2D, start_delay: float) -> void:
 func place_worm():
 	PuzzleManager.worm_placed = true
 	worm_sprite.visible = true 
+	item_drop_area.queue_free()
 	gate_key.disabled = false
 	var tween = create_tween()
 	tween.tween_property(fih, "global_position", worm_sprite.global_position + Vector2(250, 0), 1.5)

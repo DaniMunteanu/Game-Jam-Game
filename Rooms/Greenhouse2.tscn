@@ -7,7 +7,9 @@
 [ext_resource type="Script" uid="uid://clhjhexsk6ajh" path="res://Scripts/Puzzles2D/greenhouse2_checker.gd" id="3_xevms"]
 [ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/legacy/D.png" id="4_b5jqt"]
 [ext_resource type="Texture2D" uid="uid://duf3ls1s7cyo7" path="res://Sprites/Background/front-side/sera sah.png" id="5_g0gk5"]
+[ext_resource type="Texture2D" uid="uid://esmmo4ax68np" path="res://Sprites/Background/sera-left/sunflower.png" id="8_5s7jx"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="8_147er"]
+[ext_resource type="Texture2D" uid="uid://dkybsj18gpa48" path="res://Sprites/Background/sera-left/sunflower_stem.png" id="9_hsk72"]
 
 [node name="Greenhouse2" type="Node2D" unique_id=1041314291 node_paths=PackedStringArray("canvas_layer")]
 script = ExtResource("1_g0gk5")
@@ -126,5 +128,60 @@ expand_mode = 1
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
+[node name="Sunflower" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=1087171285]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1927084
+anchor_top = 0.42329627
+anchor_right = 0.29618758
+anchor_bottom = 0.93485194
+offset_left = -0.00012207031
+offset_top = -0.15997314
+offset_right = 0.31982422
+offset_bottom = 0.35992432
+script = ExtResource("2_5s7jx")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/Sunflower" unique_id=1155716751]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.12686573
+anchor_top = 0.026835034
+anchor_right = 1.1365755
+anchor_bottom = 0.9838136
+offset_left = -4.0
+offset_top = -0.01499939
+offset_right = 0.0079956055
+offset_bottom = -1.5259247
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8_5s7jx")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="EmptyFlower" type="TextureRect" parent="CanvasLayer" unique_id=1496419371]
+z_index = -1
+anchors_preset = -1
+anchor_left = 0.19100001
+anchor_top = 0.56100005
+anchor_right = 0.27933332
+anchor_bottom = 0.933
+offset_left = -0.72003174
+offset_top = 0.11993408
+offset_right = 14.679993
+offset_bottom = 3.3599854
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_hsk72")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("8_147er")]
 mouse_filter = 2
+
+[connection signal="pressed" from="CanvasLayer/SceneSwitchers/Sunflower" to="CanvasLayer/SceneSwitchers" method="_on_sunflower_pressed"]

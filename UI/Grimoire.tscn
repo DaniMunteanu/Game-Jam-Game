@@ -1,8 +1,31 @@
 [gd_scene format=3 uid="uid://bvjoucwd4ls7t"]
 
 [ext_resource type="Script" uid="uid://cwwawof7hguvj" path="res://Scripts/UI scripts/grimoire.gd" id="1_dn28g"]
-[ext_resource type="Texture2D" uid="uid://1s05vlcqe8ml" path="res://icon.svg" id="2_eoyrf"]
+[ext_resource type="Texture2D" uid="uid://bcnmoavubxx0d" path="res://Sprites/Grimoire/grimoar_sprite.png" id="2_46r2j"]
 [ext_resource type="PackedScene" uid="uid://cu1m6vvgk233u" path="res://UI/GrimoirePage.tscn" id="3_46r2j"]
+[ext_resource type="Texture2D" uid="uid://cvwbcui5j8v7j" path="res://Sprites/Grimoire/Pages/grimoar_page_1.png" id="4_kugwv"]
+[ext_resource type="Texture2D" uid="uid://dhtdue5rkxpdp" path="res://Sprites/tarot cards/The Magician.png" id="5_qa2i4"]
+[ext_resource type="Texture2D" uid="uid://cir7ng11lami6" path="res://Sprites/tarot cards/The Moon.png" id="6_7fwwq"]
+[ext_resource type="FontFile" uid="uid://21o08qsimddu" path="res://Sprites/Placeholders/HomemadeApple-Regular.ttf" id="7_qa2i4"]
+[ext_resource type="Texture2D" uid="uid://xgwmfuxacv2" path="res://Sprites/Grimoire/Pages/grimoar_page_2.png" id="7_ueyfi"]
+[ext_resource type="Texture2D" uid="uid://b1t81fqriim2x" path="res://Sprites/tarot cards/Death.png" id="8_theda"]
+[ext_resource type="Texture2D" uid="uid://br7qrsyrxqhqy" path="res://Sprites/tarot cards/Temperance.png" id="9_vrvmw"]
+[ext_resource type="Texture2D" uid="uid://cnyvdwyv2gx48" path="res://Sprites/Grimoire/Pages/grimoar_page_3.png" id="10_wud31"]
+[ext_resource type="Texture2D" uid="uid://da2uptdie06i4" path="res://Sprites/tarot cards/The Star.png" id="11_ekcah"]
+[ext_resource type="Texture2D" uid="uid://cxbyck50atg6q" path="res://Sprites/tarot cards/The Hierophant.png" id="12_qertg"]
+[ext_resource type="Texture2D" uid="uid://c3i506t6e7r7o" path="res://Sprites/Grimoire/Pages/grimoar_page_4.png" id="13_kchnl"]
+[ext_resource type="Texture2D" uid="uid://dq3qmjyde0n8d" path="res://Sprites/tarot cards/The Sun.png" id="14_lmk6a"]
+[ext_resource type="Texture2D" uid="uid://b0vpci1b0xpq1" path="res://Sprites/tarot cards/The Emperor.png" id="15_k8jr2"]
+[ext_resource type="Texture2D" uid="uid://cfb0lxi56ehpx" path="res://Sprites/Grimoire/Pages/grimoar_page_5.png" id="16_4bgfk"]
+[ext_resource type="Texture2D" uid="uid://i3tcgfy3kd81" path="res://Sprites/tarot cards/Judgement.png" id="17_ujtp4"]
+[ext_resource type="Texture2D" uid="uid://cvlinfjdwo51v" path="res://Sprites/tarot cards/The World.png" id="18_g0q1y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_46r2j"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_qa2i4"]
+font = ExtResource("7_qa2i4")
+font_color = Color(0, 0, 0, 1)
 
 [node name="Grimoire" type="Control" unique_id=178188831]
 layout_mode = 3
@@ -15,32 +38,84 @@ script = ExtResource("1_dn28g")
 
 [node name="GrimoireImage" type="TextureRect" parent="." unique_id=167200829]
 layout_mode = 0
-offset_left = 1749.0
-offset_top = 917.0
-offset_right = 1877.0
+offset_left = 1684.0
+offset_top = 878.0
+offset_right = 1904.0
 offset_bottom = 1045.0
-texture = ExtResource("2_eoyrf")
+texture = ExtResource("2_46r2j")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="GrimoireImage" unique_id=550900772]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 108.0
-offset_right = 102.0
-offset_bottom = 127.0
+offset_left = 75.0
+offset_top = 160.0
+offset_right = 195.0
+offset_bottom = 188.0
 text = "[Q] - Open"
+label_settings = SubResource("LabelSettings_46r2j")
 
 [node name="Pages" type="Control" parent="." unique_id=1155734976]
-visible = false
 anchors_preset = 0
 
-[node name="GrimoirePage" parent="Pages" unique_id=2121197119 instance=ExtResource("3_46r2j")]
+[node name="GrimoirePage1" parent="Pages" unique_id=2121197119 instance=ExtResource("3_46r2j")]
+visible = false
 layout_mode = 1
+background_texture = ExtResource("4_kugwv")
+card_left_texture = ExtResource("5_qa2i4")
+card_right_texture = ExtResource("6_7fwwq")
+
+[node name="LeftDescription" parent="Pages/GrimoirePage1" index="6" unique_id=1512466279]
+text = "A delightfully chaotic card of spontaneous 
+gambles and a blind leap of faith. 
+The traveler steps into a fresh epoch of 
+existence, unburdened by past skepticism.
+It is an invitation to toss away the reins of 
+                        control, pocket a risk, and 
+                         trust the winding road ahead."
+label_settings = SubResource("LabelSettings_qa2i4")
+
+[node name="RightDescription" parent="Pages/GrimoirePage1" index="8" unique_id=275314100]
+offset_left = 981.0
+offset_right = 1401.0
+offset_bottom = 685.0
+text = "Manifestation, sharp willpower, and glorious 
+capability. The Magician stands as a bridge 
+between intent and reality, signaling that the 
+             seeker possesses every curious tool 
+            required to transmute an ordinary 
+ idea into spectacular success through 
+deliberate, everyday alchemy."
 
 [node name="GrimoirePage2" parent="Pages" unique_id=450620601 instance=ExtResource("3_46r2j")]
 layout_mode = 1
+background_texture = ExtResource("7_ueyfi")
+card_left_texture = ExtResource("8_theda")
+card_right_texture = ExtResource("9_vrvmw")
 
 [node name="GrimoirePage3" parent="Pages" unique_id=972283493 instance=ExtResource("3_46r2j")]
+visible = false
 layout_mode = 1
+background_texture = ExtResource("10_wud31")
+card_left_texture = ExtResource("11_ekcah")
+card_right_texture = ExtResource("12_qertg")
 
 [node name="GrimoirePage4" parent="Pages" unique_id=1277763301 instance=ExtResource("3_46r2j")]
+visible = false
 layout_mode = 1
+background_texture = ExtResource("13_kchnl")
+card_left_texture = ExtResource("14_lmk6a")
+card_right_texture = ExtResource("15_k8jr2")
+
+[node name="GrimoirePage5" parent="Pages" unique_id=1489096174 instance=ExtResource("3_46r2j")]
+visible = false
+layout_mode = 0
+background_texture = ExtResource("16_4bgfk")
+card_left_texture = ExtResource("17_ujtp4")
+card_right_texture = ExtResource("18_g0q1y")
+
+[editable path="Pages/GrimoirePage1"]
+[editable path="Pages/GrimoirePage2"]
+[editable path="Pages/GrimoirePage3"]
+[editable path="Pages/GrimoirePage4"]
+[editable path="Pages/GrimoirePage5"]

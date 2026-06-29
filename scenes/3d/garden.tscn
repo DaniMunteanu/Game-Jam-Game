@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b80xsyas7fj1" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="2_yr1ht"]
 [ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
-[ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
+[ext_resource type="PackedScene" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
 [ext_resource type="PackedScene" uid="uid://bse2py88bpr6s" path="res://3D assets/scenes/cem_gates.tscn" id="4_ulxv8"]
 [ext_resource type="PackedScene" uid="uid://by1tm21k2oglb" path="res://3D assets/Particles/le_water.tscn" id="6_ktj0q"]
 [ext_resource type="PackedScene" uid="uid://ms8kg0b1tlyb" path="res://3D assets/Particles/le_apa.tscn" id="7_t1yto"]
@@ -16,8 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://vm85akor8ljr" path="res://3D assets/Objects/le_grass.tscn" id="13_qs6id"]
 [ext_resource type="PackedScene" uid="uid://byo6ymx2ral48" path="res://3D assets/scenes/mausoleum_door.tscn" id="14_qs6id"]
 [ext_resource type="PackedScene" uid="uid://b7s680gfnukc3" path="res://3D assets/Particles/lil_fire.tscn" id="16_f4ofy"]
+[ext_resource type="PackedScene" uid="uid://cvgv4qxofwhs8" path="res://3D assets/Objects/pavilionstuff/2petal.glb" id="16_h22pd"]
+[ext_resource type="Script" uid="uid://bh7f51h2s6t8e" path="res://Scripts/Puzzles3D/sun_3d.gd" id="16_nayp3"]
 [ext_resource type="PackedScene" uid="uid://dp1ao8e1wcrjm" path="res://3D assets/Particles/torch_fire.tscn" id="17_8eb3g"]
+[ext_resource type="PackedScene" uid="uid://cl5hnkep222m8" path="res://3D assets/Objects/pavilionstuff/3petal.glb" id="17_nayp3"]
 [ext_resource type="PackedScene" uid="uid://crxgl2qpr267" path="res://3D assets/Particles/blue_fire.tscn" id="18_h22pd"]
+[ext_resource type="PackedScene" uid="uid://ds2x63yagqssb" path="res://3D assets/Objects/pavilionstuff/4petal.glb" id="18_vs4jp"]
+[ext_resource type="PackedScene" uid="uid://b81hvydkrb78h" path="res://3D assets/Objects/pavilionstuff/suncenter.glb" id="23_gm1ln"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
 
@@ -239,6 +244,9 @@ _data = {
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
 size = Vector3(34.409332, 1, 11.69751)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_umu6e"]
+size = Vector3(4.2180634, 4.4575195, 4.0126953)
 
 [node name="Garden" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("gates", "spawnpos", "player", "fantana")]
 script = ExtResource("1_lrqvg")
@@ -545,6 +553,7 @@ shape = SubResource("CylinderShape3D_tsddh")
 
 [node name="InteractableArea3D" parent="Well" unique_id=563925380 instance=ExtResource("4_jw885")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23981094, -0.2817688, -0.034259796)
+visible = false
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Well/InteractableArea3D" unique_id=853851025]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23981094, -0.13994026, -0.080200195)
@@ -818,5 +827,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.662386, 11.964373, -22.865
 
 [node name="blue_fire3" parent="FireHazard" unique_id=253269750 instance=ExtResource("18_h22pd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.662386, 11.964373, 9.379177)
+
+[node name="Sun3D" type="Node3D" parent="." unique_id=1305780010 node_paths=PackedStringArray("obj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.646, 0, 0)
+script = ExtResource("16_nayp3")
+obj = NodePath("StaticBody3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sun3D" unique_id=491369014 node_paths=PackedStringArray("object") groups=["Interactables"]]
+script = ExtResource("3_ngcjk")
+object = NodePath(".")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sun3D/StaticBody3D" unique_id=773851458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.088818, 8.327341, -2.8641415)
+shape = SubResource("BoxShape3D_umu6e")
+
+[node name="2petal" parent="Sun3D" unique_id=1124647803 instance=ExtResource("16_h22pd")]
+visible = false
+
+[node name="3petal" parent="Sun3D" unique_id=1373021751 instance=ExtResource("17_nayp3")]
+visible = false
+
+[node name="4petal" parent="Sun3D" unique_id=697005749 instance=ExtResource("18_vs4jp")]
+visible = false
+
+[node name="suncenter" parent="Sun3D" unique_id=181683467 instance=ExtResource("23_gm1ln")]
+visible = false
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
