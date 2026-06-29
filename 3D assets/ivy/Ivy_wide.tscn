@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dq4kax18ip075"]
+
+[ext_resource type="ArrayMesh" uid="uid://ccn8uvufpchtl" path="res://3D assets/ivy/Objects_Ivy_Wide.res" id="1_4w4tp"]
+
+[node name="IvyWide" type="MeshInstance3D" unique_id=1085334945]
+mesh = ExtResource("1_4w4tp")

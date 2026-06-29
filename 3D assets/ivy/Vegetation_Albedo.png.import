@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbhuqjwaajrcg"
-path.bptc="res://.godot/imported/animestyled_hdr.hdr-735b8ebbbaa1e122cece1c0de461409e.bptc.ctex"
+uid="uid://dqj1k80ep8rjb"
+path.s3tc="res://.godot/imported/Vegetation_Albedo.png-36f5ac4f1f88820bc9cfa531630464d4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://3D assets/sky textures/animestyled_hdr.hdr"
-dest_files=["res://.godot/imported/animestyled_hdr.hdr-735b8ebbbaa1e122cece1c0de461409e.bptc.ctex"]
+source_file="res://3D assets/ivy/Vegetation_Albedo.png"
+dest_files=["res://.godot/imported/Vegetation_Albedo.png-36f5ac4f1f88820bc9cfa531630464d4.s3tc.ctex"]
 
 [params]
 
