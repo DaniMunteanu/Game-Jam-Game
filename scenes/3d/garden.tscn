@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
 [ext_resource type="Script" uid="uid://b80xsyas7fj1" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="2_yr1ht"]
-[ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
+[ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
 [ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
 [ext_resource type="PackedScene" uid="uid://bse2py88bpr6s" path="res://3D assets/scenes/cem_gates.tscn" id="4_ulxv8"]
 [ext_resource type="Texture2D" uid="uid://55ttssrk811f" path="res://Sprites/Background/back-side/sera perete sah.png" id="5_yv1t8"]
@@ -814,19 +814,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4760952, 0.43184996, 19.41
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.781312, 0.43184996, 19.404236)
 
 [node name="Le_Grass7" parent="GrassManager" unique_id=11610108 instance=ExtResource("13_qs6id")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.774416, 0.43184996, 8.71051)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.554718, 0.31941128, 19.262808)
 
 [node name="Le_Grass8" parent="GrassManager" unique_id=1526188796 instance=ExtResource("13_qs6id")]
 transform = Transform3D(0.7786494, 0, -0.113307506, 0, 1, 0, 0.08709984, 0, 1.0129389, -12.858748, 0.43184996, -0.91131663)
 
 [node name="Le_Grass9" parent="GrassManager" unique_id=1422258099 instance=ExtResource("13_qs6id")]
-transform = Transform3D(0.92860687, 0, 0.31729272, 0, 1, 0, -0.31069452, 0, 0.94832766, -13.068898, 0.43184996, -11.889033)
+transform = Transform3D(0.5475501, 0, -0.030232923, 0, 1, 0, 0.016346414, 0, 1.0127016, -13.848325, 0.43184996, -4.404068)
 
 [node name="Le_Grass10" parent="GrassManager" unique_id=1334988963 instance=ExtResource("13_qs6id")]
 transform = Transform3D(0.95607007, 0, -0.21608758, 0, 1, 0, 0.21159396, 0, 0.97637415, -22.587025, -0.26594305, -19.386986)
 
 [node name="Le_Grass11" parent="GrassManager" unique_id=28394483 instance=ExtResource("13_qs6id")]
-transform = Transform3D(0.3136647, 0, -0.060504142, 0, 0.71767884, 0, 0.018041648, 0, 1.036902, -10.908063, 0.8636999, -7.398044)
+transform = Transform3D(0.3136647, 0, -0.060504142, 0, 0.71767884, 0, 0.018041648, 0, 1.036902, -9.674758, 0.8636999, -3.982236)
 
 [node name="Le_Grass12" parent="GrassManager" unique_id=433865846 instance=ExtResource("13_qs6id")]
 transform = Transform3D(0.95840627, 0, -0.031248327, 0, 0.99999994, 0, 0.029167961, 0, 0.9995041, 2.766066, 0.8636999, -1.0767312)
@@ -871,7 +871,7 @@ transform = Transform3D(1.1631052, 0, -0.030579256, 0, 0.99999994, 0, 0.03539773
 transform = Transform3D(0.54984087, 0, -0.031653747, 0, 0.99999994, 0, 0.016733756, 0, 1.0124718, 0.18009186, 0.8636999, -21.335884)
 
 [node name="Le_Grass26" parent="GrassManager" unique_id=1332488540 instance=ExtResource("13_qs6id")]
-transform = Transform3D(0.95376873, 0, -0.103637785, 0, 0.837282, 0, 0.09858295, 0, 0.9946075, -12.074067, 0.45403385, -20.309551)
+transform = Transform3D(0.95376873, 0, -0.103637785, 0, 0.837282, 0, 0.09858295, 0, 0.9946075, -12.074067, 0.45403385, -23.064148)
 
 [node name="Le_Grass27" parent="GrassManager" unique_id=2028669334 instance=ExtResource("13_qs6id")]
 transform = Transform3D(0.9620822, 0, -0.022900127, 0, 0.69147104, 0, 0.029279832, 0, 0.73247993, 28.446777, 0.8636999, -29.091667)
@@ -920,6 +920,18 @@ transform = Transform3D(0.95840627, 0, -0.031248327, 0, 0.8737457, 0, 0.02916796
 
 [node name="Le_Grass42" parent="GrassManager" unique_id=1185128196 instance=ExtResource("13_qs6id")]
 transform = Transform3D(1, 0, 0, 0, 0.9353858, 0, 0, 0, 0.4757383, 16.812778, 0.43184996, 16.255753)
+
+[node name="Le_Grass43" parent="GrassManager" unique_id=535869779 instance=ExtResource("13_qs6id")]
+transform = Transform3D(0.9183453, 0, 0, 0, 1, 0, 0, 0, 1, -13.872206, -0.2363267, 20.954084)
+
+[node name="Le_Grass44" parent="GrassManager" unique_id=1597103830 instance=ExtResource("13_qs6id")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.54906595, -23.796478, -0.22645116, 10.655207)
+
+[node name="Le_Grass45" parent="GrassManager" unique_id=1914885156 instance=ExtResource("13_qs6id")]
+transform = Transform3D(0.76664597, 0, 0.4005564, 0, 1, 0, -0.7311863, 0, 0.41998178, -17.715221, -0.22645116, 6.892852)
+
+[node name="Le_Grass46" parent="GrassManager" unique_id=931604699 instance=ExtResource("13_qs6id")]
+transform = Transform3D(0.33235842, 0, -0.2895513, 0, 0.837282, 0, 0.49464887, 0, 0.1942034, -17.794634, 0.25597095, -11.648854)
 
 [node name="FireHazard" type="Node3D" parent="." unique_id=472021089]
 

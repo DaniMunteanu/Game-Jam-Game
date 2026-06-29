@@ -28,7 +28,7 @@ func _ready() -> void:
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	TextManager.show_once("room_2", [
-		"Ugh, my head... what the hell happened?, I was just doing a reading and then...everything went sideways. And why are my photos all messed up?"
+		"Ugh, my head... what the hell happened? The ritual... did it work? Where is he? I was just casting the incantation and then... everything went completely sideways."
 	])
 
 

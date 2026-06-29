@@ -7,10 +7,10 @@ extends Node2D
 @onready var texture_rect: TextureRect = $CanvasLayer/SceneSwitchers/BackToRoom/TextureRect
 
 var painting_descriptions: Array[String] = [
-	"Mom’s favorite photo. She always told people I was a star child. She even gave me a name to match “Otto” meaning wealth",
-	"Nine years old. I wore that wizard hat for weeks. The start of the obsession. Should’ve just played football.",
-	"Twenty-two. Citrine and aventurine in my pockets for success. I was sure a degree and a few crystals would do the heavy lifting.",
-	"Wait... this isn't supposed to be here. This just happened. The mirror... it was glowing exactly like that during the reading."
+	"Me and Ozzy. Look at those ridiculous matching caps. Mom insisted on Ozzy wearing the Moon one, and I got the Sun. We thought we were an unbreakable duo. Seeing it labelled 'Moon and Sun' now... it feels heavy. Like an omen I missed.",
+	"We look so happy here, just playing around without a care in the world. But I know exactly when this was. It was the afternoon right before the accident. 'Day of Sorrow' ... it’s like this room is mocking me.",
+	"My wedding day. I was terrified, but I thought I was finally building something stable. A fresh start. But looking at the tag 'Your new family'... it just reminds me of everything I was trying to run away from.",
+	"Wait... This happened just a few minutes ago right before the flash. The mirror, the candles, the grimoire... it's the incantation. And the plaque just says 'Depression'. I didn't just screw up the incantation... I let my own grief twist the spell, didn't I?"
 ]
 var markers: Array[Marker2D] = []
 var paintings: Array[DraggablePuzzleObject] = []
@@ -58,7 +58,7 @@ func end_puzzle():
 	sfx_player.play()
 	
 	TextManager.show_once("Magician_completed", [
-		"The Magician. Number one. It’s the card of manifestation, I need the other six if I’m going to fix this mess"
+		"Hold on. The Magician... this is from my ritual setup. If I actually managed to bridge the gap between life and death, the spell must have fractured the entire deck. I'm going to need every last card to figure out what exactly happened."
 	])
 	PuzzleManager.finish_puzzle(PuzzleManager.puzzles.MAGICIAN)
 	SignalBus.magician_completed.emit()
