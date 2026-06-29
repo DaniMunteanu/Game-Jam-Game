@@ -12,7 +12,6 @@ func _ready() -> void:
 	
 func _on_pressed() -> void:
 	if destination_room_path != "":
-		
 		SceneChanger.change_scene_to_path(destination_room_path)
 
 func _on_mouse_entered() -> void:

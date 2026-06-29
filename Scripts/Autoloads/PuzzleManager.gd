@@ -2,11 +2,11 @@ extends Node
 
 enum puzzles{
 	MAGICIAN,
-	MOON,
+	HIEROPHANT,
+	STAR,
 	DEATH,
 	TEMPERANCE,
-	STAR,
-	HIEROPHANT,
+	MOON,
 	SUN,
 	EMPEROR,
 	JUDGEMENT,
@@ -28,6 +28,11 @@ var medium_sack_picked_up: bool = false
 var big_sack_picked_up: bool = false
 
 var all_sacks_picked_up: bool = false
+
+var _2_petal_placed: bool = false
+var _3_petal_placed: bool = false
+var _4_petal_placed: bool = false
+var suncenter_placed: bool = false
 
 const number_of_puzzles: int = 11
 var complete_puzzles: Array[bool] = []

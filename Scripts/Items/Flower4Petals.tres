@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://jlwtmw55qwcc"]
+
+[ext_resource type="Texture2D" uid="uid://y4mg6brgumhh" path="res://Sprites/Items/sunflower_4_petals.png" id="1_0r84d"]
+[ext_resource type="Script" uid="uid://s4iq5hfdsch5" path="res://Scripts/Items/item_data.gd" id="2_v5euo"]
+
+[resource]
+script = ExtResource("2_v5euo")
+item_name = "Flower4Petals"
+icon = ExtResource("1_0r84d")
+metadata/_custom_type_script = "uid://s4iq5hfdsch5"

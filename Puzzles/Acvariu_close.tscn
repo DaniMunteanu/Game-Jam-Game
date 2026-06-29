@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dfovannbdm63n" path="res://Sprites/Mouse/back2.png" id="3_dwue0"]
 [ext_resource type="Texture2D" uid="uid://c118dcwq6jtd2" path="res://Sprites/Background/sera-left/peste.png" id="3_v2bvc"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="5_kupa2"]
-[ext_resource type="Texture2D" uid="uid://ck2gqby5wggtv" path="res://Sprites/Background/sera-left/cheie.png" id="6_0smaj"]
+[ext_resource type="Texture2D" uid="uid://ck2gqby5wggtv" path="res://Sprites/Items/cheie.png" id="6_0smaj"]
 [ext_resource type="PackedScene" uid="uid://dwv575pukbv8s" path="res://UI/ItemDropArea.tscn" id="8_bvpl3"]
 [ext_resource type="Resource" uid="uid://bo44vxoswpvho" path="res://Scripts/Items/Worm.tres" id="9_8skb0"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="10_m5v8r"]
@@ -65,11 +65,11 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="GateKey" type="TextureButton" parent="." unique_id=1479525236]
-offset_left = 737.0
-offset_top = 754.0
-offset_right = 1361.0
-offset_bottom = 1132.0
-rotation = -0.121745035
+offset_left = 822.0
+offset_top = 929.0
+offset_right = 1335.7446
+offset_bottom = 1113.2557
+rotation = -0.066674724
 texture_normal = ExtResource("6_0smaj")
 texture_disabled = ExtResource("6_0smaj")
 ignore_texture_size = true

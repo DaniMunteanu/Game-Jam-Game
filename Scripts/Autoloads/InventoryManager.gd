@@ -11,10 +11,10 @@ const MEDIUM_SACK: ItemData = preload("res://Scripts/Items/MediumSack.tres")
 const BIG_SACK: ItemData = preload("res://Scripts/Items/BigSack.tres")
 const WORM: ItemData = preload("res://Scripts/Items/Worm.tres")
 const KEY: ItemData = preload("res://Scripts/Items/GateKey.tres")
-const FLOWER_CORE: ItemData = preload("res://Scripts/Items/FlowerCore.tres")
-const FLOWER_PETAL_1: ItemData = preload("res://Scripts/Items/FlowerPetal1.tres")
-const FLOWER_PETAL_2: ItemData = preload("res://Scripts/Items/FlowerPetal2.tres")
-const FLOWER_PETAL_3: ItemData = preload("res://Scripts/Items/FlowerPetal3.tres")
+const FLOWER_CENTER: ItemData = preload("res://Scripts/Items/FlowerCenter.tres")
+const FLOWER_2_PETALS: ItemData = preload("res://Scripts/Items/Flower2Petals.tres")
+const FLOWER_3_PETALS: ItemData = preload("res://Scripts/Items/Flower3Petals.tres")
+const FLOWER_4_PETALS: ItemData = preload("res://Scripts/Items/Flower4Petals.tres")
 
 const MAX_SIZE = 8
 

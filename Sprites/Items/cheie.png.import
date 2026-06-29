@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck2gqby5wggtv"
-path="res://.godot/imported/cheie.png-82c172c467bf92ddcf0675d4de976abf.ctex"
+path="res://.godot/imported/cheie.png-5df93c0a13ab1ff000927d0ea23e63de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/sera-left/cheie.png"
-dest_files=["res://.godot/imported/cheie.png-82c172c467bf92ddcf0675d4de976abf.ctex"]
+source_file="res://Sprites/Items/cheie.png"
+dest_files=["res://.godot/imported/cheie.png-5df93c0a13ab1ff000927d0ea23e63de.ctex"]
 
 [params]
 

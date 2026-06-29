@@ -4,8 +4,8 @@
 
 [node name="Tooltip" type="PanelContainer" unique_id=1469773120]
 anchors_preset = -1
-offset_right = 133.0
-offset_bottom = 19.0
+offset_right = 500.0
+offset_bottom = 41.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rxunl")
@@ -16,5 +16,6 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=132134837]
 custom_minimum_size = Vector2(10, 0)
+custom_maximum_size = Vector2(500, 100)
 layout_mode = 2
 autowrap_mode = 3
