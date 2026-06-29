@@ -31,13 +31,13 @@
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
 
-[sub_resource type="Sky" id="Sky_ujn77"]
+[sub_resource type="Sky" id="Sky_yv1t8"]
 sky_material = SubResource("ProceduralSkyMaterial_yxx7e")
 radiance_size = 4
 
 [sub_resource type="Environment" id="Environment_rfp5g"]
 background_mode = 2
-sky = SubResource("Sky_ujn77")
+sky = SubResource("Sky_yv1t8")
 ambient_light_color = Color(0.78183013, 0.78183013, 0.7818301, 1)
 tonemap_mode = 3
 tonemap_exposure = 0.26
@@ -187,18 +187,6 @@ size = Vector3(16.052002, 7.326172, 4.0221863)
 [sub_resource type="BoxShape3D" id="BoxShape3D_tg2s5"]
 size = Vector3(2.8975372, 10.261108, 18.107666)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_coonu"]
-size = Vector3(34.53447, 12.333557, 0.5088806)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_l1erw"]
-size = Vector3(2.4290771, 4.576721, 2.5300293)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_7vjj5"]
-size = Vector3(8.6311035, 2.506958, 3.4004517)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_dx0uh"]
-size = Vector3(1.2041016, 2.682495, 5.918518)
-
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_tsddh"]
 radius = 2.104004
 
@@ -327,6 +315,7 @@ greenhouse_path = "res://Rooms/Greenhouse1.tscn"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1343459481]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 6.492678, 12.636219, 0)
+visible = false
 shadow_enabled = true
 shadow_blur = 2.0
 directional_shadow_blend_splits = true
@@ -665,39 +654,6 @@ debug_color = Color(0.65057904, 0.32938653, 1, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.380646, 6.0626607, -31.054558)
 shape = SubResource("BoxShape3D_tg2s5")
 debug_color = Color(0.65057904, 0.32938653, 1, 1)
-
-[node name="mausoleum_cols" type="StaticBody3D" parent="garden" unique_id=1951272446]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.15269, 0, 20.91717)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="garden/mausoleum_cols" unique_id=1601041298]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.481857, 6.559373, -4.6285076)
-shape = SubResource("BoxShape3D_coonu")
-debug_color = Color(0.69505805, 0.28128836, 1, 1)
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="garden/mausoleum_cols" unique_id=1074204761]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.481857, 6.559373, 6.4104824)
-shape = SubResource("BoxShape3D_coonu")
-debug_color = Color(0.69505805, 0.28128836, 1, 1)
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="garden/mausoleum_cols" unique_id=746862904]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4852638, 2.878822, -3.1233425)
-shape = SubResource("BoxShape3D_l1erw")
-debug_color = Color(0.827451, 0.4, 0, 1)
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="garden/mausoleum_cols" unique_id=655183560]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.526144, 2.878822, 4.864876)
-shape = SubResource("BoxShape3D_l1erw")
-debug_color = Color(0.827451, 0.4, 0, 1)
-
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="garden/mausoleum_cols" unique_id=388445176]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.660229, 3.4293468, 0.8642082)
-shape = SubResource("BoxShape3D_7vjj5")
-debug_color = Color(0.7825652, 0.00025287896, 0.7223949, 1)
-
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="garden/mausoleum_cols" unique_id=147823504]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.206646, 3.570211, 0.7862873)
-shape = SubResource("BoxShape3D_dx0uh")
-debug_color = Color(1, 1, 1, 1)
 
 [node name="Well" type="StaticBody3D" parent="." unique_id=1945195027 node_paths=PackedStringArray("area", "object") groups=["Interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5949764, 2.2206395, 0.10785675)

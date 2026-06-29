@@ -3,12 +3,17 @@
 [ext_resource type="Script" uid="uid://cwwawof7hguvj" path="res://Scripts/UI scripts/grimoire.gd" id="1_dn28g"]
 [ext_resource type="Texture2D" uid="uid://bcnmoavubxx0d" path="res://Sprites/Grimoire/grimoar_sprite.png" id="2_46r2j"]
 [ext_resource type="PackedScene" uid="uid://cu1m6vvgk233u" path="res://UI/GrimoirePage.tscn" id="3_46r2j"]
+[ext_resource type="Texture2D" uid="uid://cxbyck50atg6q" path="res://Sprites/tarot cards/The Hierophant.png" id="4_160jy"]
+[ext_resource type="Texture2D" uid="uid://b1t81fqriim2x" path="res://Sprites/tarot cards/Death.png" id="7_khig7"]
 [ext_resource type="Texture2D" uid="uid://xgwmfuxacv2" path="res://Sprites/Grimoire/Pages/grimoar_page_2.png" id="7_ueyfi"]
 [ext_resource type="Texture2D" uid="uid://br7qrsyrxqhqy" path="res://Sprites/tarot cards/Temperance.png" id="9_vrvmw"]
+[ext_resource type="Texture2D" uid="uid://cir7ng11lami6" path="res://Sprites/tarot cards/The Moon.png" id="10_khig7"]
 [ext_resource type="Texture2D" uid="uid://cnyvdwyv2gx48" path="res://Sprites/Grimoire/Pages/grimoar_page_3.png" id="10_wud31"]
 [ext_resource type="Texture2D" uid="uid://da2uptdie06i4" path="res://Sprites/tarot cards/The Star.png" id="11_ekcah"]
+[ext_resource type="Texture2D" uid="uid://b0vpci1b0xpq1" path="res://Sprites/tarot cards/The Emperor.png" id="13_21w1l"]
 [ext_resource type="Texture2D" uid="uid://c3i506t6e7r7o" path="res://Sprites/Grimoire/Pages/grimoar_page_4.png" id="13_kchnl"]
 [ext_resource type="Texture2D" uid="uid://dq3qmjyde0n8d" path="res://Sprites/tarot cards/The Sun.png" id="14_lmk6a"]
+[ext_resource type="Texture2D" uid="uid://cvlinfjdwo51v" path="res://Sprites/tarot cards/The World.png" id="16_2jgdf"]
 [ext_resource type="Texture2D" uid="uid://cfb0lxi56ehpx" path="res://Sprites/Grimoire/Pages/grimoar_page_5.png" id="16_4bgfk"]
 [ext_resource type="Texture2D" uid="uid://i3tcgfy3kd81" path="res://Sprites/tarot cards/Judgement.png" id="17_ujtp4"]
 
@@ -54,6 +59,65 @@ layout_mode = 1
 left_tooltip_text = "The sacred elements have fallen into a state of chaotic disarray, and you must restore them to their rightful order before the true path will reveal itself."
 right_tooltip_text = "The liquid elixirs must mimic the colorful garments of the books upon the library shelves."
 
+[node name="CardRight" parent="Pages/GrimoirePage1" index="2" unique_id=1079632786]
+texture = ExtResource("4_160jy")
+
+[node name="PanelLeft" parent="Pages/GrimoirePage1" index="3" unique_id=1292526655]
+offset_left = -335.0
+offset_top = 304.0
+offset_right = -104.0
+offset_bottom = 341.0
+
+[node name="PanelRight" parent="Pages/GrimoirePage1" index="4" unique_id=416746566]
+offset_left = 178.0
+offset_top = 214.0
+offset_right = 409.0
+offset_bottom = 251.0
+
+[node name="LeftTitle" parent="Pages/GrimoirePage1" index="5" unique_id=23170353]
+offset_left = 723.0
+offset_top = 248.0
+offset_right = 947.0
+offset_bottom = 435.0
+text = " Element: Air
+
+ Astrology: Mercury 
+(communication, intellect, 
+and resourcefulness)"
+
+[node name="LeftDescription" parent="Pages/GrimoirePage1" index="6" unique_id=1952948361]
+offset_left = 538.0
+offset_top = 494.0
+offset_right = 958.0
+offset_bottom = 757.0
+text = "Manifestation, sharp willpower, and glorious 
+capability. The Magician stands as a bridge 
+between intent and reality, signaling that the 
+seeker possesses every curious tool required 
+to transmute an ordinary idea into spectacular 
+success through deliberate, everyday alchemy."
+
+[node name="RightTitle" parent="Pages/GrimoirePage1" index="7" unique_id=1317776254]
+text = " Element: Earth
+
+ Astrology: Taurus 
+(stability, persistence, 
+and deeply rooted values)
+"
+
+[node name="RightDescription" parent="Pages/GrimoirePage1" index="8" unique_id=241163254]
+offset_left = 987.0
+offset_top = 505.0
+offset_right = 1407.0
+offset_bottom = 763.0
+text = "Sacred tradition and the comfortable 
+architecture of established beliefs. 
+The Hierophant represents the wisdom of 
+          working within time-honored 
+            frameworks or seeking the mentorship 
+of ancient, dusty scrolls and well-tested 
+sages."
+
 [node name="GrimoirePage2" parent="Pages" unique_id=450620601 instance=ExtResource("3_46r2j")]
 visible = false
 layout_mode = 1
@@ -68,10 +132,60 @@ texture = ExtResource("7_ueyfi")
 [node name="CardLeft" parent="Pages/GrimoirePage2" index="1" unique_id=1395235712]
 texture = ExtResource("11_ekcah")
 
+[node name="CardRight" parent="Pages/GrimoirePage2" index="2" unique_id=1079632786]
+texture = ExtResource("7_khig7")
+
+[node name="PanelLeft" parent="Pages/GrimoirePage2" index="3" unique_id=1292526655]
+offset_left = -243.0
+offset_top = -100.0
+offset_right = -12.0
+offset_bottom = -63.0
+
+[node name="PanelRight" parent="Pages/GrimoirePage2" index="4" unique_id=416746566]
+offset_left = 165.0
+offset_top = 179.0
+offset_right = 396.0
+offset_bottom = 216.0
+
+[node name="LeftTitle" parent="Pages/GrimoirePage2" index="5" unique_id=23170353]
+text = " Element: Air
+
+ Astrology: Aquarius 
+(vision, hope, community, 
+and the future)"
+
+[node name="LeftDescription" parent="Pages/GrimoirePage2" index="6" unique_id=1952948361]
+offset_bottom = 783.0
+text = "                A downpour of hope and a serene, 
+                 guiding starlight blinking through 
+                the clouds after a thundering storm. 
+It brings a velvet blanket of calm directly 
+                          from the cosmos, signaling 
+                             that wounds are knitting 
+                               together and the horizon is 
+                                safe to trust once more."
+
+[node name="RightTitle" parent="Pages/GrimoirePage2" index="7" unique_id=1317776254]
+text = " Element: Water
+
+ Astrology: Scorpio 
+(rebirth, deep 
+psychological truth, and 
+transformation)
+"
+
+[node name="RightDescription" parent="Pages/GrimoirePage2" index="8" unique_id=241163254]
+text = "Grand transformation and major, sweeping 
+ transitions. This somber card rarely 
+ foretells physical demise; instead, it sings of 
+the definitive, cosmic snapping shut of one door 
+so that an entirely new, glorious portal may 
+  swing wide."
+
 [node name="GrimoirePage3" parent="Pages" unique_id=972283493 instance=ExtResource("3_46r2j")]
 visible = false
 layout_mode = 1
-left_tooltip_text = "You must find the scattered runes across the room, letting the dots guide each rune to its proper place. To claim the card, you must practice true alchemy and place the weighted sacks upon the pans in absolute equilibrium"
+left_tooltip_text = "You must find the scattered runes across the room, letting the dots guide each rune to its proper place. To claim the card, you must practice true alchemy and place the weighted sacks upon the pans in absolute equilibrium."
 right_tooltip_text = "Two fractured relics of silver must be woven back into a singular embrace, for only when they unite shall the glorious splendor of the full moon finally cast its light."
 left_card_index = 4
 right_card_index = 5
@@ -81,6 +195,52 @@ texture = ExtResource("10_wud31")
 
 [node name="CardLeft" parent="Pages/GrimoirePage3" index="1" unique_id=1395235712]
 texture = ExtResource("9_vrvmw")
+
+[node name="CardRight" parent="Pages/GrimoirePage3" index="2" unique_id=1079632786]
+texture = ExtResource("10_khig7")
+
+[node name="PanelLeft" parent="Pages/GrimoirePage3" index="3" unique_id=1292526655]
+offset_left = -244.0
+offset_top = -97.0
+offset_right = -13.0
+offset_bottom = -60.0
+
+[node name="PanelRight" parent="Pages/GrimoirePage3" index="4" unique_id=416746566]
+offset_left = 119.0
+offset_top = 179.0
+offset_right = 350.0
+offset_bottom = 216.0
+
+[node name="LeftTitle" parent="Pages/GrimoirePage3" index="5" unique_id=23170353]
+text = " Element: Fire
+
+ Astrology: Sagittarius 
+(seeking, exploration, and 
+philosophical balance)"
+
+[node name="LeftDescription" parent="Pages/GrimoirePage3" index="6" unique_id=1952948361]
+text = "              Divine balance and the peaceful 
+               integration of opposites. 
+            Temperance calls upon the traveler 
+to walk the golden middle path, carefully 
+blending the contrasting currents of emotion 
+and logic into a stable, harmonious flow."
+
+[node name="RightTitle" parent="Pages/GrimoirePage3" index="7" unique_id=1317776254]
+text = " Element: Water
+
+ Astrology: Pisces 
+(dreams, illusion, and the 
+deep subconscious)
+"
+
+[node name="RightDescription" parent="Pages/GrimoirePage3" index="8" unique_id=241163254]
+text = "Shifting illusions and navigating the ink-black 
+  depths of the subconscious mind. Under the 
+ fickle glow of the Moon, the mind easily 
+ paints monsters out of dust motes. Peer past 
+ deceptive facades and realize the demons 
+  you fear are often just shadows."
 
 [node name="GrimoirePage4" parent="Pages" unique_id=1277763301 instance=ExtResource("3_46r2j")]
 visible = false
@@ -96,6 +256,61 @@ texture = ExtResource("13_kchnl")
 [node name="CardLeft" parent="Pages/GrimoirePage4" index="1" unique_id=1395235712]
 texture = ExtResource("14_lmk6a")
 
+[node name="CardRight" parent="Pages/GrimoirePage4" index="2" unique_id=1079632786]
+texture = ExtResource("13_21w1l")
+
+[node name="PanelLeft" parent="Pages/GrimoirePage4" index="3" unique_id=1292526655]
+offset_left = -347.0
+offset_top = 218.0
+offset_right = -116.0
+offset_bottom = 255.0
+
+[node name="PanelRight" parent="Pages/GrimoirePage4" index="4" unique_id=416746566]
+offset_left = 134.0
+offset_top = 207.0
+offset_right = 365.0
+offset_bottom = 244.0
+
+[node name="LeftTitle" parent="Pages/GrimoirePage4" index="5" unique_id=23170353]
+offset_bottom = 468.0
+text = " Element: Fire
+
+ Astrology: The Sun 
+(celestial center of life, 
+ ego, consciousness, and 
+ vitality)"
+
+[node name="LeftDescription" parent="Pages/GrimoirePage4" index="6" unique_id=1952948361]
+text = "           Golden radiance, absolute clarity, and 
+           triumphant success. The Sun brings 
+           brilliant warmth, forcing the seeker to 
+        see right through complex riddles with 
+     childlike joy. It represents a peak era 
+ where everything the traveler touches 
+ bursts into glorious bloom."
+
+[node name="RightTitle" parent="Pages/GrimoirePage4" index="7" unique_id=1317776254]
+offset_left = 1151.0
+offset_top = 265.0
+offset_right = 1387.0
+offset_bottom = 490.0
+text = " Element: Fire
+
+ Astrology: Aries 
+ (leadership, pioneering 
+ spirit, and raw authority)
+"
+
+[node name="RightDescription" parent="Pages/GrimoirePage4" index="8" unique_id=241163254]
+offset_bottom = 747.0
+text = " Regal structure, stubborn stability, and the 
+ weaving of protective boundaries. This card 
+represents the rock-solid foundations required 
+ to build a lasting legacy. It calls upon the 
+ seeker to summon their inner discipline and 
+ organize a chaotic environment into a 
+ well-regulated regime."
+
 [node name="GrimoirePage5" parent="Pages" unique_id=1489096174 instance=ExtResource("3_46r2j")]
 visible = false
 layout_mode = 0
@@ -109,6 +324,51 @@ texture = ExtResource("16_4bgfk")
 
 [node name="CardLeft" parent="Pages/GrimoirePage5" index="1" unique_id=1395235712]
 texture = ExtResource("17_ujtp4")
+
+[node name="CardRight" parent="Pages/GrimoirePage5" index="2" unique_id=1079632786]
+texture = ExtResource("16_2jgdf")
+
+[node name="PanelLeft" parent="Pages/GrimoirePage5" index="3" unique_id=1292526655]
+offset_left = -244.0
+offset_top = -91.0
+offset_right = -13.0
+offset_bottom = -54.0
+
+[node name="PanelRight" parent="Pages/GrimoirePage5" index="4" unique_id=416746566]
+offset_left = 179.0
+offset_top = 98.0
+offset_right = 410.0
+offset_bottom = 135.0
+
+[node name="Label" parent="Pages/GrimoirePage5/PanelRight" index="0" unique_id=232698868]
+text = "         ???"
+
+[node name="LeftTitle" parent="Pages/GrimoirePage5" index="5" unique_id=23170353]
+offset_left = 712.0
+offset_right = 950.0
+offset_bottom = 475.0
+text = " Element: Fire
+
+ Astrology: Pluto 
+ (collective transformation, 
+  judgment, and structural rebirth)"
+
+[node name="LeftDescription" parent="Pages/GrimoirePage5" index="6" unique_id=1952948361]
+offset_bottom = 782.0
+text = "             A grand awakening, a thunderous 
+                        cosmic reckoning, and a 
+                     profound calling. The traveler is 
+                    summoned to review past deeds, 
+                  absolve themselves of ancient guilt, 
+                         and step into a much grander 
+                               version of themselves with 
+                                 crystalline clarity."
+
+[node name="RightTitle" parent="Pages/GrimoirePage5" index="7" unique_id=1317776254]
+text = ""
+
+[node name="RightDescription" parent="Pages/GrimoirePage5" index="8" unique_id=241163254]
+text = ""
 
 [node name="PageLeftButton" type="Button" parent="Pages" unique_id=2028313751]
 self_modulate = Color(1, 1, 1, 0)
