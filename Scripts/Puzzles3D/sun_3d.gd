@@ -49,6 +49,7 @@ func check_if_complete():
 		PuzzleManager.finish_puzzle(PuzzleManager.puzzles.SUN)
 		holy.play()
 		obj.remove_from_group("Interactables")
+		SignalBus.sun_completed.emit()
 		
 func place_all_pieces():
 	_2_petal.visible = true

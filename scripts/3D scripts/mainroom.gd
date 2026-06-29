@@ -25,7 +25,7 @@ extends Node3D
 @export var garden_spawnpos : Marker3D
 
 @export var grass_node_names : Array[String] = ["Le_Grass", "Le_Grass2", "Le_Grass3", "Le_Grass4"]
-
+@export var maus_door : Node3D
 const GARDEN_SPEED : float = 5.0
 
 #@export var fantana : InteractableObject 
@@ -71,7 +71,9 @@ func _ready() -> void:
 	])
 	zoom_camera.canvas.visible = false
 	#GARDEN STUFF
-	
+	if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.EMPEROR] and PuzzleManager.complete_puzzles[PuzzleManager.puzzles.SUN]:
+		if !maus_door.is_open:
+			maus_door.open()
 	
 func _set_grass_visible(visible: bool) -> void:
 	if not garden_level:
@@ -120,3 +122,7 @@ func _on_tower_delete_body_entered(body: Node3D) -> void:
 	tower_door.close_door()
 	tower_delete.queue_free()
 	#PLAY DOOR DROPPING DOWN ANIMATION
+
+
+func _on_garden_open_mausoleum() -> void:
+	maus_door.open()

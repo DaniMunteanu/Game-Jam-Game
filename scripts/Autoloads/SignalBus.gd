@@ -11,3 +11,4 @@ signal temperance_completed
 signal star_completed
 signal hierophant_completed
 signal escape_chest
+signal sun_completed

@@ -14,6 +14,7 @@ const GARDEN_SPEED : float = 5.0
 @onready var sfx_player_5: AudioStreamPlayer3D = $SfxPlayers/SfxPlayer5
 @export var worm2 : InteractableObject
 @onready var holy: AudioStreamPlayer2D = $holy
+signal open_mausoleum
 
 #Adaugate de mine, Dani, inside my twisted mind...
 """const GARDEN_SPEED : float = 5.0
@@ -29,6 +30,7 @@ const GARDEN_SPEED : float = 5.0
 #Comentate de mine, Flo, mi a dat crash
 
 func _ready() -> void:
+	SignalBus.connect("sun_completed", on_sun_completed)
 	if PuzzleManager.has_gate_key:
 		pass
 	
@@ -37,7 +39,12 @@ func _ready() -> void:
 	fantana.interact = Callable(self, "_on_well_switch")
 	if worm2:
 		worm2.interact = Callable(self, "_on_worm_pickup")
+
+func on_sun_completed():
+	if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.EMPEROR]:
+		open_mausoleum.emit()
 	
+
 func find_interactable(node: Node) -> InteractableObject:
 	var current = node
 	while current != null:

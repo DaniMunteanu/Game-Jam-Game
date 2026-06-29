@@ -46,6 +46,7 @@ window/main_scene="uid://d0rrcq8bkicf1"
 [global_group]
 
 Interactables="Interactable meshes"
+Character=""
 
 [gui]
 
