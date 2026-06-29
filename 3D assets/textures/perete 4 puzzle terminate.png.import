@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://55ttssrk811f"
-path.s3tc="res://.godot/imported/sera perete sah.png-46eae8f13387d28402ba6db213d1e7e7.s3tc.ctex"
+uid="uid://bsx5ihmygapjh"
+path.s3tc="res://.godot/imported/perete 4 puzzle terminate.png-648637f6b5d8ced00a8c7dcff973f6d1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://Sprites/Background/back-side/sera perete sah.png"
-dest_files=["res://.godot/imported/sera perete sah.png-46eae8f13387d28402ba6db213d1e7e7.s3tc.ctex"]
+source_file="res://3D assets/textures/perete 4 puzzle terminate.png"
+dest_files=["res://.godot/imported/perete 4 puzzle terminate.png-648637f6b5d8ced00a8c7dcff973f6d1.s3tc.ctex"]
 
 [params]
 
