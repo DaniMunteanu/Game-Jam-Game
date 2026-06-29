@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
 [ext_resource type="Script" uid="uid://b80xsyas7fj1" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="2_yr1ht"]
-[ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
+[ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
 [ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
 [ext_resource type="PackedScene" uid="uid://bse2py88bpr6s" path="res://3D assets/scenes/cem_gates.tscn" id="4_ulxv8"]
 [ext_resource type="PackedScene" uid="uid://by1tm21k2oglb" path="res://3D assets/Particles/le_water.tscn" id="6_ktj0q"]
@@ -23,20 +23,27 @@
 [ext_resource type="PackedScene" uid="uid://crxgl2qpr267" path="res://3D assets/Particles/blue_fire.tscn" id="18_h22pd"]
 [ext_resource type="PackedScene" uid="uid://ds2x63yagqssb" path="res://3D assets/Objects/pavilionstuff/4petal.glb" id="18_vs4jp"]
 [ext_resource type="PackedScene" uid="uid://b81hvydkrb78h" path="res://3D assets/Objects/pavilionstuff/suncenter.glb" id="23_gm1ln"]
+[ext_resource type="PackedScene" uid="uid://dq4kax18ip075" path="res://3D assets/ivy/Ivy_wide.tscn" id="24_n7dl6"]
+[ext_resource type="PackedScene" uid="uid://dyj6i7r810rod" path="res://3D assets/ivy/ivy_tall.tscn" id="25_c1umg"]
+[ext_resource type="PackedScene" uid="uid://ia4rca60sayj" path="res://3D assets/ivy/ivy_corner.tscn" id="26_dsreb"]
 [ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="24_n7dl6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
 
 [sub_resource type="Sky" id="Sky_ujn77"]
 sky_material = SubResource("ProceduralSkyMaterial_yxx7e")
+radiance_size = 4
 
 [sub_resource type="Environment" id="Environment_rfp5g"]
 background_mode = 2
 sky = SubResource("Sky_ujn77")
 ambient_light_color = Color(0.78183013, 0.78183013, 0.7818301, 1)
-tonemap_mode = 2
+tonemap_mode = 3
 tonemap_exposure = 0.26
 tonemap_white = 4.75
+ssr_enabled = true
+ssao_enabled = true
+ssao_intensity = 3.1
 glow_enabled = true
 fog_enabled = true
 fog_light_color = Color(0.567832, 0.5213776, 0.67262733, 1)
@@ -249,6 +256,13 @@ size = Vector3(34.409332, 1, 11.69751)
 [sub_resource type="BoxShape3D" id="BoxShape3D_umu6e"]
 size = Vector3(4.2180634, 4.4575195, 4.0126953)
 
+[sub_resource type="FogMaterial" id="FogMaterial_gm1ln"]
+density = 0.0791
+
+[sub_resource type="FogMaterial" id="FogMaterial_13qdw"]
+density = 0.8
+emission = Color(0.5132331, 0.5132328, 0.5132329, 1)
+
 [node name="Garden" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("gates", "spawnpos", "player", "fantana")]
 script = ExtResource("1_lrqvg")
 gates = NodePath("Emperor3D/cem_gates")
@@ -258,18 +272,10 @@ fantana = NodePath("Well")
 greenhouse_path = "res://Rooms/Greenhouse1.tscn"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1343459481]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 6.492678, 12.636219, 0)
 shadow_enabled = true
-
-[node name="OmniLight3D" type="OmniLight3D" parent="DirectionalLight3D" unique_id=1195144581]
-transform = Transform3D(1, 0, -7.4505806e-08, 0, 1, -5.9604645e-08, 5.9604645e-08, 5.9604645e-08, 1, 0.7938449, 3.9741483, 5.250745)
-light_energy = 10.0
-omni_range = 10.0
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="DirectionalLight3D" unique_id=543300371]
-transform = Transform3D(1, -2.9802322e-08, -1.7881393e-07, 0, 1, 0, 1.6391277e-07, 5.9604645e-08, 1, 28.396387, 18.313908, 6.1169004)
-light_energy = 15.796
-omni_range = 14.644067
+shadow_blur = 2.0
+directional_shadow_blend_splits = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1954821123]
 environment = SubResource("Environment_rfp5g")
@@ -864,6 +870,83 @@ visible = false
 [node name="suncenter" parent="Sun3D" unique_id=181683467 instance=ExtResource("23_gm1ln")]
 visible = false
 
+[node name="Lights" type="Node3D" parent="." unique_id=637695173]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights" unique_id=1195144581]
+transform = Transform3D(-0.8660254, -0.43301275, 0.2500001, 5.161914e-08, 0.5, 0.86602545, -0.50000006, 0.75, -0.43301266, -1.0956607, 5.646266, 0.31004977)
+light_energy = 10.0
+omni_range = 10.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights" unique_id=543300371]
+transform = Transform3D(-0.8660253, -0.43301278, 0.25000018, 1.4195263e-07, 0.5, 0.86602545, -0.5000001, 0.75, -0.4330126, -32.527626, 14.454344, -3.1114602)
+light_energy = 15.796
+omni_range = 14.644067
+
+[node name="bluelight1" type="OmniLight3D" parent="Lights" unique_id=1578505463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.870481, 12.485819, -1.1018355)
+light_color = Color(0.19215687, 0.1254902, 0.5137255, 1)
+light_energy = 6.397
+light_volumetric_fog_energy = 12.504
+omni_range = 13.390592
+
+[node name="bluelight3" type="OmniLight3D" parent="Lights" unique_id=416094776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.870481, 12.485819, -23.213837)
+light_color = Color(0.19215687, 0.1254902, 0.5137255, 1)
+light_energy = 6.397
+light_volumetric_fog_energy = 12.504
+omni_range = 13.390592
+
+[node name="bluelight2" type="OmniLight3D" parent="Lights" unique_id=1071498965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.870481, 12.485819, 9.304798)
+light_color = Color(0.19215687, 0.1254902, 0.5137255, 1)
+light_energy = 6.397
+light_volumetric_fog_energy = 12.504
+omni_range = 13.390592
+
+[node name="FogVolume" type="FogVolume" parent="." unique_id=1856561082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.850891, 1.1426377, -4.6967163)
+size = Vector3(94.32922, 2.0327606, 72.12463)
+material = SubResource("FogMaterial_gm1ln")
+
+[node name="FogVolume2" type="FogVolume" parent="." unique_id=304285052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.142372, 0.014770508, -11.48938)
+size = Vector3(33.025024, 2.029541, 54.800537)
+material = SubResource("FogMaterial_13qdw")
+
+[node name="ivys" type="Node3D" parent="." unique_id=1502568308]
+
+[node name="IvyWide" parent="ivys" unique_id=1085334945 instance=ExtResource("24_n7dl6")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.762827, 6.127003, 0)
+
+[node name="IvyWide3" parent="ivys" unique_id=1433481062 instance=ExtResource("24_n7dl6")]
+transform = Transform3D(-2.999394e-08, 0, 1, 0, 1, 0, -0.68618137, 0, -4.371139e-08, -20.756895, 6.0236616, 9.140202)
+
+[node name="IvyWide2" parent="ivys" unique_id=5835928 instance=ExtResource("24_n7dl6")]
+transform = Transform3D(-6.226934e-08, 0, 1, 0, 1, 0, -1.4245565, 0, -4.371139e-08, -20.762827, 6.2119937, -12.515071)
+
+[node name="IvyTall" parent="ivys" unique_id=1111389719 instance=ExtResource("25_c1umg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.86189, 17.042446, -6.5161757)
+
+[node name="IvyCorner" parent="ivys" unique_id=1398664453 instance=ExtResource("26_dsreb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 37.013832, 1.5062027, 15.625485)
+
+[node name="IvyCorner3" parent="ivys" unique_id=249128172 instance=ExtResource("26_dsreb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 31.441952, 0.6066675, 15.448976)
+
+[node name="IvyCorner2" parent="ivys" unique_id=1671450083 instance=ExtResource("26_dsreb")]
+transform = Transform3D(-1.6502054, 0, -1.4426554e-07, 0, 1.6502054, 0, 1.4426554e-07, 0, -1.6502054, 47.930103, 0.7528851, 15.443572)
+
+[node name="IvyTall2" parent="ivys" unique_id=857924225 instance=ExtResource("25_c1umg")]
+transform = Transform3D(1.7289255, -0.37970254, 0, 0.37970254, 1.7289255, 0, 0, 0, 1.7701292, -13.174655, 9.62554, 26.155151)
+
+[node name="IvyTall3" parent="ivys" unique_id=1116819062 instance=ExtResource("25_c1umg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.973629, 9.506138, -33.77431)
+
+[node name="IvyCorner4" parent="ivys" unique_id=787032208 instance=ExtResource("26_dsreb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.617254, 0.3044157, 28.53129)
+
+[node name="IvyTall4" parent="ivys" unique_id=626884157 instance=ExtResource("25_c1umg")]
+transform = Transform3D(-0.6449848, 0, 0.22961333, 0, 1, 0, -0.32573938, 0, -0.45464903, 22.171503, 11.222642, 17.461302)
 [node name="holy" type="AudioStreamPlayer2D" parent="." unique_id=1570423330]
 stream = ExtResource("24_n7dl6")
 
