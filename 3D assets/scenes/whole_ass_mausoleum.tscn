@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://jsf5lm3hus52"]
+
+[ext_resource type="PackedScene" uid="uid://jgwro0b028ul" path="res://3D assets/Objects/mausoleum stuff/whole-ass_mausoleum.glb" id="1_2umkg"]
+
+[node name="whole-ass_mausoleum" unique_id=1942704860 instance=ExtResource("1_2umkg")]
