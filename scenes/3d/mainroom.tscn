@@ -530,7 +530,7 @@ size = Vector3(2.6733403, 0.0107421875, 2.78454)
 [sub_resource type="BoxShape3D" id="BoxShape3D_0gmuw"]
 size = Vector3(2.4833984, 5.509506, 0.35009766)
 
-[node name="Mainroom" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("spawnpos", "player", "mirror", "tower_door", "zodiac_wheel", "zoom_camera", "secret_door", "room_level", "garden_level", "tower", "tower_delete")]
+[node name="Mainroom" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("spawnpos", "player", "mirror", "tower_door", "zodiac_wheel", "zoom_camera", "secret_door", "room_level", "garden_level", "tower", "tower_delete", "garden_spawnpos")]
 script = ExtResource("1_j7t7n")
 spawnpos = NodePath("MirrorSpawnPos")
 player = NodePath("Player")
@@ -544,6 +544,8 @@ room_level = NodePath("FirstRoom")
 garden_level = NodePath("GardenLevel")
 tower = NodePath("tower")
 tower_delete = NodePath("tower_delete")
+garden_spawnpos = NodePath("Marker3D")
+grass_node_names = Array[String](["Le_Grass20", "Le_Grass21", "Le_Grass22", "Le_Grass24", "Le_Grass26"])
 
 [node name="Player" parent="." unique_id=2036735905 instance=ExtResource("1_w1mmj")]
 transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -5.271773, 3.1448445, 2.6078143)
@@ -1266,6 +1268,9 @@ debug_color = Color(0, 0, 0, 1)
 
 [node name="WellSpawnPos" type="Marker3D" parent="." unique_id=825547713]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.362839, -23.484127, 35.826927)
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1847247713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.952183, -21.337326, 35.12363)
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
 [connection signal="body_entered" from="FirstRoom/actual_mirror/InteractableArea3D" to="." method="_on_d_mirror_body_entered"]
