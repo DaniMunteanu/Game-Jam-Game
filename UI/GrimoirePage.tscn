@@ -8,22 +8,6 @@
 [sub_resource type="LabelSettings" id="LabelSettings_ragau"]
 font_size = 32
 
-[sub_resource type="LabelSettings" id="LabelSettings_487pd"]
-font = ExtResource("4_487pd")
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_vyy1b"]
-font = ExtResource("4_487pd")
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_qfolc"]
-font = ExtResource("4_487pd")
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_umu6e"]
-font = ExtResource("4_487pd")
-font_color = Color(0, 0, 0, 1)
-
 [node name="GrimoirePage" type="Control" unique_id=2121197119]
 layout_mode = 3
 anchors_preset = 0
@@ -115,7 +99,7 @@ offset_bottom = 19.0
 text = "Hover for Hint"
 label_settings = SubResource("LabelSettings_ragau")
 
-[node name="LeftTitle" type="Label" parent="." unique_id=339167460]
+[node name="LeftTitle" type="RichTextLabel" parent="." unique_id=23170353]
 custom_minimum_size = Vector2(50, 50)
 custom_maximum_size = Vector2(400, -1)
 layout_mode = 0
@@ -123,14 +107,17 @@ offset_left = 720.0
 offset_top = 253.0
 offset_right = 944.0
 offset_bottom = 440.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_487pd")
+bbcode_enabled = true
 text = "Element: Air
 
 Astrology: Uranus
  (sudden change,
  revolution, and freedom)"
-label_settings = SubResource("LabelSettings_487pd")
+autowrap_mode = 0
 
-[node name="LeftDescription" type="Label" parent="." unique_id=1512466279]
+[node name="LeftDescription" type="RichTextLabel" parent="." unique_id=1952948361]
 custom_minimum_size = Vector2(50, 50)
 custom_maximum_size = Vector2(420, -1)
 layout_mode = 0
@@ -138,10 +125,13 @@ offset_left = 541.0
 offset_top = 501.0
 offset_right = 961.0
 offset_bottom = 764.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_487pd")
+bbcode_enabled = true
 text = "A delightfully chaotic card of spontaneous gambles and a blind leap of faith. The traveler steps into a fresh epoch of existence, unburdened by past skepticism. It is an invitation to toss away the reins of control, pocket a risk, and  trust the winding road ahead."
-label_settings = SubResource("LabelSettings_vyy1b")
+autowrap_mode = 0
 
-[node name="RightTitle" type="Label" parent="." unique_id=1071230051]
+[node name="RightTitle" type="RichTextLabel" parent="." unique_id=1317776254]
 custom_minimum_size = Vector2(50, 50)
 custom_maximum_size = Vector2(400, -1)
 layout_mode = 0
@@ -149,15 +139,18 @@ offset_left = 1157.0
 offset_top = 250.0
 offset_right = 1393.0
 offset_bottom = 475.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_487pd")
+bbcode_enabled = true
 text = "Element: Air
 
 Astrology: Mercury 
 (communication, intellect, 
 and resourcefulness)
 "
-label_settings = SubResource("LabelSettings_qfolc")
+autowrap_mode = 0
 
-[node name="RightDescription" type="Label" parent="." unique_id=275314100]
+[node name="RightDescription" type="RichTextLabel" parent="." unique_id=241163254]
 custom_minimum_size = Vector2(50, 50)
 custom_maximum_size = Vector2(420, -1)
 layout_mode = 0
@@ -165,8 +158,11 @@ offset_left = 978.0
 offset_top = 498.0
 offset_right = 1398.0
 offset_bottom = 723.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_487pd")
+bbcode_enabled = true
 text = "Manifestation, sharp willpower, and glorious capability. The Magician stands as a bridge between intent and reality, signaling that the seeker possesses every curious tool required to transmute an ordinary idea into spectacular success through deliberate, everyday alchemy."
-label_settings = SubResource("LabelSettings_umu6e")
+autowrap_mode = 0
 
 [connection signal="mouse_entered" from="PanelLeft" to="." method="_on_panel_left_mouse_entered"]
 [connection signal="mouse_exited" from="PanelLeft" to="." method="_on_panel_left_mouse_exited"]

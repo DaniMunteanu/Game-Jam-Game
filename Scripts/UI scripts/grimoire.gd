@@ -28,6 +28,14 @@ func _ready() -> void:
 		pages[0].update_cards()
 
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("3D_left"):
+		_on_page_left_button_pressed()
+		return
+	
+	if event.is_action_pressed("3D_right"):
+		_on_page_right_button_pressed()
+		return
+	
 	if event.is_action_pressed("open_grimoire"):
 		pages_parent.visible = !pages_parent.visible
 		if pages_parent.visible:
