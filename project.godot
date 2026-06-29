@@ -120,3 +120,6 @@ open_grimoire={
 rendering_device/pipeline_cache/save_chunk_size_mb=3.000001
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+lights_and_shadows/directional_shadow/size=8192
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=4
+lights_and_shadows/positional_shadow/atlas_size=8192

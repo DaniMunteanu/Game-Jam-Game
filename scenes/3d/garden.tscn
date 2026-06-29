@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
 [ext_resource type="Script" uid="uid://b80xsyas7fj1" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="2_yr1ht"]
-[ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
-[ext_resource type="PackedScene" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
+[ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
+[ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
 [ext_resource type="PackedScene" uid="uid://bse2py88bpr6s" path="res://3D assets/scenes/cem_gates.tscn" id="4_ulxv8"]
 [ext_resource type="PackedScene" uid="uid://by1tm21k2oglb" path="res://3D assets/Particles/le_water.tscn" id="6_ktj0q"]
 [ext_resource type="PackedScene" uid="uid://ms8kg0b1tlyb" path="res://3D assets/Particles/le_apa.tscn" id="7_t1yto"]
@@ -28,14 +28,16 @@
 
 [sub_resource type="Sky" id="Sky_ujn77"]
 sky_material = SubResource("ProceduralSkyMaterial_yxx7e")
+radiance_size = 4
 
 [sub_resource type="Environment" id="Environment_rfp5g"]
 background_mode = 2
 sky = SubResource("Sky_ujn77")
 ambient_light_color = Color(0.78183013, 0.78183013, 0.7818301, 1)
-tonemap_mode = 2
+tonemap_mode = 3
 tonemap_exposure = 0.26
 tonemap_white = 4.75
+ssr_enabled = true
 glow_enabled = true
 fog_enabled = true
 fog_light_color = Color(0.567832, 0.5213776, 0.67262733, 1)
@@ -257,18 +259,10 @@ fantana = NodePath("Well")
 greenhouse_path = "res://Rooms/Greenhouse1.tscn"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1343459481]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 6.492678, 12.636219, 0)
 shadow_enabled = true
-
-[node name="OmniLight3D" type="OmniLight3D" parent="DirectionalLight3D" unique_id=1195144581]
-transform = Transform3D(1, 0, -7.4505806e-08, 0, 1, -5.9604645e-08, 5.9604645e-08, 5.9604645e-08, 1, 0.7938449, 3.9741483, 5.250745)
-light_energy = 10.0
-omni_range = 10.0
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="DirectionalLight3D" unique_id=543300371]
-transform = Transform3D(1, -2.9802322e-08, -1.7881393e-07, 0, 1, 0, 1.6391277e-07, 5.9604645e-08, 1, 28.396387, 18.313908, 6.1169004)
-light_energy = 15.796
-omni_range = 14.644067
+shadow_blur = 2.0
+directional_shadow_blend_splits = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1954821123]
 environment = SubResource("Environment_rfp5g")
@@ -855,6 +849,18 @@ visible = false
 
 [node name="suncenter" parent="Sun3D" unique_id=181683467 instance=ExtResource("23_gm1ln")]
 visible = false
+
+[node name="Lights" type="Node3D" parent="." unique_id=637695173]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights" unique_id=1195144581]
+transform = Transform3D(-0.8660254, -0.43301275, 0.2500001, 5.161914e-08, 0.5, 0.86602545, -0.50000006, 0.75, -0.43301266, -1.0956607, 5.646266, 0.31004977)
+light_energy = 10.0
+omni_range = 10.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights" unique_id=543300371]
+transform = Transform3D(-0.8660253, -0.43301275, 0.25000018, 1.4195263e-07, 0.5, 0.86602545, -0.5000001, 0.75, -0.4330126, -30.992924, 14.454344, -3.1114602)
+light_energy = 15.796
+omni_range = 14.644067
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
 
