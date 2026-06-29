@@ -6,6 +6,7 @@ extends Node
 @onready var _3_petal: Node3D = $"3petal"
 @onready var _4_petal: Node3D = $"4petal"
 @onready var suncenter: Node3D = $suncenter
+@onready var holy: AudioStreamPlayer2D = $"../holy"
 
 func _ready() -> void:
 	if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.SUN]:
@@ -46,6 +47,7 @@ func place_flower_piece():
 func check_if_complete():
 	if PuzzleManager._2_petal_placed and PuzzleManager._3_petal_placed and PuzzleManager._4_petal_placed and PuzzleManager.suncenter_placed:
 		PuzzleManager.finish_puzzle(PuzzleManager.puzzles.SUN)
+		holy.play()
 		obj.remove_from_group("Interactables")
 		
 func place_all_pieces():

@@ -22,6 +22,9 @@ extends Node3D
 @export var garden_level : Node
 @export var tower : Node3D
 @export var tower_delete : Area3D
+@export var garden_spawnpos : Marker3D
+
+@export var grass_node_names : Array[String] = ["Le_Grass", "Le_Grass2", "Le_Grass3", "Le_Grass4"]
 
 const GARDEN_SPEED : float = 5.0
 
@@ -37,14 +40,30 @@ func _ready() -> void:
 	PuzzleManager.completed_puzzles = 6
 	if PuzzleManager.completed_puzzles == 6:
 		_on_part1_finished() # for finishing in 2d
-		
-		
+	_set_grass_visible(false)
+	
 	PuzzleManager.all_puzzles_completed.connect(_on_part1_finished)
 	# for finishing in 3d ^
 	#AudioManager.switch_to_3d()
 	dissolve.visible = false
 	print(mirror.area.can_interact)
-	player.global_position = spawnpos.position
+	#aici ne uitam daca venim din garden si stergem tot ce era din mainroom
+	if PuzzleManager.came_from_greenhouse:
+		PuzzleManager.came_from_greenhouse = false
+		player.global_position = garden_spawnpos.position
+		garden_level.visible = true
+		player.speed = GARDEN_SPEED
+		if room_level:
+			room_level.queue_free()
+		if tower:
+			tower.queue_free()
+		if tower_door:
+			tower_door.queue_free()
+		if tower_delete:
+			tower_delete.queue_free()
+		_set_grass_visible(true)
+	else:
+		player.global_position = spawnpos.position
 	mirror.interact = Callable(self, "_on_mirror_switch")
 	
 	TextManager.show_once("mainroom_enter", [
@@ -54,7 +73,13 @@ func _ready() -> void:
 	#GARDEN STUFF
 	
 	
-
+func _set_grass_visible(visible: bool) -> void:
+	if not garden_level:
+		return
+	for grass_name in grass_node_names:
+		var grass = garden_level.find_child(grass_name, true, false)
+		if grass:
+			grass.visible = visible
 
 func _on_mirror_switch():
 	print("SWITCHING!")
@@ -86,6 +111,7 @@ func _on_tower_delete_body_entered(body: Node3D) -> void:
 		return
 	print("out with the old, in with the new.")
 	garden_level.visible = true
+	_set_grass_visible(true)
 	player.speed = GARDEN_SPEED
 	if room_level:
 		room_level.queue_free()

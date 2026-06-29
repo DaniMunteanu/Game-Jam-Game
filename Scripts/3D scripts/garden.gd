@@ -13,6 +13,7 @@ const GARDEN_SPEED : float = 5.0
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sfx_player_5: AudioStreamPlayer3D = $SfxPlayers/SfxPlayer5
 @export var worm2 : InteractableObject
+@onready var holy: AudioStreamPlayer2D = $holy
 
 #Adaugate de mine, Dani, inside my twisted mind...
 """const GARDEN_SPEED : float = 5.0
@@ -70,6 +71,7 @@ func _on_player_clicked(target) -> void:
 		target.interact.call()
 """
 func _on_well_switch():
+	PuzzleManager.came_from_greenhouse = true
 	print("SWITCHING TO GREENHOUSE!")
 	fantana.area.can_interact = false
 	player.set_physics_process(false)
