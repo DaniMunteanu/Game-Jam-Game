@@ -13,6 +13,7 @@ const GARDEN_SPEED : float = 5.0
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sfx_player_5: AudioStreamPlayer3D = $SfxPlayers/SfxPlayer5
 @export var worm2 : InteractableObject
+@onready var holy: AudioStreamPlayer2D = $holy
 
 #Adaugate de mine, Dani, inside my twisted mind...
 """const GARDEN_SPEED : float = 5.0
