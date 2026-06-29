@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="2_lskgf"]
 [ext_resource type="Texture2D" uid="uid://dhtdue5rkxpdp" path="res://Sprites/tarot cards/The Magician.png" id="3_4dwyl"]
 [ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/legacy/A.png" id="3_afr5c"]
-[ext_resource type="Script" path="res://Scripts/canvas_layer.gd" id="3_qo4f6"]
+[ext_resource type="Script" uid="uid://dgxccig7fib3l" path="res://Scripts/canvas_layer.gd" id="3_qo4f6"]
 [ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/legacy/D.png" id="4_4dwyl"]
 [ext_resource type="Script" uid="uid://74si1xeljpdm" path="res://Scripts/Puzzles2D/greenhouse1_checker.gd" id="5_7j8cd"]
 [ext_resource type="Texture2D" uid="uid://btj7252bdj5mf" path="res://Sprites/Background/front-side/sera poarta spre 3d.png" id="6_u76ue"]

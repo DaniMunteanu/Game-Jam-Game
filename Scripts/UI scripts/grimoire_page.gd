@@ -24,11 +24,7 @@ func update_cards():
 func _on_panel_left_mouse_entered() -> void:
 	tooltip = tooltip_scene.instantiate()
 	tooltip.set_text(left_tooltip_text)
-	tooltip.visible = false
 	add_child(tooltip)
-	await get_tree().create_timer(1).timeout
-	if tooltip:
-		tooltip.visible = true
 
 func _on_panel_left_mouse_exited() -> void:
 	if tooltip:
@@ -38,11 +34,7 @@ func _on_panel_left_mouse_exited() -> void:
 func _on_panel_right_mouse_entered() -> void:
 	tooltip = tooltip_scene.instantiate()
 	tooltip.set_text(right_tooltip_text)
-	tooltip.visible = false
 	add_child(tooltip)
-	await get_tree().create_timer(1).timeout
-	if tooltip:
-		tooltip.visible = true
 
 func _on_panel_right_mouse_exited() -> void:
 	if tooltip:
