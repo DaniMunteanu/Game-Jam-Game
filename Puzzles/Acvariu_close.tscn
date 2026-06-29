@@ -1,15 +1,18 @@
 [gd_scene format=3 uid="uid://cx4bkg766xlom"]
 
 [ext_resource type="Script" uid="uid://ciwfcqtu4wd16" path="res://Scripts/Puzzles2D/aquarium.gd" id="1_1cfge"]
-[ext_resource type="Texture2D" uid="uid://dme6ak0tvik6k" path="res://Sprites/Background/sera-left/ficsh.jpg" id="1_o037l"]
+[ext_resource type="Texture2D" uid="uid://82tq2w1hny7o" path="res://Sprites/Background/sera-left/acvariu_fara_pesti.png" id="2_m5v8r"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="2_xn4a1"]
-[ext_resource type="Texture2D" uid="uid://d2o26gfv1e2oc" path="res://Sprites/Placeholders/Fih.jpg" id="3_bvpl3"]
 [ext_resource type="Texture2D" uid="uid://dfovannbdm63n" path="res://Sprites/Mouse/back2.png" id="3_dwue0"]
-[ext_resource type="Texture2D" uid="uid://djnhajkpwvna2" path="res://Sprites/Placeholders/Items/Item1.png" id="4_dwue0"]
+[ext_resource type="Texture2D" uid="uid://c118dcwq6jtd2" path="res://Sprites/Background/sera-left/peste.png" id="3_v2bvc"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="5_kupa2"]
+[ext_resource type="Texture2D" uid="uid://ck2gqby5wggtv" path="res://Sprites/Background/sera-left/cheie.png" id="6_0smaj"]
 [ext_resource type="PackedScene" uid="uid://dwv575pukbv8s" path="res://UI/ItemDropArea.tscn" id="8_bvpl3"]
 [ext_resource type="Resource" uid="uid://bo44vxoswpvho" path="res://Scripts/Items/Worm.tres" id="9_8skb0"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="10_m5v8r"]
+[ext_resource type="Texture2D" uid="uid://8rw0myqna3dp" path="res://Sprites/Items/worm.png" id="11_v2bvc"]
+[ext_resource type="Texture2D" uid="uid://chyv5bey0u6xk" path="res://Sprites/Background/sera-left/fih1-removebg-preview.png" id="12_0oux8"]
+[ext_resource type="Texture2D" uid="uid://b0hiaalwuipvm" path="res://Sprites/Background/sera-left/fih2-removebg-preview.png" id="13_cfm1k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kupa2"]
 
@@ -19,14 +22,14 @@ script = ExtResource("1_1cfge")
 [node name="Background" type="Node2D" parent="." unique_id=2069965437]
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=11812718]
-position = Vector2(961, 538)
-scale = Vector2(3.2369742, 3.1607144)
-texture = ExtResource("1_o037l")
+position = Vector2(966.50006, 549.99994)
+scale = Vector2(1.1487268, 1.1376324)
+texture = ExtResource("2_m5v8r")
 
 [node name="Fih" type="Sprite2D" parent="." unique_id=124714212]
 z_index = 1
-position = Vector2(487, 488)
-texture = ExtResource("3_bvpl3")
+position = Vector2(1080, 897)
+texture = ExtResource("3_v2bvc")
 
 [node name="BackToRoom" type="Button" parent="." unique_id=1673048926]
 self_modulate = Color(1, 1, 1, 0)
@@ -62,12 +65,13 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="GateKey" type="TextureButton" parent="." unique_id=1479525236]
-offset_left = 170.0
-offset_top = 676.0
-offset_right = 794.0
-offset_bottom = 1054.0
-texture_normal = ExtResource("4_dwue0")
-texture_disabled = ExtResource("4_dwue0")
+offset_left = 737.0
+offset_top = 754.0
+offset_right = 1361.0
+offset_bottom = 1132.0
+rotation = -0.121745035
+texture_normal = ExtResource("6_0smaj")
+texture_disabled = ExtResource("6_0smaj")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -75,10 +79,10 @@ stretch_mode = 5
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 512.0
-offset_top = 624.0
-offset_right = 694.0
-offset_bottom = 757.0
+offset_left = 42.0
+offset_top = 122.0
+offset_right = 1898.0
+offset_bottom = 1079.0
 grow_horizontal = 1
 grow_vertical = 1
 required_item = ExtResource("9_8skb0")
@@ -89,6 +93,25 @@ required_item = ExtResource("9_8skb0")
 mouse_filter = 2
 
 [node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("10_m5v8r")]
+
+[node name="Wormh" type="Sprite2D" parent="." unique_id=354003534]
+visible = false
+position = Vector2(279, 909)
+scale = Vector2(0.24749164, 0.24853802)
+texture = ExtResource("11_v2bvc")
+
+[node name="smallFih" type="Sprite2D" parent="." unique_id=213134509]
+position = Vector2(1653, 191)
+texture = ExtResource("12_0oux8")
+
+[node name="smallFih2" type="Sprite2D" parent="." unique_id=579500576]
+position = Vector2(201, 616)
+texture = ExtResource("13_cfm1k")
+
+[node name="smallFih3" type="Sprite2D" parent="." unique_id=262405582]
+position = Vector2(436, 182)
+scale = Vector2(-1.0400007, 1)
+texture = ExtResource("12_0oux8")
 
 [connection signal="pressed" from="BackToRoom" to="BackToRoom" method="_on_pressed"]
 [connection signal="pressed" from="GateKey" to="." method="_on_gate_key_pressed"]
