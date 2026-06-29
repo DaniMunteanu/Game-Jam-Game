@@ -1071,7 +1071,7 @@ light_size = 0.215
 
 [node name="OmniLight3D17" type="OmniLight3D" parent="FirstRoom/OmniLights" unique_id=1914248222]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.164303, 5.0619006, 4.1903543)
-light_energy = 6.593
+visible = false
 light_volumetric_fog_energy = 10.383
 light_size = 0.485
 omni_range = 1.6018165

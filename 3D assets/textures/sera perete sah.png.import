@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://55ttssrk811f"
-path.s3tc="res://.godot/imported/sera perete sah.png-46eae8f13387d28402ba6db213d1e7e7.s3tc.ctex"
+uid="uid://b1ei3hi7cat7o"
+path.s3tc="res://.godot/imported/sera perete sah.png-5d4b6ad880831f67d07a665013e1e0cc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://Sprites/Background/back-side/sera perete sah.png"
-dest_files=["res://.godot/imported/sera perete sah.png-46eae8f13387d28402ba6db213d1e7e7.s3tc.ctex"]
+source_file="res://3D assets/textures/sera perete sah.png"
+dest_files=["res://.godot/imported/sera perete sah.png-5d4b6ad880831f67d07a665013e1e0cc.s3tc.ctex"]
 
 [params]
 
