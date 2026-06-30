@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
 [ext_resource type="Script" uid="uid://b80xsyas7fj1" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
 [ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
-[ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
+[ext_resource type="PackedScene" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
 [ext_resource type="PackedScene" uid="uid://bse2py88bpr6s" path="res://3D assets/scenes/cem_gates.tscn" id="4_ulxv8"]
 [ext_resource type="Texture2D" uid="uid://55ttssrk811f" path="res://Sprites/Background/back-side/sera perete sah.png" id="5_yv1t8"]
 [ext_resource type="PackedScene" uid="uid://by1tm21k2oglb" path="res://3D assets/Particles/le_water.tscn" id="6_ktj0q"]
@@ -16,14 +16,10 @@
 [ext_resource type="AudioStream" uid="uid://bm085t0y4w02f" path="res://Audio/SFX/mirror4.mp3" id="11_jw885"]
 [ext_resource type="Texture2D" uid="uid://bedtvepwhx65i" path="res://Sprites/texts/verset3_fundal.png" id="11_x0508"]
 [ext_resource type="Texture2D" uid="uid://cfy7o7nmyxiqj" path="res://Sprites/texts/verset4_fundal.png" id="12_biohv"]
-[ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="12_g7k05"]
-[ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="12_tsddh"]
 [ext_resource type="PackedScene" uid="uid://2b8uw558vv5v" path="res://3D assets/scenes/worm_2.tscn" id="13_g7k05"]
 [ext_resource type="PackedScene" uid="uid://vm85akor8ljr" path="res://3D assets/Objects/le_grass.tscn" id="13_qs6id"]
-[ext_resource type="PackedScene" uid="uid://b7s680gfnukc3" path="res://3D assets/Particles/lil_fire.tscn" id="16_f4ofy"]
 [ext_resource type="PackedScene" uid="uid://cvgv4qxofwhs8" path="res://3D assets/Objects/pavilionstuff/2petal.glb" id="16_h22pd"]
 [ext_resource type="Script" uid="uid://bh7f51h2s6t8e" path="res://Scripts/Puzzles3D/sun_3d.gd" id="16_nayp3"]
-[ext_resource type="PackedScene" uid="uid://dp1ao8e1wcrjm" path="res://3D assets/Particles/torch_fire.tscn" id="17_8eb3g"]
 [ext_resource type="PackedScene" uid="uid://cl5hnkep222m8" path="res://3D assets/Objects/pavilionstuff/3petal.glb" id="17_nayp3"]
 [ext_resource type="PackedScene" uid="uid://crxgl2qpr267" path="res://3D assets/Particles/blue_fire.tscn" id="18_h22pd"]
 [ext_resource type="PackedScene" uid="uid://ds2x63yagqssb" path="res://3D assets/Objects/pavilionstuff/4petal.glb" id="18_vs4jp"]
@@ -313,11 +309,10 @@ density = 0.0791
 density = 0.8
 emission = Color(0.5132331, 0.5132328, 0.5132329, 1)
 
-[node name="Garden" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("gates", "spawnpos", "player", "fantana")]
+[node name="Garden" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("gates", "spawnpos", "fantana")]
 script = ExtResource("1_lrqvg")
 gates = NodePath("Emperor3D/cem_gates")
 spawnpos = NodePath("garden_spawn")
-player = NodePath("")
 fantana = NodePath("Well")
 greenhouse_path = "res://Rooms/Greenhouse1.tscn"
 
@@ -975,14 +970,6 @@ libraries/ = SubResource("AnimationLibrary_jw885")
 [node name="SfxPlayer5" type="AudioStreamPlayer3D" parent="SfxPlayers" unique_id=1408212519]
 stream = ExtResource("11_jw885")
 
-[node name="InventoryUI" parent="." unique_id=629547533 instance=ExtResource("12_tsddh")]
-
-[node name="Grimoire" parent="InventoryUI" index="2" unique_id=178188831 node_paths=PackedStringArray("pages")]
-pages = []
-is_in_3d = true
-
-[node name="CardsDisplay" parent="." unique_id=2004390668 instance=ExtResource("12_g7k05")]
-
 [node name="worm2" parent="." unique_id=826826803 groups=["Interactables"] instance=ExtResource("13_g7k05")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5094466, 0, -0.07716179)
 
@@ -1131,60 +1118,6 @@ transform = Transform3D(0.33235842, 0, -0.2895513, 0, 0.837282, 0, 0.49464887, 0
 
 [node name="FireHazard" type="Node3D" parent="." unique_id=472021089]
 
-[node name="lil_fire" parent="FireHazard" unique_id=1152828423 instance=ExtResource("16_f4ofy")]
-transform = Transform3D(0.013722055, 0, 0, 0, 0.20348835, 0, 0, 0, 1, 52.40303, 6.35752, 20.340448)
-
-[node name="lil_fire2" parent="FireHazard" unique_id=2094955961 instance=ExtResource("16_f4ofy")]
-transform = Transform3D(0.013722055, 0, 0, 0, 0.20348835, 0, 0, 0, 1, 52.40303, 6.322379, 21.34029)
-
-[node name="lil_fire3" parent="FireHazard" unique_id=595598082 instance=ExtResource("16_f4ofy")]
-transform = Transform3D(0.013722055, 0, 0, 0, 0.20348835, 0, 0, 0, 1, 52.40303, 6.295784, 22.34293)
-
-[node name="lil_fire4" parent="FireHazard" unique_id=198341680 instance=ExtResource("16_f4ofy")]
-transform = Transform3D(0.013722055, 0, 0, 0, 0.20348835, 0, 0, 0, 1, 52.39487, 6.241532, 23.360691)
-
-[node name="TorchFire" parent="FireHazard" unique_id=324158462 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.129726, 8.367453, 16.723291)
-
-[node name="TorchFire2" parent="FireHazard" unique_id=1724779884 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.960459, 8.367453, 16.723291)
-
-[node name="TorchFire3" parent="FireHazard" unique_id=1933974214 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.83501, 8.367453, 16.723291)
-
-[node name="TorchFire4" parent="FireHazard" unique_id=1682157513 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.658066, 8.367453, 16.723291)
-
-[node name="TorchFire5" parent="FireHazard" unique_id=791265240 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.51702, 8.367453, 16.723291)
-
-[node name="TorchFire6" parent="FireHazard" unique_id=231346593 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.399357, 8.367453, 16.723291)
-
-[node name="TorchFire7" parent="FireHazard" unique_id=755830345 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.20369, 8.367453, 16.723291)
-
-[node name="TorchFire8" parent="FireHazard" unique_id=1724504578 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.129726, 8.367453, 26.832457)
-
-[node name="TorchFire9" parent="FireHazard" unique_id=1955747157 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.960459, 8.367453, 26.832457)
-
-[node name="TorchFire10" parent="FireHazard" unique_id=207210642 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.83501, 8.367453, 26.832457)
-
-[node name="TorchFire11" parent="FireHazard" unique_id=1513493848 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.658066, 8.367453, 26.832457)
-
-[node name="TorchFire12" parent="FireHazard" unique_id=1337067415 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.51702, 8.367453, 26.832457)
-
-[node name="TorchFire13" parent="FireHazard" unique_id=430250263 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.399357, 8.367453, 26.832457)
-
-[node name="TorchFire14" parent="FireHazard" unique_id=892209734 instance=ExtResource("17_8eb3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.20369, 8.367453, 26.832457)
-
 [node name="blue_fire" parent="FireHazard" unique_id=1873096153 instance=ExtResource("18_h22pd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.662386, 11.964373, -1.2369584)
 
@@ -1299,5 +1232,3 @@ transform = Transform3D(-5.9316733e-08, 0, -1, 0, 1, 0, 1.3570087, 0, -4.371139e
 
 [node name="holy" type="AudioStreamPlayer2D" parent="." unique_id=1570423330]
 stream = ExtResource("24_n7dl6")
-
-[editable path="InventoryUI"]
