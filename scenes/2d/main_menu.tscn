@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://cgy0sf6c5rwgt"]
 
-[ext_resource type="Script" uid="uid://pktjg68ny7sg" path="res://Scripts/UI scripts/main_menu.gd" id="1_7b3b2"]
+[ext_resource type="Script" path="res://Scripts/UI scripts/main_menu.gd" id="1_7b3b2"]
 [ext_resource type="Texture2D" uid="uid://rqsr6wlqrn22" path="res://UI/Menus/LE_MENU.png" id="2_7b3b2"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="3_7b3b2"]
 [ext_resource type="PackedScene" uid="uid://bhm5xkhsb3n7c" path="res://scenes/2d/options_panel.tscn" id="3_k62s8"]
 [ext_resource type="Texture2D" uid="uid://cbna3v0pgjne8" path="res://UI/Menus/playm-removebg-preview.png" id="4_cjo4x"]
-[ext_resource type="Texture2D" uid="uid://dd8sw6tye10if" path="res://UI/Menus/Untitled_design__3_-removebg-preview.png" id="5_welr4"]
 [ext_resource type="Texture2D" uid="uid://co0fr631rd113" path="res://UI/Menus/Untitled_design__2_-removebg-preview.png" id="6_nd5kf"]
 [ext_resource type="Texture2D" uid="uid://b5xo1y5foquqs" path="res://UI/Menus/Untitled_design__1_-removebg-preview.png" id="7_nq53s"]
 [ext_resource type="PackedScene" uid="uid://xjsowxpop2h6" path="res://UI/CinematicPlayer.tscn" id="9_7b3b2"]
@@ -16,14 +15,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u77uy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2qbj5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6sm0g"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4m701"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7b3b2"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oxbk4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cjo4x"]
 
@@ -88,33 +79,6 @@ texture = ExtResource("4_cjo4x")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Continue" type="Button" parent="MenuScreen/ButtonManager" unique_id=1065800829]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 31.925001
-anchor_top = 11.775001
-anchor_right = 37.5
-anchor_bottom = 13.200001
-offset_left = 88.0
-offset_top = 117.99997
-offset_right = 88.0
-offset_bottom = 118.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_6sm0g")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_4m701")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_7b3b2")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_oxbk4")
-script = ExtResource("3_7b3b2")
-
-[node name="TextureRect" type="TextureRect" parent="MenuScreen/ButtonManager/Continue" unique_id=650207959]
-layout_mode = 0
-offset_left = -19.0
-offset_top = -23.0
-offset_right = 244.0
-offset_bottom = 69.0
-texture = ExtResource("5_welr4")
-expand_mode = 1
-stretch_mode = 5
-
 [node name="Options" type="Button" parent="MenuScreen/ButtonManager" unique_id=625525947]
 layout_mode = 1
 anchors_preset = -1
@@ -123,9 +87,9 @@ anchor_top = 14.950001
 anchor_right = 37.45
 anchor_bottom = 16.675001
 offset_left = 91.0
-offset_top = 121.0
+offset_top = -29.0
 offset_right = 91.0
-offset_bottom = 120.99994
+offset_bottom = -29.000061
 theme_override_styles/normal = SubResource("StyleBoxEmpty_cjo4x")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_welr4")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_nd5kf")
@@ -148,10 +112,10 @@ anchor_left = 33.4
 anchor_top = 18.800001
 anchor_right = 36.375
 anchor_bottom = 20.525002
-offset_left = 85.0
-offset_top = 101.99994
-offset_right = 85.0
-offset_bottom = 101.99994
+offset_left = 75.0
+offset_top = -77.00006
+offset_right = 75.0
+offset_bottom = -77.00006
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nq53s")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_vb5xx")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_y04ss")
@@ -177,7 +141,6 @@ offset_top = -6.0
 intro_video = ExtResource("10_cjo4x")
 
 [connection signal="pressed" from="MenuScreen/ButtonManager/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="MenuScreen/ButtonManager/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="MenuScreen/ButtonManager/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MenuScreen/ButtonManager/Quit Game" to="." method="_on_quit_game_pressed"]
 [connection signal="cinematic_finished" from="CinematicPlayer" to="." method="_on_cinematic_player_cinematic_finished"]

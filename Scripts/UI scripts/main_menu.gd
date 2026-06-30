@@ -11,11 +11,11 @@ func _ready() -> void:
 	AudioManager.switch_to_2d()
 	#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	cinematic_player.hide()
-	if FileAccess.file_exists("user://SaveFile.tres") == false:
-		continue_button.disabled = true
-		continue_button.modulate.a = 0.5
-	else:
-		SaveManager.load_data()
+	#if FileAccess.file_exists("user://SaveFile.tres") == false:
+	#	continue_button.disabled = true
+	#	continue_button.modulate.a = 0.5
+	#else:
+	#SaveManager.load_data()
 	options_panel.visible = false
 
 func _on_start_pressed() -> void:
