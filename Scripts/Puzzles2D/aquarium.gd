@@ -53,8 +53,6 @@ func animate_zigzag(fish: Sprite2D, start_delay: float) -> void:
 		tween.tween_property(fish, "global_position", base_pos + Vector2(60, 0), 1.2)
 		tween.tween_property(fish, "global_position", base_pos, 1.2)
 		await tween.finished
-	
-	
 
 func animate_bubble(bubble: Sprite2D, start_delay: float) -> void:
 	await get_tree().create_timer(start_delay).timeout
@@ -107,3 +105,6 @@ func _on_gate_key_pressed() -> void:
 	gate_key.queue_free()
 	InventoryManager.add_item(InventoryManager.KEY)
 	PuzzleManager.has_gate_key = true
+	
+func _exit_tree() -> void:
+	PauseMenu.disable_puzzle_escape()

@@ -2,10 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b52n10npscye6" path="res://Scripts/3D scripts/mainroom.gd" id="1_j7t7n"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="1_w1mmj"]
-[ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_qe2jl"]
+[ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_qe2jl"]
 [ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="3_rfp5g"]
 [ext_resource type="PackedScene" uid="uid://d35qijl2l5jdx" path="res://3D assets/Illusion.blend" id="6_5k5vb"]
-[ext_resource type="PackedScene" uid="uid://b8x23qj21yxwb" path="res://Particles/Fire.tscn" id="9_lr5v6"]
 [ext_resource type="Script" uid="uid://5dn58dedj0g6" path="res://Scripts/Puzzles3D/moon_3d.gd" id="10_2vkj2"]
 [ext_resource type="PackedScene" uid="uid://ixxg5srbckg2" path="res://3D assets/luna.tscn" id="11_ntof2"]
 [ext_resource type="PackedScene" uid="uid://yvqu345dohrg" path="res://3D assets/scenes/secret_vitraliu.tscn" id="11_pchfi"]
@@ -28,7 +27,7 @@
 [ext_resource type="Resource" uid="uid://fxf623ngowdt" path="res://Scripts/Items/GreenPot.tres" id="23_v6s45"]
 [ext_resource type="Resource" uid="uid://dhkl5spggl2ln" path="res://Scripts/Items/BluePot.tres" id="24_yxx7e"]
 [ext_resource type="Resource" uid="uid://yvnkv23qvu5v" path="res://Scripts/Items/YellowPot.tres" id="25_lr5v6"]
-[ext_resource type="Script" uid="uid://c5jcpns81oxq3" path="res://Scripts/Puzzles3D/death_3d.gd" id="29_qe2jl"]
+[ext_resource type="Script" path="res://Scripts/Puzzles3D/death_3d.gd" id="29_qe2jl"]
 [ext_resource type="AudioStream" uid="uid://dtos2mplvjkri" path="res://Audio/SFX/zodiac_pressedt.wav" id="31_v6s45"]
 [ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="32_yxx7e"]
 [ext_resource type="AudioStream" uid="uid://djksd37gj7fx6" path="res://Audio/SFX/chest.wav" id="35_yh05a"]
@@ -54,6 +53,8 @@
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="50_cp2t3"]
 [ext_resource type="Script" uid="uid://1b7l3jg6ojfr" path="res://Scripts/3D scripts/text_areas.gd" id="51_yofqi"]
 [ext_resource type="PackedScene" uid="uid://bmxcwjriyydfi" path="res://UI/EndingChoice.tscn" id="53_e36nn"]
+[ext_resource type="PackedScene" uid="uid://xjsowxpop2h6" path="res://UI/CinematicPlayer.tscn" id="54_kfru1"]
+[ext_resource type="VideoStream" uid="uid://cf1tmfa5yi57r" path="res://Videos/Arcana_Intro_Final.ogv" id="55_fugsj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nq443"]
 
@@ -964,9 +965,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27523804, -0.1628418, -0.1
 shape = SubResource("BoxShape3D_v6s45")
 debug_color = Color(18.68087, 0, 6.28537, 1)
 
-[node name="Fire" parent="FirstRoom/Illusion" unique_id=134169400 instance=ExtResource("9_lr5v6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.718072, 0.99135303, -1.652811)
-
 [node name="secret_door" type="StaticBody3D" parent="FirstRoom/Illusion" unique_id=1371356322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.744363, 0, 13.400789)
 
@@ -1747,10 +1745,10 @@ transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 1.70
 
 [node name="TheWorld" parent="EndPart/bridge" unique_id=13138351 instance=ExtResource("48_cp2t3")]
 
-[node name="Plane_001" parent="EndPart/bridge/TheWorld" index="6" unique_id=1257105311]
+[node name="Plane_001" parent="EndPart/bridge/TheWorld" index="6" unique_id=836148226]
 transform = Transform3D(2.838862e-07, 0.5735762, -0.81915206, 0.9999999, -2.8212995e-07, 1.4901158e-07, -1.4563784e-07, -0.81915206, -0.57357615, -4.479083, 7.565024, 195.1427)
 
-[node name="Ozzy" parent="EndPart/bridge/TheWorld" index="7" unique_id=2081125263]
+[node name="Ozzy" parent="EndPart/bridge/TheWorld" index="7" unique_id=972512160]
 transform = Transform3D(-0.94795364, -0.3184087, 1.3918086e-08, 0, -4.371139e-08, -1, 0.31840873, -0.9479535, 4.1436365e-08, 5.714037, 7.7113485, 197.34108)
 
 [node name="black" parent="EndPart/bridge" unique_id=1868591190 instance=ExtResource("45_pnqj1")]
@@ -1900,12 +1898,22 @@ is_in_3d = true
 [node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("50_cp2t3")]
 
 [node name="EndingChoice" parent="CanvasLayer" unique_id=71411889 node_paths=PackedStringArray("inventory_ui", "cards_display", "ozzy_mesh", "mirror_mesh_1", "mirror_mesh_2", "mirror_mesh_3") instance=ExtResource("53_e36nn")]
+visible = false
 inventory_ui = NodePath("../InventoryUI")
 cards_display = NodePath("../CardsDisplay")
 ozzy_mesh = NodePath("../../EndPart/bridge/TheWorld/Ozzy")
 mirror_mesh_1 = NodePath("../../EndPart/bridge/TheWorld/Plane_001")
 mirror_mesh_2 = NodePath("../../EndPart/bridge/TheWorld/Plane_012")
 mirror_mesh_3 = NodePath("../../EndPart/bridge/TheWorld/Plane_011")
+
+[node name="CinematicPlayer" parent="CanvasLayer" unique_id=333442951 instance=ExtResource("54_kfru1")]
+visible = false
+z_index = 1
+offset_left = -5.0
+offset_top = -6.0
+intro_video = ExtResource("55_fugsj")
+[node name="TorchFire" parent="." unique_id=1961308349 instance=ExtResource("41_nq443")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.754746, 1.6197579, -5.4858694)
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
 [connection signal="body_entered" from="FirstRoom/actual_mirror/InteractableArea3D" to="." method="_on_d_mirror_body_entered"]

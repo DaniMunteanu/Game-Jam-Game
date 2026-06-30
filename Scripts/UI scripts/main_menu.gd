@@ -1,21 +1,22 @@
 extends CanvasLayer
 
 @onready var options_panel = $OptionsPanel
-@onready var continue_button: Button = $MenuScreen/ButtonManager/Continue
+#@onready var continue_button: Button = $MenuScreen/ButtonManager/Continue
 @onready var cinematic_player: CinematicPlayer = $CinematicPlayer
 
 @export var start_scene_path : String
 @export var options_menu_path : String
 
 func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	AudioManager.switch_to_2d()
 	#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	cinematic_player.hide()
-	if FileAccess.file_exists("user://SaveFile.tres") == false:
-		continue_button.disabled = true
-		continue_button.modulate.a = 0.5
-	else:
-		SaveManager.load_data()
+	#if FileAccess.file_exists("user://SaveFile.tres") == false:
+	#	continue_button.disabled = true
+	#	continue_button.modulate.a = 0.5
+	#else:
+	#SaveManager.load_data()
 	options_panel.visible = false
 
 func _on_start_pressed() -> void:

@@ -47,10 +47,19 @@ func play_outro():
 	play()
 	skip.show()
 	
+	can_skip = true
+	
 	animation_player.play("fade_to_normal")
 	await animation_player.animation_finished
 	
-	can_skip = true
+func only_fade():
+	animation_player.play("fade_to_black")
+	await animation_player.animation_finished
+	
+	#animation_player.play("fade_to_normal")
+	#await animation_player.animation_finished
+	
+	cinematic_finished.emit()
 
 func _on_skip_pressed() -> void:
 	can_skip = false

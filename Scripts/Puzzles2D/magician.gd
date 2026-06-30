@@ -94,3 +94,4 @@ func on_try_snapping(painting_index: int):
 
 func _exit_tree() -> void:
 	TextManager.cancel()
+	PauseMenu.disable_puzzle_escape()
