@@ -10,4 +10,6 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		await maus_door.anim_player.animation_finished
 		print("now delete the garden")
 		garden_level.queue_free()
+		get_node("bridge").process_mode = Node.PROCESS_MODE_INHERIT
 		trans_area.queue_free()
+		
