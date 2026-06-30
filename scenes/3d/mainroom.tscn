@@ -44,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://byo6ymx2ral48" path="res://3D assets/scenes/mausoleum_door.tscn" id="41_rmfpj"]
 [ext_resource type="VoxelGIData" uid="uid://dtuxbiceo4mgb" path="res://3D assets/light bakes/mainroom.VoxelGI_data.res" id="42_0gmuw"]
 [ext_resource type="PackedScene" uid="uid://j27wrkptprcf" path="res://3D assets/scenes/tower scenes/tower_door.tscn" id="42_qe2jl"]
+[ext_resource type="PackedScene" uid="uid://cte8lov0ida2q" path="res://Particles/black.tscn" id="45_pnqj1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nq443"]
 
@@ -1384,6 +1385,9 @@ transform = Transform3D(0.31438974, 0, -1.4007226, 0, 1.4355711, 0, 1.4007226, 0
 transform = Transform3D(-0.30832303, -0.093308896, -1.6590155, -0.5655845, 1.5924746, 0.015545573, 1.5624194, 0.5580513, -0.32175726, 31.311138, -1.8952084, -14.130026)
 shape = SubResource("BoxShape3D_fugsj")
 debug_color = Color(18.892157, 18.892157, 18.892157, 1)
+
+[node name="black" parent="." unique_id=1868591190 instance=ExtResource("45_pnqj1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.631393, -19.99491, 29.819283)
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
 [connection signal="body_entered" from="FirstRoom/actual_mirror/InteractableArea3D" to="." method="_on_d_mirror_body_entered"]
