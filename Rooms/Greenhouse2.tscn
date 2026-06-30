@@ -197,8 +197,8 @@ texture = ExtResource("11_dcyah")
 stream = ExtResource("11_hsk72")
 
 [node name="Pots" type="Sprite2D" parent="." unique_id=35528705]
-position = Vector2(225, 907)
-scale = Vector2(0.39983028, 0.46925217)
+position = Vector2(267, 922)
+scale = Vector2(0.39983028, 0.4555097)
 texture = ExtResource("12_lc8j6")
 
 [node name="Roaba" type="Sprite2D" parent="." unique_id=11841074]
