@@ -83,7 +83,7 @@ size = Vector3(1, 4.3706055, 15.490967)
 size = Vector3(1, 3.1938477, 33.635925)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yr1ht"]
-size = Vector3(2.3646321, 0.10811806, 2.253059)
+size = Vector3(3.2941325, 0.10811806, 2.253059)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jdxrh"]
 size = Vector3(2.8633451, 0.20824742, 2.3482807)
@@ -582,7 +582,7 @@ debug_color = Color(18.733334, 14.601878, 16.62041, 1)
 transform = Transform3D(0.31438974, 0, -1.4007226, 0, 1.4355711, 0, 1.4007226, 0, 0.31438974, -8.257132, 4.0251503, -17.696024)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="garden/scari2" unique_id=1300088702]
-transform = Transform3D(-0.30832303, -0.093308896, -1.6590155, -0.5655845, 1.5924746, 0.015545573, 1.5624194, 0.5580513, -0.32175726, 31.311138, -1.8952084, -14.130026)
+transform = Transform3D(-0.31645155, -0.06745899, -1.6587377, -0.44758034, 1.6295428, 0.019116873, 1.5986347, 0.44288042, -0.32299614, 31.164066, -2.1032214, -13.387062)
 shape = SubResource("BoxShape3D_yr1ht")
 debug_color = Color(18.892157, 18.892157, 18.892157, 1)
 
