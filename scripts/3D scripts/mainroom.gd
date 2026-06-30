@@ -161,7 +161,7 @@ func _on_end_scene_body_entered(body: Node3D) -> void:
 		if is_world_ending:
 			za_warudo.world_ending()
 			await get_tree().create_timer(8.5).timeout
-			
+			black_fire.get_node("AnimationPlayer").play("fade_out")
 			final_anim_player.play("accept_fate")
 			await final_anim_player.animation_finished
 			za_warudo.chain_up()

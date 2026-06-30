@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
 [ext_resource type="Script" uid="uid://b80xsyas7fj1" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
-[ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
-[ext_resource type="PackedScene" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
+[ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
+[ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
 [ext_resource type="PackedScene" uid="uid://bse2py88bpr6s" path="res://3D assets/scenes/cem_gates.tscn" id="4_ulxv8"]
 [ext_resource type="Texture2D" uid="uid://55ttssrk811f" path="res://Sprites/Background/back-side/sera perete sah.png" id="5_yv1t8"]
 [ext_resource type="PackedScene" uid="uid://by1tm21k2oglb" path="res://3D assets/Particles/le_water.tscn" id="6_ktj0q"]
@@ -299,8 +299,9 @@ _data = {
 &"dissolve": SubResource("Animation_r2r2o")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_umu6e"]
-size = Vector3(4.2180634, 4.4575195, 4.0126953)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_agc57"]
+height = 2.852295
+radius = 1.9990234
 
 [sub_resource type="FogMaterial" id="FogMaterial_gm1ln"]
 density = 0.0791
@@ -1149,8 +1150,9 @@ script = ExtResource("3_ngcjk")
 object = NodePath(".")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sun3D/StaticBody3D" unique_id=773851458]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.088818, 8.327341, -2.8641415)
-shape = SubResource("BoxShape3D_umu6e")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.022587, 8.213205, -2.7714028)
+shape = SubResource("CylinderShape3D_agc57")
+debug_color = Color(1, 1, 1, 1)
 
 [node name="2petal" parent="Sun3D" unique_id=1124647803 instance=ExtResource("16_h22pd")]
 visible = false
