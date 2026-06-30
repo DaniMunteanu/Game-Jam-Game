@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://brsr4q1d3x0sj"]
+
+[ext_resource type="PackedScene" uid="uid://dtgawfghlrdhe" path="res://3D assets/Objects/bridge of shadows/TheWorld.glb" id="1_0o72u"]
+[ext_resource type="Script" uid="uid://y4hg2afj1lbk" path="res://Scripts/3D scripts/the_world.gd" id="2_5useo"]
+
+[node name="TheWorld" unique_id=13138351 node_paths=PackedStringArray("anim_player") instance=ExtResource("1_0o72u")]
+script = ExtResource("2_5useo")
+anim_player = NodePath("AnimationPlayer")
+
+[node name="Plane_011" parent="." index="4" unique_id=2101844090]
+transform = Transform3D(0.81915474, 0.5735725, -0.0004428637, 2.7720622e-08, 0.0007720748, 0.9999997, 0.5735727, -0.8191545, 0.0006324328, -4.4772954, 7.563098, 195.27374)
+
+[node name="Plane_012" parent="." index="5" unique_id=2017521712]
+transform = Transform3D(9.2129085e-08, 0.57357633, 0.8191521, -1, 7.54979e-08, 5.9604645e-08, -2.7656455e-08, -0.8191521, 0.57357633, -4.493663, 7.5611587, 195.31696)
+
+[node name="Plane_001" parent="." index="6" unique_id=1257105311]
+transform = Transform3D(-6.771644e-08, 0.5735763, -0.8191522, 1, 7.54979e-08, -2.9802322e-08, 4.4750365e-08, -0.8191522, -0.5735763, -4.479083, 7.565024, 195.1427)
+
+[node name="Ozzy" parent="." index="7" unique_id=2081125263]
+transform = Transform3D(-0.9479535, -0.3184087, 1.3918086e-08, 0, -4.371139e-08, -1, 0.3184087, -0.9479535, 4.1436365e-08, 5.714037, 7.7113485, 197.34108)
