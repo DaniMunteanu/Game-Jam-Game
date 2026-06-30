@@ -89,13 +89,11 @@ grow_vertical = 1
 required_item = ExtResource("9_8skb0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1927818754]
-visible = false
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("5_kupa2")]
 mouse_filter = 2
 
 [node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("10_m5v8r")]
-visible = false
 
 [node name="Wormh" type="Sprite2D" parent="." unique_id=354003534]
 visible = false
