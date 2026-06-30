@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b52n10npscye6" path="res://Scripts/3D scripts/mainroom.gd" id="1_j7t7n"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="1_w1mmj"]
-[ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_qe2jl"]
+[ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_qe2jl"]
 [ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="3_rfp5g"]
 [ext_resource type="PackedScene" uid="uid://d35qijl2l5jdx" path="res://3D assets/Illusion.blend" id="6_5k5vb"]
 [ext_resource type="Script" uid="uid://5dn58dedj0g6" path="res://Scripts/Puzzles3D/moon_3d.gd" id="10_2vkj2"]
@@ -27,7 +27,7 @@
 [ext_resource type="Resource" uid="uid://fxf623ngowdt" path="res://Scripts/Items/GreenPot.tres" id="23_v6s45"]
 [ext_resource type="Resource" uid="uid://dhkl5spggl2ln" path="res://Scripts/Items/BluePot.tres" id="24_yxx7e"]
 [ext_resource type="Resource" uid="uid://yvnkv23qvu5v" path="res://Scripts/Items/YellowPot.tres" id="25_lr5v6"]
-[ext_resource type="Script" path="res://Scripts/Puzzles3D/death_3d.gd" id="29_qe2jl"]
+[ext_resource type="Script" uid="uid://c5jcpns81oxq3" path="res://Scripts/Puzzles3D/death_3d.gd" id="29_qe2jl"]
 [ext_resource type="AudioStream" uid="uid://dtos2mplvjkri" path="res://Audio/SFX/zodiac_pressedt.wav" id="31_v6s45"]
 [ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="32_yxx7e"]
 [ext_resource type="AudioStream" uid="uid://djksd37gj7fx6" path="res://Audio/SFX/chest.wav" id="35_yh05a"]
@@ -817,6 +817,9 @@ size = Vector3(19.6, 10.900001, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vtrmx"]
 size = Vector3(19.300001, 10.5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3662s"]
+size = Vector3(16.7, 9.2, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fugsj"]
 size = Vector3(3.72736, 0.10811806, 2.253059)
@@ -1745,10 +1748,10 @@ transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 1.70
 
 [node name="TheWorld" parent="EndPart/bridge" unique_id=13138351 instance=ExtResource("48_cp2t3")]
 
-[node name="Plane_001" parent="EndPart/bridge/TheWorld" index="6" unique_id=836148226]
+[node name="Plane_001" parent="EndPart/bridge/TheWorld" index="6" unique_id=1257105311]
 transform = Transform3D(2.838862e-07, 0.5735762, -0.81915206, 0.9999999, -2.8212995e-07, 1.4901158e-07, -1.4563784e-07, -0.81915206, -0.57357615, -4.479083, 7.565024, 195.1427)
 
-[node name="Ozzy" parent="EndPart/bridge/TheWorld" index="7" unique_id=972512160]
+[node name="Ozzy" parent="EndPart/bridge/TheWorld" index="7" unique_id=2081125263]
 transform = Transform3D(-0.94795364, -0.3184087, 1.3918086e-08, 0, -4.371139e-08, -1, 0.31840873, -0.9479535, 4.1436365e-08, 5.714037, 7.7113485, 197.34108)
 
 [node name="black" parent="EndPart/bridge" unique_id=1868591190 instance=ExtResource("45_pnqj1")]
@@ -1878,6 +1881,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 4.75, 0)
 shape = SubResource("BoxShape3D_vtrmx")
 debug_color = Color(1, 1, 1, 1)
 
+[node name="actually_first_area" type="Area3D" parent="EndPart/bridge/text_areas" unique_id=1152725944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4000168, 0, 31.400007)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EndPart/bridge/text_areas/actually_first_area" unique_id=222498481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34999847, 4.1000004, -3.8146973e-06)
+shape = SubResource("BoxShape3D_3662s")
+debug_color = Color(1, 1, 1, 1)
+
 [node name="scari2" type="StaticBody3D" parent="EndPart" unique_id=996384389]
 transform = Transform3D(0.31438974, 0, -1.4007226, 0, 1.4355711, 0, 1.4007226, 0, 0.31438974, 2.228526, -20.487019, 23.721004)
 
@@ -1912,6 +1923,7 @@ z_index = 1
 offset_left = -5.0
 offset_top = -6.0
 intro_video = ExtResource("55_fugsj")
+
 [node name="TorchFire" parent="." unique_id=1961308349 instance=ExtResource("41_nq443")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.754746, 1.6197579, -5.4858694)
 
@@ -1927,6 +1939,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.754746, 1.6197579, -5.4858
 [connection signal="body_entered" from="EndPart/bridge/text_areas/third_area" to="EndPart/bridge/text_areas" method="_on_third_area_body_entered"]
 [connection signal="body_entered" from="EndPart/bridge/text_areas/fourth_area" to="EndPart/bridge/text_areas" method="_on_fourth_area_body_entered"]
 [connection signal="body_entered" from="EndPart/bridge/text_areas/fifth_area" to="EndPart/bridge/text_areas" method="_on_fifth_area_body_entered"]
+[connection signal="body_entered" from="EndPart/bridge/text_areas/actually_first_area" to="EndPart/bridge/text_areas" method="_on_actually_first_area_body_entered"]
 
 [editable path="EndPart/bridge/TheWorld"]
 [editable path="CanvasLayer/InventoryUI"]

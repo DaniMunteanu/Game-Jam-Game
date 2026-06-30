@@ -2,8 +2,26 @@
 
 [ext_resource type="Script" uid="uid://fjahcu1k05wq" path="res://Scripts/UI scripts/ending_choice.gd" id="1_8e2do"]
 
+[sub_resource type="Theme" id="Theme_jvhdj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7yqg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjsly"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [sub_resource type="LabelSettings" id="LabelSettings_ragau"]
 font_size = 100
+outline_size = 2
+outline_color = Color(0.4745098, 0.21176471, 0.49803922, 1)
+shadow_size = 4
+shadow_color = Color(0.8038538, 0.41906887, 0.8098751, 0.5568628)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0un2t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ncmh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="EndingChoice" type="Control" unique_id=71411889]
 process_mode = 3
@@ -28,6 +46,9 @@ offset_right = -89.0
 offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_jvhdj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_f7yqg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gjsly")
 
 [node name="Label" type="Label" parent="LeftEndingButton" unique_id=1137879547]
 layout_mode = 1
@@ -56,6 +77,8 @@ offset_right = 1060.0
 offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_0un2t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ncmh")
 
 [node name="Label" type="Label" parent="RightEndingButton" unique_id=637284777]
 layout_mode = 1

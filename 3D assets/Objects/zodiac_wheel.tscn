@@ -196,10 +196,10 @@ tracks/3/path = NodePath("The Star:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(9.927379, 5.718455, -1.1605314), Vector3(8.955006, 5.718455, -1.1605314), Vector3(8.955006, 5.718455, -1.1605314), Vector3(8.9754715, 0.22454184, -1.1605314)]
+"values": [Vector3(10.081425, 4.0316987, -1.1605314)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -208,10 +208,10 @@ tracks/4/path = NodePath("The Star/StaticBody3D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
+"values": []
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -220,10 +220,10 @@ tracks/5/path = NodePath("The Star/StaticBody3D/CollisionShape3D:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
+"values": []
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -268,10 +268,10 @@ tracks/9/path = NodePath("The Star:rotation")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0.0009999999, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 0,
-"values": [Vector3(1.5707964, 1.5707964, 0), Vector3(1.5707964, 1.5707964, 0), Vector3(1.5707964, 1.5707964, 0), Vector3(3.3716005e-15, 1.5707964, -4.3711392e-08)]
+"values": []
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -280,10 +280,10 @@ tracks/10/path = NodePath("The Star/StaticBody3D:rotation")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0.0009999999, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
+"values": []
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -292,10 +292,10 @@ tracks/11/path = NodePath("The Star/StaticBody3D/CollisionShape3D:rotation")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0.0009999999, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
+"values": []
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bvugf"]
@@ -309,11 +309,12 @@ script = ExtResource("2_gxnlk")
 anim_player = NodePath("AnimationPlayer")
 star_card = NodePath("The Star")
 
-[node name="aries_sign" parent="." index="2" unique_id=85423786]
+[node name="aries_sign" parent="." index="2" unique_id=1320164347]
 transform = Transform3D(-5.6873226e-08, -1, -1.1059097e-07, 0.64114773, 4.8405308e-08, -0.76741743, 0.7674175, -1.1455066e-07, 0.6411477, 9.872185, 5.814583, -1.142973)
 
-[node name="The Star" parent="." index="3" unique_id=237058659]
+[node name="The Star" parent="." index="3" unique_id=119193432]
 transform = Transform3D(-2.3029722e-08, 0.5268586, -2.3029722e-08, 0, -2.3029722e-08, -0.5268586, -0.5268586, -2.3029722e-08, 1.0066611e-15, 9.927379, 5.718455, -1.1605314)
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4" unique_id=1560217999]
 libraries/ = SubResource("AnimationLibrary_bvugf")
