@@ -108,6 +108,7 @@ offset_left = 1043.0
 offset_top = 498.0
 offset_right = 1216.0
 offset_bottom = 626.0
+disabled = true
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/Grimoire" unique_id=595193169]
 layout_mode = 0

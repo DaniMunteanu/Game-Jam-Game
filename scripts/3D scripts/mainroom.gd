@@ -35,6 +35,11 @@ var is_world_ending : bool = false
 @export var bridge_cols : StaticBody3D
 const GARDEN_SPEED : float = 5.0
 
+@onready var footstep_zone_1: Area3D = $footstep_zone1
+@onready var footstep_zone_2: Area3D = $footstep_zone2
+@onready var concrete_2: AudioStreamPlayer = $Concrete2
+@onready var dirt_walk_4: AudioStreamPlayer = $DirtWalk4
+	
 @export var ending_choice: EndingChoice
 @onready var cinematic_player: CinematicPlayer = $CanvasLayer/CinematicPlayer
 
@@ -65,12 +70,19 @@ func _ready() -> void:
 	#AudioManager.switch_to_3d()
 	dissolve.visible = false
 	print(mirror.area.can_interact)
+	
+	if footstep_zone_1:
+		footstep_zone_1.body_entered.connect(_on_footstep_zone_entered.bind(concrete_2))
+	if footstep_zone_2:
+		footstep_zone_2.body_entered.connect(_on_footstep_zone_entered.bind(dirt_walk_4))
+		
 	#aici ne uitam daca venim din garden si stergem tot ce era din mainroom
 	if PuzzleManager.came_from_greenhouse:
 		PuzzleManager.came_from_greenhouse = false
 		player.global_position = garden_spawnpos.position
 		garden_level.visible = true
 		player.speed = GARDEN_SPEED
+		player.set_footstep_sound(player.footstep_sound_outdoor)
 		if room_level:
 			room_level.queue_free()
 		if tower:
@@ -92,6 +104,11 @@ func _ready() -> void:
 	if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.EMPEROR] and PuzzleManager.complete_puzzles[PuzzleManager.puzzles.SUN]:
 		if !maus_door.is_open:
 			maus_door.open()
+
+func _on_footstep_zone_entered(body: Node3D, sound: AudioStream) -> void:
+	if body is not CharacterBody3D:
+		return
+	player.set_footstep_sound(sound)
 	
 func _set_grass_visible(visible: bool) -> void:
 	if not garden_level:
@@ -133,6 +150,7 @@ func _on_tower_delete_body_entered(body: Node3D) -> void:
 	garden_level.visible = true
 	_set_grass_visible(true)
 	player.speed = GARDEN_SPEED
+	player.set_footstep_sound(player.footstep_sound_outdoor)
 	if room_level:
 		room_level.queue_free()
 	if tower:
