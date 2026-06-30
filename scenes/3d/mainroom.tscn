@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://b52n10npscye6" path="res://Scripts/3D scripts/mainroom.gd" id="1_j7t7n"]
 [ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="1_w1mmj"]
-[ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_qe2jl"]
-[ext_resource type="PackedScene" path="res://scenes/3d/interactable_area_3d.tscn" id="3_rfp5g"]
+[ext_resource type="Script" uid="uid://3hq0fuvsjl70" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_qe2jl"]
+[ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="3_rfp5g"]
 [ext_resource type="PackedScene" uid="uid://d35qijl2l5jdx" path="res://3D assets/Illusion.blend" id="6_5k5vb"]
 [ext_resource type="PackedScene" uid="uid://b8x23qj21yxwb" path="res://Particles/Fire.tscn" id="9_lr5v6"]
 [ext_resource type="Script" uid="uid://5dn58dedj0g6" path="res://Scripts/Puzzles3D/moon_3d.gd" id="10_2vkj2"]
-[ext_resource type="PackedScene" path="res://3D assets/luna.tscn" id="11_ntof2"]
+[ext_resource type="PackedScene" uid="uid://ixxg5srbckg2" path="res://3D assets/luna.tscn" id="11_ntof2"]
 [ext_resource type="PackedScene" uid="uid://yvqu345dohrg" path="res://3D assets/scenes/secret_vitraliu.tscn" id="11_pchfi"]
 [ext_resource type="Script" uid="uid://c1srst7838qj0" path="res://Scripts/Puzzles3D/star_3d.gd" id="12_vl5l8"]
 [ext_resource type="Script" uid="uid://0htjwty3extj" path="res://Scripts/Puzzles3D/temperance_3d.gd" id="13_gnvy8"]
@@ -48,6 +48,7 @@
 [ext_resource type="PackedScene" uid="uid://c8un3vhi7aom5" path="res://3D assets/Objects/mausoleum stuff/candles.glb" id="44_aso34"]
 [ext_resource type="PackedScene" uid="uid://b7s680gfnukc3" path="res://3D assets/Particles/lil_fire.tscn" id="44_v5abu"]
 [ext_resource type="PackedScene" uid="uid://cte8lov0ida2q" path="res://Particles/black.tscn" id="45_pnqj1"]
+[ext_resource type="PackedScene" uid="uid://brsr4q1d3x0sj" path="res://3D assets/Objects/bridge of shadows/the_world.tscn" id="48_cp2t3"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="49_hdeoa"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="50_cp2t3"]
 
@@ -502,10 +503,16 @@ tracks/0/keys = {
 "values": [0.0, 1.0]
 }
 
+[sub_resource type="Animation" id="Animation_agc57"]
+resource_name = "final_cutscene"
+length = 3.0000000000000004
+step = 0.5
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pchfi"]
 _data = {
 &"RESET": SubResource("Animation_iwjsq"),
-&"dissolve": SubResource("Animation_r2r2o")
+&"dissolve": SubResource("Animation_r2r2o"),
+&"final_cutscene": SubResource("Animation_agc57")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pchfi"]
@@ -571,10 +578,231 @@ size = Vector3(31.6, 1.3000001, 12.5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_13qdw"]
 size = Vector3(1, 10.400001, 12.1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_b1lj4"]
+size = Vector3(17.2, 8.3, 1)
+
+[sub_resource type="Animation" id="Animation_cp2t3"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cine_cam:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.7000008, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cine_cam:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(4.42, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("cine_cam:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(176.40001, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("cine_cam:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cine_cam:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(3.1415925, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("cine_cam:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_yofqi"]
+resource_name = "accept_fate"
+length = 8.0
+step = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cine_cam:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(4.000004, -0.25, 0, 0.25, 0, 7.500004, -0.33333334, -0.5833334, 0, 0),
+"times": PackedFloat32Array(0, 4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cine_cam:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(6.8199997, -0.25, 0, 0.25, 0, 6.8199997, -0.33333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("cine_cam:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(189.10002, -0.25, 0, 0.25, 0, 195.30002, -0.33333334, -1.0333328, 0, 0),
+"times": PackedFloat32Array(0, 4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("cine_cam:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 2, 0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.22165681, -0.16666667, 0.040759724, 0.16666667, -0.040759724, -0.48911667, -0.33333334, 0.08151945, 0, 0, -0.4886922, -0.16666667, -0.054451674, 0.16666667, 0.054451674, 0.16430344, -0.16499996, -0.108903356, 0, 0, 0.16430345, -0.33333334, -2.483527e-09, 0, 0),
+"times": PackedFloat32Array(0, 2, 4, 5, 6, 8)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cine_cam:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 2, 0, 2),
+"points": PackedFloat32Array(2.7925267, -0.25, 0, 0.25, 0, 2.7698376, -0.16666667, 0.0040664477, 0.16666667, -0.0040664477, 2.7437294, -0.33333334, 0.008132895, 0, 0, 2.7436576, -0.16666667, -0.0036397974, 0.16666667, 0.0036397974, 2.787407, -0.16499996, -0.007279595, 0, 0, 0.34394604, -0.33333334, 0.4072435, 0, 0),
+"times": PackedFloat32Array(0, 2, 4, 5, 6, 8)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("cine_cam:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 2, 0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, -0.016246445, 0.16666667, 0.016246445, 0.19495735, -0.33333334, -0.03249289, 0, 0, 0.19547687, -0.16666667, 0.021227833, 0.16666667, -0.021227833, -0.059776627, -0.16499996, 0.042455662, 0, 0, -0.059776623, -0.33333334, -6.2088173e-10, 0, 0),
+"times": PackedFloat32Array(0, 2, 4, 5, 6, 8)
+}
+
+[sub_resource type="Animation" id="Animation_e36nn"]
+resource_name = "final_scene"
+length = 5.0
+step = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cine_cam:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1.7000008, -0.25, 0, 0.25, 0, 4.000004, -0.75, -0.38333386, 0, 0),
+"times": PackedFloat32Array(0.5, 5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cine_cam:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(4.42, -0.25, 0, 0.25, 0, 6.8199997, -0.75, -0.39999992, 0, 0),
+"times": PackedFloat32Array(0.5, 5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("cine_cam:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(176.40001, -0.25, 0, 0.25, 0, 189.10002, -0.75, -2.1166687, 0, 0),
+"times": PackedFloat32Array(0.5, 5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("cine_cam:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.75, 0, 0, 0),
+"times": PackedFloat32Array(0.5, 5)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cine_cam:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(3.1415925, -0.25, 0, 0.25, 0, 2.7925267, -0.75, 0.058177628, 0, 0),
+"times": PackedFloat32Array(0.5, 5)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("cine_cam:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.75, 0, 0, 0),
+"times": PackedFloat32Array(0.5, 5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yofqi"]
+_data = {
+&"RESET": SubResource("Animation_cp2t3"),
+&"accept_fate": SubResource("Animation_yofqi"),
+&"final_scene": SubResource("Animation_e36nn")
+}
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_fugsj"]
 size = Vector3(3.72736, 0.10811806, 2.253059)
 
-[node name="Mainroom" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("spawnpos", "player", "mirror", "tower_door", "zodiac_wheel", "zoom_camera", "secret_door", "room_level", "garden_level", "tower", "tower_delete", "garden_spawnpos", "maus_door") groups=["Character"]]
+[node name="Mainroom" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("spawnpos", "player", "mirror", "tower_door", "zodiac_wheel", "zoom_camera", "secret_door", "room_level", "garden_level", "tower", "tower_delete", "garden_spawnpos", "maus_door", "cine_cam", "cutscene_start_pos", "final_anim_player", "za_warudo") groups=["Character"]]
 script = ExtResource("1_j7t7n")
 spawnpos = NodePath("MirrorSpawnPos")
 player = NodePath("Player")
@@ -591,6 +819,10 @@ tower_delete = NodePath("tower_delete")
 garden_spawnpos = NodePath("Marker3D")
 grass_node_names = Array[String](["Le_Grass20", "Le_Grass21", "Le_Grass22", "Le_Grass24", "Le_Grass26", "Le_Grass25"])
 maus_door = NodePath("EndPart/Judgement3D/mausoleum_door")
+cine_cam = NodePath("EndPart/bridge/cine_cam")
+cutscene_start_pos = NodePath("EndPart/bridge/cutscene_start")
+final_anim_player = NodePath("EndPart/bridge/AnimationPlayer")
+za_warudo = NodePath("EndPart/bridge/TheWorld")
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="." unique_id=1564272341]
 environment = SubResource("Environment_qe2jl")
@@ -1487,7 +1719,49 @@ debug_color = Color(1, 1, 1, 1)
 
 [node name="bridge" parent="EndPart" unique_id=1926463764 instance=ExtResource("41_0gmuw")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 59.8, -24.77, 61.6)
+
+[node name="cutscene_start" type="Marker3D" parent="EndPart/bridge" unique_id=1506977481]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 1.7000008, 4.42, 176.1)
+
+[node name="TheWorld" parent="EndPart/bridge" unique_id=13138351 instance=ExtResource("48_cp2t3")]
+
+[node name="Plane_001" parent="EndPart/bridge/TheWorld" index="6" unique_id=1257105311]
+transform = Transform3D(2.838862e-07, 0.5735762, -0.81915206, 0.9999999, -2.8212995e-07, 1.4901158e-07, -1.4563784e-07, -0.81915206, -0.57357615, -4.479083, 7.565024, 195.1427)
+
+[node name="Ozzy" parent="EndPart/bridge/TheWorld" index="7" unique_id=2081125263]
+transform = Transform3D(-0.94795364, -0.3184087, 1.3918086e-08, 0, -4.371139e-08, -1, 0.31840873, -0.9479535, 4.1436365e-08, 5.714037, 7.7113485, 197.34108)
+
+[node name="black" parent="EndPart/bridge" unique_id=1868591190 instance=ExtResource("45_pnqj1")]
+transform = Transform3D(0.47, 0, 0, 0, 0.47, 0, 0, 0, 0.47, 5.5000114, 3.6000004, 196.9)
 visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="EndPart/bridge" unique_id=709465934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2999687, 8.799999, 193.5)
+light_energy = 5.497
+light_volumetric_fog_energy = 3.32
+omni_range = 7.3
+
+[node name="SpotLight3D" type="SpotLight3D" parent="EndPart/bridge" unique_id=1207798046]
+transform = Transform3D(0.9396927, -4.371139e-08, 0.34202012, -0.34202012, -4.3711392e-08, 0.9396927, -2.6125095e-08, -1, -5.602545e-08, 6.3000145, 10.900002, 196.7)
+light_color = Color(0.83340406, 0.3576819, 0.5336474, 1)
+light_energy = 20.0
+light_volumetric_fog_energy = 4.209
+spot_range = 7.0
+spot_angle = 43.79613
+
+[node name="end_scene" type="Area3D" parent="EndPart/bridge" unique_id=1561710027]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6293945e-06, 0, 176.40001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EndPart/bridge/end_scene" unique_id=256898883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4000015, 4.950001, 0)
+shape = SubResource("BoxShape3D_b1lj4")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="cine_cam" type="Camera3D" parent="EndPart/bridge" unique_id=2026317600]
+transform = Transform3D(-1, 0, 1.5099579e-07, 0, 1, 0, -1.509958e-07, 0, -0.9999999, 1.7000008, 4.42, 176.40001)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EndPart/bridge" unique_id=300880804]
+libraries/ = SubResource("AnimationLibrary_yofqi")
 
 [node name="scari2" type="StaticBody3D" parent="EndPart" unique_id=996384389]
 transform = Transform3D(0.31438974, 0, -1.4007226, 0, 1.4355711, 0, 1.4007226, 0, 0.31438974, 2.228526, -20.487019, 23.721004)
@@ -1496,9 +1770,6 @@ transform = Transform3D(0.31438974, 0, -1.4007226, 0, 1.4355711, 0, 1.4007226, 0
 transform = Transform3D(-0.32207692, -0.04401405, -1.6584425, -0.34055108, 1.6551841, 0.022208778, 1.6236979, 0.33842468, -0.32431042, 31.091688, -2.1272507, -13.023698)
 shape = SubResource("BoxShape3D_fugsj")
 debug_color = Color(18.892157, 18.892157, 18.892157, 1)
-
-[node name="black" parent="." unique_id=1868591190 instance=ExtResource("45_pnqj1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.631393, -19.99491, 29.819283)
 
 [node name="InventoryUI" parent="." unique_id=629547533 instance=ExtResource("49_hdeoa")]
 
@@ -1514,5 +1785,7 @@ is_in_3d = true
 [connection signal="body_entered" from="tower_delete" to="." method="_on_tower_delete_body_entered"]
 [connection signal="open_mausoleum" from="GardenLevel/Garden" to="." method="_on_garden_open_mausoleum"]
 [connection signal="body_entered" from="EndPart/Judgement3D/whole-ass_mausoleum2/Area3D" to="EndPart" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="EndPart/bridge/end_scene" to="." method="_on_end_scene_body_entered"]
 
+[editable path="EndPart/bridge/TheWorld"]
 [editable path="InventoryUI"]
