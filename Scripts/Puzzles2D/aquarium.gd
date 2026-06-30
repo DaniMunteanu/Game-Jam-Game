@@ -11,6 +11,7 @@ extends Node
 
 
 func _ready() -> void:
+	PauseMenu.enable_puzzle_escape("res://Rooms/Greenhouse1.tscn")
 	worm_sprite.visible = false 
 	if PuzzleManager.worm_placed:
 		place_worm()

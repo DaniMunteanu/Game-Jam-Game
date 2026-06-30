@@ -34,6 +34,8 @@ var _3_petal_placed: bool = false
 var _4_petal_placed: bool = false
 var suncenter_placed: bool = false
 
+var verses_discovered: Array[bool] = [false, false, false, false] 
+
 const number_of_puzzles: int = 11
 var complete_puzzles: Array[bool] = []
 var completed_puzzles : int = 0

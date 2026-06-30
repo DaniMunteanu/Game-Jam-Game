@@ -10,13 +10,19 @@ var pieces_snapped: Array[int] = []
 
 @export var snap_max_distance: float = 50.0
 @export var solution: Array[Vector2] = []
+@export var verses: Array[TextureRect] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	check_verses()
 	PauseMenu.enable_puzzle_escape("res://Rooms/Greenhouse2.tscn")
 	init_markers_array()
 	init_pieces_array()
 	init_pieces_snapped_array()
+
+func check_verses():
+	for index in range(verses.size()):
+		verses[index].visible = PuzzleManager.verses_discovered[index]
 
 func init_markers_array():
 	for markers_subparent in markers_parent.get_children():
@@ -36,7 +42,6 @@ func init_pieces_snapped_array():
 	
 	for piece_index in range(pieces.size()):
 		on_try_snapping(piece_index)
-	
 
 func check_if_solved():
 	for pair in solution:
