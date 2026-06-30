@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var markers_parent: Node = $CanvasLayer/SnapMarkers
 @onready var pieces_parent: Node = $CanvasLayer/Pieces
-@onready var sfx_player: AudioStreamPlayer2D = $Sfx_Player
+@onready var holy: AudioStreamPlayer2D = $holy
 
 var markers: Array[Marker2D] = []
 var pieces: Array[DraggablePuzzleObject] = []
@@ -52,6 +52,7 @@ func check_if_solved():
 func end_puzzle():
 	for piece in pieces:
 		piece.draggable = false
+	holy.play()
 	PuzzleManager.finish_puzzle(PuzzleManager.puzzles.EMPEROR)
 	print("Emperor Won!")
 

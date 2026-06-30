@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://cj2b4v6m86ogr" path="res://3D assets/garden.blend" id="1_i446x"]
 [ext_resource type="Script" uid="uid://b80xsyas7fj1" path="res://Scripts/3D scripts/garden.gd" id="1_lrqvg"]
-[ext_resource type="PackedScene" uid="uid://dm0ycc5x5wtod" path="res://scenes/3d/player3D.tscn" id="2_yr1ht"]
 [ext_resource type="Script" path="res://Scripts/3D scripts/InteractableObject.gd" id="3_ngcjk"]
 [ext_resource type="PackedScene" uid="uid://bwg407mxqbuw" path="res://scenes/3d/interactable_area_3d.tscn" id="4_jw885"]
 [ext_resource type="PackedScene" uid="uid://bse2py88bpr6s" path="res://3D assets/scenes/cem_gates.tscn" id="4_ulxv8"]
@@ -318,7 +317,7 @@ emission = Color(0.5132331, 0.5132328, 0.5132329, 1)
 script = ExtResource("1_lrqvg")
 gates = NodePath("Emperor3D/cem_gates")
 spawnpos = NodePath("garden_spawn")
-player = NodePath("Player")
+player = NodePath("")
 fantana = NodePath("Well")
 greenhouse_path = "res://Rooms/Greenhouse1.tscn"
 
@@ -704,7 +703,7 @@ area = NodePath("InteractableArea3D")
 object = NodePath(".")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Well" unique_id=1321577962]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07324886, -1.002943, 0.004524231)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07324886, -0.372473, 0.004524231)
 shape = SubResource("CylinderShape3D_tsddh")
 
 [node name="InteractableArea3D" parent="Well" unique_id=563925380 instance=ExtResource("4_jw885")]
@@ -712,9 +711,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23981094, -0.2817688, -0.0
 visible = false
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Well/InteractableArea3D" unique_id=853851025]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23981094, -0.13994026, -0.080200195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23981094, 0.31163478, -0.080200195)
 shape = SubResource("CylinderShape3D_g7k05")
-debug_color = Color(0, 0.6, 0.69803923, 1)
+debug_color = Color(0, 11.715372, 13.466579, 1)
 
 [node name="Sprite3D" type="Sprite3D" parent="Well" unique_id=2115367890]
 transform = Transform3D(0.165, 0, 0, 0, -7.212379e-09, -0.165, 0, 0.165, -7.212379e-09, 0, -0.0157907, 0)
@@ -740,9 +739,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.196545, 12.762918, 21.0413
 visible = false
 light_energy = 9.325
 omni_range = 10.420014
-
-[node name="Player" parent="." unique_id=2036735905 instance=ExtResource("2_yr1ht")]
-transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -0.90492797, 3.1448445, -4.32356)
 
 [node name="Emperor3D" type="Node3D" parent="." unique_id=1762415287 node_paths=PackedStringArray("verses")]
 script = ExtResource("7_jggk7")
@@ -1303,7 +1299,5 @@ transform = Transform3D(-5.9316733e-08, 0, -1, 0, 1, 0, 1.3570087, 0, -4.371139e
 
 [node name="holy" type="AudioStreamPlayer2D" parent="." unique_id=1570423330]
 stream = ExtResource("24_n7dl6")
-
-[connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
 
 [editable path="InventoryUI"]

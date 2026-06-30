@@ -81,7 +81,7 @@ func _on_well_switch():
 	PuzzleManager.came_from_greenhouse = true
 	print("SWITCHING TO GREENHOUSE!")
 	fantana.area.can_interact = false
-	player.set_physics_process(false)
+	#player.set_physics_process(false)
 	dissolve.visible = true
 	animation_player.play("dissolve")
 	sfx_player_5.play()
