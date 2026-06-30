@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://gcs7aymyg04o" path="res://Scripts/Puzzles2D/room2_checker.gd" id="6_ipfbv"]
 [ext_resource type="Texture2D" uid="uid://dxcn46d7gtqqn" path="res://Sprites/Background/front-side/perete 1 fara suport.png" id="8_7ixoc"]
 [ext_resource type="Texture2D" uid="uid://74dxxux8pupb" path="res://Sprites/Background/front-side/oglinda_reparata_perete_luminos-removebg-preview.png" id="9_iwjsq"]
-[ext_resource type="Script" path="res://Scripts/canvas_layer.gd" id="10_a6xs1"]
+[ext_resource type="Script" uid="uid://dgxccig7fib3l" path="res://Scripts/canvas_layer.gd" id="10_a6xs1"]
 [ext_resource type="Script" path="res://Scripts/new_mirror.gd" id="12_r2r2o"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="14_r2r2o"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="15_okvqb"]
@@ -177,7 +177,6 @@ offset_top = 5.4799957
 offset_right = -0.5600586
 offset_bottom = 4.6399536
 script = ExtResource("12_r2r2o")
-destination_room_path = "res://scenes/3d/mainroom.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/Mirror" unique_id=790678593]
 layout_mode = 1

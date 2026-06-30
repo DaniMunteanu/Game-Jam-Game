@@ -8,7 +8,6 @@ extends Node
 @export var verses: Array[Card] = []
 
 func _ready() -> void:
-	#obj.remove_from_group("Interactables")
 	grave_0.interact = Callable(self, "grave_0_visited")
 	grave_1.interact = Callable(self, "grave_1_visited")
 	grave_2.interact = Callable(self, "grave_2_visited")
