@@ -3,3 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://jgwro0b028ul" path="res://3D assets/Objects/mausoleum stuff/whole-ass_mausoleum.glb" id="1_2umkg"]
 
 [node name="whole-ass_mausoleum" unique_id=1942704860 instance=ExtResource("1_2umkg")]
+
+[node name="coffin_001" parent="." index="6" unique_id=1344423642]
+transform = Transform3D(0.9848077, 0, -0.17364818, 0, 1, 0, 0.17364818, 0, 0.9848077, 36.221233, 3.9119437, 21.76341)
