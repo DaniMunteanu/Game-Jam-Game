@@ -65,10 +65,10 @@ texture = ExtResource("3_jk8e2")
 [node name="A" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=371454315]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 17.0
-offset_top = 724.0
-offset_right = 81.0
-offset_bottom = 781.0
+offset_left = 138.0
+offset_top = 833.0
+offset_right = 202.0
+offset_bottom = 890.0
 script = ExtResource("5_lsdnl")
 destination_room_path = "res://Rooms/Room2.tscn"
 
@@ -91,10 +91,10 @@ stretch_mode = 5
 [node name="D" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=680602743]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 1664.875
-offset_top = 724.0
-offset_right = 1764.8751
-offset_bottom = 781.0
+offset_left = 1624.0
+offset_top = 835.0
+offset_right = 1724.0001
+offset_bottom = 892.0
 script = ExtResource("5_lsdnl")
 destination_room_path = "res://Rooms/Room4.tscn"
 
