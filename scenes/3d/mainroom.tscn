@@ -572,7 +572,7 @@ size = Vector3(31.6, 1.3000001, 12.5)
 size = Vector3(1, 10.400001, 12.1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fugsj"]
-size = Vector3(2.3646321, 0.10811806, 2.253059)
+size = Vector3(3.72736, 0.10811806, 2.253059)
 
 [node name="Mainroom" type="Node3D" unique_id=81722206 node_paths=PackedStringArray("spawnpos", "player", "mirror", "tower_door", "zodiac_wheel", "zoom_camera", "secret_door", "room_level", "garden_level", "tower", "tower_delete", "garden_spawnpos", "maus_door") groups=["Character"]]
 script = ExtResource("1_j7t7n")
@@ -1493,7 +1493,7 @@ visible = false
 transform = Transform3D(0.31438974, 0, -1.4007226, 0, 1.4355711, 0, 1.4007226, 0, 0.31438974, 2.228526, -20.487019, 23.721004)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="EndPart/scari2" unique_id=1793527746]
-transform = Transform3D(-0.30832303, -0.093308896, -1.6590155, -0.5655845, 1.5924746, 0.015545573, 1.5624194, 0.5580513, -0.32175726, 31.311138, -1.8952084, -14.130026)
+transform = Transform3D(-0.32207692, -0.04401405, -1.6584425, -0.34055108, 1.6551841, 0.022208778, 1.6236979, 0.33842468, -0.32431042, 31.091688, -2.1272507, -13.023698)
 shape = SubResource("BoxShape3D_fugsj")
 debug_color = Color(18.892157, 18.892157, 18.892157, 1)
 
