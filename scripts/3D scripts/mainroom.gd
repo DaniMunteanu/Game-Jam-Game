@@ -33,7 +33,7 @@ var is_world_ending : bool = false
 @export var za_warudo : Node3D
 @onready var black_fire := $EndPart/bridge/black
 @export var bridge_cols : StaticBody3D
-const GARDEN_SPEED : float = 5.0
+const GARDEN_SPEED : float = 8.0
 
 @onready var footstep_zone_1: Area3D = $footstep_zone1
 @onready var footstep_zone_2: Area3D = $footstep_zone2
@@ -70,11 +70,6 @@ func _ready() -> void:
 	#AudioManager.switch_to_3d()
 	dissolve.visible = false
 	print(mirror.area.can_interact)
-	
-	if footstep_zone_1:
-		footstep_zone_1.body_entered.connect(_on_footstep_zone_entered.bind(concrete_2))
-	if footstep_zone_2:
-		footstep_zone_2.body_entered.connect(_on_footstep_zone_entered.bind(dirt_walk_4))
 		
 	#aici ne uitam daca venim din garden si stergem tot ce era din mainroom
 	if PuzzleManager.came_from_greenhouse:
@@ -104,11 +99,6 @@ func _ready() -> void:
 	if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.EMPEROR] and PuzzleManager.complete_puzzles[PuzzleManager.puzzles.SUN]:
 		if !maus_door.is_open:
 			maus_door.open()
-
-func _on_footstep_zone_entered(body: Node3D, sound: AudioStream) -> void:
-	if body is not CharacterBody3D:
-		return
-	player.set_footstep_sound(sound)
 	
 func _set_grass_visible(visible: bool) -> void:
 	if not garden_level:
@@ -197,6 +187,7 @@ func _on_end_scene_body_entered(body: Node3D) -> void:
 		InventoryManager.reset_data()
 		PuzzleManager.reset_data()
 		
+		AudioManager.stop_music()
 		if is_world_ending:
 			za_warudo.world_ending()
 			await get_tree().create_timer(8.5).timeout

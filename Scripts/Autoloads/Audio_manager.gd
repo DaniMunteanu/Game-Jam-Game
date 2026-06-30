@@ -10,6 +10,7 @@ var sfx_volume : float = 1.0
 var is_3d : bool = false
 @onready var music_player: AudioStreamPlayer = $MusicPlayer
 @onready var music_player_3d: AudioStreamPlayer = $MusicPlayer3d
+@onready var music_ending: AudioStreamPlayer = $MusicEnding
 
 func _ready() -> void:
 	_master_bus = AudioServer.get_bus_index("Master")
@@ -46,9 +47,13 @@ func play_music_3d(stream: AudioStream) -> void:
 	music_player_3d.stream = stream
 	music_player_3d.play()
 	
+func play_ending_music():
+	music_ending.play()
+	
 func stop_music() -> void:
 	music_player.stop()
 	music_player_3d.stop()
+	music_ending.stop()
 	
 func switch_to_3d() -> void:
 	if is_3d:

@@ -1,25 +1,11 @@
 extends Control
 
-@onready var star: Button = $Star
-@onready var books: Button = $Books
-
-@onready var tooltip_scene = preload("res://UI/Tooltip.tscn")
-var tooltip: Tooltip
-
-func _process(delta: float) -> void:
-	if tooltip:
-		tooltip.global_position = get_global_mouse_position() + Vector2(0, -80)
+@export var background_wall: Sprite2D
+const PERETE_2_BECU_STINS = preload("res://Sprites/Background/left-side/perete 2 becu stins.png")
 
 func _ready() -> void:
-	if PuzzleManager.calendar_solved == true:
-		star.disabled = true
+	if PuzzleManager.completed_puzzles == 6:
+		lights_out()
 		
-func _on_books_mouse_entered() -> void:
-	tooltip = tooltip_scene.instantiate()
-	tooltip.set_text("Maybe those colors hint to something...")
-	add_child(tooltip)
-	
-func _on_books_mouse_exited() -> void:
-	if tooltip:
-		tooltip.queue_free()
-		tooltip = null
+func lights_out():
+	background_wall.texture = PERETE_2_BECU_STINS

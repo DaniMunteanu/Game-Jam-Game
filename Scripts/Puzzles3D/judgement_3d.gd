@@ -45,6 +45,8 @@ func end_puzzle():
 	if mausoleum_door.get_node("AnimationPlayer").current_animation != "":
 		await mausoleum_door.anim_player.animation_finished
 	mausoleum_door.get_node("AnimationPlayer").play("open_door")
+	AudioManager.stop_music()
+	AudioManager.play_ending_music()
 
 func light_all_candles():
 	candle_0.remove_from_group("Interactables")

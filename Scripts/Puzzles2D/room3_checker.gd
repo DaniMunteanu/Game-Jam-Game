@@ -1,6 +1,11 @@
 extends Control
 
+@export var background_wall: Sprite2D
+const PERETE_3_BEC_STINS = preload("res://Sprites/Background/right-side/perete 3 bec stins.png")
+
 @onready var death: Button = $Death
+@onready var books: Button = $Books
+
 @onready var tooltip_scene = preload("res://UI/Tooltip.tscn")
 var tooltip: Tooltip
 
@@ -11,6 +16,8 @@ func _process(delta: float) -> void:
 func _ready() -> void:
 	if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.DEATH] == true:
 		death.disabled = true
+	if PuzzleManager.completed_puzzles == 6:
+		lights_out()
 
 func _on_books_mouse_entered() -> void:
 	tooltip = tooltip_scene.instantiate()
@@ -21,6 +28,11 @@ func _on_books_mouse_exited() -> void:
 	if tooltip:
 		tooltip.queue_free()
 		tooltip = null
+
+func lights_out():
+	background_wall.texture = PERETE_3_BEC_STINS
+	death.visible = false
+	books.visible = false
 
 """func _on_grimoire_pressed() -> void:
 	if PuzzleManager.completed_puzzles == PuzzleManager.number_of_puzzles - 1:

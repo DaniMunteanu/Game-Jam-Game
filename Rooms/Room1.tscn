@@ -38,7 +38,7 @@ texture = ExtResource("2_enbp3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=565787541]
 
-[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=653715160 node_paths=PackedStringArray("a_button", "d_button", "calendar_button")]
+[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=653715160 node_paths=PackedStringArray("background_wall", "a_button", "d_button", "calendar_button")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -10.0
@@ -47,6 +47,7 @@ offset_right = 1910.0
 offset_bottom = 1082.0
 mouse_filter = 2
 script = ExtResource("4_gthuv")
+background_wall = NodePath("../../BackgroundSprites/Wall")
 a_button = NodePath("A")
 d_button = NodePath("D")
 calendar_button = NodePath("Calendar")
@@ -54,10 +55,10 @@ calendar_button = NodePath("Calendar")
 [node name="A" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=329204687]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 116.0
-offset_top = 818.0
-offset_right = 216.0
-offset_bottom = 875.0
+offset_left = 107.0
+offset_top = 724.0
+offset_right = 207.0
+offset_bottom = 781.0
 script = ExtResource("5_1kmgg")
 destination_room_path = "res://Rooms/Room4.tscn"
 
@@ -80,10 +81,10 @@ stretch_mode = 5
 [node name="D" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=794513466]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 1646.0
-offset_top = 827.0
-offset_right = 1746.0001
-offset_bottom = 884.0
+offset_left = 1664.875
+offset_top = 724.0
+offset_right = 1764.8751
+offset_bottom = 781.0
 script = ExtResource("5_1kmgg")
 destination_room_path = "res://Rooms/Room2.tscn"
 

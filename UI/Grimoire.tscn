@@ -246,7 +246,7 @@ text = "Shifting illusions and navigating the ink-black
 visible = false
 layout_mode = 1
 left_tooltip_text = "You must harvest the golden blossom of summer and place it safely inside the summer’s eye."
-right_tooltip_text = "You must lure the guardians away with the bait of the pond in order to claim the buried key. Monarch, sentinels, checkmate, moves"
+right_tooltip_text = "You must lure the guardians away with the bait of the pond in order to claim the buried key. Monarch, sentinels, checkmate, moves. The moves are, in order: white pawn to e4, black pawn to e5. white bishop to c4, black knight to c6. Then, white queen to h5 and black bishop to e7."
 left_card_index = 6
 right_card_index = 7
 
