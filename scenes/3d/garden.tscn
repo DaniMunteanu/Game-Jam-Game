@@ -8,9 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://bse2py88bpr6s" path="res://3D assets/scenes/cem_gates.tscn" id="4_ulxv8"]
 [ext_resource type="Texture2D" uid="uid://55ttssrk811f" path="res://Sprites/Background/back-side/sera perete sah.png" id="5_yv1t8"]
 [ext_resource type="PackedScene" uid="uid://by1tm21k2oglb" path="res://3D assets/Particles/le_water.tscn" id="6_ktj0q"]
+[ext_resource type="Script" uid="uid://bcr8mhubhb06t" path="res://Scripts/Puzzles3D/emperor_3d.gd" id="7_jggk7"]
 [ext_resource type="PackedScene" uid="uid://ms8kg0b1tlyb" path="res://3D assets/Particles/le_apa.tscn" id="7_t1yto"]
 [ext_resource type="Texture2D" uid="uid://dhtdue5rkxpdp" path="res://Sprites/tarot cards/The Magician.png" id="8_cxpkk"]
+[ext_resource type="Texture2D" uid="uid://bydy7hwd7bkbv" path="res://Sprites/texts/verset_fundal.png" id="9_tfww2"]
+[ext_resource type="Texture2D" uid="uid://6ur5ydbrhy2d" path="res://Sprites/texts/fixedverset2.png" id="10_g0cls"]
+[ext_resource type="Script" uid="uid://dias3okb0nhm1" path="res://Scripts/UI scripts/card.gd" id="10_x0508"]
 [ext_resource type="AudioStream" uid="uid://bm085t0y4w02f" path="res://Audio/SFX/mirror4.mp3" id="11_jw885"]
+[ext_resource type="Texture2D" uid="uid://bedtvepwhx65i" path="res://Sprites/texts/verset3_fundal.png" id="11_x0508"]
+[ext_resource type="Texture2D" uid="uid://cfy7o7nmyxiqj" path="res://Sprites/texts/verset4_fundal.png" id="12_biohv"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="12_g7k05"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="12_tsddh"]
 [ext_resource type="PackedScene" uid="uid://2b8uw558vv5v" path="res://3D assets/scenes/worm_2.tscn" id="13_g7k05"]
@@ -206,7 +212,10 @@ albedo_texture = ExtResource("5_yv1t8")
 size = Vector3(117.42721, 1, 88.05139)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vuo0i"]
-size = Vector3(7.597168, 1.1326904, 3.4838867)
+size = Vector3(7.597168, 5.41111, 3.4838867)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ppa0f"]
+font_size = 64
 
 [sub_resource type="Shader" id="Shader_a6xs1"]
 code = "shader_type canvas_item;
@@ -733,40 +742,209 @@ light_energy = 9.325
 omni_range = 10.420014
 
 [node name="Player" parent="." unique_id=2036735905 instance=ExtResource("2_yr1ht")]
-transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -0.18859243, 3.1448445, -4.32356)
+transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -0.90492797, 3.1448445, -4.32356)
 
-[node name="Emperor3D" type="Node3D" parent="." unique_id=1762415287]
+[node name="Emperor3D" type="Node3D" parent="." unique_id=1762415287 node_paths=PackedStringArray("verses")]
+script = ExtResource("7_jggk7")
+verses = [NodePath("Verses/Verse1"), NodePath("Verses/Verse2"), NodePath("Verses/Verse3"), NodePath("Verses/Verse4")]
 
 [node name="cem_gates" parent="Emperor3D" unique_id=995697651 instance=ExtResource("4_ulxv8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.646, 0, 0)
 
-[node name="grave1" type="StaticBody3D" parent="Emperor3D" unique_id=966101694]
+[node name="grave0" type="StaticBody3D" parent="Emperor3D" unique_id=966101694 node_paths=PackedStringArray("object") groups=["Interactables"]]
+script = ExtResource("3_ngcjk")
+object = NodePath(".")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Emperor3D/grave1" unique_id=1525441732]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.46077, 0.89889526, -23.750298)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Emperor3D/grave0" unique_id=1525441732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.46077, 1.6431274, -23.750298)
 shape = SubResource("BoxShape3D_vuo0i")
 debug_color = Color(0.94286036, 8.471012e-06, 0.6020027, 1)
 
-[node name="grave2" type="StaticBody3D" parent="Emperor3D" unique_id=2021862574]
+[node name="grave1" type="StaticBody3D" parent="Emperor3D" unique_id=2021862574 node_paths=PackedStringArray("object") groups=["Interactables"]]
+script = ExtResource("3_ngcjk")
+object = NodePath(".")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Emperor3D/grave2" unique_id=1035328816]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.46077, 0.9652405, -16.343788)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Emperor3D/grave1" unique_id=1035328816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.46077, 1.5971222, -16.343788)
 shape = SubResource("BoxShape3D_vuo0i")
 debug_color = Color(0.94286036, 8.471012e-06, 0.6020027, 1)
 
-[node name="grave3" type="StaticBody3D" parent="Emperor3D" unique_id=1328517388]
+[node name="grave2" type="StaticBody3D" parent="Emperor3D" unique_id=1328517388 node_paths=PackedStringArray("object") groups=["Interactables"]]
+script = ExtResource("3_ngcjk")
+object = NodePath(".")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Emperor3D/grave3" unique_id=584560592]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.46077, 0.89889526, -8.340135)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Emperor3D/grave2" unique_id=584560592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.46077, 1.3803635, -8.340135)
 shape = SubResource("BoxShape3D_vuo0i")
 debug_color = Color(0.94286036, 8.471012e-06, 0.6020027, 1)
 
-[node name="grave4" type="StaticBody3D" parent="Emperor3D" unique_id=1278831049]
+[node name="grave3" type="StaticBody3D" parent="Emperor3D" unique_id=1278831049 node_paths=PackedStringArray("object") groups=["Interactables"]]
+script = ExtResource("3_ngcjk")
+object = NodePath(".")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Emperor3D/grave4" unique_id=1091356953]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.957436, 0.89889526, -0.79255486)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Emperor3D/grave3" unique_id=1091356953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.957436, 1.1805229, -0.79255486)
 shape = SubResource("BoxShape3D_vuo0i")
 debug_color = Color(0.94286036, 8.471012e-06, 0.6020027, 1)
+
+[node name="Verses" type="Control" parent="Emperor3D" unique_id=1775040375]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Verse1" type="TextureRect" parent="Emperor3D/Verses" unique_id=1438790606]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -682.5
+offset_top = -151.5
+offset_right = 682.5
+offset_bottom = 151.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_tfww2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("10_x0508")
+
+[node name="ClueUnlocked" type="Label" parent="Emperor3D/Verses/Verse1" unique_id=914687908]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -519.0
+offset_top = -274.5
+offset_right = 519.0
+offset_bottom = -201.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Clue unlocked in the Chessboard!"
+label_settings = SubResource("LabelSettings_ppa0f")
+
+[node name="Verse2" type="TextureRect" parent="Emperor3D/Verses" unique_id=966510989]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -682.5
+offset_top = -151.5
+offset_right = 682.5
+offset_bottom = 151.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_g0cls")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("10_x0508")
+
+[node name="ClueUnlocked" type="Label" parent="Emperor3D/Verses/Verse2" unique_id=1549631639]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -519.0
+offset_top = -274.5
+offset_right = 519.0
+offset_bottom = -201.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Clue unlocked in the Chessboard!"
+label_settings = SubResource("LabelSettings_ppa0f")
+
+[node name="Verse3" type="TextureRect" parent="Emperor3D/Verses" unique_id=1272233299]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -682.5
+offset_top = -151.5
+offset_right = 682.5
+offset_bottom = 151.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("11_x0508")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("10_x0508")
+
+[node name="ClueUnlocked" type="Label" parent="Emperor3D/Verses/Verse3" unique_id=1665052934]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -519.0
+offset_top = -274.5
+offset_right = 519.0
+offset_bottom = -201.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Clue unlocked in the Chessboard!"
+label_settings = SubResource("LabelSettings_ppa0f")
+
+[node name="Verse4" type="TextureRect" parent="Emperor3D/Verses" unique_id=431728051]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -682.5
+offset_top = -151.5
+offset_right = 682.5
+offset_bottom = 151.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("12_biohv")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("10_x0508")
+
+[node name="ClueUnlocked" type="Label" parent="Emperor3D/Verses/Verse4" unique_id=2091222630]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -519.0
+offset_top = -274.5
+offset_right = 519.0
+offset_bottom = -201.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Clue unlocked in the Chessboard!"
+label_settings = SubResource("LabelSettings_ppa0f")
 
 [node name="Wataryoudoinghere" type="Node3D" parent="." unique_id=1274077845]
 

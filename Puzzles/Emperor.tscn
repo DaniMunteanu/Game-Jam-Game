@@ -2,251 +2,445 @@
 
 [ext_resource type="Script" uid="uid://cabkl3x4gbyfi" path="res://Scripts/Puzzles2D/emperor.gd" id="1_dy1vk"]
 [ext_resource type="PackedScene" uid="uid://bvip2aownlgr" path="res://PuzzleObjects/DraggablePuzzleObject.tscn" id="2_5dqgq"]
-[ext_resource type="Texture2D" uid="uid://i6qx4d1la14f" path="res://Sprites/Placeholders/Chess/ChessBoard.jpg" id="2_gax46"]
-[ext_resource type="Texture2D" uid="uid://bgrqx88d51ppw" path="res://Sprites/Placeholders/Chess/Black/b-pawn.png" id="4_gmbwj"]
-[ext_resource type="Texture2D" uid="uid://bo3721wxqeho6" path="res://Sprites/Placeholders/Chess/White/w-pawn.png" id="4_xpncv"]
-[ext_resource type="Texture2D" uid="uid://bp08mfx58h3ge" path="res://Sprites/Placeholders/Chess/Black/b-rook.png" id="5_1an1i"]
-[ext_resource type="Texture2D" uid="uid://bgi8rx2wrvjng" path="res://Sprites/Placeholders/Chess/White/w-rook.png" id="5_osrak"]
-[ext_resource type="Texture2D" uid="uid://rgriwmocsiqh" path="res://Sprites/Placeholders/Chess/Black/b-knight.png" id="6_herje"]
-[ext_resource type="Texture2D" uid="uid://4mavknydecd0" path="res://Sprites/Placeholders/Chess/White/w-knight.png" id="6_v53tg"]
+[ext_resource type="Texture2D" uid="uid://n3xfdygu0juy" path="res://Sprites/Background/sera-right/sera  PERETE SAH.png" id="2_8smwi"]
+[ext_resource type="Texture2D" uid="uid://bydy7hwd7bkbv" path="res://Sprites/texts/verset_fundal.png" id="2_8vgn6"]
+[ext_resource type="Texture2D" uid="uid://6ur5ydbrhy2d" path="res://Sprites/texts/fixedverset2.png" id="3_8smwi"]
+[ext_resource type="Texture2D" uid="uid://bedtvepwhx65i" path="res://Sprites/texts/verset3_fundal.png" id="4_ahbjf"]
+[ext_resource type="Texture2D" uid="uid://cfy7o7nmyxiqj" path="res://Sprites/texts/verset4_fundal.png" id="5_30pvx"]
+[ext_resource type="Texture2D" uid="uid://xq2i7bf8dkyu" path="res://Sprites/PuzzleObjects/Chess/chess_table.png" id="6_mryt5"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="7_8tqqv"]
-[ext_resource type="Texture2D" uid="uid://bgs4kmyngru0q" path="res://Sprites/Placeholders/Chess/Black/b-bishop.png" id="7_sca3m"]
-[ext_resource type="Texture2D" uid="uid://xb3htyyvsvnr" path="res://Sprites/Placeholders/Chess/Black/b-queen.png" id="8_8vgn6"]
 [ext_resource type="Texture2D" uid="uid://dfovannbdm63n" path="res://Sprites/Mouse/back2.png" id="8_fx03e"]
-[ext_resource type="Texture2D" uid="uid://buag7108t6tlf" path="res://Sprites/Placeholders/Chess/Black/b-king.png" id="9_8smwi"]
+[ext_resource type="Texture2D" uid="uid://xqn50ijky1oq" path="res://Sprites/PuzzleObjects/Chess/pion_negru.png" id="8_q0u7m"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="9_i0knk"]
+[ext_resource type="Texture2D" uid="uid://cwmdd04nsdriy" path="res://Sprites/PuzzleObjects/Chess/tura_negru.png" id="9_qbmd8"]
+[ext_resource type="Texture2D" uid="uid://dmintgegns4dv" path="res://Sprites/PuzzleObjects/Chess/cal_negru.png" id="10_j5bkm"]
 [ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="11_1an1i"]
-[ext_resource type="Texture2D" uid="uid://cgahdae2q2wyu" path="res://Sprites/Placeholders/Chess/White/w-bishop.png" id="13_ahbjf"]
-[ext_resource type="Texture2D" uid="uid://cxhkh40rgasxn" path="res://Sprites/Placeholders/Chess/White/w-queen.png" id="14_30pvx"]
-[ext_resource type="Texture2D" uid="uid://c472y5ml4j7x2" path="res://Sprites/Placeholders/Chess/White/w-king.png" id="15_mryt5"]
+[ext_resource type="Texture2D" uid="uid://c0gn86ro5bbwd" path="res://Sprites/PuzzleObjects/Chess/nebun_negru.png" id="11_ia8te"]
+[ext_resource type="Texture2D" uid="uid://cpeuxbewgnwuk" path="res://Sprites/PuzzleObjects/Chess/regina_negru.png" id="12_j7t2y"]
+[ext_resource type="Texture2D" uid="uid://bywpv6b0aqqj7" path="res://Sprites/PuzzleObjects/Chess/rege_negru.png" id="13_vpqda"]
+[ext_resource type="Texture2D" uid="uid://b7vyonhkre28h" path="res://Sprites/PuzzleObjects/Chess/pion_alb.png" id="14_07w2i"]
+[ext_resource type="Texture2D" uid="uid://l58184nqvlat" path="res://Sprites/PuzzleObjects/Chess/tura_alb.png" id="15_fel5x"]
+[ext_resource type="Texture2D" uid="uid://bl68i4k6wucwe" path="res://Sprites/PuzzleObjects/Chess/cal_alb.png" id="16_tuqfk"]
+[ext_resource type="Texture2D" uid="uid://dc1bg4tspx70i" path="res://Sprites/PuzzleObjects/Chess/nebun_alb.png" id="17_ujctv"]
+[ext_resource type="Texture2D" uid="uid://b1jx0d8jipwgg" path="res://Sprites/PuzzleObjects/Chess/regina_alb.png" id="18_8k5rp"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="19_gmbwj"]
+[ext_resource type="Texture2D" uid="uid://7n75603vh1lm" path="res://Sprites/PuzzleObjects/Chess/rege_alb.png" id="19_kae3k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ragau"]
+font_size = 36
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_herje"]
 
-[node name="Emperor" type="Node2D" unique_id=678236464]
+[node name="Emperor" type="Node2D" unique_id=678236464 node_paths=PackedStringArray("verses")]
 script = ExtResource("1_dy1vk")
 solution = Array[Vector2]([Vector2(4, 36), Vector2(10, 21), Vector2(13, 38), Vector2(20, 35), Vector2(29, 19), Vector2(30, 60)])
+verses = [NodePath("CanvasLayer/Verses/Verse0"), NodePath("CanvasLayer/Verses/Verse1"), NodePath("CanvasLayer/Verses/Verse2"), NodePath("CanvasLayer/Verses/Verse3")]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=129414867]
 position = Vector2(958.99994, 540.99994)
 scale = Vector2(0.758, 0.758)
-
-[node name="ChessBoard" type="Sprite2D" parent="." unique_id=227345006]
-position = Vector2(548, 560)
-scale = Vector2(1.6, 1.6)
-texture = ExtResource("2_gax46")
+texture = ExtResource("2_8smwi")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1462075938]
+
+[node name="VersesBacksides" type="Control" parent="CanvasLayer" unique_id=19398546]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1148.0
+offset_top = 177.0
+offset_right = 1188.0
+offset_bottom = 217.0
+
+[node name="TextureRect" type="Panel" parent="CanvasLayer/VersesBacksides" unique_id=565226462]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.1750001
+anchor_top = -0.275
+anchor_right = -1.1750001
+anchor_bottom = -0.275
+offset_right = 700.0
+offset_bottom = 155.0
+
+[node name="Label" type="Label" parent="CanvasLayer/VersesBacksides/TextureRect" unique_id=1459381277]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.0
+offset_top = -20.5
+offset_right = 235.0
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Check the graves for clues"
+label_settings = SubResource("LabelSettings_ragau")
+
+[node name="TextureRect2" type="Panel" parent="CanvasLayer/VersesBacksides" unique_id=305440536]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.1750001
+anchor_top = -0.275
+anchor_right = -1.1750001
+anchor_bottom = -0.275
+offset_top = 185.0
+offset_right = 700.0
+offset_bottom = 340.0
+
+[node name="Label" type="Label" parent="CanvasLayer/VersesBacksides/TextureRect2" unique_id=1444176650]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.0
+offset_top = -20.5
+offset_right = 235.0
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Check the graves for clues"
+label_settings = SubResource("LabelSettings_ragau")
+
+[node name="TextureRect3" type="Panel" parent="CanvasLayer/VersesBacksides" unique_id=1257199088]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.1750001
+anchor_top = -0.275
+anchor_right = -1.1750001
+anchor_bottom = -0.275
+offset_top = 371.0
+offset_right = 700.0
+offset_bottom = 526.0
+
+[node name="Label" type="Label" parent="CanvasLayer/VersesBacksides/TextureRect3" unique_id=945145363]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.0
+offset_top = -20.5
+offset_right = 235.0
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Check the graves for clues"
+label_settings = SubResource("LabelSettings_ragau")
+
+[node name="TextureRect4" type="Panel" parent="CanvasLayer/VersesBacksides" unique_id=153034469]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.1750001
+anchor_top = -0.275
+anchor_right = -1.1750001
+anchor_bottom = -0.275
+offset_top = 558.0
+offset_right = 700.0
+offset_bottom = 713.0
+
+[node name="Label" type="Label" parent="CanvasLayer/VersesBacksides/TextureRect4" unique_id=420670391]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.0
+offset_top = -20.5
+offset_right = 235.0
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Check the graves for clues"
+label_settings = SubResource("LabelSettings_ragau")
+
+[node name="Verses" type="Control" parent="CanvasLayer" unique_id=1244754869]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1148.0
+offset_top = 177.0
+offset_right = 1188.0
+offset_bottom = 217.0
+
+[node name="Verse0" type="TextureRect" parent="CanvasLayer/Verses" unique_id=701751233]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.1750001
+anchor_top = -0.275
+anchor_right = -1.1750001
+anchor_bottom = -0.275
+offset_right = 700.0
+offset_bottom = 155.0
+texture = ExtResource("2_8vgn6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Verse1" type="TextureRect" parent="CanvasLayer/Verses" unique_id=799999030]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.1750001
+anchor_top = -0.275
+anchor_right = -1.1750001
+anchor_bottom = -0.275
+offset_top = 185.0
+offset_right = 700.0
+offset_bottom = 340.0
+texture = ExtResource("3_8smwi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Verse2" type="TextureRect" parent="CanvasLayer/Verses" unique_id=1243078005]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.1750001
+anchor_top = -0.275
+anchor_right = -1.1750001
+anchor_bottom = -0.275
+offset_top = 371.0
+offset_right = 700.0
+offset_bottom = 526.0
+texture = ExtResource("4_ahbjf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Verse3" type="TextureRect" parent="CanvasLayer/Verses" unique_id=1413446963]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.1750001
+anchor_top = -0.275
+anchor_right = -1.1750001
+anchor_bottom = -0.275
+offset_top = 558.0
+offset_right = 700.0
+offset_bottom = 713.0
+texture = ExtResource("5_30pvx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ChessBoard" type="TextureRect" parent="CanvasLayer" unique_id=1685037763]
+offset_left = 19.0
+offset_top = 14.0
+offset_right = 1090.0
+offset_bottom = 1065.0
+texture = ExtResource("6_mryt5")
 
 [node name="SnapMarkers" type="Node" parent="CanvasLayer" unique_id=1063690809]
 
 [node name="RowA" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=617166175]
 
 [node name="Marker0" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=776629907]
-position = Vector2(161, 937)
+position = Vector2(115, 974)
 
 [node name="Marker1" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=622761763]
-position = Vector2(162, 833)
+position = Vector2(116, 870)
 
 [node name="Marker2" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=1014828181]
-position = Vector2(161, 726)
+position = Vector2(115, 759)
 
 [node name="Marker3" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=17370127]
-position = Vector2(159, 626)
+position = Vector2(113, 632)
 
 [node name="Marker4" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=966025371]
-position = Vector2(162, 514)
+position = Vector2(116, 508)
 
 [node name="Marker5" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=1602175681]
-position = Vector2(161, 415)
+position = Vector2(115, 383)
 
 [node name="Marker6" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=1195371566]
-position = Vector2(163, 298)
+position = Vector2(117, 261)
 
 [node name="Marker7" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowA" unique_id=443731337]
-position = Vector2(163, 191)
+position = Vector2(117, 131)
 
 [node name="RowB" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=1743211357]
 
-[node name="Marker8" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1323128284]
-position = Vector2(267, 937)
+[node name="Marker8" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=2067437885]
+position = Vector2(236, 974)
 
-[node name="Marker9" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1401923885]
-position = Vector2(268, 833)
+[node name="Marker9" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=2049287777]
+position = Vector2(237, 870)
 
-[node name="Marker10" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1570382021]
-position = Vector2(267, 726)
+[node name="Marker10" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1867053046]
+position = Vector2(236, 759)
 
-[node name="Marker11" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1278835498]
-position = Vector2(265, 626)
+[node name="Marker11" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1848574240]
+position = Vector2(234, 632)
 
-[node name="Marker12" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=168774298]
-position = Vector2(268, 514)
+[node name="Marker12" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=2137846063]
+position = Vector2(237, 508)
 
-[node name="Marker13" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=2094791705]
-position = Vector2(267, 415)
+[node name="Marker13" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=804990247]
+position = Vector2(236, 383)
 
-[node name="Marker14" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=64077303]
-position = Vector2(269, 298)
+[node name="Marker14" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1851430523]
+position = Vector2(238, 261)
 
-[node name="Marker15" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=547941944]
-position = Vector2(269, 191)
+[node name="Marker15" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowB" unique_id=1206349345]
+position = Vector2(238, 131)
 
 [node name="RowC" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=36706462]
 
-[node name="Marker16" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1535271123]
-position = Vector2(380, 937)
+[node name="Marker16" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1134423485]
+position = Vector2(361, 974)
 
-[node name="Marker17" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1829754014]
-position = Vector2(381, 833)
+[node name="Marker17" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1558556122]
+position = Vector2(362, 870)
 
-[node name="Marker18" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=729344062]
-position = Vector2(380, 726)
+[node name="Marker18" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1831992985]
+position = Vector2(361, 759)
 
-[node name="Marker19" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1411576154]
-position = Vector2(378, 626)
+[node name="Marker19" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1367195630]
+position = Vector2(359, 632)
 
-[node name="Marker20" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=991227708]
-position = Vector2(381, 514)
+[node name="Marker20" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=672538341]
+position = Vector2(362, 508)
 
-[node name="Marker21" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1595224900]
-position = Vector2(380, 415)
+[node name="Marker21" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=766156024]
+position = Vector2(361, 383)
 
-[node name="Marker22" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=405336758]
-position = Vector2(382, 298)
+[node name="Marker22" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1128189024]
+position = Vector2(363, 261)
 
-[node name="Marker23" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=1768156252]
-position = Vector2(382, 191)
+[node name="Marker23" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowC" unique_id=409414442]
+position = Vector2(363, 131)
 
 [node name="RowD" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=473415191]
 
-[node name="Marker24" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1705884027]
-position = Vector2(488, 937)
+[node name="Marker24" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1371514067]
+position = Vector2(489, 974)
 
-[node name="Marker25" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=53597295]
-position = Vector2(489, 833)
+[node name="Marker25" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=655943485]
+position = Vector2(490, 870)
 
-[node name="Marker26" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1457432096]
-position = Vector2(488, 726)
+[node name="Marker26" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1677793823]
+position = Vector2(489, 759)
 
-[node name="Marker27" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=709571302]
-position = Vector2(486, 626)
+[node name="Marker27" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=352079309]
+position = Vector2(487, 632)
 
-[node name="Marker28" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1311703175]
-position = Vector2(489, 514)
+[node name="Marker28" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=691900089]
+position = Vector2(490, 508)
 
-[node name="Marker29" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=690251424]
-position = Vector2(488, 415)
+[node name="Marker29" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=185787593]
+position = Vector2(489, 383)
 
-[node name="Marker30" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1175743780]
-position = Vector2(490, 298)
+[node name="Marker30" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=516186140]
+position = Vector2(491, 261)
 
-[node name="Marker31" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=362969240]
-position = Vector2(490, 191)
+[node name="Marker31" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowD" unique_id=1632999078]
+position = Vector2(491, 131)
 
 [node name="RowE" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=2108799261]
 
-[node name="Marker32" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=1136741344]
-position = Vector2(596, 937)
+[node name="Marker32" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=1007648257]
+position = Vector2(617, 974)
 
-[node name="Marker33" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=443982457]
-position = Vector2(597, 833)
+[node name="Marker33" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=2033284108]
+position = Vector2(618, 870)
 
-[node name="Marker34" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=2040241620]
-position = Vector2(596, 726)
+[node name="Marker34" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=38052328]
+position = Vector2(617, 759)
 
-[node name="Marker35" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=170239769]
-position = Vector2(594, 626)
+[node name="Marker35" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=235618898]
+position = Vector2(615, 632)
 
-[node name="Marker36" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=808694116]
-position = Vector2(597, 514)
+[node name="Marker36" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=741166268]
+position = Vector2(618, 508)
 
-[node name="Marker37" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=517391158]
-position = Vector2(596, 415)
+[node name="Marker37" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=109784833]
+position = Vector2(617, 383)
 
-[node name="Marker38" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=59461228]
-position = Vector2(598, 298)
+[node name="Marker38" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=379161354]
+position = Vector2(619, 261)
 
-[node name="Marker39" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=1505312256]
-position = Vector2(598, 191)
+[node name="Marker39" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowE" unique_id=259749537]
+position = Vector2(619, 131)
 
 [node name="RowF" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=592556647]
 
-[node name="Marker40" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=428680318]
-position = Vector2(704, 937)
+[node name="Marker40" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=104111127]
+position = Vector2(742, 974)
 
-[node name="Marker41" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1410583233]
-position = Vector2(705, 833)
+[node name="Marker41" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1933846813]
+position = Vector2(743, 870)
 
-[node name="Marker42" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1130730053]
-position = Vector2(704, 726)
+[node name="Marker42" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1400344705]
+position = Vector2(742, 759)
 
-[node name="Marker43" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1957322230]
-position = Vector2(702, 626)
+[node name="Marker43" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1118142320]
+position = Vector2(740, 632)
 
-[node name="Marker44" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=859852660]
-position = Vector2(705, 514)
+[node name="Marker44" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=32475588]
+position = Vector2(743, 508)
 
-[node name="Marker45" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=987935856]
-position = Vector2(704, 415)
+[node name="Marker45" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1676828778]
+position = Vector2(742, 383)
 
-[node name="Marker46" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1626603123]
-position = Vector2(706, 298)
+[node name="Marker46" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1099922508]
+position = Vector2(744, 261)
 
-[node name="Marker47" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=948843492]
-position = Vector2(706, 191)
+[node name="Marker47" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowF" unique_id=1907071877]
+position = Vector2(744, 131)
 
 [node name="RowG" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=628809234]
 
-[node name="Marker48" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=778968591]
-position = Vector2(810, 937)
+[node name="Marker48" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1868743179]
+position = Vector2(869, 974)
 
-[node name="Marker49" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=81780061]
-position = Vector2(811, 833)
+[node name="Marker49" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=846171364]
+position = Vector2(870, 870)
 
-[node name="Marker50" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=346677981]
-position = Vector2(810, 726)
+[node name="Marker50" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1026089883]
+position = Vector2(869, 759)
 
-[node name="Marker51" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=234761817]
-position = Vector2(808, 626)
+[node name="Marker51" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1884046500]
+position = Vector2(867, 632)
 
-[node name="Marker52" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1958919301]
-position = Vector2(811, 514)
+[node name="Marker52" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1575354028]
+position = Vector2(870, 508)
 
-[node name="Marker53" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1586285710]
-position = Vector2(810, 415)
+[node name="Marker53" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1694904220]
+position = Vector2(869, 383)
 
-[node name="Marker54" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1482671999]
-position = Vector2(812, 298)
+[node name="Marker54" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1736166746]
+position = Vector2(871, 261)
 
-[node name="Marker55" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=1846035448]
-position = Vector2(812, 191)
+[node name="Marker55" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowG" unique_id=367914063]
+position = Vector2(871, 131)
 
 [node name="RowH" type="Node" parent="CanvasLayer/SnapMarkers" unique_id=661037092]
 
-[node name="Marker56" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=680595726]
-position = Vector2(920, 937)
+[node name="Marker56" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=115894792]
+position = Vector2(989, 974)
 
-[node name="Marker57" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=501877119]
-position = Vector2(921, 833)
+[node name="Marker57" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=1889006086]
+position = Vector2(990, 870)
 
-[node name="Marker58" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=1739783288]
-position = Vector2(920, 726)
+[node name="Marker58" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=1317828489]
+position = Vector2(989, 759)
 
-[node name="Marker59" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=425253646]
-position = Vector2(918, 626)
+[node name="Marker59" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=518391386]
+position = Vector2(987, 632)
 
-[node name="Marker60" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=85249095]
-position = Vector2(921, 514)
+[node name="Marker60" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=662487172]
+position = Vector2(990, 508)
 
-[node name="Marker61" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=438540006]
-position = Vector2(920, 415)
+[node name="Marker61" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=1448764102]
+position = Vector2(989, 383)
 
-[node name="Marker62" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=203793591]
-position = Vector2(922, 298)
+[node name="Marker62" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=618007839]
+position = Vector2(991, 261)
 
-[node name="Marker63" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=1056158902]
-position = Vector2(922, 191)
+[node name="Marker63" type="Marker2D" parent="CanvasLayer/SnapMarkers/RowH" unique_id=901287248]
+position = Vector2(991, 131)
 
 [node name="Pieces" type="Node" parent="CanvasLayer" unique_id=1794281774]
 
@@ -254,14 +448,16 @@ position = Vector2(922, 191)
 
 [node name="BlackPawn" parent="CanvasLayer/Pieces/Black" unique_id=374029610 instance=ExtResource("2_5dqgq")]
 anchors_preset = -1
+anchor_left = -0.013541667
+anchor_top = -0.023148147
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 116.0
-offset_top = 253.0
-offset_right = 216.0
-offset_bottom = 353.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_gmbwj")
+offset_left = 86.0
+offset_top = 222.0
+offset_right = 180.0
+offset_bottom = 317.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("8_q0u7m")
 ignore_texture_size = true
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
@@ -270,12 +466,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 226.0
-offset_top = 254.0
-offset_right = 326.0
-offset_bottom = 354.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_gmbwj")
+offset_left = 182.0
+offset_top = 196.0
+offset_right = 302.0
+offset_bottom = 316.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("8_q0u7m")
 ignore_texture_size = true
 stretch_mode = 5
 index = 1
@@ -285,12 +481,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 334.0
-offset_top = 253.0
-offset_right = 434.0
-offset_bottom = 353.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_gmbwj")
+offset_left = 306.0
+offset_top = 197.0
+offset_right = 426.0
+offset_bottom = 317.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("8_q0u7m")
 ignore_texture_size = true
 stretch_mode = 5
 index = 2
@@ -300,12 +496,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 443.0
-offset_top = 255.0
-offset_right = 543.0
-offset_bottom = 355.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_gmbwj")
+offset_left = 430.0
+offset_top = 197.0
+offset_right = 550.0
+offset_bottom = 317.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("8_q0u7m")
 ignore_texture_size = true
 stretch_mode = 5
 index = 3
@@ -315,12 +511,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 549.0
-offset_top = 252.0
-offset_right = 649.0
-offset_bottom = 352.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_gmbwj")
+offset_left = 552.0
+offset_top = 197.0
+offset_right = 672.0
+offset_bottom = 317.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("8_q0u7m")
 ignore_texture_size = true
 stretch_mode = 5
 index = 4
@@ -330,12 +526,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 659.0
-offset_top = 253.0
-offset_right = 759.0
-offset_bottom = 353.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_gmbwj")
+offset_left = 684.0
+offset_top = 198.0
+offset_right = 804.0
+offset_bottom = 318.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("8_q0u7m")
 ignore_texture_size = true
 stretch_mode = 5
 index = 5
@@ -345,12 +541,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 767.0
-offset_top = 252.0
-offset_right = 867.0
-offset_bottom = 352.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_gmbwj")
+offset_left = 809.0
+offset_top = 198.0
+offset_right = 929.0
+offset_bottom = 318.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("8_q0u7m")
 ignore_texture_size = true
 stretch_mode = 5
 index = 6
@@ -360,12 +556,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 876.0
-offset_top = 254.0
-offset_right = 976.0
-offset_bottom = 354.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_gmbwj")
+offset_left = 931.0
+offset_top = 201.0
+offset_right = 1051.0
+offset_bottom = 321.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("8_q0u7m")
 ignore_texture_size = true
 stretch_mode = 5
 index = 7
@@ -375,12 +571,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 117.0
-offset_top = 138.0
-offset_right = 217.0
-offset_bottom = 238.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("5_1an1i")
+offset_left = 64.0
+offset_top = 70.0
+offset_right = 184.0
+offset_bottom = 190.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("9_qbmd8")
 ignore_texture_size = true
 stretch_mode = 5
 index = 8
@@ -390,12 +586,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 878.0
-offset_top = 138.0
-offset_right = 978.0
-offset_bottom = 238.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("5_1an1i")
+offset_left = 931.0
+offset_top = 71.0
+offset_right = 1051.0
+offset_bottom = 191.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("9_qbmd8")
 ignore_texture_size = true
 stretch_mode = 5
 index = 9
@@ -405,12 +601,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 227.0
-offset_top = 140.0
-offset_right = 327.0
-offset_bottom = 240.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("6_herje")
+offset_left = 180.0
+offset_top = 71.0
+offset_right = 300.0
+offset_bottom = 191.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("10_j5bkm")
 ignore_texture_size = true
 stretch_mode = 5
 index = 10
@@ -420,14 +616,15 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 769.0
-offset_top = 138.0
-offset_right = 869.0
-offset_bottom = 238.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("6_herje")
+offset_left = 811.0
+offset_top = 72.0
+offset_right = 931.0
+offset_bottom = 192.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("10_j5bkm")
 ignore_texture_size = true
 stretch_mode = 5
+flip_h = true
 index = 11
 metadata/_edit_use_anchors_ = true
 
@@ -435,12 +632,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 337.0
-offset_top = 138.0
-offset_right = 437.0
-offset_bottom = 238.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("7_sca3m")
+offset_left = 303.0
+offset_top = 69.0
+offset_right = 423.0
+offset_bottom = 189.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("11_ia8te")
 ignore_texture_size = true
 stretch_mode = 5
 index = 12
@@ -450,12 +647,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 659.0
-offset_top = 139.0
-offset_right = 759.0
-offset_bottom = 239.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("7_sca3m")
+offset_left = 684.0
+offset_top = 72.0
+offset_right = 804.0
+offset_bottom = 192.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("11_ia8te")
 ignore_texture_size = true
 stretch_mode = 5
 index = 13
@@ -465,12 +662,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 441.0
-offset_top = 140.0
-offset_right = 541.0
-offset_bottom = 240.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("8_8vgn6")
+offset_left = 431.0
+offset_top = 71.0
+offset_right = 551.0
+offset_bottom = 191.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("12_j7t2y")
 ignore_texture_size = true
 stretch_mode = 5
 index = 14
@@ -480,12 +677,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 550.0
-offset_top = 138.0
-offset_right = 650.0
-offset_bottom = 238.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("9_8smwi")
+offset_left = 556.0
+offset_top = 70.0
+offset_right = 676.0
+offset_bottom = 190.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("13_vpqda")
 ignore_texture_size = true
 stretch_mode = 5
 index = 15
@@ -497,12 +694,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 116.0
-offset_top = 779.0
-offset_right = 216.0
-offset_bottom = 879.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_xpncv")
+offset_left = 56.0
+offset_top = 816.0
+offset_right = 176.0
+offset_bottom = 936.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("14_07w2i")
 ignore_texture_size = true
 stretch_mode = 5
 index = 16
@@ -512,12 +709,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 226.0
-offset_top = 780.0
-offset_right = 326.0
-offset_bottom = 880.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_xpncv")
+offset_left = 177.0
+offset_top = 816.0
+offset_right = 297.0
+offset_bottom = 936.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("14_07w2i")
 ignore_texture_size = true
 stretch_mode = 5
 index = 17
@@ -527,12 +724,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 334.0
-offset_top = 779.0
-offset_right = 434.0
-offset_bottom = 879.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_xpncv")
+offset_left = 304.0
+offset_top = 815.0
+offset_right = 424.0
+offset_bottom = 935.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("14_07w2i")
 ignore_texture_size = true
 stretch_mode = 5
 index = 18
@@ -542,12 +739,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 443.0
-offset_top = 781.0
-offset_right = 543.0
-offset_bottom = 881.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_xpncv")
+offset_left = 430.0
+offset_top = 815.0
+offset_right = 550.0
+offset_bottom = 935.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("14_07w2i")
 ignore_texture_size = true
 stretch_mode = 5
 index = 19
@@ -557,12 +754,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 549.0
-offset_top = 778.0
-offset_right = 649.0
-offset_bottom = 878.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_xpncv")
+offset_left = 559.0
+offset_top = 812.0
+offset_right = 679.0
+offset_bottom = 932.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("14_07w2i")
 ignore_texture_size = true
 stretch_mode = 5
 index = 20
@@ -572,12 +769,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 659.0
-offset_top = 779.0
-offset_right = 759.0
-offset_bottom = 879.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_xpncv")
+offset_left = 683.0
+offset_top = 814.0
+offset_right = 803.0
+offset_bottom = 934.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("14_07w2i")
 ignore_texture_size = true
 stretch_mode = 5
 index = 21
@@ -587,12 +784,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 767.0
-offset_top = 778.0
-offset_right = 867.0
-offset_bottom = 878.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_xpncv")
+offset_left = 810.0
+offset_top = 814.0
+offset_right = 930.0
+offset_bottom = 934.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("14_07w2i")
 ignore_texture_size = true
 stretch_mode = 5
 index = 22
@@ -602,12 +799,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 876.0
-offset_top = 780.0
-offset_right = 976.0
-offset_bottom = 880.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("4_xpncv")
+offset_left = 931.0
+offset_top = 815.0
+offset_right = 1051.0
+offset_bottom = 935.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("14_07w2i")
 ignore_texture_size = true
 stretch_mode = 5
 index = 23
@@ -617,12 +814,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 115.0
-offset_top = 881.0
-offset_right = 215.0
-offset_bottom = 981.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("5_osrak")
+offset_left = 59.0
+offset_top = 925.0
+offset_right = 179.0
+offset_bottom = 1045.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("15_fel5x")
 ignore_texture_size = true
 stretch_mode = 5
 index = 24
@@ -632,12 +829,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 876.0
-offset_top = 881.0
-offset_right = 976.0
-offset_bottom = 981.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("5_osrak")
+offset_left = 929.0
+offset_top = 920.0
+offset_right = 1049.0
+offset_bottom = 1040.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("15_fel5x")
 ignore_texture_size = true
 stretch_mode = 5
 index = 25
@@ -647,12 +844,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 225.0
-offset_top = 883.0
-offset_right = 325.0
-offset_bottom = 983.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("6_v53tg")
+offset_left = 169.0
+offset_top = 927.0
+offset_right = 289.0
+offset_bottom = 1047.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("16_tuqfk")
 ignore_texture_size = true
 stretch_mode = 5
 index = 26
@@ -662,14 +859,15 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 767.0
-offset_top = 881.0
-offset_right = 867.0
-offset_bottom = 981.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("6_v53tg")
+offset_left = 810.0
+offset_top = 920.0
+offset_right = 930.0
+offset_bottom = 1040.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("16_tuqfk")
 ignore_texture_size = true
 stretch_mode = 5
+flip_h = true
 index = 27
 metadata/_edit_use_anchors_ = true
 
@@ -677,12 +875,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 335.0
-offset_top = 881.0
-offset_right = 435.0
-offset_bottom = 981.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("13_ahbjf")
+offset_left = 301.0
+offset_top = 919.0
+offset_right = 421.0
+offset_bottom = 1039.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("17_ujctv")
 ignore_texture_size = true
 stretch_mode = 5
 index = 28
@@ -692,12 +890,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 657.0
-offset_top = 882.0
-offset_right = 757.0
-offset_bottom = 982.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("13_ahbjf")
+offset_left = 682.0
+offset_top = 920.0
+offset_right = 802.0
+offset_bottom = 1040.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("17_ujctv")
 ignore_texture_size = true
 stretch_mode = 5
 index = 29
@@ -707,12 +905,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 442.0
-offset_top = 881.0
-offset_right = 542.0
-offset_bottom = 981.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("14_30pvx")
+offset_left = 430.0
+offset_top = 921.0
+offset_right = 550.0
+offset_bottom = 1041.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("18_8k5rp")
 ignore_texture_size = true
 stretch_mode = 5
 index = 30
@@ -722,58 +920,16 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 550.0
-offset_top = 880.0
-offset_right = 650.0
-offset_bottom = 980.0
-pivot_offset = Vector2(50, 50)
-texture_normal = ExtResource("15_mryt5")
+offset_left = 560.0
+offset_top = 920.0
+offset_right = 680.0
+offset_bottom = 1040.0
+pivot_offset = Vector2(60, 60)
+texture_normal = ExtResource("19_kae3k")
 ignore_texture_size = true
 stretch_mode = 5
 index = 31
 metadata/_edit_use_anchors_ = true
-
-[node name="Poem" type="Control" parent="CanvasLayer" unique_id=2020449582]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="CanvasLayer/Poem" unique_id=610345918]
-layout_mode = 0
-offset_left = 1134.0
-offset_top = 218.0
-offset_right = 1906.0
-offset_bottom = 277.0
-text = "The Emperor's footman, in front of him, marched two paces, armour all a glimmer
-The Shadow's soldier answered his call, moved the same just like a mirror"
-
-[node name="Label2" type="Label" parent="CanvasLayer/Poem" unique_id=78521589]
-layout_mode = 0
-offset_left = 1134.0
-offset_top = 307.0
-offset_right = 1906.0
-offset_bottom = 366.0
-text = "And then the Bishop White flew far and wide, with his marching soldier on the line
-The Shadow's Horse, on Light's left side, moved to center to align"
-
-[node name="Label3" type="Label" parent="CanvasLayer/Poem" unique_id=35019079]
-layout_mode = 0
-offset_left = 1134.0
-offset_top = 404.0
-offset_right = 1906.0
-offset_bottom = 463.0
-text = "The queen of light moved now, until she could no more
-Shadow's dark priest ran just one, treachery at his core"
-
-[node name="Label4" type="Label" parent="CanvasLayer/Poem" unique_id=840843099]
-layout_mode = 0
-offset_left = 1134.0
-offset_top = 494.0
-offset_right = 1906.0
-offset_bottom = 553.0
-text = "To finish, the Emperor simply moved his queen
-FIND HIM IN THE IN-BETWEEN"
 
 [node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=926328027]
 layout_mode = 3
@@ -789,10 +945,10 @@ metadata/_edit_use_anchors_ = true
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 1.5619792
-anchor_top = 0.51296294
-anchor_right = 1.5619792
-anchor_bottom = 0.51296294
+anchor_left = 1.5380208
+anchor_top = 0.5092593
+anchor_right = 1.5380208
+anchor_bottom = 0.5092593
 offset_left = -1871.0
 offset_top = -496.0
 offset_right = -1527.0
