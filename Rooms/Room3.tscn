@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bfa3ib6otv2kj" path="res://Sprites/Background/right-side/carti.png" id="4_8g0xb"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="5_lsdnl"]
 [ext_resource type="Script" uid="uid://b3s022c3tp6ro" path="res://Scripts/Puzzles2D/room3_checker.gd" id="5_um4a1"]
-[ext_resource type="PackedScene" uid="uid://xjsowxpop2h6" path="res://UI/CinematicPlayer.tscn" id="11_3cfrt"]
 [ext_resource type="PackedScene" uid="uid://b06xf8rmjtknh" path="res://Sprites/Background/front-side/praf.tscn" id="13_drxiv"]
 [ext_resource type="Texture2D" uid="uid://cg2rj51cjh3h3" path="res://Sprites/Background/legacy/A.png" id="14_eeqrn"]
 [ext_resource type="Texture2D" uid="uid://r4d1prfccsp0" path="res://Sprites/Background/legacy/D.png" id="15_48l5a"]
@@ -27,9 +26,6 @@ scale = Vector2(0.7570978, 0.75)
 texture = ExtResource("2_nnmqw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=765953715]
-
-[node name="CinematicPlayer" parent="CanvasLayer" unique_id=333442951 instance=ExtResource("11_3cfrt")]
-z_index = 10
 
 [node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=2131005199]
 layout_mode = 3

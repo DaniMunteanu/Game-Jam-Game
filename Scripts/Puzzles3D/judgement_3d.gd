@@ -39,6 +39,10 @@ func check_if_solved():
 func end_puzzle():
 	light_all_candles()
 	bridge.visible = true
+	
+	# in case the door is still in the closing animation (if the puzzle is solved too quickly)
+	if mausoleum_door.get_node("AnimationPlayer").current_animation != "":
+		await mausoleum_door.anim_player.animation_finished
 	mausoleum_door.get_node("AnimationPlayer").play("open_door")
 
 func light_all_candles():

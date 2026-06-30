@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bmxcwjriyydfi"]
+
+[ext_resource type="Script" uid="uid://fjahcu1k05wq" path="res://Scripts/UI scripts/ending_choice.gd" id="1_8e2do"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ragau"]
+font_size = 100
+
+[node name="EndingChoice" type="Control" unique_id=71411889]
+process_mode = 3
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_8e2do")
+
+[node name="LeftEndingButton" type="Button" parent="." unique_id=1864240181]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1060.0
+offset_right = -89.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="LeftEndingButton" unique_id=1137879547]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -288.5
+offset_top = -244.0
+offset_right = 288.5
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Save him"
+label_settings = SubResource("LabelSettings_ragau")
+
+[node name="RightEndingButton" type="Button" parent="." unique_id=346966201]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 89.0
+offset_right = 1060.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="RightEndingButton" unique_id=637284777]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -334.0
+offset_top = -244.0
+offset_right = 334.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Save yourself"
+label_settings = SubResource("LabelSettings_ragau")
+
+[connection signal="mouse_entered" from="LeftEndingButton" to="." method="_on_left_ending_button_mouse_entered"]
+[connection signal="mouse_exited" from="LeftEndingButton" to="." method="_on_left_ending_button_mouse_exited"]
+[connection signal="pressed" from="LeftEndingButton" to="." method="_on_left_ending_button_pressed"]
+[connection signal="mouse_entered" from="RightEndingButton" to="." method="_on_right_ending_button_mouse_entered"]
+[connection signal="mouse_exited" from="RightEndingButton" to="." method="_on_right_ending_button_mouse_exited"]
+[connection signal="pressed" from="RightEndingButton" to="." method="_on_right_ending_button_pressed"]
