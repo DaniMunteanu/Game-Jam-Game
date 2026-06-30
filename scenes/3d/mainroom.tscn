@@ -50,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://cte8lov0ida2q" path="res://Particles/black.tscn" id="45_pnqj1"]
 [ext_resource type="PackedScene" uid="uid://brsr4q1d3x0sj" path="res://3D assets/Objects/bridge of shadows/the_world.tscn" id="48_cp2t3"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="49_hdeoa"]
+[ext_resource type="PackedScene" uid="uid://c88fkbyayxbvi" path="res://3D assets/Particles/strong_fire.tscn" id="50_agc57"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="50_cp2t3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nq443"]
@@ -840,6 +841,7 @@ transform = Transform3D(3.7, 0, 0, 0, 3.7, 0, 0, 0, 3.7, -5.271773, 3.1448445, 2
 
 [node name="OmniLight3D15" type="OmniLight3D" parent="." unique_id=1222721448]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.324274, -18.615837, 18.180344)
+visible = false
 light_color = Color(0.65236986, 0.5193592, 0.4905631, 1)
 light_energy = 9.113
 light_size = 0.682
@@ -1798,6 +1800,36 @@ debug_color = Color(1, 1, 1, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.549999, 2.75, -1.2000046)
 shape = SubResource("BoxShape3D_wi6ju")
 debug_color = Color(1, 1, 1, 1)
+
+[node name="StrongFire" parent="EndPart/bridge" unique_id=1366629760 instance=ExtResource("50_agc57")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 13.400005, 0, 58.2)
+
+[node name="StrongFire6" parent="EndPart/bridge" unique_id=732318868 instance=ExtResource("50_agc57")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -10.599995, 0, 58.2)
+
+[node name="StrongFire7" parent="EndPart/bridge" unique_id=2113609993 instance=ExtResource("50_agc57")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -10.599995, 0, 86.5)
+
+[node name="StrongFire8" parent="EndPart/bridge" unique_id=1358930873 instance=ExtResource("50_agc57")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -10.599983, 0, 111.100006)
+
+[node name="StrongFire9" parent="EndPart/bridge" unique_id=36129413 instance=ExtResource("50_agc57")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -10.599983, 0, 137.5)
+
+[node name="StrongFire10" parent="EndPart/bridge" unique_id=554276347 instance=ExtResource("50_agc57")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -10.599983, 0, 161.1)
+
+[node name="StrongFire2" parent="EndPart/bridge" unique_id=2091287801 instance=ExtResource("50_agc57")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 13.400005, 0, 86.4)
+
+[node name="StrongFire3" parent="EndPart/bridge" unique_id=370105093 instance=ExtResource("50_agc57")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 13.400005, 0, 112.4)
+
+[node name="StrongFire4" parent="EndPart/bridge" unique_id=1391280848 instance=ExtResource("50_agc57")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 13.400005, 0, 138.8)
+
+[node name="StrongFire5" parent="EndPart/bridge" unique_id=1162668588 instance=ExtResource("50_agc57")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 14.200024, 0, 163)
 
 [node name="scari2" type="StaticBody3D" parent="EndPart" unique_id=996384389]
 transform = Transform3D(0.31438974, 0, -1.4007226, 0, 1.4355711, 0, 1.4007226, 0, 0.31438974, 2.228526, -20.487019, 23.721004)
