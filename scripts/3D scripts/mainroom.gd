@@ -26,12 +26,18 @@ extends Node3D
 
 @export var grass_node_names : Array[String] = ["Le_Grass", "Le_Grass2", "Le_Grass3", "Le_Grass4"]
 @export var maus_door : Node3D
+@export var cine_cam : Camera3D
+@export var cutscene_start_pos : Marker3D
+@export var final_anim_player : AnimationPlayer
+var is_world_ending : bool = true
+@export var za_warudo : Node3D
+
 const GARDEN_SPEED : float = 5.0
 
-#@export var fantana : InteractableObject 
-#@export var greenhouse_path : String  
+
 
 func _ready() -> void:
+	cine_cam.current = false
 	#garden_level.visible = false
 	#SHUT OFF THE MUSIC FOR DRAMATIC SPOOKY EFFECT
 	#FOR DEBUGGING
@@ -126,3 +132,35 @@ func _on_tower_delete_body_entered(body: Node3D) -> void:
 
 func _on_garden_open_mausoleum() -> void:
 	maus_door.open()
+
+
+func _on_end_scene_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Character"):
+		player.set_physics_process(false)
+		player.set_process_input(false)
+		
+		print("End custcene started")
+		var player_cam = body.camera# or get node
+		cine_cam.global_transform = player_cam.global_transform
+		cine_cam.current = true
+		
+		var target_transform := cutscene_start_pos.global_transform
+		var tween := create_tween()
+		tween.set_trans(Tween.TRANS_SINE)
+		tween.set_ease(Tween.EASE_IN_OUT)
+		tween.set_parallel(true)
+		
+		tween.tween_property(cine_cam, "global_position", target_transform.origin, 0.5)
+		tween.tween_property(cine_cam, "global_rotation", target_transform.basis.get_euler(), 0.5)
+		tween.set_parallel(false)
+		final_anim_player.play("final_scene")
+		await final_anim_player.animation_finished
+		if is_world_ending:
+			za_warudo.world_ending()
+			await get_tree().create_timer(8.5).timeout
+			final_anim_player.play("accept_fate")
+			await final_anim_player.animation_finished
+			za_warudo.chain_up()
+			print("then move the camera near the chains, then chain up")
+		else:
+			print("aicea vine endingu 2D Dani")
