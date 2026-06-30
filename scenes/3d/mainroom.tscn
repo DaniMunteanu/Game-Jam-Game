@@ -581,7 +581,7 @@ garden_level = NodePath("GardenLevel")
 tower = NodePath("tower")
 tower_delete = NodePath("tower_delete")
 garden_spawnpos = NodePath("Marker3D")
-grass_node_names = Array[String](["Le_Grass20", "Le_Grass21", "Le_Grass22", "Le_Grass24", "Le_Grass26"])
+grass_node_names = Array[String](["Le_Grass20", "Le_Grass21", "Le_Grass22", "Le_Grass24", "Le_Grass26", "Le_Grass25"])
 maus_door = NodePath("EndPart/mausoleum_door")
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="." unique_id=1564272341]
