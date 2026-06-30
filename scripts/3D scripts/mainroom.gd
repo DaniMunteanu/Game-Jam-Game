@@ -29,24 +29,31 @@ extends Node3D
 @export var cine_cam : Camera3D
 @export var cutscene_start_pos : Marker3D
 @export var final_anim_player : AnimationPlayer
-var is_world_ending : bool = true
+var is_world_ending : bool = false
 @export var za_warudo : Node3D
 @onready var black_fire := $EndPart/bridge/black
 @export var bridge_cols : StaticBody3D
 const GARDEN_SPEED : float = 5.0
 
-
+@export var ending_choice: EndingChoice
 
 func _ready() -> void:
+	if ending_choice:
+		ending_choice.ending_picked.connect(_on_ending_picked)
+	
 	cine_cam.current = false
 	
 	get_node("EndPart/bridge").process_mode = Node.PROCESS_MODE_DISABLED 
 	#garden_level.visible = false
 	#SHUT OFF THE MUSIC FOR DRAMATIC SPOOKY EFFECT
 	#FOR DEBUGGING
-	PuzzleManager.complete_puzzles[PuzzleManager.puzzles.MAGICIAN] = true
 	
+	#Already set true in PuzzleManager.gd _ready()
+	#PuzzleManager.complete_puzzles[PuzzleManager.puzzles.MAGICIAN] = true
+	
+	#Only if we want to skip part 1
 	PuzzleManager.completed_puzzles = 6
+	
 	if PuzzleManager.completed_puzzles == 6:
 		_on_part1_finished() # for finishing in 2d
 	_set_grass_visible(false)
@@ -132,10 +139,11 @@ func _on_tower_delete_body_entered(body: Node3D) -> void:
 	tower_delete.queue_free()
 	#PLAY DOOR DROPPING DOWN ANIMATION
 
-
 func _on_garden_open_mausoleum() -> void:
 	maus_door.open()
 
+func _on_ending_picked(is_left_ending):
+	is_world_ending = is_left_ending
 
 func _on_end_scene_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Character"):
@@ -158,6 +166,10 @@ func _on_end_scene_body_entered(body: Node3D) -> void:
 		tween.set_parallel(false)
 		final_anim_player.play("final_scene")
 		await final_anim_player.animation_finished
+		
+		ending_choice.display_choices()
+		await ending_choice.ending_picked
+		
 		if is_world_ending:
 			za_warudo.world_ending()
 			await get_tree().create_timer(8.5).timeout

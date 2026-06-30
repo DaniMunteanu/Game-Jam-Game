@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cgy0sf6c5rwgt"]
 
-[ext_resource type="Script" path="res://Scripts/UI scripts/main_menu.gd" id="1_7b3b2"]
+[ext_resource type="Script" uid="uid://pktjg68ny7sg" path="res://Scripts/UI scripts/main_menu.gd" id="1_7b3b2"]
 [ext_resource type="Texture2D" uid="uid://rqsr6wlqrn22" path="res://UI/Menus/LE_MENU.png" id="2_7b3b2"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="3_7b3b2"]
 [ext_resource type="PackedScene" uid="uid://bhm5xkhsb3n7c" path="res://scenes/2d/options_panel.tscn" id="3_k62s8"]
@@ -180,3 +180,4 @@ intro_video = ExtResource("10_cjo4x")
 [connection signal="pressed" from="MenuScreen/ButtonManager/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="MenuScreen/ButtonManager/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MenuScreen/ButtonManager/Quit Game" to="." method="_on_quit_game_pressed"]
+[connection signal="cinematic_finished" from="CinematicPlayer" to="." method="_on_cinematic_player_cinematic_finished"]

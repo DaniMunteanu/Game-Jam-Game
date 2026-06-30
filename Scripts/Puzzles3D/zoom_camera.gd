@@ -76,7 +76,3 @@ func _on_button_4_pressed() -> void:
 	print(curr_arr)
 	butt4.texture_normal = texture_array[curr_arr[3]]
 	check_puzzle()
-
-
-func _on_hint_pressed() -> void:
-	TextManager.show_text("I should look more closely at the runes.")	

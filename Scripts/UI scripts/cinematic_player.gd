@@ -27,13 +27,14 @@ func play_intro():
 	
 	self_modulate.a = 1
 	stream = intro_video
-	play()
+	if is_inside_tree():
+		play()
 	skip.show()
+	
+	can_skip = true
 	
 	animation_player.play("fade_to_normal")
 	await animation_player.animation_finished
-	
-	can_skip = true
 
 func play_outro():
 	AudioManager.stop_music()
