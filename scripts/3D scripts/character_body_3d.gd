@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 const SPRINT_SPEED = 8.7  #RUUUUN
-var speed = 3.0
+var speed = 8.0
 const SENSITIVITY = 0.003
 
 var gravity = 9.8
@@ -71,8 +71,8 @@ func _physics_process(delta: float) -> void:
 		input_dir.x,0, input_dir.y)).normalized()
 #RUUUUN
 	var current_speed = speed
-	if Input.is_key_pressed(KEY_SHIFT):
-		current_speed = SPRINT_SPEED
+	#if Input.is_key_pressed(KEY_SHIFT):
+		#current_speed = SPRINT_SPEED
 	
 	if direction:
 		velocity.x = direction.x * current_speed  #RUUUUN 

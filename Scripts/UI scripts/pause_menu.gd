@@ -13,6 +13,8 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
+		if is_in_intro:
+			return
 		var current_scene = get_tree().current_scene
 		if is_in_chest:
 			_exit_chest()

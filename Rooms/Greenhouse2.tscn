@@ -45,7 +45,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="A" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=2055260161]
 self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.052083332
+anchor_top = -0.61296296
+anchor_right = -0.052083332
+anchor_bottom = -0.61296296
 offset_left = 107.0
 offset_top = 724.0
 offset_right = 207.0
@@ -73,7 +78,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="D" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=1265537777]
 self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028710937
+anchor_top = -0.6037037
+anchor_right = 0.028710937
+anchor_bottom = -0.6037037
 offset_left = 1664.875
 offset_top = 724.0
 offset_right = 1764.8751

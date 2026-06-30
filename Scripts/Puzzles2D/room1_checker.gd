@@ -1,5 +1,9 @@
 extends Node
 
+@export var background_wall: Sprite2D
+
+const PERETE_4_BECUL_STINS = preload("res://Sprites/Background/back-side/perete 4 becul stins.png")
+
 @onready var the_magician: Button = $"The Magician"
 @export var a_button: Button
 @export var d_button: Button
@@ -22,3 +26,9 @@ func _ready() -> void:
 			calendar_texture.texture = load("res://Sprites/Background/back-side/calendar_facut.png")
 		calendar_button.disabled = true
 		calendar_button.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		
+	if PuzzleManager.completed_puzzles == 6:
+		lights_out()
+		
+func lights_out():
+	background_wall.texture = PERETE_4_BECUL_STINS

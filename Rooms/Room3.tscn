@@ -27,13 +27,14 @@ texture = ExtResource("2_nnmqw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=765953715]
 
-[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=2131005199]
+[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=2131005199 node_paths=PackedStringArray("background_wall")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
 script = ExtResource("5_um4a1")
+background_wall = NodePath("../../BackgorundSprites/Wall")
 
 [node name="Death" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=1658255433]
 self_modulate = Color(1, 1, 1, 0)
@@ -137,6 +138,42 @@ volume_db = 9.26
 
 [node name="Praf" parent="." unique_id=1443607552 instance=ExtResource("13_drxiv")]
 position = Vector2(800, 526)
+
+[node name="Praf2" parent="." unique_id=746426343 instance=ExtResource("13_drxiv")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1305, 357)
+
+[node name="Praf3" parent="." unique_id=1655151100 instance=ExtResource("13_drxiv")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1382, 360)
+
+[node name="Praf4" parent="." unique_id=1266053287 instance=ExtResource("13_drxiv")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1448, 360)
+
+[node name="Praf5" parent="." unique_id=29433260 instance=ExtResource("13_drxiv")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1508, 406)
+
+[node name="Praf6" parent="." unique_id=1601058633 instance=ExtResource("13_drxiv")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1510, 474)
+
+[node name="Praf7" parent="." unique_id=1948508698 instance=ExtResource("13_drxiv")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1452, 523)
+
+[node name="Praf8" parent="." unique_id=1028761705 instance=ExtResource("13_drxiv")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1383, 533)
+
+[node name="Praf9" parent="." unique_id=1847750851 instance=ExtResource("13_drxiv")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1329, 508)
+
+[node name="Praf10" parent="." unique_id=217756961 instance=ExtResource("13_drxiv")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1304, 435)
 
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/Death" to="CanvasLayer/SceneSwitchers/Death" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/A" to="." method="_on_a_pressed"]

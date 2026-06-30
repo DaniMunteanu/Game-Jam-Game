@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c1poe3shrtvbk" path="res://Scripts/room.gd" id="1_tj7eo"]
 [ext_resource type="Texture2D" uid="uid://8unoo7n3iuta" path="res://Sprites/Background/left-side/perete 2 faca carte.png" id="2_def1v"]
+[ext_resource type="Script" uid="uid://ck7mhaykas1vp" path="res://Scripts/Puzzles2D/room4_checker.gd" id="3_03h48"]
 [ext_resource type="Script" path="res://Scripts/pisi.gd" id="6_def1v"]
 [ext_resource type="AudioStream" uid="uid://v6expysct4fh" path="res://Audio/SFX/purr.mp3" id="7_03h48"]
 [ext_resource type="AudioStream" uid="uid://cnyl21bqw7ifp" path="res://Audio/SFX/pisi-miau.mp3" id="8_qu38w"]
@@ -27,12 +28,14 @@ texture = ExtResource("2_def1v")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1817150608]
 
-[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=1753663454]
+[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=1753663454 node_paths=PackedStringArray("background_wall")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
+script = ExtResource("3_03h48")
+background_wall = NodePath("../../BackgorundSprites/Wall")
 
 [node name="A" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=1020717284]
 self_modulate = Color(1, 1, 1, 0)
@@ -64,10 +67,10 @@ stretch_mode = 5
 [node name="D" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=915977491]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 1690.0
-offset_top = 837.0
-offset_right = 1790.0001
-offset_bottom = 894.0
+offset_left = 1705.0
+offset_top = 747.0
+offset_right = 1805.0001
+offset_bottom = 804.0
 script = ExtResource("10_031wo")
 destination_room_path = "res://Rooms/Room1.tscn"
 

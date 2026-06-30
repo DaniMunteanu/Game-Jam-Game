@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ms8kg0b1tlyb" path="res://3D assets/Particles/le_apa.tscn" id="7_t1yto"]
 [ext_resource type="Texture2D" uid="uid://dhtdue5rkxpdp" path="res://Sprites/tarot cards/The Magician.png" id="8_cxpkk"]
 [ext_resource type="Texture2D" uid="uid://bydy7hwd7bkbv" path="res://Sprites/texts/verset_fundal.png" id="9_tfww2"]
+[ext_resource type="Texture2D" uid="uid://6ur5ydbrhy2d" path="res://Sprites/texts/fixedverset2.png" id="10_g0cls"]
 [ext_resource type="Script" uid="uid://dias3okb0nhm1" path="res://Scripts/UI scripts/card.gd" id="10_x0508"]
 [ext_resource type="AudioStream" uid="uid://bm085t0y4w02f" path="res://Audio/SFX/mirror4.mp3" id="11_jw885"]
 [ext_resource type="Texture2D" uid="uid://bedtvepwhx65i" path="res://Sprites/texts/verset3_fundal.png" id="11_x0508"]
@@ -27,35 +28,6 @@
 [ext_resource type="PackedScene" uid="uid://dyj6i7r810rod" path="res://3D assets/ivy/ivy_tall.tscn" id="25_c1umg"]
 [ext_resource type="PackedScene" uid="uid://ia4rca60sayj" path="res://3D assets/ivy/ivy_corner.tscn" id="26_dsreb"]
 [ext_resource type="PackedScene" uid="uid://dq4kax18ip075" path="res://3D assets/ivy/Ivy_wide.tscn" id="26_yv1t8"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxx7e"]
-
-[sub_resource type="Sky" id="Sky_yv1t8"]
-sky_material = SubResource("ProceduralSkyMaterial_yxx7e")
-radiance_size = 4
-
-[sub_resource type="Environment" id="Environment_rfp5g"]
-background_mode = 2
-sky = SubResource("Sky_yv1t8")
-ambient_light_color = Color(0.78183013, 0.78183013, 0.7818301, 1)
-tonemap_mode = 3
-tonemap_exposure = 0.26
-tonemap_white = 4.75
-ssr_enabled = true
-ssao_enabled = true
-ssao_intensity = 3.1
-glow_enabled = true
-fog_enabled = true
-fog_light_color = Color(0.567832, 0.5213776, 0.67262733, 1)
-fog_sun_scatter = 0.27
-fog_density = 0.02
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.01
-volumetric_fog_albedo = Color(0.36692, 0.6230053, 0.8730759, 1)
-volumetric_fog_anisotropy = 0.11
-volumetric_fog_length = 26.2
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ujn77"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qs6id"]
 size = Vector3(9.200684, 0.48059082, 4.371338)
@@ -326,10 +298,6 @@ visible = false
 shadow_enabled = true
 shadow_blur = 2.0
 directional_shadow_blend_splits = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1954821123]
-environment = SubResource("Environment_rfp5g")
-camera_attributes = SubResource("CameraAttributesPractical_ujn77")
 
 [node name="garden_spawn" type="Marker3D" parent="." unique_id=968669344]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5907462, -0.53646517, 1.0825098)
@@ -853,7 +821,7 @@ offset_bottom = 151.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("9_tfww2")
+texture = ExtResource("10_g0cls")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("10_x0508")

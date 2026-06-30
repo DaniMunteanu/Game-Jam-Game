@@ -38,7 +38,7 @@ texture = ExtResource("2_enbp3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=565787541]
 
-[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=653715160 node_paths=PackedStringArray("a_button", "d_button", "calendar_button")]
+[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=653715160 node_paths=PackedStringArray("background_wall", "a_button", "d_button", "calendar_button")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -10.0
@@ -47,6 +47,7 @@ offset_right = 1910.0
 offset_bottom = 1082.0
 mouse_filter = 2
 script = ExtResource("4_gthuv")
+background_wall = NodePath("../../BackgroundSprites/Wall")
 a_button = NodePath("A")
 d_button = NodePath("D")
 calendar_button = NodePath("Calendar")

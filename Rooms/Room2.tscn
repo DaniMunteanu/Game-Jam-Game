@@ -153,7 +153,7 @@ grow_vertical = 2
 color = Color(0.091252245, 0.08692636, 0.2524531, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=83785056]
+[node name="SceneSwitchers" type="Control" parent="CanvasLayer" unique_id=83785056 node_paths=PackedStringArray("background_wall", "mirror_texture")]
 layout_mode = 3
 anchor_right = 1.006
 anchor_bottom = 1.019
@@ -163,6 +163,8 @@ offset_right = -0.52001953
 offset_bottom = -0.52001953
 mouse_filter = 2
 script = ExtResource("6_ipfbv")
+background_wall = NodePath("../../BackgroundSprites/Wall")
+mirror_texture = NodePath("Mirror/TextureRect")
 
 [node name="Mirror" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=217423170]
 self_modulate = Color(1, 1, 1, 0)
@@ -193,14 +195,15 @@ scale = Vector2(0.7, 0.7)
 mouse_filter = 2
 texture = ExtResource("9_iwjsq")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="A" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=624187282]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 107.0
-offset_top = 724.0
-offset_right = 207.0
-offset_bottom = 781.0
+offset_left = 59.0
+offset_top = 819.0
+offset_right = 159.0
+offset_bottom = 876.0
 script = ExtResource("15_okvqb")
 destination_room_path = "res://Rooms/Room1.tscn"
 
@@ -223,10 +226,10 @@ stretch_mode = 5
 [node name="D" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=931985481]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 1664.875
-offset_top = 724.0
-offset_right = 1764.8751
-offset_bottom = 781.0
+offset_left = 1647.0
+offset_top = 752.0
+offset_right = 1747.0001
+offset_bottom = 809.0
 script = ExtResource("15_okvqb")
 destination_room_path = "res://Rooms/Room3.tscn"
 

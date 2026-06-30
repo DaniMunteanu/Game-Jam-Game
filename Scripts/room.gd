@@ -11,7 +11,7 @@ var can_switch: bool = true
 func _ready() -> void:
 	
 	if PuzzleManager.complete_puzzles[PuzzleManager.puzzles.MAGICIAN] == true:
-		if name == "Room1":
+		if name == "Room1" and PuzzleManager.completed_puzzles < 6:
 			var wall = get_node_or_null("BackgroundSprites/Wall")
 			if wall:
 				wall.texture = load("res://Sprites/Background/back-side/perete_tablouri_facute.png")
