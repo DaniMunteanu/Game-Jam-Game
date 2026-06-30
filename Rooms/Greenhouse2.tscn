@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://esmmo4ax68np" path="res://Sprites/Background/sera-left/sunflower.png" id="8_5s7jx"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="8_147er"]
 [ext_resource type="Texture2D" uid="uid://dkybsj18gpa48" path="res://Sprites/Background/sera-left/sunflower_stem.png" id="9_hsk72"]
+[ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="11_hsk72"]
 
 [node name="Greenhouse2" type="Node2D" unique_id=1041314291 node_paths=PackedStringArray("canvas_layer")]
 script = ExtResource("1_g0gk5")
@@ -183,5 +184,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("8_147er")]
 mouse_filter = 2
+
+[node name="holy" type="AudioStreamPlayer2D" parent="." unique_id=199419779]
+stream = ExtResource("11_hsk72")
 
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/Sunflower" to="CanvasLayer/SceneSwitchers" method="_on_sunflower_pressed"]

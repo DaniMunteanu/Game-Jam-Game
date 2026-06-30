@@ -982,7 +982,7 @@ mouse_filter = 2
 
 [node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("19_gmbwj")]
 
-[node name="Sfx_Player" type="AudioStreamPlayer2D" parent="." unique_id=738795611]
+[node name="holy" type="AudioStreamPlayer2D" parent="." unique_id=738795611]
 stream = ExtResource("11_1an1i")
 
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/BackToRoom" to="CanvasLayer/SceneSwitchers/BackToRoom" method="_on_pressed"]
