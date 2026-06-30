@@ -54,10 +54,10 @@ calendar_button = NodePath("Calendar")
 [node name="A" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=329204687]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 107.0
-offset_top = 724.0
-offset_right = 207.0
-offset_bottom = 781.0
+offset_left = 116.0
+offset_top = 818.0
+offset_right = 216.0
+offset_bottom = 875.0
 script = ExtResource("5_1kmgg")
 destination_room_path = "res://Rooms/Room4.tscn"
 
@@ -80,10 +80,10 @@ stretch_mode = 5
 [node name="D" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=794513466]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 1664.875
-offset_top = 724.0
-offset_right = 1764.8751
-offset_bottom = 781.0
+offset_left = 1646.0
+offset_top = 827.0
+offset_right = 1746.0001
+offset_bottom = 884.0
 script = ExtResource("5_1kmgg")
 destination_room_path = "res://Rooms/Room2.tscn"
 

@@ -59,7 +59,7 @@ func _ready() -> void:
 	#PuzzleManager.complete_puzzles[PuzzleManager.puzzles.MAGICIAN] = true
 	
 	#Only if we want to skip part 1
-	PuzzleManager.completed_puzzles = 6
+	#PuzzleManager.completed_puzzles = 6
 	
 	if PuzzleManager.completed_puzzles == 6:
 		_on_part1_finished() # for finishing in 2d
