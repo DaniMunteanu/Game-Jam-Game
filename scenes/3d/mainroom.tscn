@@ -53,6 +53,8 @@
 [ext_resource type="PackedScene" uid="uid://c88fkbyayxbvi" path="res://3D assets/Particles/strong_fire.tscn" id="50_agc57"]
 [ext_resource type="PackedScene" uid="uid://roet0qnciil5" path="res://UI/CardsDisplay.tscn" id="50_cp2t3"]
 [ext_resource type="PackedScene" uid="uid://bmxcwjriyydfi" path="res://UI/EndingChoice.tscn" id="53_e36nn"]
+[ext_resource type="PackedScene" uid="uid://xjsowxpop2h6" path="res://UI/CinematicPlayer.tscn" id="54_kfru1"]
+[ext_resource type="VideoStream" uid="uid://cf1tmfa5yi57r" path="res://Videos/Arcana_Intro_Final.ogv" id="55_fugsj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nq443"]
 
@@ -1737,6 +1739,12 @@ transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 1.70
 
 [node name="TheWorld" parent="EndPart/bridge" unique_id=13138351 instance=ExtResource("48_cp2t3")]
 
+[node name="chain_023" parent="EndPart/bridge/TheWorld" index="2" unique_id=501476779]
+"blend_shapes/Key 1" = 1.0
+
+[node name="chain_005" parent="EndPart/bridge/TheWorld" index="3" unique_id=2097617345]
+"blend_shapes/Key 1" = 1.0
+
 [node name="Plane_001" parent="EndPart/bridge/TheWorld" index="6" unique_id=125132162]
 transform = Transform3D(2.838862e-07, 0.5735762, -0.81915206, 0.9999999, -2.8212995e-07, 1.4901158e-07, -1.4563784e-07, -0.81915206, -0.57357615, -4.479083, 7.565024, 195.1427)
 
@@ -1847,12 +1855,20 @@ is_in_3d = true
 [node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("50_cp2t3")]
 
 [node name="EndingChoice" parent="CanvasLayer" unique_id=71411889 node_paths=PackedStringArray("inventory_ui", "cards_display", "ozzy_mesh", "mirror_mesh_1", "mirror_mesh_2", "mirror_mesh_3") instance=ExtResource("53_e36nn")]
+visible = false
 inventory_ui = NodePath("../InventoryUI")
 cards_display = NodePath("../CardsDisplay")
 ozzy_mesh = NodePath("../../EndPart/bridge/TheWorld/Ozzy")
 mirror_mesh_1 = NodePath("../../EndPart/bridge/TheWorld/Plane_001")
 mirror_mesh_2 = NodePath("../../EndPart/bridge/TheWorld/Plane_012")
 mirror_mesh_3 = NodePath("../../EndPart/bridge/TheWorld/Plane_011")
+
+[node name="CinematicPlayer" parent="CanvasLayer" unique_id=333442951 instance=ExtResource("54_kfru1")]
+visible = false
+z_index = 1
+offset_left = -5.0
+offset_top = -6.0
+intro_video = ExtResource("55_fugsj")
 
 [connection signal="clicked" from="Player" to="." method="_on_player_clicked"]
 [connection signal="body_entered" from="FirstRoom/actual_mirror/InteractableArea3D" to="." method="_on_d_mirror_body_entered"]

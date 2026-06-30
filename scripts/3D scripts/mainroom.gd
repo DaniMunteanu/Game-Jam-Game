@@ -36,10 +36,12 @@ var is_world_ending : bool = false
 const GARDEN_SPEED : float = 5.0
 
 @export var ending_choice: EndingChoice
+@onready var cinematic_player: CinematicPlayer = $CanvasLayer/CinematicPlayer
 
 func _ready() -> void:
 	if ending_choice:
 		ending_choice.ending_picked.connect(_on_ending_picked)
+		ending_choice.visible = false
 	
 	cine_cam.current = false
 	
@@ -147,6 +149,8 @@ func _on_ending_picked(is_left_ending):
 
 func _on_end_scene_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Character"):
+		PauseMenu.is_in_intro = true
+		
 		player.set_physics_process(false)
 		player.set_process_input(false)
 		
@@ -170,6 +174,11 @@ func _on_end_scene_body_entered(body: Node3D) -> void:
 		ending_choice.display_choices()
 		await ending_choice.ending_picked
 		
+		PauseMenu.is_in_intro = true
+		DirAccess.remove_absolute("user://SaveFile.tres")
+		InventoryManager.reset_data()
+		PuzzleManager.reset_data()
+		
 		if is_world_ending:
 			za_warudo.world_ending()
 			await get_tree().create_timer(8.5).timeout
@@ -178,5 +187,15 @@ func _on_end_scene_body_entered(body: Node3D) -> void:
 			await final_anim_player.animation_finished
 			za_warudo.chain_up()
 			print("then move the camera near the chains, then chain up")
+			
+			await get_tree().create_timer(5).timeout
+			cinematic_player.show()
+			cinematic_player.only_fade()
 		else:
-			print("aicea vine endingu 2D Dani")
+			cinematic_player.show()
+			cinematic_player.play_outro()
+			
+		await cinematic_player.cinematic_finished
+		PauseMenu.is_in_intro = false
+			
+		SceneChanger.change_scene_to_path("res://scenes/2d/main_menu.tscn")

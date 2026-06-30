@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://biq2pisv2spek" path="res://Scripts/UI scripts/cinematic_player.gd" id="1_tvui3"]
 [ext_resource type="VideoStream" uid="uid://ce8mg3xaglj1b" path="res://Videos/gata.ogv" id="2_apckq"]
-[ext_resource type="VideoStream" uid="uid://bwujmt4ln3qff" path="res://Videos/outro-gata.ogv" id="3_r5lw3"]
+[ext_resource type="VideoStream" uid="uid://bip01dfcv2ow6" path="res://Videos/Final_FinalEnding-Arcana.ogv" id="3_apckq"]
 
 [sub_resource type="Animation" id="Animation_apckq"]
 length = 0.001
@@ -103,7 +103,7 @@ volume_db = -9.09
 expand = true
 script = ExtResource("1_tvui3")
 intro_video = ExtResource("2_apckq")
-outro_video = ExtResource("3_r5lw3")
+outro_video = ExtResource("3_apckq")
 
 [node name="BlackScreen" type="ColorRect" parent="." unique_id=1291619043]
 visible = false
