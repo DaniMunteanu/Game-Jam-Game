@@ -10,7 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://esmmo4ax68np" path="res://Sprites/Background/sera-left/sunflower.png" id="8_5s7jx"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="8_147er"]
 [ext_resource type="Texture2D" uid="uid://dkybsj18gpa48" path="res://Sprites/Background/sera-left/sunflower_stem.png" id="9_hsk72"]
+[ext_resource type="Texture2D" uid="uid://dmeffnqe2wqlu" path="res://Sprites/Background/sera-left/plante/stropitoare.png" id="11_dcyah"]
 [ext_resource type="AudioStream" uid="uid://bcug6xi8ndqtn" path="res://Audio/SFX/holy_arcana.ogg" id="11_hsk72"]
+[ext_resource type="Texture2D" uid="uid://mnm3rm0h7qww" path="res://Sprites/Background/sera-left/plante/pots.png" id="12_lc8j6"]
+[ext_resource type="Texture2D" uid="uid://bhkfom7es7moy" path="res://Sprites/Background/sera-left/plante/roaba.png" id="13_dcyah"]
 
 [node name="Greenhouse2" type="Node2D" unique_id=1041314291 node_paths=PackedStringArray("canvas_layer")]
 script = ExtResource("1_g0gk5")
@@ -185,7 +188,22 @@ metadata/_edit_use_anchors_ = true
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("8_147er")]
 mouse_filter = 2
 
+[node name="Stropitoare" type="Sprite2D" parent="CanvasLayer" unique_id=93226875]
+position = Vector2(1157, 932.375)
+scale = Vector2(0.2493703, 0.23774885)
+texture = ExtResource("11_dcyah")
+
 [node name="holy" type="AudioStreamPlayer2D" parent="." unique_id=199419779]
 stream = ExtResource("11_hsk72")
+
+[node name="Pots" type="Sprite2D" parent="." unique_id=35528705]
+position = Vector2(225, 907)
+scale = Vector2(0.39983028, 0.46925217)
+texture = ExtResource("12_lc8j6")
+
+[node name="Roaba" type="Sprite2D" parent="." unique_id=11841074]
+position = Vector2(804, 782)
+scale = Vector2(0.59527016, 0.64323306)
+texture = ExtResource("13_dcyah")
 
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/Sunflower" to="CanvasLayer/SceneSwitchers" method="_on_sunflower_pressed"]

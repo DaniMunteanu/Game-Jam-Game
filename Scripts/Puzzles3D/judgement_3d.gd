@@ -13,6 +13,7 @@ extends Node
 @onready var lil_fire_1: Node3D = $"whole-ass_mausoleum2/FireHazard/lil_fire1"
 @onready var lil_fire_2: Node3D = $"whole-ass_mausoleum2/FireHazard/lil_fire2"
 @onready var lil_fire_3: Node3D = $"whole-ass_mausoleum2/FireHazard/lil_fire3"
+@onready var holy: AudioStreamPlayer3D = $holy
 
 var candles_lit: Array[bool] = [false, false, false, false]
 
@@ -39,7 +40,7 @@ func check_if_solved():
 func end_puzzle():
 	light_all_candles()
 	bridge.visible = true
-	
+	holy.play()
 	# in case the door is still in the closing animation (if the puzzle is solved too quickly)
 	if mausoleum_door.get_node("AnimationPlayer").current_animation != "":
 		await mausoleum_door.anim_player.animation_finished
