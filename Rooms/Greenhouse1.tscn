@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="7_8mi8e"]
 [ext_resource type="Texture2D" uid="uid://ynaiyyw75833" path="res://Sprites/Background/front-side/sera acvariu.png" id="7_lskgf"]
 [ext_resource type="AudioStream" uid="uid://bm085t0y4w02f" path="res://Audio/SFX/mirror4.mp3" id="12_qo4f6"]
+[ext_resource type="Texture2D" uid="uid://f1nvqp2fuk0l" path="res://Sprites/Background/sera-left/plante/plant_shelf.png" id="13_7j8cd"]
 
 [sub_resource type="Shader" id="Shader_a6xs1"]
 code = "shader_type canvas_item;
@@ -276,5 +277,10 @@ libraries/ = SubResource("AnimationLibrary_qo4f6")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1130420059]
 stream = ExtResource("12_qo4f6")
+
+[node name="PlantShelf" type="Sprite2D" parent="." unique_id=1339988265]
+position = Vector2(1517, 743.00006)
+scale = Vector2(0.7660891, 0.80542445)
+texture = ExtResource("13_7j8cd")
 
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/Mirror" to="CanvasLayer" method="_on_mirror_pressed"]

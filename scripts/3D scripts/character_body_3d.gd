@@ -22,12 +22,23 @@ const FOOTSTEP_INTERVAL : float = 0.9
 
 signal clicked
 @export var cursor : Resource
+@export var footstep_sound_indoor : AudioStream
+@export var footstep_sound_outdoor : AudioStream
 
 func _ready():
 	#Input.set_custom_mouse_cursor(cursor)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if footstep_sound_indoor:
+		footstep_player.stream = footstep_sound_indoor
+		
+var current_footstep_sounds: Array[AudioStream] = []
 
-
+func set_footstep_sound(stream: AudioStream) -> void:
+	footstep_player.stream = stream
+	
+func set_footstep_sounds_random(sounds: Array[AudioStream]) -> void:
+	current_footstep_sounds = sounds
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * SENSITIVITY)
@@ -78,6 +89,8 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor() and velocity.length() > 0.1:
 		footstep_timer -= delta
 		if footstep_timer <= 0.0:
+			if current_footstep_sounds.size() > 0:
+				footstep_player.stream = current_footstep_sounds[randi() % current_footstep_sounds.size()]
 			footstep_player.pitch_scale = randf_range(0.9, 1.3)
 			footstep_player.play()
 			footstep_timer = FOOTSTEP_INTERVAL
