@@ -5,7 +5,6 @@
 [ext_resource type="Script" path="res://Scripts/pisi.gd" id="6_def1v"]
 [ext_resource type="AudioStream" uid="uid://v6expysct4fh" path="res://Audio/SFX/purr.mp3" id="7_03h48"]
 [ext_resource type="AudioStream" uid="uid://cnyl21bqw7ifp" path="res://Audio/SFX/pisi-miau.mp3" id="8_qu38w"]
-[ext_resource type="Script" path="res://Scripts/grimoire.gd" id="9_03h48"]
 [ext_resource type="Script" uid="uid://cyvw16ono1awq" path="res://Scripts/scene_switcher_button.gd" id="10_031wo"]
 [ext_resource type="Texture2D" uid="uid://3d6fx73p2xj6" path="res://Sprites/Background/left-side/perete 2 carte.png" id="11_03h48"]
 [ext_resource type="PackedScene" uid="uid://47ig0ed5mepy" path="res://UI/InventoryUI.tscn" id="11_pqupb"]
@@ -109,7 +108,6 @@ offset_left = 1043.0
 offset_top = 498.0
 offset_right = 1216.0
 offset_bottom = 626.0
-script = ExtResource("9_03h48")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/SceneSwitchers/Grimoire" unique_id=595193169]
 layout_mode = 0
@@ -136,4 +134,3 @@ position = Vector2(727, 523)
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/A" to="." method="_on_a_pressed"]
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/D" to="." method="_on_d_pressed"]
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/Pisi" to="CanvasLayer/SceneSwitchers/Pisi" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/SceneSwitchers/Grimoire" to="CanvasLayer/SceneSwitchers/Grimoire" method="_on_pressed"]
