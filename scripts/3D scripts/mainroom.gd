@@ -31,13 +31,16 @@ extends Node3D
 @export var final_anim_player : AnimationPlayer
 var is_world_ending : bool = true
 @export var za_warudo : Node3D
-
+@onready var black_fire := $EndPart/bridge/black
+@export var bridge_cols : StaticBody3D
 const GARDEN_SPEED : float = 5.0
 
 
 
 func _ready() -> void:
 	cine_cam.current = false
+	
+	get_node("EndPart/bridge").process_mode = Node.PROCESS_MODE_DISABLED 
 	#garden_level.visible = false
 	#SHUT OFF THE MUSIC FOR DRAMATIC SPOOKY EFFECT
 	#FOR DEBUGGING
@@ -158,6 +161,7 @@ func _on_end_scene_body_entered(body: Node3D) -> void:
 		if is_world_ending:
 			za_warudo.world_ending()
 			await get_tree().create_timer(8.5).timeout
+			
 			final_anim_player.play("accept_fate")
 			await final_anim_player.animation_finished
 			za_warudo.chain_up()
