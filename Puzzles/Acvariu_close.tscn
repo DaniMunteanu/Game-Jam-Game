@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://8rw0myqna3dp" path="res://Sprites/Items/worm.png" id="11_v2bvc"]
 [ext_resource type="Texture2D" uid="uid://chyv5bey0u6xk" path="res://Sprites/Background/sera-left/fih1-removebg-preview.png" id="12_0oux8"]
 [ext_resource type="Texture2D" uid="uid://b0hiaalwuipvm" path="res://Sprites/Background/sera-left/fih2-removebg-preview.png" id="13_cfm1k"]
+[ext_resource type="Texture2D" uid="uid://bbr2d1v7aaqa" path="res://Sprites/Background/sera-left/bubble_1.png" id="14_cfm1k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kupa2"]
 
@@ -88,11 +89,13 @@ grow_vertical = 1
 required_item = ExtResource("9_8skb0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1927818754]
+visible = false
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("5_kupa2")]
 mouse_filter = 2
 
 [node name="CardsDisplay" parent="CanvasLayer" unique_id=2004390668 instance=ExtResource("10_m5v8r")]
+visible = false
 
 [node name="Wormh" type="Sprite2D" parent="." unique_id=354003534]
 visible = false
@@ -112,6 +115,45 @@ texture = ExtResource("13_cfm1k")
 position = Vector2(436, 182)
 scale = Vector2(-1.0400007, 1)
 texture = ExtResource("12_0oux8")
+
+[node name="smallFih4" type="Sprite2D" parent="." unique_id=1035025907]
+position = Vector2(1605, 805)
+rotation = -1.9945283
+texture = ExtResource("12_0oux8")
+
+[node name="smallFih5" type="Sprite2D" parent="." unique_id=1093775314]
+position = Vector2(163.00002, 305.00003)
+rotation = 3.0569012
+scale = Vector2(1.0010949, -1.1990868)
+skew = 0.025804996
+texture = ExtResource("13_cfm1k")
+
+[node name="smallFih6" type="Sprite2D" parent="." unique_id=1770442084]
+position = Vector2(1269, 434)
+rotation = 3.1415927
+scale = Vector2(-1.1648006, -1)
+texture = ExtResource("12_0oux8")
+
+[node name="smallFih7" type="Sprite2D" parent="." unique_id=1039692306]
+position = Vector2(1038, 237)
+rotation = 0.5535664
+scale = Vector2(-1.0400007, 1)
+texture = ExtResource("12_0oux8")
+
+[node name="Bubble1" type="Sprite2D" parent="." unique_id=1263726688]
+position = Vector2(855, 848)
+scale = Vector2(1.8125, 1.9375)
+texture = ExtResource("14_cfm1k")
+
+[node name="Bubble3" type="Sprite2D" parent="." unique_id=798914712]
+position = Vector2(826, 902.99994)
+scale = Vector2(1.8125, 1.9375)
+texture = ExtResource("14_cfm1k")
+
+[node name="Bubble2" type="Sprite2D" parent="." unique_id=225272016]
+position = Vector2(815, 789)
+scale = Vector2(1.8125, 1.9375)
+texture = ExtResource("14_cfm1k")
 
 [connection signal="pressed" from="BackToRoom" to="BackToRoom" method="_on_pressed"]
 [connection signal="pressed" from="GateKey" to="." method="_on_gate_key_pressed"]
