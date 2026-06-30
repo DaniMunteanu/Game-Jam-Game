@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var text_label : Label = $PanelContainer/MarginContainer/HBoxContainer/Label
-@onready var skip_button: Button = $Skip
+@onready var skip: TextureRect = $Skip
 
 var _typing_speed : float = 30.0
 var _typing_time : float = 0.0
@@ -11,8 +11,16 @@ var current_id : int = 0
 func _ready() -> void:
 	hide()
 	TextManager.start_dialogue.connect(_on_start_dialogue)
-	skip_button.pressed.connect(_on_skip_pressed)
-	
+	animate_triangle()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("skip_dialogue") and is_typing:
+		_on_skip_pressed()
+
+func animate_triangle() -> void:
+	var tween = create_tween().set_loops()
+	tween.tween_property(skip, "position:y", skip.position.y - 5, 0.5)
+	tween.tween_property(skip, "position:y", skip.position.y, 0.5)
 
 func _on_skip_pressed() -> void:
 	if is_typing:
@@ -20,7 +28,7 @@ func _on_skip_pressed() -> void:
 		is_typing = false
 		var saved_id = current_id
 		current_id += 1
-		await get_tree().create_timer(2.5).timeout
+		await get_tree().create_timer(3.5).timeout
 		if saved_id + 1 == current_id: 
 			hide()
 			TextManager.dialogue_finished.emit()
@@ -34,11 +42,11 @@ func _on_start_dialogue(text: String) -> void:
 		return
 	show()
 	if get_tree().current_scene == null:
-		skip_button.visible = true
+		skip.visible = true
 	elif get_tree().current_scene.name == "Mainroom":
-		skip_button.visible = false
+		skip.visible = false
 	else:
-		skip_button.visible = true
+		skip.visible = true
 		
 	display_text(text, my_id)
 
